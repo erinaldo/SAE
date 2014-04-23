@@ -6,7 +6,19 @@ SAE
 </name>
 </assembly>
 <members>
-<member name="T:SAE.saeosteomaterial2012DataSet.articulosDataTable">
+<member name="M:SAE.FrmFacturasyAjustes.txtcuentadesc_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ //////////////// EVENTOS DE LAS CAJAS DE TEXTO CUENTAS  //////////////
+
+</member><member name="M:SAE.Frmfacturarapida.txtcuentadesc_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ //////////////// EVENTOS DE LAS CAJAS DE TEXTO CUENTAS  //////////////
+
+</member><member name="M:SAE.FrmFacturasyAjustesSP.txtcuentadesc_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ //////////////// EVENTOS DE LAS CAJAS DE TEXTO CUENTAS  //////////////
+
+</member><member name="M:SAE.FrmFacturaEstetica.txtcuentadesc_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ //////////////// EVENTOS DE LAS CAJAS DE TEXTO CUENTAS  //////////////
+
+</member><member name="T:SAE.saeosteomaterial2012DataSet.articulosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -364,18 +376,6 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 </summary>
 </member><member name="M:SAE.FrmTransacciones.CmdNuevo_Click(System.Object,System.EventArgs)">
 999999999999999999999999999999999999999999999999999999
-
-</member><member name="M:SAE.FrmFacturasyAjustesSP.txtcuentadesc_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
- //////////////// EVENTOS DE LAS CAJAS DE TEXTO CUENTAS  //////////////
-
-</member><member name="M:SAE.Frmfacturarapida.txtcuentadesc_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
- //////////////// EVENTOS DE LAS CAJAS DE TEXTO CUENTAS  //////////////
-
-</member><member name="M:SAE.FrmFacturaEstetica.txtcuentadesc_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
- //////////////// EVENTOS DE LAS CAJAS DE TEXTO CUENTAS  //////////////
-
-</member><member name="M:SAE.FrmFacturasyAjustes.txtcuentadesc_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
- //////////////// EVENTOS DE LAS CAJAS DE TEXTO CUENTAS  //////////////
 
 </member><member name="P:SAE.My.Resources.Resources.ResourceManager">
 	<summary>

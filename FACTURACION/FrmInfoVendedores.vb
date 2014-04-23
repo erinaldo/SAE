@@ -96,6 +96,12 @@ Public Class FrmInfoVendedores
         Else
             txtdi2.Text = Now.Day
         End If
+        If Me.Text = "INFORME POR ASESOR" Then
+            d3.Enabled = True
+        Else
+            d3.Enabled = False
+            d3.Checked = False
+        End If
     End Sub
 
     Public Function adicionar(ByVal texto As String)
@@ -773,6 +779,138 @@ Public Class FrmInfoVendedores
             MsgBox("Error al Generar el Informe, " & ex.ToString, MsgBoxStyle.Information, "ERROR")
         End Try
     End Sub
+    Private Sub PDF_PERIODO()
+
+
+        Dim nit As String = ""
+        Dim nom As String = ""
+        Dim sql As String = ""
+        Dim per As String = ""
+        Dim p As String = ""
+        Dim cant As String = ""
+        Dim tit As String = ""
+
+        MiConexion(bda)
+        Cerrar()
+
+        Dim tabla2 As New DataTable
+        tabla2 = New DataTable
+
+        per = "PERIODO INICIAL: " & cbini.Text & "/" & txtpini.Text & " - PERIODO FINAL: " & cbfin.Text & "/" & txtpfin.Text
+
+        myCommand.CommandText = "SELECT * FROM sae.companias WHERE login='" & UCase(CompaniaActual) & "';"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tabla2)
+
+        nom = tabla2.Rows(0).Item("descripcion")
+        nit = tabla2.Rows(0).Item("nit")
+
+        MiConexion(bda)
+
+        Dim doc_aj As String = ""
+        Dim tb As New DataTable
+        tb = New DataTable
+        myCommand.CommandText = "SELECT tipoaj FROM parafacgral ;"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tb)
+        doc_aj = tb.Rows(0).Item(0)
+
+        Dim n As String = ""
+        If c2.Checked = True Then
+            n = " AND df.nit = '" & txttip.Text & "'"
+        End If
+
+
+        sql = "SELECT  c.nitv AS nitc, c.ciu_ent AS descrip, c.per AS doc, c.zona AS d1,  SUM(c.subtotal) AS total FROM ( "
+        For i = Val(cbini.Text) To Val(cbfin.Text)
+            If i < 10 Then
+                p = "0" & i
+            Else
+                p = i
+            End If
+
+            If cbini.Text = cbfin.Text Then
+                sql = sql & " SELECT df.item, '" & p & "' AS per, f.doc , df.nit AS nitv, v.nombre AS ciu_ent, v.zona,  " _
+                & " IF( LEFT(f.doc,2)='" & doc_aj & "', CONCAT('-',(df.vtotal-(df.vtotal*(df.por_des/100)))),   " _
+                & " (df.vtotal-(df.vtotal*(df.por_des/100)))) AS subtotal   " _
+                & " FROM detafac" & p & " df, vendedores v, facturas" & p & " f     " _
+                & " WHERE  (f.doc = df.doc)  AND v.nitv = df.nit  " & n & " AND RIGHT(f.fecha,2) BETWEEN '" & txtdi1.Text & "' AND  '" & txtdi2.Text & "' "
+            Else
+                If p = cbini.Text Then
+
+                    sql = sql & " SELECT df.item, '" & p & "' AS per, f.doc , df.nit AS nitv, v.nombre AS ciu_ent, v.zona,  " _
+                & " IF( LEFT(f.doc,2)='" & doc_aj & "', CONCAT('-',(df.vtotal-(df.vtotal*(df.por_des/100)))),   " _
+                & " (df.vtotal-(df.vtotal*(df.por_des/100)))) AS subtotal   " _
+                & " FROM detafac" & p & " df, vendedores v, facturas" & p & " f     " _
+                & " WHERE  (f.doc = df.doc)  AND v.nitv = df.nit  " & n & " AND RIGHT(f.fecha,2) >= '" & txtdi1.Text & "' "
+
+                ElseIf p <> cbini.Text And p <> cbfin.Text Then
+
+                    sql = sql & " UNION SELECT df.item, '" & p & "' AS per, f.doc , df.nit AS nitv, v.nombre AS ciu_ent, v.zona,  " _
+               & " IF( LEFT(f.doc,2)='" & doc_aj & "', CONCAT('-',(df.vtotal-(df.vtotal*(df.por_des/100)))),   " _
+               & " (df.vtotal-(df.vtotal*(df.por_des/100)))) AS subtotal   " _
+               & " FROM detafac" & p & " df, vendedores v, facturas" & p & " f     " _
+               & " WHERE  (f.doc = df.doc)  AND v.nitv = df.nit  " & n & "  "
+                ElseIf p = cbfin.Text Then
+                    sql = sql & " SELECT df.item, '" & p & "' AS per, f.doc , df.nit AS nitv, v.nombre AS ciu_ent, v.zona,  " _
+            & " IF( LEFT(f.doc,2)='" & doc_aj & "', CONCAT('-',(df.vtotal-(df.vtotal*(df.por_des/100)))),   " _
+            & " (df.vtotal-(df.vtotal*(df.por_des/100)))) AS subtotal   " _
+            & " FROM detafac" & p & " df, vendedores v, facturas" & p & " f     " _
+            & " WHERE  (f.doc = df.doc)  AND v.nitv = df.nit  " & n & " AND RIGHT(f.fecha,2) <= '" & txtdi2.Text & "' "
+                End If
+            End If
+
+        Next
+
+        sql = sql & ") as c GROUP BY doc, nitc ORDER BY doc, descrip "
+
+        TextBox1.Text = Sql
+
+        Dim tabla As  New DataTable
+        myCommand.Parameters.Clear()
+        myCommand.CommandText = Sql
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tabla)
+
+        Dim CrReport As New CrystalDecisions.CrystalReports.Engine.ReportDocument
+        CrReport = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
+
+        CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\REstetica\ReportVenTt.rpt")
+        CrReport.SetDataSource(tabla)
+        Try
+            CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+        Catch ex As Exception
+        End Try
+        FrmReportFacVen2.CrystalReportViewer1.ReportSource = CrReport
+
+        Try
+            Dim Prcompañia As New ParameterField
+            Dim PrNit As New ParameterField
+            Dim Prperiodo As New ParameterField
+
+            Dim prmdatos As ParameterFields
+            prmdatos = New ParameterFields
+
+            Prcompañia.Name = "comp"
+            Prcompañia.CurrentValues.AddValue(nom.ToString)
+
+            PrNit.Name = "nit"
+            PrNit.CurrentValues.AddValue(nit.ToString)
+
+            Prperiodo.Name = "periodo"
+            Prperiodo.CurrentValues.AddValue(per.ToString)
+
+            prmdatos.Add(Prcompañia)
+            prmdatos.Add(PrNit)
+            prmdatos.Add(Prperiodo)
+
+            FrmReportFacVen2.CrystalReportViewer1.ParameterFieldInfo = prmdatos
+            FrmReportFacVen2.ShowDialog()
+
+        Catch ex As Exception
+        End Try
+        Cerrar()
+    End Sub
     Private Sub PDF_ASESOR()
         Try
             If FrmPrincipal.cmdAuditoria.Visible = True Then
@@ -852,7 +990,7 @@ Public Class FrmInfoVendedores
                            & " FROM detafac" & p & " df, vendedores v, facturas" & p & " f , terceros t " _
                            & "  WHERE t.nit = f.nitc  and (f.doc = df.doc)  AND v.nitv = df.nit " & n & " AND right(f.fecha,2) >= '" & txtdi1.Text & "'"
                         ElseIf p <> cbini.Text And p <> cbfin.Text Then
-                            sql = sql & " UNION  SELECT f.doc , df.nit AS nitv,, v.nombre as ciu_ent, t.nombre As cc ,  df.nomart AS observ , " _
+                            sql = sql & " UNION  SELECT f.doc , df.nit AS nitv, v.nombre as ciu_ent, t.nombre As cc ,  df.nomart AS observ , " _
                             & " (SELECT c.concepto FROM concomi c where df.concep = c.codcon) AS cta3, " _
                             & " (SELECT  vc.porcomi FROM concomi c,  vend_cc vc WHERE df.concep = c.codcon AND df.concep = vc.codcon AND df.nit = vc.nitv ) as por_desc, " _
                             & " CAST( (CONCAT( RIGHT( f . fecha , 2 ) ,  '/', MID( f . fecha ,  6, 2 ) ,  '/', LEFT( f . fecha , 4 ) ) ) AS CHAR( 20 ) ) AS fecha_o, " _
@@ -868,7 +1006,7 @@ Public Class FrmInfoVendedores
                             & "  (SELECT ((df.vtotal-(df.vtotal*(df.por_des/100)))/(1+(df.iva_d/100)))* ( c.porcomi /100 ) as venc FROM concomi c,  vend_cc vc WHERE df.concep = c.codcon AND df.concep = vc.codcon AND df.nit = vc.nitv ) as ret_f, " _
                             & " (((df.vtotal/(1+(df.iva_d/100))-(df.vtotal/(1+(df.iva_d/100)) *(df.por_des/100)) )) - ( ((df.vtotal/(1+(df.iva_d/100))-(df.vtotal/(1+(df.iva_d/100)) *(df.por_des/100)) )) * (f.por_desc/100))) * (1+(df.iva_d/100)) AS subtotal " _
                            & " FROM detafac" & p & " df, vendedores v, facturas" & p & " f , terceros t " _
-                           & "  WHERE t.nit = f.nitc  and (f.doc = df.doc)  AND v.nitv = df.nit " & n & " AND right(f.fecha,2) <= '" & txtdi1.Text & "'"
+                           & "  WHERE t.nit = f.nitc  and (f.doc = df.doc)  AND v.nitv = df.nit " & n & " AND right(f.fecha,2) <= '" & txtdi2.Text & "'"
                         End If
                     End If
 
@@ -997,7 +1135,7 @@ Public Class FrmInfoVendedores
                       & " (((df.vtotal / (1 + (df.iva_d / 100)) - (df.vtotal / (1 + (df.iva_d / 100)) * (df.por_des / 100)))) - (((df.vtotal / (1 + (df.iva_d / 100)) - (df.vtotal / (1 + (df.iva_d / 100)) * (df.por_des / 100)))) * (f.por_desc / 100))) * (1 + (df.iva_d / 100)) " _
                       & " ) AS subtotal " _
                            & " FROM detafac" & p & " df, vendedores v, facturas" & p & " f , terceros t " _
-                           & "  WHERE t.nit = f.nitc  and (f.doc = df.doc)  AND v.nitv = df.nit " & n & " AND right(f.fecha,2) <= '" & txtdi1.Text & "'"
+                           & "  WHERE t.nit = f.nitc  and (f.doc = df.doc)  AND v.nitv = df.nit " & n & " AND right(f.fecha,2) <= '" & txtdi2.Text & "'"
                         End If
                     End If
 
@@ -1060,12 +1198,15 @@ Public Class FrmInfoVendedores
 
     Private Sub cmdpantalla_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdpantalla.Click
         'mostrar_pdf()
-        If Me.Text = "INFORME POR VENDEDOR" Then
-            PDF()
+        If d3.Checked = True Then
+            PDF_PERIODO()
         Else
-            PDF_ASESOR()
+            If Me.Text = "INFORME POR VENDEDOR" Then
+                PDF()
+            Else
+                PDF_ASESOR()
+            End If
         End If
-
     End Sub
     Private Sub txtdi1_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtdi1.LostFocus
         If CInt(txtdi1.Text) <= 9 Then

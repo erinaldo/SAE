@@ -46,6 +46,7 @@ Partial Class FrmInfoVendedores
         Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.cmdsalir = New System.Windows.Forms.Button
         Me.cmdpantalla = New System.Windows.Forms.Button
+        Me.d3 = New System.Windows.Forms.RadioButton
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -130,19 +131,20 @@ Partial Class FrmInfoVendedores
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.d3)
         Me.GroupBox1.Controls.Add(Me.d2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.d1)
         Me.GroupBox1.Location = New System.Drawing.Point(7, 137)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(526, 89)
+        Me.GroupBox1.Size = New System.Drawing.Size(526, 72)
         Me.GroupBox1.TabIndex = 83
         Me.GroupBox1.TabStop = False
         '
         'd2
         '
         Me.d2.AutoSize = True
-        Me.d2.Location = New System.Drawing.Point(283, 38)
+        Me.d2.Location = New System.Drawing.Point(220, 38)
         Me.d2.Name = "d2"
         Me.d2.Size = New System.Drawing.Size(72, 17)
         Me.d2.TabIndex = 6
@@ -181,9 +183,9 @@ Partial Class FrmInfoVendedores
         Me.GroupBox4.Controls.Add(Me.txtpini)
         Me.GroupBox4.Controls.Add(Me.Label2)
         Me.GroupBox4.Controls.Add(Me.Label4)
-        Me.GroupBox4.Location = New System.Drawing.Point(7, 232)
+        Me.GroupBox4.Location = New System.Drawing.Point(7, 210)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(526, 81)
+        Me.GroupBox4.Size = New System.Drawing.Size(526, 66)
         Me.GroupBox4.TabIndex = 85
         Me.GroupBox4.TabStop = False
         '
@@ -278,7 +280,7 @@ Partial Class FrmInfoVendedores
         Me.GroupPanel1.Controls.Add(Me.TextBox1)
         Me.GroupPanel1.Controls.Add(Me.cmdsalir)
         Me.GroupPanel1.Controls.Add(Me.cmdpantalla)
-        Me.GroupPanel1.Location = New System.Drawing.Point(8, 319)
+        Me.GroupPanel1.Location = New System.Drawing.Point(7, 278)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(526, 85)
         '
@@ -336,12 +338,22 @@ Partial Class FrmInfoVendedores
         Me.cmdpantalla.TextAlign = System.Drawing.ContentAlignment.TopRight
         Me.cmdpantalla.UseVisualStyleBackColor = False
         '
+        'd3
+        '
+        Me.d3.AutoSize = True
+        Me.d3.Location = New System.Drawing.Point(406, 38)
+        Me.d3.Name = "d3"
+        Me.d3.Size = New System.Drawing.Size(100, 17)
+        Me.d3.TabIndex = 86
+        Me.d3.Text = "&Total por meses"
+        Me.d3.UseVisualStyleBackColor = True
+        '
         'FrmInfoVendedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(542, 413)
+        Me.ClientSize = New System.Drawing.Size(542, 369)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.GroupBox1)
@@ -389,4 +401,5 @@ Partial Class FrmInfoVendedores
     Friend WithEvents cmdsalir As System.Windows.Forms.Button
     Friend WithEvents cmdpantalla As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents d3 As System.Windows.Forms.RadioButton
 End Class

@@ -11066,3 +11066,4 @@ D:\YENIFFER\SAE_ABRIL_15_04_2014\SAE iney\SAE\bin\Debug\tr\ZedGraph.resources.dl
 D:\YENIFFER\SAE_ABRIL_15_04_2014\SAE iney\SAE\bin\Debug\zh-cn\ZedGraph.resources.dll
 D:\YENIFFER\SAE_ABRIL_15_04_2014\SAE iney\SAE\bin\Debug\zh-tw\ZedGraph.resources.dll
 D:\YENIFFER\SAE_ABRIL_15_04_2014\SAE iney\SAE\obj\Debug\SAE.frmImpcodBarras.resources
+D:\SAE iney\SAE\obj\Debug\SAE.frmImpcodBarras.resources

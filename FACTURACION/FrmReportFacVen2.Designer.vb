@@ -26,6 +26,7 @@ Partial Class FrmReportFacVen2
         Me.ReportFVen21 = New SAE.ReportFVen2
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
         Me.ReportFUsu21 = New SAE.ReportFUsu2
+        Me.ReportVenTt1 = New SAE.ReportVenTt
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -36,7 +37,7 @@ Partial Class FrmReportFacVen2
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.ReportFUsu21
+        Me.CrystalReportViewer1.ReportSource = Me.ReportVenTt1
         Me.CrystalReportViewer1.ShowRefreshButton = False
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(528, 406)
         Me.CrystalReportViewer1.TabIndex = 0
@@ -57,4 +58,5 @@ Partial Class FrmReportFacVen2
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents ReportFVen21 As SAE.ReportFVen2
     Friend WithEvents ReportFUsu21 As SAE.ReportFUsu2
+    Friend WithEvents ReportVenTt1 As SAE.ReportVenTt
 End Class
