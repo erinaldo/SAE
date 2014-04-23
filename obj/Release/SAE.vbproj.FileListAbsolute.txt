@@ -1,0 +1,890 @@
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\SAE.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\SAE.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\SAE.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmAbrirCompania.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmActualizarCC.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmAdaptacionPUC.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmAnexosBalance.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmBalanceGral.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmBalancePrueba.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmBloquearPeriodos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmBusquedas.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCambiarPass.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCatalogoC.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCierreAno.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCompania.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmConexion.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmContabilidad.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCuentas.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCuentasTributarias.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmDatosCompa.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmDocumentos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmEntradaDatos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmEstadoResultados.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmGestionCompa.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmInformeCC.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmInfTributarios.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmLibroMayor.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmLogin.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmNuevoAno.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmParContable.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmPass.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmPDF.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmPeriodo.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmPrincipal.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmReportePuc.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSaldosIniciales.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSelCliente.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.frmterceros.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmTipoDocumentos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmTipoTransaccion.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmTributarios.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmUsuarios.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmVerCuentas.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmVerDocumentos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmVerUsuarios.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmWEB.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\ZedGraph.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\ZedGraph.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\de\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\es\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\fr\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\hu\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\it\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\ja\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\pt\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\ru\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\sk\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\sv\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\tr\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\zh-cn\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\bin\Release\zh-tw\ZedGraph.resources.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmGrafica.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmAyuda.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmArti_Serv.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmConceptosComicionables.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmDatosDeEntrega.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmEntraPedidos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.frmfacturacion.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.Frmfacturarapida.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmFacturasyAjustes.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmFormaPago.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmItems.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmParaFactRapida.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmParametrosFact.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSelArticulos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSelServicio.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSelTipoDoc.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSelVendedor.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmVendedores.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmAjustes.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmAjustesCant.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmArtBodPre.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCuestasArt.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmEntradas.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmGestionLista.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmImpDocumentos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmInventarios.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmParInventarios.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmProductos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmProve_Art.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSalidas.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSelMovInventario.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmTraslados.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmObsrvaciones.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCirreInv.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmArti_de_Inventarios.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmServicios.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSelCC.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCentroCostos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmSelCentroCostos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmTarConteoFisico.resources
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\SAE.exe
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\SAE.pdb
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\SAE.xml
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\ZedGraph.xml
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\DevComponents.DotNetBar2.xml
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\de\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\es\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\fr\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\hu\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\it\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\ja\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\pt\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\ru\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\sk\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\sv\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\tr\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\zh-cn\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\bin\Release\zh-tw\ZedGraph.resources.dll
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmArti_Serv.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmConceptosComicionables.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmDatosDeEntrega.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmEntraPedidos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.frmfacturacion.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.Frmfacturarapida.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmFacturasyAjustes.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmFormaPago.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmItems.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmObsrvaciones.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmParaFactRapida.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmParametrosFact.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSelArticulos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSelCC.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSelServicio.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSelTipoDoc.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSelVendedor.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmServicios.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmVendedores.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmAbrirCompania.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmActualizarCC.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmAdaptacionPUC.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmAnexosBalance.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmAyuda.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmBalanceGral.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmBalancePrueba.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmBloquearPeriodos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmBusquedas.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmCambiarPass.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmCatalogoC.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmCentroCostos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmCierreAno.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmCompania.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmConexion.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmContabilidad.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmCuentas.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmCuentasTributarias.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmDatosCompa.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmDocumentos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmEntradaDatos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmEstadoResultados.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmGestionCompa.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmGrafica.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmInformeCC.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmInfTributarios.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmLibroMayor.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmLogin.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmNuevoAno.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmParContable.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmPass.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmPDF.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmPeriodo.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmPrincipal.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmReportePuc.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSaldosIniciales.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSelCentroCostos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSelCliente.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.frmterceros.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmTipoDocumentos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmTipoTransaccion.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmTributarios.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmUsuarios.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmVerCuentas.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmVerDocumentos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmVerUsuarios.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmWEB.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmAjustes.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmAjustesCant.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmArtBodPre.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmArti_de_Inventarios.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmCirreInv.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmCuestasArt.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmEntradas.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmGestionLista.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmImpDocumentos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmInventarios.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmParInventarios.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmProductos.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmProve_Art.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSalidas.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmSelMovInventario.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmTarConteoFisico.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.FrmTraslados.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.Resources.resources
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.vbproj.GenerateResource.Cache
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.exe
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.xml
+C:\Users\Libanis\Desktop\SAE\SAE\obj\Release\SAE.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmImpFacturas.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmAnularFact.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmCopiaSeguridad.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmRestaurarCopia.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmAcercaDe.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmInve_y_Balances.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\SAE\SAE\obj\Release\SAE.FrmNumPag.resources
+D:\SAE rey\SAE\bin\Release\SAE.exe.config
+D:\SAE rey\SAE\bin\Release\SAE.exe
+D:\SAE rey\SAE\bin\Release\SAE.pdb
+D:\SAE rey\SAE\bin\Release\SAE.xml
+D:\SAE rey\SAE\obj\Release\ResolveAssemblyReference.cache
+D:\SAE rey\SAE\obj\Release\SAE.FrmGenArtRN3.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepMovArt.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmBuscarDocs.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCartera.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmConUnaFC.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDesaCartera.resources
+D:\SAE rey\SAE\obj\Release\SAE.Frmestadisticaedades.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmEstadoCuentas.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmFacturasPendientes.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmItemCartera.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmMovCartera.resources
+D:\SAE rey\SAE\obj\Release\SAE.frmparametroscartera.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmReciboCartera.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelFacturaCartera.resources
+D:\SAE rey\SAE\obj\Release\SAE.frmseltipodoccar.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAnalisisCPP.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAnularCompras.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCompEgreCpp.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCompras.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmVentasCartera.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCPPinfoProv.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDesaCompra.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDesaCxP.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDocProveedor.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmFormaPago2.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGastos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoArtGas.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoCompCPP.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoCompGasOtros.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoCompProv.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoFactCPP.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoGastos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmItemsCompras.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmItemsCPP.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmMarcarPedidos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmOrdenCompra.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmOtrosConceptosCP.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmOtrosConceptosProv.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmParCompras.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmPlanPagoCPP.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSaldosInicialesCPP.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelDocProveedor.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelFacturaCompra.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelGasto.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelMisArticulos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelMisGastos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelOrdenesCompras.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelPediPen.resources
+D:\SAE rey\SAE\obj\Release\SAE.RepCPPInfProv.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAnularFact.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmArti_Serv.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAumentarPrecios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmBuscarCodBar.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmBuscarRefe.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmConceptosComicionables.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDatosDeEntrega.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDesFact.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmEntraPedidos.resources
+D:\SAE rey\SAE\obj\Release\SAE.frmfacturacion.resources
+D:\SAE rey\SAE\obj\Release\SAE.Frmfacturarapida.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmFacturasyAjustes.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmFormaPago.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmImpFacturas.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoArticulos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoClientes.resources
+D:\SAE rey\SAE\obj\Release\SAE.Frminfoconse.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoCrono.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoListaPreciosArt.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoPagos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoReferencia.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoServicios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoVendedores.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmItems.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmLisArticulos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmLisClientes.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmLisDocumen.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmLisRef.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmListasClientes.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmModPreciosManual.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmObsrvaciones.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmOtrosConceptos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmParaFactRapida.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmParametrosFact.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmPdfFac.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmPrecioItems.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmPreciosServicios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepLisPre.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelArticulos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelCC.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelFacturaVenta.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelPedidos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelServicio.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelTipoDoc.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelVendedor.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmServicios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmTipoItems.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmVendedores.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAbrirCompania.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAcercaDe.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmActualizarCC.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAdaptacionPUC.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAnexosBalance.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAnularOtDoc.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAyuda.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmBalanceGral.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmBalanceG_cc.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmBalancePrueba.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmBloquearPeriodos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmBusquedas.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCambiarContraComp.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCambiarPass.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCatalogoC.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCentroCostos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCertificadoRete.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCierreAno.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmComEgresoCpp.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCompania.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCompDiario.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCompIngresos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmConexion.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmConfigEmail.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmContabilidad.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCopiaSeguridad.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCuentas.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCuentasTributarias.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDatosCompa.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDigitarBase.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDocExistente.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDocumentos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmEntradaDatos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmEstadoResultados.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmEstadoR_cc.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGestionCompa.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGrafica.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGruposImp.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmImpuestos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoCentroC.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInformeCC.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInformesCentroCosto.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfTributarios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInve_y_Balances.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmLibroDiario.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmLibroMayor.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmLogin.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmMenuImp.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmNotaCredito.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmNotaDebito.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmNuevaCuenta.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmNuevoAno.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmNumPag.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmOtrosDocumentos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmParametrosOtrosDoc.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmParContable.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmPass.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmPDF.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmPeriodo.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmPrincipal.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRecibodeCaja.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmReportePuc.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRestaurarCopia.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSaldosIniciales.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSaldosInicialesCartera.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelCentroCostos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelCliente.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelConcepImp.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelExistente.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelImpuestos.resources
+D:\SAE rey\SAE\obj\Release\SAE.frmterceros.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmTipoDocumentos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmTipoTransaccion.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmTributarios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmUsuarios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmVerCuentas.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmVerDocumentos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmVerUsuarios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmWEB.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAjustes.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAjustesCant.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmAnular_Inv.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmArtBodPre.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmArti_de_Inventarios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCirreInv.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmConteoFisInv.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmCuestasArt.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmDesaInvetario.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmEditarConteo.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmEntradas.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGenArticulos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGenArticulos2.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGenArticulos3.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGenArticulos33.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGenArtRN.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGenArtRN2.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmGestionLista.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmImpDocumentos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfartalf.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoEntr.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoExistencia.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoKardex.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoKardexref.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoMovArt.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoMovRef.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoRef.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoSinMov.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoterceros.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInfoTipodoc.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInvenDia.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmInventarios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmLisArt.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmLisBodegas.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmMPDF.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmParInventarios.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmProductos.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmProve_Art.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRdia.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepCont.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepEsMovMen.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepExis.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepKarCod.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepKarRef.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepKarRef2.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepKarRef3.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepMovDoc.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepMovRef.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepMovTer.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepSinMov.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmRepSinMov2.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSalidas.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmSelMovInventario.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmTarConteoFisico.resources
+D:\SAE rey\SAE\obj\Release\SAE.FrmTraslados.resources
+D:\SAE rey\SAE\obj\Release\SAE.Resources.resources
+D:\SAE rey\SAE\obj\Release\SAE.vbproj.GenerateResource.Cache
+D:\SAE rey\SAE\obj\Release\SAE.exe
+D:\SAE rey\SAE\obj\Release\SAE.xml
+D:\SAE rey\SAE\obj\Release\SAE.pdb
+D:\SAE iney\SAE\bin\Release\SAE.exe.config
+D:\SAE iney\SAE\bin\Release\SAE.exe
+D:\SAE iney\SAE\bin\Release\SAE.pdb
+D:\SAE iney\SAE\bin\Release\SAE.xml
+D:\SAE iney\SAE\obj\Release\ResolveAssemblyReference.cache
+D:\SAE iney\SAE\obj\Release\SAE.FrmAuditoria.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInforAudit.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInforAudMov.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParFac.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParOtrosDoc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParProv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelUsuario.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmVisorAuditoria.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmBancos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConciliaciones.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmExtratosBanc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGestionBancos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLibroBancos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParBancos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelBanco.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmTransacciones.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGenArtRN3.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepMovArt.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmActSal.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAnalisisVencimiento.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAprCart.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmBuscarDocs.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCarxCiu.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmClientMora.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConcomiCart.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConcpFac.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConUnaFC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDesaCartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.Frmestadisticaedades.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEstadoCuentas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmFacturasPendientes.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfCartComision.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoReciboCartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmItemCartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmMovCartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmMovCli.resources
+D:\SAE iney\SAE\obj\Release\SAE.frmparametroscartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReciboCartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportAnaVen.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCarCuen.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCarxCiu.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCarxCiuD.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCClMor.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCClMorR.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportConcF.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelFacturaCartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.frmseltipodoccar.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAnalisisCPP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAntiProv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAnularCompras.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAprobarC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAproD.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCierreComp.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCompEgreCpp.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCompras.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmVentasCartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCPPinfoProv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDesaCompra.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDesaCxP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDocProveedor.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmFormaPago2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGastos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoArtGas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoCompCPP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoCompGasOtros.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoCompProv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoFactCPP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoGastos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmItemsCompras.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmItemsCPP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmMarcarPedidos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmOrdenCompra.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmOtrosConceptosCP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmOtrosConceptosProv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParCompras.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPlanPagoCPP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepDatos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCcomXpro.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCCxPg.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCompCPP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCoOtrosG.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportDocP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportPlanPago.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportPPlanPago.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSaldosInicialesCPP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelDocProveedor.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelFacturaCompra.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelGasto.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelMisArticulos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelMisGastos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelOrdenesCompras.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelPediPen.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelRemiProv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAntiCliente.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAnularFact.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAprFac.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmArti_Serv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAumentarPrecios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmBuscarCodBar.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmBuscarRefe.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCamPerFact.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConcepComi.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConcepComiV.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConceptosComicionables.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDatosDeEntrega.resources
+D:\SAE iney\SAE\obj\Release\SAE.Frmdescrip_items.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDesFact.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEntraPedidos.resources
+D:\SAE iney\SAE\obj\Release\SAE.frmfacturacion.resources
+D:\SAE iney\SAE\obj\Release\SAE.Frmfacturarapida.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmFacturasyAjustes.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmFormaPago.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmImpFacturas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmImpTicket.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoArticulos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoClientes.resources
+D:\SAE iney\SAE\obj\Release\SAE.Frminfoconse.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoCotz.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoCrono.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoListaPreciosArt.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoPagos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoReferencia.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoServicios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoVendedores.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmItems.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLisArticulos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLisClientes.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLisDocumen.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLisRef.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmListasClientes.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmModPreciosManual.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmNitF.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmObsrvaciones.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmOtrosConceptos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParaFactRapida.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParametrosFact.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPdfFac.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPrecioItems.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPreciosServicios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepLisPre.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacArt.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacArt2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacCli.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacCli2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacCon.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacPag.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacRap.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacRapVP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacRef.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacRef2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacVarias.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacVen.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportFacVen2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelArticulos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelCC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelFacturaVenta.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelPedidos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelServicio.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelTipoDoc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelVendedor.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmServicios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmTipoItems.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoUtilDiaria.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmVendedores.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAbrirCompania.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAcercaDe.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmActEco.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmActualizarCC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAdaptacionPUC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAnexosBalance.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAnularOtDoc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAyuda.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmBalanceGral.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmBalanceG_cc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmBalancePrueba.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmBloquearPeriodos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmBusquedas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCambiarContraComp.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCambiarPass.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCatalogoC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCentroCostos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCertificadoRete.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCierreAno.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCierreOpciones.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmComEgresoCpp.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCompania.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCompDiario.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCompIngresos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConexion.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConfigEmail.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmContabilidad.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCopiarPUC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCopiaSeguridad.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCuentaRtCree.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCuentas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCuentasTributarias.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDatosCompa.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDigitarBase.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDocExistente.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDocumentos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEditarNit.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEliminarComp.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEntradaDatos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEstadoResultados.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEstadoR_cc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGestionCompa.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGrafica.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGruposImp.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmImprDocContab.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmImpuestos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfMovCentroC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfMovContables.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoAnticipos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoCentroC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInformeCC.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInformeCheque.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInformesCentroCosto.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfTerceros.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfTributarios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInve_y_Balances.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmIva_Pagar.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLibroDiario.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLibroMayor.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLogin.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmMenuImp.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmNotaCredito.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmNotaDebito.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmNuevaCuenta.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmNuevoAno.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmNumPag.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmOtrosDocumentos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParametrosOtrosDoc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParContable.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPass.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPDF.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPeriodo.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPrincipal.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRecibodeCaja.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCertR.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportCMov_cue.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportContBalGen.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportContBalPru.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportContBalPruT.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportePuc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportInvBalanc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportLibroMay.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReportTributario.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRestaurarCopia.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSaldosIniciales.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSaldosInicialesCartera.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelCentroCostos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelCliente.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelConcepImp.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelExistente.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelImpuestos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelOtdoc.resources
+D:\SAE iney\SAE\obj\Release\SAE.frmterceros.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmTipoDocumentos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmTipoTransaccion.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmTributarios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmUsuarios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmUtilidadDiaria.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmVerCuentas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmVerDocumentos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmVerUsuarios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmWEB.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAnaProv.resources
+D:\SAE iney\SAE\obj\Release\SAE.Frmccosto.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmClienteC.resources
+D:\SAE iney\SAE\obj\Release\SAE.Frmdetafac.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGerencial.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParametrosGer.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCierreInm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmClasiTerceros.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConsultaInm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmContratos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEst_Cuen_Inm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEst_Cuen_Prop.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGaleriaInm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfContratos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfInmuebles.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfPagoServ.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfTercerosInm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInmDependencias.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInmLlaves.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInmobiliaria.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInmServicios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInmueble.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInmueblesTipos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmNovedadInm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmNovedadProce.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPagosServicios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParInmob.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSaldosIniInm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelContratos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelDueño.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelInmueble.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelNovedad.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelPagos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmVisorImagen.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmVisorInformes.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAjustes.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAjustesCant.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAnular_Inv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAprInv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmArtBodPre.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmArti_de_Inventarios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCamCodart.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCirreInv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmConteoFisInv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCopiarInv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCuentasSalIniinv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCuestasArt.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDesaInvetario.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDesaInvSI.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEditarConteo.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEntradas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGenArticulos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGenArticulos2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGenArticulos3.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGenArticulos33.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGenArtRN.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGenArtRN2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGestionLista.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmImpDocumentos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfartalf.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoEntr.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoExistencia.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoKardex.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoKardexref.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoMovArt.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoMovRef.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoRef.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoSinMov.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoterceros.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoTipodoc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfPunto.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInvenDia.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInventarios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLisArt.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmLisBodegas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmMPDF.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParInventarios.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmProductos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmProve_Art.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRdia.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepCont.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepEsMovMen.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepExis.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepKarCod.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepKarRef.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepKarRef2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepKarRef3.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepMovDoc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepMovRef.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepMovTer.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmReproInven.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepSinMov.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmRepSinMov2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSaldosInicialesInvMenu.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSaldosIniInv.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSalidas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelMovInventario.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmTarConteoFisico.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmTraslados.resources
+D:\SAE iney\SAE\obj\Release\SAE.Resources.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInforOrdenes.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmNuevoEgreso.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmOrdenesDePago.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmOrdenPagos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmParOrdenes.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelecContraros.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelOndenPago.resources
+D:\SAE iney\SAE\obj\Release\SAE.vbproj.GenerateResource.Cache
+D:\SAE iney\SAE\obj\Release\SAE.exe
+D:\SAE iney\SAE\obj\Release\SAE.xml
+D:\SAE iney\SAE\obj\Release\SAE.pdb
+D:\SAE iney\SAE\obj\Release\SAE.FrmConciliacionB.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEliminarSICart.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDesenglobarCta.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEstetica.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmFacturaEstetica.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGestionCitas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInforCitas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmItemsEst.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmMetasxArea.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelArea.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelCitas.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDiarioFac.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmFacturasyAjustesSP.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfoUsuario.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCIordenes.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfCGN.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelCiorden.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmAnulaFI.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfFacInm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfNovedades.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfOtconcp.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfSerInm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfServPub.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmOtrosccInm.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmValorInmu.resources
+D:\SAE iney\SAE\obj\Release\SAE.Frmctaconceptos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmGenerarFmtos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmMediosMagneticos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmValorMin.resources
+D:\SAE iney\SAE\obj\Release\SAE.FemFPE2.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCtasRubroxx.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmCuentasRubros.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDesapCEOrden.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDesNomina.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmDocConciliaB.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmEgresoNomina.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmFPEgresos.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfDeducciones.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmInfEgreRubro.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmModCausaPresu.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmPOrdOt.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelConcili.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSeldeducciones.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelOrdenPagoDoc.resources
+D:\SAE iney\SAE\obj\Release\SAE.FrmSelRubrIng.resources
