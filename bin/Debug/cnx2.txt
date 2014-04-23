@@ -1,0 +1,1 @@
+server=127.0.0.1;user=root; password=root; database=saeestic2011;port=3306;Allow Zero Datetime=True;Convert Zero Datetime=True;Persist Security Info=True;
