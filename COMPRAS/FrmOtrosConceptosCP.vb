@@ -763,6 +763,7 @@
                 FrmAntiProv.gitems.Item("disponible", i).Value = Moneda(tabla2.Rows(i).Item("disp").ToString)
                 FrmAntiProv.gitems.Item("monto", i).Value = Moneda(tabla2.Rows(i).Item("disp").ToString)
                 FrmAntiProv.gitems.Item("cta", i).Value = tabla2.Rows(i).Item("cta").ToString
+                FrmAntiProv.gitems.Item("detalle", i).Value = tabla2.Rows(i).Item("concepto").ToString
             Next
         Catch ex As Exception
             'MsgBox(ex.ToString)

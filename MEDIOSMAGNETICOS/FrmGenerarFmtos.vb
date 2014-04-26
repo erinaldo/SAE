@@ -916,13 +916,13 @@
             Dim tabla As New DataTable
             tabla.Clear()
             myCommand.Parameters.Clear()
-            myCommand.CommandText = "SELECT  c.desc  FROM  formatos f, conceptos c " _
+            myCommand.CommandText = "SELECT  c.descr  FROM  formatos f, conceptos c " _
             & " WHERE c.codcon= '" & cmbcon.Text & "'  AND c.codfor='" & cmbForm.Text & "'"
             myAdapter.SelectCommand = myCommand
             myAdapter.Fill(tabla)
             Refresh()
             If tabla.Rows.Count > 0 Then
-                txtcon.Text = UCase(tabla.Rows(0).Item("desc"))
+                txtcon.Text = UCase(tabla.Rows(0).Item("descr"))
             End If
         End If
        
@@ -935,14 +935,16 @@
 
 
         Dim cad As String = ""
+        Dim cad1 As String = ""
         Dim cons As String = ""
+        Dim tope As Double = 0
 
         If cmbcon.Text <> "NO" Then
             ' CON CONCEPTOS
             Dim t1 As New DataTable
             t1.Clear()
             myCommand.Parameters.Clear()
-            myCommand.CommandText = "SELECT c.cuenta, s.descripcion, p.tope FROM cta_conc c, selpuc s, conceptos p " _
+            myCommand.CommandText = "SELECT c.cuenta, s.descripcion, p.tope, c.mov FROM cta_conc c, selpuc s, conceptos p " _
             & " WHERE c.cuenta = s.codigo AND c.codfor ='" & cmbForm.Text & "' AND c.codcon = '" & cmbcon.Text & "' AND p.codcon=c.codcon AND p.codfor=c.codfor "
             myAdapter.SelectCommand = myCommand
             myAdapter.Fill(t1)
@@ -952,6 +954,18 @@
                 MsgBox("Verifique las cuentas para el concepto " & cmbcon.Text & " - Formato " & cmbForm.Text, MsgBoxStyle.Information, "Verifique")
                 Exit Sub
             Else
+                Try
+                    tope = CDbl(t1.Rows(0).Item("tope"))
+                Catch ex As Exception
+                    tope = CDbl(0)
+                End Try
+                If t1.Rows(0).Item("mov") = "sl" Then
+                    cad1 = "d.debito-d.credito"
+                ElseIf t1.Rows(0).Item("mov") = "db" Then
+                    cad1 = "d.debito"
+                ElseIf t1.Rows(0).Item("mov") = "cr" Then
+                    cad1 = "d.credito"
+                End If
                 For j = 0 To t1.Rows.Count - 1
                     If j = 0 Then
                         cad = cad & " AND d.codigo LIKE '" & t1.Rows(j).Item("cuenta") & "%' "
@@ -980,11 +994,17 @@
                 p = i
             End If
             If i <> 12 Then
-                cons = cons & " SELECT SUM(d.debito-d.credito) AS sm, d.codigo, d.nit FROM documentos" & p & " d " _
-        & " WHERE  d.nit<>'' " & cad & " GROUP BY d.nit  UNION "
+                '        cons = cons & " SELECT SUM(d.debito-d.credito) AS sm, d.codigo, d.nit FROM documentos" & p & " d " _
+                '& " WHERE  d.nit<>'' " & cad & " GROUP BY d.nit  UNION "
+                cons = cons & " SELECT SUM(" & cad1 & ") AS sm, d.codigo, d.nit FROM documentos" & p & " d " _
+ & " WHERE  d.nit<>'' " & cad & " GROUP BY d.nit  UNION "
+
             Else
-                cons = cons & " SELECT SUM(d.debito-d.credito) AS sm, d.codigo, d.nit FROM documentos" & p & " d " _
-      & " WHERE  d.nit<>'' " & cad & " GROUP BY d.nit "
+                '          cons = cons & " SELECT SUM(d.debito-d.credito) AS sm, d.codigo, d.nit FROM documentos" & p & " d " _
+                '& " WHERE  d.nit<>'' " & cad & " GROUP BY d.nit "
+                cons = cons & " SELECT SUM(" & cad1 & ") AS sm, d.codigo, d.nit FROM documentos" & p & " d " _
+                & " WHERE  d.nit<>'' " & cad & " GROUP BY d.nit "
+
             End If
         Next
 
@@ -1022,26 +1042,62 @@
             mibarra.Value = 0
             mibarra.Visible = True
             mibarra.Maximum = t2.Rows.Count + 1
-
+            Dim vtp As Double = 0
             For i = 0 To t2.Rows.Count - 1
-                gcuenta.Item("concepto", c).Value = cmbcon.Text
-                gcuenta.Item("tipo_id", c).Value = t2.Rows(i).Item("ti")
-                gcuenta.Item("num_id", c).Value = t2.Rows(i).Item("nit")
-                gcuenta.Item("dv", c).Value = t2.Rows(i).Item("dv")
-                gcuenta.Item("tipo_id", c).Value = t2.Rows(i).Item("ti")
-                gcuenta.Item("apell1", c).Value = retorno(Trim(t2.Rows(i).Item("apel")), 1)
-                gcuenta.Item("apell2", c).Value = retorno(Trim(t2.Rows(i).Item("apel")), 2)
-                gcuenta.Item("nom1", c).Value = retorno(Trim(t2.Rows(i).Item("nomb")), 1)
-                gcuenta.Item("nom2", c).Value = retorno(Trim(t2.Rows(i).Item("nomb")), 2)
-                gcuenta.Item("rsocial", c).Value = t2.Rows(i).Item("razon")
-                gcuenta.Item("dir", c).Value = t2.Rows(i).Item("dir")
-                gcuenta.Item("dpto", c).Value = t2.Rows(i).Item("dept")
-                gcuenta.Item("mcp", c).Value = t2.Rows(i).Item("mun")
-                gcuenta.Item("pais", c).Value = t2.Rows(i).Item("pais")
-                gcuenta.Item("pagoD", c).Value = t2.Rows(i).Item("s")
-                c = c + 1
-                mibarra.Value = mibarra.Value + 1
+                If CDbl(t2.Rows(i).Item("s")) < tope Then
+
+                    vtp = vtp + CDbl(t2.Rows(i).Item("s"))
+                    gcuenta.RowCount = gcuenta.RowCount - 1
+                Else
+                    gcuenta.Item("concepto", c).Value = cmbcon.Text
+                    gcuenta.Item("tipo_id", c).Value = t2.Rows(i).Item("ti")
+                    gcuenta.Item("num_id", c).Value = t2.Rows(i).Item("nit")
+                    gcuenta.Item("dv", c).Value = t2.Rows(i).Item("dv")
+                    gcuenta.Item("tipo_id", c).Value = t2.Rows(i).Item("ti")
+                    gcuenta.Item("apell1", c).Value = retorno(Trim(t2.Rows(i).Item("apel")), 1)
+                    gcuenta.Item("apell2", c).Value = retorno(Trim(t2.Rows(i).Item("apel")), 2)
+                    gcuenta.Item("nom1", c).Value = retorno(Trim(t2.Rows(i).Item("nomb")), 1)
+                    gcuenta.Item("nom2", c).Value = retorno(Trim(t2.Rows(i).Item("nomb")), 2)
+                    gcuenta.Item("rsocial", c).Value = t2.Rows(i).Item("razon")
+                    gcuenta.Item("dir", c).Value = t2.Rows(i).Item("dir")
+                    gcuenta.Item("dpto", c).Value = t2.Rows(i).Item("dept")
+                    gcuenta.Item("mcp", c).Value = t2.Rows(i).Item("mun")
+                    gcuenta.Item("pais", c).Value = t2.Rows(i).Item("pais")
+                    gcuenta.Item("pagoD", c).Value = t2.Rows(i).Item("s")
+                    c = c + 1
+                    mibarra.Value = mibarra.Value + 1
+                End If
+               
             Next
+            If tope <> 0 Then
+                Dim tc As New DataTable
+                tc.Clear()
+                myCommand.Parameters.Clear()
+                myCommand.CommandText = "SELECT descripcion, direccion, dpto, RIGHT(mun,3) AS m FROM sae.companias WHERE login='" & FrmPrincipal.lbcompania.Text & "'"
+                myAdapter.SelectCommand = myCommand
+                myAdapter.Fill(tc)
+                Refresh()
+                Try
+                    gcuenta.RowCount = gcuenta.RowCount + 1
+                    gcuenta.Item("concepto", c).Value = cmbcon.Text
+                    gcuenta.Item("tipo_id", c).Value = "43"
+                    gcuenta.Item("num_id", c).Value = "222222222"
+                    gcuenta.Item("dv", c).Value = ""
+                    gcuenta.Item("tipo_id", c).Value = ""
+                    gcuenta.Item("apell1", c).Value = ""
+                    gcuenta.Item("apell2", c).Value = ""
+                    gcuenta.Item("nom1", c).Value = ""
+                    gcuenta.Item("nom2", c).Value = ""
+                    gcuenta.Item("rsocial", c).Value = tc.Rows(0).Item("descripcion")
+                    gcuenta.Item("dir", c).Value = tc.Rows(0).Item("direccion")
+                    gcuenta.Item("dpto", c).Value = tc.Rows(0).Item("dpto")
+                    gcuenta.Item("mcp", c).Value = tc.Rows(0).Item("m")
+                    gcuenta.Item("pais", c).Value = "169"
+                    gcuenta.Item("pagoD", c).Value = Moneda(vtp)
+                    c = c + 1
+                Catch ex As Exception
+                End Try
+            End If
             'End If
             mibarra.Visible = False
             Me.Cursor = Cursors.Default

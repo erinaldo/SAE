@@ -1,6 +1,7 @@
 ﻿Public Class FrmDesapCEOrden
 
     Private Sub FrmDesapCEOrden_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        chA.Checked = True
         txtnumfac.Text = ""
         lbcliente.Text = ""
         lbtotal.Text = "0,00"
@@ -56,8 +57,19 @@
         Catch ex As Exception
             MsgBox("Error actualizar orden " & ex.ToString, MsgBoxStyle.Information, "SAE")
         End Try
-       
 
+        'ELIMINAR DOC SOPORTE
+        If chA.Checked = False Then
+            Try
+                myCommand.Parameters.Clear()
+                myCommand.CommandText = "UPDATE ord_pagos " _
+                                  & "SET sop_cont='' WHERE doc='" & lbcliente.Text & "' ;"
+                myCommand.ExecuteNonQuery()
+            Catch ex As Exception
+                MsgBox("Error actualizar orden_soportecontable " & ex.ToString, MsgBoxStyle.Information, "SAE")
+            End Try
+        End If
+        
         'CTAS_X_PAGAR
         Try
             myCommand.Parameters.Clear()

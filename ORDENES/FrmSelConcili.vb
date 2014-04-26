@@ -3,8 +3,14 @@
     Private Sub FrmSelConcili_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim a As String = Strings.Right(PerActual, 4)
         Dim tabla As New DataTable
-        myCommand.CommandText = "SELECT num , CAST(CONCAT(dia,'/',per) AS CHAR(15)) AS fech, ctabanco, CAST(CONCAT(banco,' ', num_cta) AS CHAR(100)) AS nomban," _
-        & " docotros, doccuadre FROM conciliacion c, bancos b WHERE c.ctabanco= b.codigo ORDER BY num; "
+        If lbcm.Text = "editar" Then
+            myCommand.CommandText = "SELECT num , CAST(CONCAT(dia,'/',per) AS CHAR(15)) AS fech, ctabanco, CAST(CONCAT(banco,' ', num_cta) AS CHAR(100)) AS nomban," _
+        & " docotros, doccuadre, fini, ffin FROM conciliacion c, bancos b " _
+        & " WHERE c.ctabanco= b.codigo " & lbfila.Text & " ORDER BY num; "
+        Else
+            myCommand.CommandText = "SELECT num , CAST(CONCAT(dia,'/',per) AS CHAR(15)) AS fech, ctabanco, CAST(CONCAT(banco,' ', num_cta) AS CHAR(100)) AS nomban," _
+        & " docotros, doccuadre, fini, ffin FROM conciliacion c, bancos b WHERE c.ctabanco= b.codigo ORDER BY num; "
+        End If
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         Refresh()
@@ -26,6 +32,8 @@
                 gitems.Item(3, i).Value = tabla.Rows(i).Item("nomban")
                 gitems.Item(4, i).Value = tabla.Rows(i).Item("docotros")
                 gitems.Item(5, i).Value = tabla.Rows(i).Item("doccuadre")
+                gitems.Item(6, i).Value = CDate(tabla.Rows(i).Item("fini").ToString)
+                gitems.Item(7, i).Value = tabla.Rows(i).Item("ffin").ToString
             Next
             With gitems
                 .AlternatingRowsDefaultCellStyle.BackColor = Color.White

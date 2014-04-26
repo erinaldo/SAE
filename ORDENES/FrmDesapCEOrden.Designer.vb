@@ -42,6 +42,7 @@ Partial Class FrmDesapCEOrden
         Me.Label2 = New System.Windows.Forms.Label
         Me.cbper = New System.Windows.Forms.ComboBox
         Me.Label1 = New System.Windows.Forms.Label
+        Me.chA = New System.Windows.Forms.CheckBox
         Me.GroupPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -52,7 +53,7 @@ Partial Class FrmDesapCEOrden
         Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
         Me.GroupPanel1.Controls.Add(Me.cmdsalir)
         Me.GroupPanel1.Controls.Add(Me.cmdpantalla)
-        Me.GroupPanel1.Location = New System.Drawing.Point(3, 257)
+        Me.GroupPanel1.Location = New System.Drawing.Point(3, 254)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(489, 85)
         '
@@ -104,6 +105,7 @@ Partial Class FrmDesapCEOrden
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.chA)
         Me.GroupBox1.Controls.Add(Me.lbtipo)
         Me.GroupBox1.Controls.Add(Me.lbdoc)
         Me.GroupBox1.Controls.Add(Me.lbtotal)
@@ -121,7 +123,7 @@ Partial Class FrmDesapCEOrden
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(489, 248)
+        Me.GroupBox1.Size = New System.Drawing.Size(489, 250)
         Me.GroupBox1.TabIndex = 82
         Me.GroupBox1.TabStop = False
         '
@@ -148,7 +150,7 @@ Partial Class FrmDesapCEOrden
         'lbtotal
         '
         Me.lbtotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbtotal.Location = New System.Drawing.Point(173, 189)
+        Me.lbtotal.Location = New System.Drawing.Point(174, 214)
         Me.lbtotal.Name = "lbtotal"
         Me.lbtotal.Size = New System.Drawing.Size(143, 23)
         Me.lbtotal.TabIndex = 21
@@ -159,7 +161,7 @@ Partial Class FrmDesapCEOrden
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(23, 196)
+        Me.Label7.Location = New System.Drawing.Point(24, 221)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(45, 16)
         Me.Label7.TabIndex = 20
@@ -169,7 +171,7 @@ Partial Class FrmDesapCEOrden
         'lbcliente
         '
         Me.lbcliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbcliente.Location = New System.Drawing.Point(173, 154)
+        Me.lbcliente.Location = New System.Drawing.Point(174, 179)
         Me.lbcliente.Name = "lbcliente"
         Me.lbcliente.Size = New System.Drawing.Size(261, 23)
         Me.lbcliente.TabIndex = 19
@@ -179,7 +181,7 @@ Partial Class FrmDesapCEOrden
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(23, 156)
+        Me.Label5.Location = New System.Drawing.Point(24, 181)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(113, 16)
         Me.Label5.TabIndex = 18
@@ -189,7 +191,7 @@ Partial Class FrmDesapCEOrden
         '
         Me.txtfecha.CustomFormat = "yyyy/dd/mm"
         Me.txtfecha.Enabled = False
-        Me.txtfecha.Location = New System.Drawing.Point(173, 126)
+        Me.txtfecha.Location = New System.Drawing.Point(174, 151)
         Me.txtfecha.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.txtfecha.Name = "txtfecha"
         Me.txtfecha.Size = New System.Drawing.Size(205, 20)
@@ -200,7 +202,7 @@ Partial Class FrmDesapCEOrden
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(25, 126)
+        Me.Label4.Location = New System.Drawing.Point(26, 151)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(128, 16)
         Me.Label4.TabIndex = 13
@@ -275,12 +277,25 @@ Partial Class FrmDesapCEOrden
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Documento Del Periodo"
         '
+        'chA
+        '
+        Me.chA.AutoSize = True
+        Me.chA.Checked = True
+        Me.chA.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chA.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chA.Location = New System.Drawing.Point(25, 120)
+        Me.chA.Name = "chA"
+        Me.chA.Size = New System.Drawing.Size(311, 19)
+        Me.chA.TabIndex = 12
+        Me.chA.Text = "Mantener el documento asociado a la Orden"
+        Me.chA.UseVisualStyleBackColor = True
+        '
         'FrmDesapCEOrden
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(496, 347)
+        Me.ClientSize = New System.Drawing.Size(496, 345)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -314,4 +329,5 @@ Partial Class FrmDesapCEOrden
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cbper As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents chA As System.Windows.Forms.CheckBox
 End Class

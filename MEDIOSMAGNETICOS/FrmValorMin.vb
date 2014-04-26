@@ -34,7 +34,7 @@
     Private Sub cmbForm_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbForm.SelectedIndexChanged
         Dim tabla As New DataTable
         tabla.Clear()
-        myCommand.CommandText = "SELECT  f.descripcion, c.codcon, c.desc, c.tope  FROM  formatos f, conceptos c " _
+        myCommand.CommandText = "SELECT  f.descripcion, c.codcon, c.descr, c.tope  FROM  formatos f, conceptos c " _
         & " WHERE f.codigo= '" & cmbForm.Text & "'  AND c.codfor='" & cmbForm.Text & "'"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
@@ -45,7 +45,7 @@
             grilla.RowCount = tabla.Rows.Count + 1
             For j = 0 To tabla.Rows.Count - 1
                 grilla.Item("concepto", j).Value = tabla.Rows(j).Item("codcon")
-                grilla.Item("nomd", j).Value = tabla.Rows(j).Item("desc")
+                grilla.Item("nomd", j).Value = tabla.Rows(j).Item("descr")
                 grilla.Item("valor", j).Value = tabla.Rows(j).Item("tope")
             Next
         End If

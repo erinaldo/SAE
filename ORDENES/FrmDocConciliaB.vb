@@ -33,6 +33,7 @@
             TxtNumero.Text = FrmConciliacionB.txtNcb.Text
         End If
 
+        gitems.Enabled = True
         txtdb.Text = Moneda(0)
         txtcr.Text = Moneda(0)
         txtdif.Text = Moneda(0)
@@ -86,9 +87,9 @@
                 FrmConciliacionB.gcon.Item("gdvmto", i).Value = gitems.Item("gdvmto", i).Value
                 FrmConciliacionB.gcon.Item("gfvmto", i).Value = gitems.Item("gfvmto", i).Value
                 FrmConciliacionB.gcon.Item("gnit", i).Value = gitems.Item("gnit", i).Value
-                FrmConciliacionB.gcon.Item("grubro", i).Value = gitems.Item("grubro", i).Value
+                FrmConciliacionB.gcon.Item("grubro", i).Value = ""
                 FrmConciliacionB.gcon.Item("gcheque", i).Value = gitems.Item("gcheque", i).Value
-                FrmConciliacionB.gcon.Item("trbro", i).Value = gitems.Item("trbro", i).Value
+                ' FrmConciliacionB.gcon.Item("trbro", i).Value = gitems.Item("trbro", i).Value
             Next
         End If
 
@@ -156,12 +157,12 @@
                 Exit Sub
             End If
         Next
-        Try
-            Dim fecha As Date = CDate(txtdia.Text & "/" & cbper.Text & "/" & Strings.Right(PerActual, 4))
-        Catch ex As Exception
-            MsgBox("Verifique la Fecha", MsgBoxStyle.Information, "Verificacion")
-            Exit Sub
-        End Try
+        'Try
+        '    Dim fecha As Date = CDate(txtdia.Text & "/" & cbper.Text & "/" & Strings.Right(PerActual, 4))
+        'Catch ex As Exception
+        '    MsgBox("Verifique la Fecha", MsgBoxStyle.Information, "Verificacion")
+        '    Exit Sub
+        'End Try
         'For i = 0 To gitems.RowCount - 2
         '    Try
         '        If gitems.Item(3, i).Value.ToString <> "" Then
@@ -497,11 +498,11 @@
                     Catch ex As Exception
                         cr = 0
                     End Try
-                    sumadb = db - cr
+                    sumadb = sumadb + db - cr
                 End If
             Next
             txtsalcon.Text = Moneda(sumadb)
-            txtsaldo.Text = Moneda(CDbl(txtsalB2.Text) + CDbl(txtsalcon.Text))
+            txtsaldo.Text = Moneda(CDbl(txtsalB2.Text) + CDbl(sumadb))
         Catch ex As Exception
             MsgBox("Error al sacar diferencia 2" & ex.ToString, MsgBoxStyle.Critical, "SAE Verificación")
         End Try
@@ -757,5 +758,6 @@
         txtsalcon.Text = Moneda(0)
         txtsaldo.Text = txtsalB2.Text
         gitems.ReadOnly = True
+        gitems.Enabled = False
     End Sub
 End Class

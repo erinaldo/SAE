@@ -38,6 +38,8 @@ Partial Class Frmctaconceptos
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
         Me.cmddel = New System.Windows.Forms.Button
         Me.cmdadd = New System.Windows.Forms.Button
+        Me.cbtmv = New System.Windows.Forms.ComboBox
+        Me.Label5 = New System.Windows.Forms.Label
         Me.cta = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.sl = New System.Windows.Forms.DataGridViewComboBoxColumn
@@ -59,6 +61,8 @@ Partial Class Frmctaconceptos
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cbtmv)
+        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.txtcon)
         Me.GroupBox1.Controls.Add(Me.cmbcon)
         Me.GroupBox1.Controls.Add(Me.txtdesfor)
@@ -67,7 +71,7 @@ Partial Class Frmctaconceptos
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Location = New System.Drawing.Point(7, 32)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(528, 112)
+        Me.GroupBox1.Size = New System.Drawing.Size(528, 138)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -144,7 +148,7 @@ Partial Class Frmctaconceptos
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.IndianRed
-        Me.Label4.Location = New System.Drawing.Point(12, 293)
+        Me.Label4.Location = New System.Drawing.Point(11, 320)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(335, 13)
         Me.Label4.TabIndex = 94
@@ -158,7 +162,7 @@ Partial Class Frmctaconceptos
         Me.gcuenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.gcuenta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cta, Me.descripcion, Me.sl})
         Me.gcuenta.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.gcuenta.Location = New System.Drawing.Point(7, 149)
+        Me.gcuenta.Location = New System.Drawing.Point(6, 176)
         Me.gcuenta.Name = "gcuenta"
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
@@ -179,7 +183,7 @@ Partial Class Frmctaconceptos
         Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
         Me.GroupPanel1.Controls.Add(Me.cmddel)
         Me.GroupPanel1.Controls.Add(Me.cmdadd)
-        Me.GroupPanel1.Location = New System.Drawing.Point(7, 311)
+        Me.GroupPanel1.Location = New System.Drawing.Point(6, 338)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(528, 85)
         '
@@ -232,6 +236,26 @@ Partial Class Frmctaconceptos
         Me.cmdadd.TextAlign = System.Drawing.ContentAlignment.TopRight
         Me.cmdadd.UseVisualStyleBackColor = False
         '
+        'cbtmv
+        '
+        Me.cbtmv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbtmv.FormattingEnabled = True
+        Me.cbtmv.Items.AddRange(New Object() {"SALDO", "DEBITO", "CREDITO"})
+        Me.cbtmv.Location = New System.Drawing.Point(99, 111)
+        Me.cbtmv.Name = "cbtmv"
+        Me.cbtmv.Size = New System.Drawing.Size(113, 21)
+        Me.cbtmv.TabIndex = 4
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(7, 115)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(82, 13)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Mostrar Valor"
+        '
         'cta
         '
         Me.cta.HeaderText = "CUENTA"
@@ -250,15 +274,16 @@ Partial Class Frmctaconceptos
         'sl
         '
         Me.sl.HeaderText = "MOVIMIENTO"
-        Me.sl.Items.AddRange(New Object() {"Saldo", "Debito", "Credito"})
+        Me.sl.Items.AddRange(New Object() {"SALDO", "DEBITO", "CREDITO"})
         Me.sl.Name = "sl"
+        Me.sl.ReadOnly = True
         '
         'Frmctaconceptos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(542, 398)
+        Me.ClientSize = New System.Drawing.Size(542, 429)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.gcuenta)
@@ -294,6 +319,8 @@ Partial Class Frmctaconceptos
     Friend WithEvents GroupPanel1 As DevComponents.DotNetBar.Controls.GroupPanel
     Friend WithEvents cmddel As System.Windows.Forms.Button
     Friend WithEvents cmdadd As System.Windows.Forms.Button
+    Friend WithEvents cbtmv As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents cta As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents sl As System.Windows.Forms.DataGridViewComboBoxColumn

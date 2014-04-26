@@ -54,13 +54,13 @@
         Dim tabla As New DataTable
         tabla.Clear()
         myCommand.Parameters.Clear()
-        myCommand.CommandText = "SELECT  c.desc  FROM  formatos f, conceptos c " _
+        myCommand.CommandText = "SELECT  c.descr  FROM  formatos f, conceptos c " _
         & " WHERE c.codcon= '" & cmbcon.Text & "'  AND c.codfor='" & cmbForm.Text & "'"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         Refresh()
         If tabla.Rows.Count > 0 Then
-            txtcon.Text = UCase(tabla.Rows(0).Item("desc"))
+            txtcon.Text = UCase(tabla.Rows(0).Item("descr"))
             buscarCuentas()
         End If
 
@@ -79,16 +79,25 @@
         If t1.Rows.Count = 0 Then
             gcuenta.RowCount = 10
         Else
+
+            If t1.Rows(0).Item("mov") = "sl" Then
+                cbtmv.Text = "SALDO"
+            ElseIf t1.Rows(0).Item("mov") = "db" Then
+                cbtmv.Text = "DEDITO"
+            ElseIf t1.Rows(0).Item("mov") = "cr" Then
+                cbtmv.Text = "CREDITO"
+            End If
+
             gcuenta.RowCount = t1.Rows.Count + 3
             For j = 0 To t1.Rows.Count - 1
                 gcuenta.Item(0, j).Value = t1.Rows(j).Item("cuenta")
                 gcuenta.Item(1, j).Value = t1.Rows(j).Item("descripcion")
                 If t1.Rows(j).Item("mov") = "sl" Then
-                    gcuenta.Item(2, j).Value = "Saldo"
+                    gcuenta.Item(2, j).Value = "SALDO"
                 ElseIf t1.Rows(j).Item("mov") = "db" Then
-                    gcuenta.Item(2, j).Value = "Debito"
+                    gcuenta.Item(2, j).Value = "DEDITO"
                 ElseIf t1.Rows(j).Item("mov") = "cr" Then
-                    gcuenta.Item(2, j).Value = "Credito"
+                    gcuenta.Item(2, j).Value = "CREDITO"
                 End If
             Next
         End If
@@ -142,6 +151,11 @@
             End If
         Catch ex As Exception
         End Try
+        Try
+            gcuenta.Item(2, fila).Value = cbtmv.Text
+        Catch ex As Exception
+        End Try
+
     End Sub
 
     Private Sub gcuenta_CellEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles gcuenta.CellEnter
@@ -176,11 +190,11 @@
                     myCommand.Parameters.AddWithValue("?codfor", cmbForm.Text)
                     myCommand.Parameters.AddWithValue("?codcon", cmbcon.Text)
                     myCommand.Parameters.AddWithValue("?cta", gcuenta.Item(0, i).Value)
-                    If gcuenta.Item(2, i).Value = "Saldo" Then
+                    If gcuenta.Item(2, i).Value = "SALDO" Then
                         myCommand.Parameters.AddWithValue("?mov", "sl")
-                    ElseIf gcuenta.Item(2, i).Value = "Debito" Then
+                    ElseIf gcuenta.Item(2, i).Value = "DEBITO" Then
                         myCommand.Parameters.AddWithValue("?mov", "db")
-                    ElseIf gcuenta.Item(2, i).Value = "Credito" Then
+                    ElseIf gcuenta.Item(2, i).Value = "CREDITO" Then
                         myCommand.Parameters.AddWithValue("?mov", "cr")
                     End If
                     myCommand.CommandText = "INSERT cta_conc VALUES (?codfor,?codcon,?cta,?mov)"
@@ -205,5 +219,15 @@
         If resultado = MsgBoxResult.Yes Then
             gcuenta.Rows.RemoveAt(fila2)
         End If
+    End Sub
+
+    Private Sub cbtmv_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbtmv.SelectedIndexChanged
+        Try
+            For i = 0 To gcuenta.Rows.Count - 1
+                gcuenta.Item("sl", i).Value = cbtmv.Text
+            Next
+        Catch ex As Exception
+        End Try
+       
     End Sub
 End Class

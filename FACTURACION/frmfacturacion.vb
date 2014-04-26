@@ -1206,8 +1206,9 @@ Public Class frmfacturacion
 
     Private Sub cmdcaja_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdcaja.Click
         FrmInformeCC.p3.Checked = True
-        FrmInformeCC.c3.Checked = True
-        FrmInformeCC.txtcuenta.Text = "1105"
+        FrmInformeCC.c2.Checked = True
+        FrmInformeCC.txtcini.Text = "1105"
+        FrmInformeCC.txtcfin.Text = "111005001"
         FrmInformeCC.ShowDialog()
     End Sub
 End Class

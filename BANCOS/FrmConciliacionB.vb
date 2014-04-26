@@ -234,37 +234,89 @@ Public Class FrmConciliacionB
         lbnum.Text = ""
         lbestado.Text = "NULO"
     End Sub
+    Dim f1, f2 As String
+  
     Private Sub cmdContinuar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdContinuar.Click
         If txtnomcta.Text = "" Then
             MsgBox("Seleccione una cuenta bancaria...", MsgBoxStyle.Information, "SAE Control.")
             Exit Sub
         End If
-        Try
-            BuscarSII()
-            Saldos()
-        Catch ex As Exception
-        End Try
-        txtsalaj.Text = txtsaldo.Text
-        txtsalB.Text = Moneda(0)
-        txtdifsal.Text = txtsalaj.Text
-        CmdCancelar_Click(AcceptButton, AcceptButton)
-        SacarCuenta()
-        txtdia.Enabled = True
-        txtdia.Text = Now.Day
-        cbper.Text = Strings.Left(PerActual, 2)
-        txtperiodo.Text = Strings.Right(PerActual, 4)
-        'limpiar
-        gcon.Rows.Clear()
-        txtDcb.Text = ""
-        txtDcb2.Text = ""
-        txtNcb.Text = ""
-        txtsalcon.Text = 0
-        NumActual()
-        txtdia.Focus()
-        desbloquear()
-        gdatos.Enabled = True
-        Gmov.Enabled = True
-        lbestado.Text = "NUEVO"
+        Dim tp As String = "can"
+        f1 = Strings.Right(CDate(fecha1.Text.ToString), 4) & "-" & Strings.Mid(CDate(fecha1.Text.ToString), 4, 2) & "-" & Strings.Left(CDate(fecha1.Text.ToString), 2)
+        f2 = Strings.Right(CDate(fecha2.Text.ToString), 4) & "-" & Strings.Mid(CDate(fecha2.Text.ToString), 4, 2) & "-" & Strings.Left(CDate(fecha2.Text.ToString), 2)
+
+        Dim tbI As New DataTable
+        tbI.Clear()
+        myCommand.CommandText = "select * from conciliacion where ctabanco='" & txtcuenta.Text & "' " _
+        & " and fini='" & f1 & "' and ffin='" & f2 & "' "
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tbI)
+        If tbI.Rows.Count > 0 Then
+            MsgBox("Ya existe una conciliacion para este banco en ese rango de fechas")
+            Dim resp As MsgBoxResult
+            resp = MsgBox("Si: Para realizar un Nuevo documento.  No: Editar el existente. ", MsgBoxStyle.YesNoCancel, "SAE Imprimir")
+            If resp = MsgBoxResult.Yes Then
+                tp = "SI"
+            ElseIf resp = MsgBoxResult.No Then
+                tp = "NO"
+            Else
+                tp = "can"
+            End If
+        Else
+            tp = "SI"
+        End If
+
+        If tp = "SI" Then
+
+            Try
+                BuscarSII()
+                Saldos()
+            Catch ex As Exception
+            End Try
+            'txtsalaj.Text = txtsaldo.Text
+            txtsalaj.Text = txtsi.Text
+            txtsalB.Text = Moneda(0)
+            txtdifsal.Text = txtsalaj.Text
+            CmdCancelar_Click(AcceptButton, AcceptButton)
+            SacarCuenta()
+            txtdia.Enabled = True
+            txtdia.Text = Now.Day
+            cbper.Text = Strings.Left(PerActual, 2)
+            txtperiodo.Text = Strings.Right(PerActual, 4)
+            'limpiar
+            gcon.Rows.Clear()
+            txtDcb.Text = ""
+            txtDcb2.Text = ""
+            txtNcb.Text = ""
+            txtsalcon.Text = 0
+            NumActual()
+            txtdia.Focus()
+            desbloquear()
+            gdatos.Enabled = True
+            Gmov.Enabled = True
+            lbestado.Text = "NUEVO"
+        ElseIf tp = "NO" Then
+            Try
+                FrmSelConcili.lbcm.Text = "editar"
+                FrmSelConcili.lbfila.Text = " AND ctabanco='" & txtcuenta.Text & "' and fini='" & f1 & "' and ffin='" & f2 & "' "
+                FrmSelConcili.lbform.Text = "ConcilB"
+                FrmSelConcili.ShowDialog()
+                FrmSelConcili.lbcm.Text = ""
+                FrmSelConcili.lbfila.Text = ""
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+            End Try
+            If lbnum.Text <> "" Then
+                BuscarConciliacion()
+                lbestado.Text = "EDITAR"
+                gdatos.Enabled = True
+                Gmov.Enabled = True
+                desbloquear()
+                CmdNuevo.Enabled = False
+                CmdCancelar.Enabled = True
+                SaldosEditar()
+            End If
+        End If
     End Sub
     Private Sub NumActual()
         Dim ta As New DataTable
@@ -352,7 +404,7 @@ Public Class FrmConciliacionB
                     grilla.Item("conepto", i).Value = tablaPer.Rows(i).Item("descri").ToString
                     grilla.Item("nit", i).Value = tablaPer.Rows(i).Item("nit").ToString
                     grilla.Item("cheque2", i).Value = tablaPer.Rows(i).Item("cheque").ToString
-                    grilla.Item("sel", i).Value = "OK"
+                    grilla.Item("sel", i).Value = "NO"
                     'MsgBox(i)
                 Next
             Else
@@ -368,6 +420,92 @@ Public Class FrmConciliacionB
         extra = Moneda(CDbl(Moneda(sumad)) - CDbl(Moneda(sumac)))
         txtsaldo.Text = Moneda(CDbl(txtsi.Text) + CDbl(extra))
         txtsalaj.Text = Moneda(0)
+    End Sub
+    Public Sub SaldosEditar()
+
+        Dim sql As String = ""
+        Dim axu As Integer = 0
+        Dim perf As String = PerActual(0) & PerActual(1)
+        'sql = "SELECT * FROM documentos" & perf & " WHERE codigo='" & txtcuenta.Text & "' ORDER BY dia,tipodoc,doc;"
+        '.........
+        Dim m1 As String = ""
+        Dim m2 As String = ""
+        Dim p As String = ""
+
+        m1 = Strings.Mid(fecha1.Text, 4, 2)
+        m2 = Strings.Mid(fecha2.Text, 4, 2)
+
+        sql = sql & " SELECT item,dia, doc, tipodoc, debito, credito, descri, nit, periodo,cheque FROM ("
+
+        For i = Val(m1) To Val(m2)
+            If i < 10 Then
+                p = "0" & i
+            Else
+                p = i
+            End If
+            If m1 = m2 Then
+                sql = sql & " select item, dia, doc, tipodoc, debito, credito, descri, nit, periodo,cheque " _
+                  & " FROM documentos" & p & " WHERE FORMAT(dia,0) BETWEEN " & Val(Strings.Left(fecha1.Text, 2)) & " AND  " & Val(Strings.Left(fecha2.Text, 2)) & " " _
+                  & " AND  codigo = '" & txtcuenta.Text & "'" _
+                  & " AND tipodoc<>'CB' AND CONCAT(tipodoc,LPAD(doc,5,0)) NOT IN (SELECT CONCAT(cta_iva,concep) FROM detacomp" & p & " WHERE doc='" & lbnum.Text & "') "
+            Else
+                If p = m1 Then
+                    sql = sql & " select item, dia, doc, tipodoc, debito, credito, descri, nit, periodo,cheque " _
+               & " FROM documentos" & p & " WHERE FORMAT(dia,0) >= " & Val(Strings.Left(fecha1.Text, 2)) & " " _
+               & " AND  codigo = '" & txtcuenta.Text & "'" _
+                  & " AND tipodoc<>'CB' AND CONCAT(tipodoc,LPAD(doc,5,0)) NOT IN (SELECT CONCAT(cta_iva,concep) FROM detacomp" & p & " WHERE doc='" & lbnum.Text & "') "
+
+                ElseIf p <> m2 Then
+                    sql = sql & " UNION select item, dia, doc, tipodoc, debito, credito, descri, nit, periodo,cheque " _
+              & " FROM documentos" & p & " WHERE codigo = '" & txtcuenta.Text & "' " _
+                  & " AND tipodoc<>'CB' AND CONCAT(tipodoc,LPAD(doc,5,0)) NOT IN (SELECT CONCAT(cta_iva,concep) FROM detacomp" & p & " WHERE doc='" & lbnum.Text & "') "
+
+                ElseIf p = m2 Then
+                    sql = sql & " UNION select item, dia, doc, tipodoc, debito, credito, descri, nit, periodo,cheque " _
+              & " FROM documentos" & p & " WHERE FORMAT(dia,0) <= " & Val(Strings.Left(fecha2.Text, 2)) & " " _
+              & " AND  codigo = '" & txtcuenta.Text & "'" _
+             & " AND tipodoc<>'CB' AND CONCAT(tipodoc,LPAD(doc,5,0)) NOT IN (SELECT CONCAT(cta_iva,concep) FROM detacomp" & p & " WHERE doc='" & lbnum.Text & "') "
+                End If
+            End If
+        Next
+        sql = sql & " ) AS c ORDER BY FORMAT(dia,0), FORMAT(left(periodo,2),0) "
+        'grilla.Rows.Clear()
+        '.........
+        Dim sumad As Double = 0
+        Dim sumac As Double = 0
+        Try
+
+            Dim tablaPer As New DataTable
+            tablaPer.Clear()
+            myCommand.CommandText = sql
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tablaPer)
+            If tablaPer.Rows.Count > 0 Then
+                grilla.RowCount = tablaPer.Rows.Count + 1 + grilla.RowCount
+                For i = 0 To tablaPer.Rows.Count - 1
+                    Try
+                        sumad = sumad + CDbl(Moneda(tablaPer.Rows(i).Item("debito").ToString))
+                        sumac = sumac + CDbl(Moneda(tablaPer.Rows(i).Item("credito").ToString))
+                    Catch ex As Exception
+                        ' MsgBox(ex.ToString)
+                    End Try
+                    grilla.Item("fecha", i).Value = tablaPer.Rows(i).Item("dia").ToString & "/" & tablaPer.Rows(i).Item("periodo").ToString
+                    grilla.Item("numero", i).Value = NumeroDoc(tablaPer.Rows(i).Item("doc").ToString)
+                    grilla.Item("tipo", i).Value = tablaPer.Rows(i).Item("tipodoc").ToString
+                    grilla.Item("Debitos", i).Value = Moneda(tablaPer.Rows(i).Item("debito").ToString)
+                    grilla.Item("Creditos", i).Value = Moneda(tablaPer.Rows(i).Item("credito").ToString)
+                    grilla.Item("conepto", i).Value = tablaPer.Rows(i).Item("descri").ToString
+                    grilla.Item("nit", i).Value = tablaPer.Rows(i).Item("nit").ToString
+                    grilla.Item("cheque2", i).Value = tablaPer.Rows(i).Item("cheque").ToString
+                    grilla.Item("sel", i).Value = "NO"
+                    'MsgBox(i)
+                Next
+            Else
+                'grilla.RowCount = 2
+            End If
+        Catch ex As Exception
+            '  MsgBox("22222" & ex.ToString)
+        End Try
     End Sub
     Dim camp As String
     Private Sub grilla_CellBeginEdit(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellCancelEventArgs) Handles grilla.CellBeginEdit
@@ -980,72 +1118,78 @@ Public Class FrmConciliacionB
     End Sub
     Public Sub ValoresDefecto(ByVal i)
         Try
-            If gitems.Item(1, i).Value.ToString = "" Then
-                gitems.Item(1, i).Value = "0,00"
-            End If
-        Catch ex As Exception
-            gitems.Item(1, i).Value = "0,00"
-        End Try
-        Try
-            If gitems.Item(2, i).Value.ToString = "" Then
-                gitems.Item(2, i).Value = "0,00"
-            End If
-        Catch ex As Exception
-            gitems.Item(2, i).Value = "0,00"
-        End Try
-        Try
-            If gitems.Item(4, i).Value.ToString = "" Then
-                gitems.Item(4, i).Value = "0,00"
-            End If
-        Catch ex As Exception
-            gitems.Item(4, i).Value = "0,00"
-        End Try
-        Dim fec As Date
-        Try
-            fec = CDate(Now.Day & "/" & PerActual)
-        Catch ex As Exception
-            fec = CDate("01" & "/" & PerActual)
-        End Try
-        Try
-            If Trim(gitems.Item(5, i).Value.ToString) = "" Then
-                gitems.Item(5, i).Value = Val(0)
-                gitems.Item(6, i).Value = fec.AddDays(Val(0))
-            End If
-        Catch ex As Exception
-            Try
-                gitems.Item(5, i).Value = Val(0)
-                gitems.Item(6, i).Value = fec.AddDays(Val(0))
-            Catch ex2 As Exception
-                gitems.Item(5, i).Value = "0"
-                gitems.Item(6, i).Value = fec
-            End Try
-        End Try
-        Try
-            If gitems.Item(7, i).Value.ToString = "" And Trim(txtbanco.Text) <> "" Then
-                gitems.Item(7, i).Value = txtnit.Text
-            End If
-        Catch ex As Exception
-            If Trim(txtbanco.Text) <> "" Then
-                gitems.Item(7, i).Value = txtnit.Text
-            End If
-        End Try
-        Try
-            If gitems.Item(8, i).Value = "" Then
-                gitems.Item(8, i).Value = ""
-            End If
-        Catch ex As Exception
-            gitems.Item(8, i).Value = ""
-        End Try
-        'gitems.Item(8, i).Value = "0"
-        'Try
-        '    If Trim(gitems.Item(8, i).Value.ToString) = "" And Trim(txtncentro.Text) <> "" And txtcentro.Enabled = True Then
 
-        '    End If
-        'Catch ex As Exception
-        '    If Trim(txtncentro.Text) <> "" And txtcentro.Enabled = True Then
-        '        gitems.Item(8, i).Value = txtcentro.Text
-        '    End If
-        'End Try
+     
+            Try
+                If gitems.Item(1, i).Value.ToString = "" Then
+                    gitems.Item(1, i).Value = "0,00"
+                End If
+            Catch ex As Exception
+                gitems.Item(1, i).Value = "0,00"
+            End Try
+            Try
+                If gitems.Item(2, i).Value.ToString = "" Then
+                    gitems.Item(2, i).Value = "0,00"
+                End If
+            Catch ex As Exception
+                gitems.Item(2, i).Value = "0,00"
+            End Try
+            Try
+                If gitems.Item(4, i).Value.ToString = "" Then
+                    gitems.Item(4, i).Value = "0,00"
+                End If
+            Catch ex As Exception
+                gitems.Item(4, i).Value = "0,00"
+            End Try
+            Dim fec As Date
+            Try
+                fec = CDate(Now.Day & "/" & PerActual)
+            Catch ex As Exception
+                fec = CDate("01" & "/" & PerActual)
+            End Try
+            Try
+                If Trim(gitems.Item(5, i).Value.ToString) = "" Then
+                    gitems.Item(5, i).Value = Val(0)
+                    gitems.Item(6, i).Value = fec.AddDays(Val(0))
+                End If
+            Catch ex As Exception
+                Try
+                    gitems.Item(5, i).Value = Val(0)
+                    gitems.Item(6, i).Value = fec.AddDays(Val(0))
+                Catch ex2 As Exception
+                    gitems.Item(5, i).Value = "0"
+                    gitems.Item(6, i).Value = fec
+                End Try
+            End Try
+            Try
+                If gitems.Item(7, i).Value.ToString = "" And Trim(txtbanco.Text) <> "" Then
+                    gitems.Item(7, i).Value = txtnit.Text
+                End If
+            Catch ex As Exception
+                If Trim(txtbanco.Text) <> "" Then
+                    gitems.Item(7, i).Value = txtnit.Text
+                End If
+            End Try
+            Try
+                If gitems.Item(8, i).Value = "" Then
+                    gitems.Item(8, i).Value = ""
+                End If
+            Catch ex As Exception
+                gitems.Item(8, i).Value = ""
+            End Try
+            'gitems.Item(8, i).Value = "0"
+            'Try
+            '    If Trim(gitems.Item(8, i).Value.ToString) = "" And Trim(txtncentro.Text) <> "" And txtcentro.Enabled = True Then
+
+            '    End If
+            'Catch ex As Exception
+            '    If Trim(txtncentro.Text) <> "" And txtcentro.Enabled = True Then
+            '        gitems.Item(8, i).Value = txtcentro.Text
+            '    End If
+            'End Try
+        Catch ex As Exception
+
+        End Try
     End Sub
     Public Sub Buscarcuentas(ByVal cuenta As String, ByVal fila As Integer)
         If cuenta = "" Then
@@ -1601,7 +1745,7 @@ Public Class FrmConciliacionB
 
             txtsalaj.Text = CDbl(txtsalaj.Text) - CDbl(txtsalcon.Text)
             txtsalcon.Text = 0
-
+            FrmDocConciliaB.gitems.Rows.Clear()
             If gcon.Rows.Count > 1 Then
                 FrmDocConciliaB.CmdNuevo.Enabled = False
                 FrmDocConciliaB.CmdCancelar.Enabled = True
@@ -1620,7 +1764,7 @@ Public Class FrmConciliacionB
                     FrmDocConciliaB.gitems.Item("gnit", i).Value = gcon.Item("gnit", i).Value
                     FrmDocConciliaB.gitems.Item("grubro", i).Value = gcon.Item("grubro", i).Value
                     FrmDocConciliaB.gitems.Item("gcheque", i).Value = gcon.Item("gcheque", i).Value
-                    FrmDocConciliaB.gitems.Item("trbro", i).Value = gcon.Item("trbro", i).Value
+                    ' FrmDocConciliaB.gitems.Item("trbro", i).Value = gcon.Item("trbro", i).Value
                 Next
             Else
                 FrmDocConciliaB.CmdNuevo.Enabled = True
@@ -1630,10 +1774,10 @@ Public Class FrmConciliacionB
             gcon.Rows.Clear()
             FrmDocConciliaB.txtcuenta.Text = txtcuenta.Text
             FrmDocConciliaB.txtnomcta.Text = txtnomcta.Text
-            FrmDocConciliaB.txtsaldo.Text = txtsalaj.Text
+            FrmDocConciliaB.txtsaldo.Text = Moneda(txtsalaj.Text)
             FrmDocConciliaB.txtsalB.Text = txtsalB.Text
             FrmDocConciliaB.txtsalB2.Text = txtsalaj.Text
-            FrmDocConciliaB.txtsaldo.Text = CDbl(FrmDocConciliaB.txtsalB2.Text) + CDbl(FrmDocConciliaB.txtsalcon.Text)
+            FrmDocConciliaB.txtsaldo.Text = Moneda(CDbl(FrmDocConciliaB.txtsalB2.Text) + CDbl(FrmDocConciliaB.txtsalcon.Text))
             FrmDocConciliaB.txtdifsal.Text = txtdifsal.Text
             caldif()
 
@@ -1650,12 +1794,13 @@ Public Class FrmConciliacionB
 
             txtsalaj.Text = CDbl(txtsalaj.Text) - CDbl(txtsalcon.Text)
             txtsalcon.Text = 0
-
+            FrmDocConciliaB.gitems.Rows.Clear()
             If gcon.Rows.Count > 1 Then
                 FrmDocConciliaB.CmdNuevo.Enabled = False
                 FrmDocConciliaB.CmdCancelar.Enabled = True
                 FrmDocConciliaB.CmdListo.Enabled = True
                 FrmDocConciliaB.gitems.ReadOnly = False
+                FrmDocConciliaB.gitems.Enabled = True
                 FrmDocConciliaB.gitems.Rows.Clear()
                 FrmDocConciliaB.gitems.RowCount = gcon.RowCount
                 For i = 0 To gcon.Rows.Count - 1
@@ -1669,7 +1814,7 @@ Public Class FrmConciliacionB
                     FrmDocConciliaB.gitems.Item("gnit", i).Value = gcon.Item("gnit", i).Value
                     FrmDocConciliaB.gitems.Item("grubro", i).Value = gcon.Item("grubro", i).Value
                     FrmDocConciliaB.gitems.Item("gcheque", i).Value = gcon.Item("gcheque", i).Value
-                    FrmDocConciliaB.gitems.Item("trbro", i).Value = gcon.Item("trbro", i).Value
+                    '   FrmDocConciliaB.gitems.Item("trbro", i).Value = gcon.Item("trbro", i).Value
                 Next
             Else
                 FrmDocConciliaB.CmdNuevo.Enabled = True
@@ -1679,10 +1824,10 @@ Public Class FrmConciliacionB
             gcon.Rows.Clear()
             FrmDocConciliaB.txtcuenta.Text = txtcuenta.Text
             FrmDocConciliaB.txtnomcta.Text = txtnomcta.Text
-            FrmDocConciliaB.txtsaldo.Text = txtsalaj.Text
+            FrmDocConciliaB.txtsaldo.Text = Moneda(txtsalaj.Text)
             FrmDocConciliaB.txtsalB.Text = txtsalB.Text
             FrmDocConciliaB.txtsalB2.Text = txtsalaj.Text
-            FrmDocConciliaB.txtsaldo.Text = CDbl(FrmDocConciliaB.txtsalB2.Text) + CDbl(FrmDocConciliaB.txtsalcon.Text)
+            FrmDocConciliaB.txtsaldo.Text = Moneda(CDbl(FrmDocConciliaB.txtsalB2.Text) + CDbl(FrmDocConciliaB.txtsalcon.Text))
             FrmDocConciliaB.txtdifsal.Text = txtdifsal.Text
             caldif()
 
@@ -1694,7 +1839,7 @@ Public Class FrmConciliacionB
             FrmDocConciliaB.TxtDocumento.Text = txtDcb.Text
             FrmDocConciliaB.TxtNumero.Text = txtNcb.Text
             FrmDocConciliaB.Gmov.Enabled = False
-
+            FrmDocConciliaB.gitems.Rows.Clear()
             If gcon.Rows.Count > 1 Then
                 FrmDocConciliaB.CmdNuevo.Enabled = False
                 FrmDocConciliaB.CmdCancelar.Enabled = True
@@ -1713,7 +1858,7 @@ Public Class FrmConciliacionB
                     FrmDocConciliaB.gitems.Item("gnit", i).Value = gcon.Item("gnit", i).Value
                     FrmDocConciliaB.gitems.Item("grubro", i).Value = gcon.Item("grubro", i).Value
                     FrmDocConciliaB.gitems.Item("gcheque", i).Value = gcon.Item("gcheque", i).Value
-                    FrmDocConciliaB.gitems.Item("trbro", i).Value = gcon.Item("trbro", i).Value
+                    ' FrmDocConciliaB.gitems.Item("trbro", i).Value = gcon.Item("trbro", i).Value
                 Next
             Else
                 FrmDocConciliaB.CmdNuevo.Enabled = True
@@ -1723,10 +1868,10 @@ Public Class FrmConciliacionB
 
             FrmDocConciliaB.txtcuenta.Text = txtcuenta.Text
             FrmDocConciliaB.txtnomcta.Text = txtnomcta.Text
-            FrmDocConciliaB.txtsaldo.Text = txtsalaj.Text
+            FrmDocConciliaB.txtsaldo.Text = Moneda(txtsalaj.Text)
             FrmDocConciliaB.txtsalB.Text = txtsalB.Text
             FrmDocConciliaB.txtsalB2.Text = txtsalaj.Text
-            FrmDocConciliaB.txtsaldo.Text = CDbl(FrmDocConciliaB.txtsalB2.Text) + CDbl(FrmDocConciliaB.txtsalcon.Text)
+            FrmDocConciliaB.txtsaldo.Text = Moneda(CDbl(FrmDocConciliaB.txtsalB2.Text) + CDbl(FrmDocConciliaB.txtsalcon.Text))
             FrmDocConciliaB.txtdifsal.Text = txtdifsal.Text
             FrmDocConciliaB.ShowDialog()
         End If
@@ -1962,8 +2107,8 @@ Public Class FrmConciliacionB
         Try
             FrmSelConcili.lbform.Text = "ConcilB"
             FrmSelConcili.ShowDialog()
-           
         Catch ex As Exception
+            MsgBox(ex.ToString)
         End Try
         If lbnum.Text <> "" Then
             BuscarConciliacion()
@@ -1984,8 +2129,8 @@ Public Class FrmConciliacionB
         txtcuenta.Text = tb.Rows(0).Item("ctabanco")
         BuscarDatosB()
         lbnum.Text = tb.Rows(0).Item("num")
-        fecha1.Value = CDate(tb.Rows(0).Item("fini"))
-        fecha2.Value = CDate(tb.Rows(0).Item("ffin"))
+        fecha1.Value = CDate(tb.Rows(0).Item("fini").ToString)
+        fecha2.Value = CDate(tb.Rows(0).Item("ffin").ToString)
         txtsaldo.Text = Moneda(tb.Rows(0).Item("sallibro"))
         txtsalaj.Text = Moneda(tb.Rows(0).Item("salaj"))
         txtsalB.Text = Moneda(tb.Rows(0).Item("salbanco"))
@@ -1998,9 +2143,13 @@ Public Class FrmConciliacionB
         txtperiodo.Text = Strings.Right(tb.Rows(0).Item("per"), 4)
         If tb.Rows(0).Item("doccuadre") <> "" Then
             buscar_CB(Strings.Left(tb.Rows(0).Item("per"), 2))
+        Else
+            gcon.Rows.Clear()
         End If
         If tb.Rows(0).Item("docotros") <> "" Then
             buscar_OD(Strings.Left(tb.Rows(0).Item("per"), 2), tb.Rows(0).Item("docotros"))
+        Else
+            gitems.Rows.Clear()
         End If
         buscar_datosc(tb.Rows(0).Item("doccon"), tb.Rows(0).Item("num"))
         lbestado.Text = "CONSULTA"

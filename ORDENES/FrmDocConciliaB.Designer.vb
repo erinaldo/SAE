@@ -24,6 +24,12 @@ Partial Class FrmDocConciliaB
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
@@ -65,6 +71,17 @@ Partial Class FrmDocConciliaB
         Me.txtsalcon = New System.Windows.Forms.TextBox
         Me.txtsalB2 = New System.Windows.Forms.TextBox
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.gdes = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.gDeb = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.gCred = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -89,7 +106,7 @@ Partial Class FrmDocConciliaB
         Me.Gmov.Controls.Add(Me.gitems)
         Me.Gmov.Location = New System.Drawing.Point(6, 86)
         Me.Gmov.Name = "Gmov"
-        Me.Gmov.Size = New System.Drawing.Size(956, 228)
+        Me.Gmov.Size = New System.Drawing.Size(905, 228)
         Me.Gmov.TabIndex = 146
         Me.Gmov.TabStop = False
         '
@@ -108,7 +125,7 @@ Partial Class FrmDocConciliaB
         Me.GroupBox4.Controls.Add(Me.txtcr)
         Me.GroupBox4.Location = New System.Drawing.Point(7, 7)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(944, 72)
+        Me.GroupBox4.Size = New System.Drawing.Size(893, 72)
         Me.GroupBox4.TabIndex = 13
         Me.GroupBox4.TabStop = False
         '
@@ -126,7 +143,7 @@ Partial Class FrmDocConciliaB
         Me.GroupBox5.Controls.Add(Me.CmdListo)
         Me.GroupBox5.Controls.Add(Me.CmdCancelar)
         Me.GroupBox5.Controls.Add(Me.CmdNuevo)
-        Me.GroupBox5.Location = New System.Drawing.Point(752, 12)
+        Me.GroupBox5.Location = New System.Drawing.Point(713, 12)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(173, 57)
         Me.GroupBox5.TabIndex = 50
@@ -134,10 +151,10 @@ Partial Class FrmDocConciliaB
         '
         'CmdListo
         '
-        Me.CmdListo.Image = Global.SAE.My.Resources.Resources.guardar
-        Me.CmdListo.Location = New System.Drawing.Point(57, 12)
+        Me.CmdListo.Image = Global.SAE.My.Resources.Resources.ok
+        Me.CmdListo.Location = New System.Drawing.Point(58, 11)
         Me.CmdListo.Name = "CmdListo"
-        Me.CmdListo.Size = New System.Drawing.Size(51, 38)
+        Me.CmdListo.Size = New System.Drawing.Size(48, 40)
         Me.CmdListo.TabIndex = 52
         Me.CmdListo.UseVisualStyleBackColor = True
         '
@@ -272,7 +289,7 @@ Partial Class FrmDocConciliaB
         Me.gitems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.gdes, Me.gDeb, Me.gCred, Me.gcta, Me.gBase, Me.gdvmto, Me.gfvmto, Me.gnit, Me.grubro, Me.gcheque, Me.trubro})
         Me.gitems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.gitems.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.gitems.Location = New System.Drawing.Point(7, 85)
+        Me.gitems.Location = New System.Drawing.Point(21, 84)
         Me.gitems.MultiSelect = False
         Me.gitems.Name = "gitems"
         Me.gitems.ReadOnly = True
@@ -286,7 +303,7 @@ Partial Class FrmDocConciliaB
         Me.gitems.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.gitems.RowHeadersVisible = False
         Me.gitems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.gitems.Size = New System.Drawing.Size(940, 136)
+        Me.gitems.Size = New System.Drawing.Size(858, 136)
         Me.gitems.TabIndex = 12
         '
         'cbper
@@ -345,7 +362,7 @@ Partial Class FrmDocConciliaB
         Me.GroupBox1.Controls.Add(Me.txtsaldo)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 5)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(956, 75)
+        Me.GroupBox1.Size = New System.Drawing.Size(905, 75)
         Me.GroupBox1.TabIndex = 147
         Me.GroupBox1.TabStop = False
         '
@@ -359,7 +376,7 @@ Partial Class FrmDocConciliaB
         Me.txtnomcta.MaxLength = 70
         Me.txtnomcta.Name = "txtnomcta"
         Me.txtnomcta.ShortcutsEnabled = False
-        Me.txtnomcta.Size = New System.Drawing.Size(711, 21)
+        Me.txtnomcta.Size = New System.Drawing.Size(662, 21)
         Me.txtnomcta.TabIndex = 149
         '
         'txtsalB
@@ -470,6 +487,137 @@ Partial Class FrmDocConciliaB
         Me.txtsalB2.TabIndex = 150
         Me.txtsalB2.Text = "0,00"
         Me.txtsalB2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridViewTextBoxColumn1.FillWeight = 180.0!
+        Me.DataGridViewTextBoxColumn1.Frozen = True
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Descripcion"
+        Me.DataGridViewTextBoxColumn1.MaxInputLength = 50
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 160
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn1.Width = 160
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.ForestGreen
+        DataGridViewCellStyle9.Format = "N2"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle9
+        Me.DataGridViewTextBoxColumn2.Frozen = True
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Debitos"
+        Me.DataGridViewTextBoxColumn2.MaxInputLength = 30
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle10.Format = "N2"
+        DataGridViewCellStyle10.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle10
+        Me.DataGridViewTextBoxColumn3.Frozen = True
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Creditos"
+        Me.DataGridViewTextBoxColumn3.MaxInputLength = 30
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.FillWeight = 80.0!
+        Me.DataGridViewTextBoxColumn4.Frozen = True
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Cuenta"
+        Me.DataGridViewTextBoxColumn4.MaxInputLength = 12
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn4.Width = 80
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle11.Format = "N2"
+        DataGridViewCellStyle11.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle11
+        Me.DataGridViewTextBoxColumn5.FillWeight = 80.0!
+        Me.DataGridViewTextBoxColumn5.Frozen = True
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Base"
+        Me.DataGridViewTextBoxColumn5.MaxInputLength = 30
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn5.Width = 80
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle12
+        Me.DataGridViewTextBoxColumn6.Frozen = True
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Dias Vmto"
+        Me.DataGridViewTextBoxColumn6.MaxInputLength = 4
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 65
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn6.Width = 65
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle13.Format = "d"
+        DataGridViewCellStyle13.NullValue = "00/00/0000"
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle13
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Fecha Vmto"
+        Me.DataGridViewTextBoxColumn7.MaxInputLength = 10
+        Me.DataGridViewTextBoxColumn7.MinimumWidth = 75
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn7.Width = 75
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Nit"
+        Me.DataGridViewTextBoxColumn8.MaxInputLength = 20
+        Me.DataGridViewTextBoxColumn8.MinimumWidth = 95
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn8.Width = 95
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Rubro"
+        Me.DataGridViewTextBoxColumn9.MinimumWidth = 150
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Width = 150
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Cheque"
+        Me.DataGridViewTextBoxColumn10.MinimumWidth = 80
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn10.Width = 80
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.HeaderText = "trbro"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
         '
         'gdes
         '
@@ -584,6 +732,7 @@ Partial Class FrmDocConciliaB
         Me.grubro.MinimumWidth = 150
         Me.grubro.Name = "grubro"
         Me.grubro.ReadOnly = True
+        Me.grubro.Visible = False
         Me.grubro.Width = 150
         '
         'gcheque
@@ -601,13 +750,14 @@ Partial Class FrmDocConciliaB
         Me.trubro.HeaderText = "trbro"
         Me.trubro.Name = "trubro"
         Me.trubro.ReadOnly = True
+        Me.trubro.Visible = False
         '
         'FrmDocConciliaB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(965, 322)
+        Me.ClientSize = New System.Drawing.Size(916, 318)
         Me.Controls.Add(Me.cbper)
         Me.Controls.Add(Me.txtsalcon)
         Me.Controls.Add(Me.txtperiodo)
@@ -677,4 +827,15 @@ Partial Class FrmDocConciliaB
     Friend WithEvents grubro As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents gcheque As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents trubro As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

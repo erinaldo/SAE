@@ -15,8 +15,11 @@
             Dim anio As String = PerActual(3) & PerActual(4) & PerActual(5) & PerActual(6)
             f = DateSerial(Strings.Right(PerActual, 4), Strings.Left(PerActual, 2) + 1, 0)
             f = Strings.Right(f, 4) & "-" & Strings.Mid(f, 4, 2) & "-" & Strings.Left(f, 2)
+            'myCommand.CommandText = "SELECT doc, con_num, con_objeto, nomnit, con_valor, estado,sop_cont,   " _
+            '& " CAST(CONCAT(RIGHT(fecha,2),'/',MID(fecha,6,2),'/',LEFT(fecha,4)) AS CHAR(15)) as fc FROM ord_pagos WHERE " & cond & " fecha<='" & f & "' AND estado<>'AN' AND sop_cont<>'' ORDER BY sop_cont;"
+
             myCommand.CommandText = "SELECT doc, con_num, con_objeto, nomnit, con_valor, estado,sop_cont,   " _
-            & " CAST(CONCAT(RIGHT(fecha,2),'/',MID(fecha,6,2),'/',LEFT(fecha,4)) AS CHAR(15)) as fc FROM ord_pagos WHERE " & cond & " fecha<='" & f & "' AND estado<>'AN' AND sop_cont<>'' ORDER BY sop_cont;"
+           & " CAST(CONCAT(RIGHT(fecha,2),'/',MID(fecha,6,2),'/',LEFT(fecha,4)) AS CHAR(15)) as fc FROM ord_pagos WHERE " & cond & "  estado<>'AN' AND sop_cont<>'' ORDER BY sop_cont;"
 
             '  myCommand.CommandText = "SELECT * FROM ord_pagos WHERE per='" & PerActual & "' AND estado<>'AN' ORDER BY doc,fecha;"
             myAdapter.SelectCommand = myCommand

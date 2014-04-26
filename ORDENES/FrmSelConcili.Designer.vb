@@ -26,12 +26,6 @@ Partial Class FrmSelConcili
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSelConcili))
         Me.cmbbuscar = New System.Windows.Forms.ComboBox
         Me.gitems = New System.Windows.Forms.DataGridView
-        Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cta_banco = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.banco = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.otmov = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.doc_cb = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.lbfila = New System.Windows.Forms.Label
         Me.ok = New System.Windows.Forms.Button
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
@@ -42,6 +36,14 @@ Partial Class FrmSelConcili
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
         Me.txtcuenta = New System.Windows.Forms.TextBox
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cta_banco = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.banco = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.otmov = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.doc_cb = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.fini = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ffin = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.gitems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupPanel1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -66,7 +68,7 @@ Partial Class FrmSelConcili
         Me.gitems.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.gitems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         Me.gitems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.gitems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.fecha, Me.cta_banco, Me.banco, Me.otmov, Me.doc_cb})
+        Me.gitems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.fecha, Me.cta_banco, Me.banco, Me.otmov, Me.doc_cb, Me.fini, Me.ffin})
         Me.gitems.GridColor = System.Drawing.SystemColors.ButtonHighlight
         Me.gitems.Location = New System.Drawing.Point(5, 61)
         Me.gitems.MultiSelect = False
@@ -74,53 +76,9 @@ Partial Class FrmSelConcili
         Me.gitems.RowHeadersVisible = False
         Me.gitems.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.gitems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.gitems.Size = New System.Drawing.Size(728, 335)
+        Me.gitems.Size = New System.Drawing.Size(932, 335)
         Me.gitems.StandardTab = True
         Me.gitems.TabIndex = 7
-        '
-        'num
-        '
-        Me.num.HeaderText = "NUMERO"
-        Me.num.MinimumWidth = 80
-        Me.num.Name = "num"
-        Me.num.ReadOnly = True
-        Me.num.Width = 80
-        '
-        'fecha
-        '
-        Me.fecha.HeaderText = "FECHA"
-        Me.fecha.MinimumWidth = 80
-        Me.fecha.Name = "fecha"
-        Me.fecha.ReadOnly = True
-        Me.fecha.Width = 80
-        '
-        'cta_banco
-        '
-        Me.cta_banco.HeaderText = "CTA BANCO"
-        Me.cta_banco.MinimumWidth = 100
-        Me.cta_banco.Name = "cta_banco"
-        Me.cta_banco.ReadOnly = True
-        '
-        'banco
-        '
-        Me.banco.HeaderText = "BANCO"
-        Me.banco.MinimumWidth = 250
-        Me.banco.Name = "banco"
-        Me.banco.Width = 250
-        '
-        'otmov
-        '
-        Me.otmov.HeaderText = "OTROS MOV"
-        Me.otmov.MinimumWidth = 100
-        Me.otmov.Name = "otmov"
-        Me.otmov.ReadOnly = True
-        '
-        'doc_cb
-        '
-        Me.doc_cb.HeaderText = "DOC CB"
-        Me.doc_cb.MinimumWidth = 100
-        Me.doc_cb.Name = "doc_cb"
-        Me.doc_cb.ReadOnly = True
         '
         'lbfila
         '
@@ -152,7 +110,7 @@ Partial Class FrmSelConcili
         Me.GroupPanel1.Controls.Add(Me.cmditems)
         Me.GroupPanel1.Location = New System.Drawing.Point(5, 399)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(728, 85)
+        Me.GroupPanel1.Size = New System.Drawing.Size(932, 85)
         '
         '
         '
@@ -202,7 +160,7 @@ Partial Class FrmSelConcili
         Me.cmditems.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmditems.ForeColor = System.Drawing.Color.Transparent
         Me.cmditems.Image = Global.SAE.My.Resources.Resources.seleecionar
-        Me.cmditems.Location = New System.Drawing.Point(326, 8)
+        Me.cmditems.Location = New System.Drawing.Point(398, 9)
         Me.cmditems.Name = "cmditems"
         Me.cmditems.Size = New System.Drawing.Size(72, 68)
         Me.cmditems.TabIndex = 0
@@ -229,7 +187,7 @@ Partial Class FrmSelConcili
         Me.GroupBox3.Controls.Add(Me.txtcuenta)
         Me.GroupBox3.Location = New System.Drawing.Point(5, 3)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(728, 52)
+        Me.GroupBox3.Size = New System.Drawing.Size(932, 52)
         Me.GroupBox3.TabIndex = 6
         Me.GroupBox3.TabStop = False
         '
@@ -242,12 +200,70 @@ Partial Class FrmSelConcili
         Me.txtcuenta.Size = New System.Drawing.Size(259, 20)
         Me.txtcuenta.TabIndex = 0
         '
+        'num
+        '
+        Me.num.HeaderText = "NUMERO"
+        Me.num.MinimumWidth = 80
+        Me.num.Name = "num"
+        Me.num.ReadOnly = True
+        Me.num.Width = 80
+        '
+        'fecha
+        '
+        Me.fecha.HeaderText = "FECHA"
+        Me.fecha.MinimumWidth = 80
+        Me.fecha.Name = "fecha"
+        Me.fecha.ReadOnly = True
+        Me.fecha.Width = 80
+        '
+        'cta_banco
+        '
+        Me.cta_banco.HeaderText = "CTA BANCO"
+        Me.cta_banco.MinimumWidth = 100
+        Me.cta_banco.Name = "cta_banco"
+        Me.cta_banco.ReadOnly = True
+        '
+        'banco
+        '
+        Me.banco.HeaderText = "BANCO"
+        Me.banco.MinimumWidth = 250
+        Me.banco.Name = "banco"
+        Me.banco.Width = 250
+        '
+        'otmov
+        '
+        Me.otmov.HeaderText = "OTROS MOV"
+        Me.otmov.MinimumWidth = 100
+        Me.otmov.Name = "otmov"
+        Me.otmov.ReadOnly = True
+        '
+        'doc_cb
+        '
+        Me.doc_cb.HeaderText = "DOC CB"
+        Me.doc_cb.MinimumWidth = 100
+        Me.doc_cb.Name = "doc_cb"
+        Me.doc_cb.ReadOnly = True
+        '
+        'fini
+        '
+        Me.fini.HeaderText = "FECHA INICIAL"
+        Me.fini.MinimumWidth = 100
+        Me.fini.Name = "fini"
+        Me.fini.ReadOnly = True
+        '
+        'ffin
+        '
+        Me.ffin.HeaderText = "FECHA FINAL"
+        Me.ffin.MinimumWidth = 100
+        Me.ffin.Name = "ffin"
+        Me.ffin.ReadOnly = True
+        '
         'FrmSelConcili
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(738, 491)
+        Me.ClientSize = New System.Drawing.Size(949, 491)
         Me.Controls.Add(Me.gitems)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.GroupBox3)
@@ -284,4 +300,6 @@ Partial Class FrmSelConcili
     Friend WithEvents banco As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents otmov As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents doc_cb As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents fini As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ffin As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

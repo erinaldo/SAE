@@ -584,7 +584,7 @@ Public Class FrmNovedadInm
                     FrmComEgresoCpp.grilla.Item("Base", 1).Value = Moneda(0)
                     FrmComEgresoCpp.grilla.Item("cc", 1).Value = ""
                 End If
-
+                FrmComEgresoCpp.txtconcepto.Text = "CODINM: " & txtinm.Text
                 FrmComEgresoCpp.lbestado.Text = "NUEVO"
                 FrmComEgresoCpp.ShowDialog()
                 If FrmComEgresoCpp.lbestado.Text = "NUEVO" Then

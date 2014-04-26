@@ -387,6 +387,7 @@ Partial Class FrmPrincipal
         '
         'InventariosToolStripMenuItem
         '
+        Me.InventariosToolStripMenuItem.Enabled = False
         Me.InventariosToolStripMenuItem.Image = Global.SAE.My.Resources.Resources.cajas
         Me.InventariosToolStripMenuItem.Name = "InventariosToolStripMenuItem"
         Me.InventariosToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.I), System.Windows.Forms.Keys)
@@ -400,6 +401,7 @@ Partial Class FrmPrincipal
         '
         'FacturacionToolStripMenuItem
         '
+        Me.FacturacionToolStripMenuItem.Enabled = False
         Me.FacturacionToolStripMenuItem.Image = Global.SAE.My.Resources.Resources.iconos_finan_form
         Me.FacturacionToolStripMenuItem.Name = "FacturacionToolStripMenuItem"
         Me.FacturacionToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
@@ -413,6 +415,7 @@ Partial Class FrmPrincipal
         '
         'CarteraToolStripMenuItem
         '
+        Me.CarteraToolStripMenuItem.Enabled = False
         Me.CarteraToolStripMenuItem.Image = CType(resources.GetObject("CarteraToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CarteraToolStripMenuItem.Name = "CarteraToolStripMenuItem"
         Me.CarteraToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
@@ -421,6 +424,7 @@ Partial Class FrmPrincipal
         '
         'ProveedoresToolStripMenuItem
         '
+        Me.ProveedoresToolStripMenuItem.Enabled = False
         Me.ProveedoresToolStripMenuItem.Image = CType(resources.GetObject("ProveedoresToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
         Me.ProveedoresToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
@@ -434,6 +438,7 @@ Partial Class FrmPrincipal
         '
         'GerencialToolStripMenuItem
         '
+        Me.GerencialToolStripMenuItem.Enabled = False
         Me.GerencialToolStripMenuItem.Image = Global.SAE.My.Resources.Resources.grf
         Me.GerencialToolStripMenuItem.Name = "GerencialToolStripMenuItem"
         Me.GerencialToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
@@ -629,6 +634,7 @@ Partial Class FrmPrincipal
         Me.BEstetica.Name = "BEstetica"
         Me.BEstetica.Size = New System.Drawing.Size(68, 68)
         Me.BEstetica.ToolTipText = "Estetica"
+        Me.BEstetica.Visible = False
         '
         'ToolStripSeparator6
         '
@@ -692,6 +698,7 @@ Partial Class FrmPrincipal
         Me.inmobiliaria.Name = "inmobiliaria"
         Me.inmobiliaria.Size = New System.Drawing.Size(68, 68)
         Me.inmobiliaria.Text = "Imnobiliaria"
+        Me.inmobiliaria.Visible = False
         '
         'cmdBanco
         '
@@ -915,7 +922,7 @@ Partial Class FrmPrincipal
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
-        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  15 ABRIL 2014"
+        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  24 ABRIL 2014"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

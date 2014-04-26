@@ -49,20 +49,6 @@ Partial Class FrmGenerarFmtos
         Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmGenerarFmtos))
         Me.gcuenta = New System.Windows.Forms.DataGridView
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.Bcan = New System.Windows.Forms.Button
-        Me.bImp = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.BGuardar = New System.Windows.Forms.Button
-        Me.cmdBuscar = New System.Windows.Forms.Button
-        Me.txtcon = New System.Windows.Forms.TextBox
-        Me.cmbcon = New System.Windows.Forms.ComboBox
-        Me.txtdesfor = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.cmbForm = New System.Windows.Forms.ComboBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.mibarra = New System.Windows.Forms.ProgressBar
         Me.tipfid = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.subfid = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.concepto = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -122,6 +108,20 @@ Partial Class FrmGenerarFmtos
         Me.nom1cont = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.nom2cont = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.rsocialcont = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Bcan = New System.Windows.Forms.Button
+        Me.bImp = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
+        Me.BGuardar = New System.Windows.Forms.Button
+        Me.cmdBuscar = New System.Windows.Forms.Button
+        Me.txtcon = New System.Windows.Forms.TextBox
+        Me.cmbcon = New System.Windows.Forms.ComboBox
+        Me.txtdesfor = New System.Windows.Forms.TextBox
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.cmbForm = New System.Windows.Forms.ComboBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.mibarra = New System.Windows.Forms.ProgressBar
         CType(Me.gcuenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -148,151 +148,6 @@ Partial Class FrmGenerarFmtos
         Me.gcuenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.gcuenta.Size = New System.Drawing.Size(840, 311)
         Me.gcuenta.TabIndex = 6
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Bcan)
-        Me.GroupBox1.Controls.Add(Me.bImp)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.BGuardar)
-        Me.GroupBox1.Controls.Add(Me.cmdBuscar)
-        Me.GroupBox1.Controls.Add(Me.txtcon)
-        Me.GroupBox1.Controls.Add(Me.cmbcon)
-        Me.GroupBox1.Controls.Add(Me.txtdesfor)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.cmbForm)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(840, 112)
-        Me.GroupBox1.TabIndex = 7
-        Me.GroupBox1.TabStop = False
-        '
-        'Bcan
-        '
-        Me.Bcan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bcan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bcan.Image = Global.SAE.My.Resources.Resources.ccno
-        Me.Bcan.Location = New System.Drawing.Point(788, 19)
-        Me.Bcan.Name = "Bcan"
-        Me.Bcan.Size = New System.Drawing.Size(46, 42)
-        Me.Bcan.TabIndex = 117
-        Me.ToolTip1.SetToolTip(Me.Bcan, "Cancelar")
-        Me.Bcan.UseVisualStyleBackColor = False
-        '
-        'bImp
-        '
-        Me.bImp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bImp.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.bImp.Image = Global.SAE.My.Resources.Resources.import
-        Me.bImp.Location = New System.Drawing.Point(738, 63)
-        Me.bImp.Name = "bImp"
-        Me.bImp.Size = New System.Drawing.Size(46, 42)
-        Me.bImp.TabIndex = 10
-        Me.ToolTip1.SetToolTip(Me.bImp, "Importar Datos Guardados")
-        Me.bImp.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Image = Global.SAE.My.Resources.Resources.minusb
-        Me.Button2.Location = New System.Drawing.Point(788, 63)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(46, 42)
-        Me.Button2.TabIndex = 9
-        Me.ToolTip1.SetToolTip(Me.Button2, "Exportar XML")
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'BGuardar
-        '
-        Me.BGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BGuardar.Image = Global.SAE.My.Resources.Resources.guardar
-        Me.BGuardar.Location = New System.Drawing.Point(688, 63)
-        Me.BGuardar.Name = "BGuardar"
-        Me.BGuardar.Size = New System.Drawing.Size(46, 42)
-        Me.BGuardar.TabIndex = 8
-        Me.ToolTip1.SetToolTip(Me.BGuardar, "Guardar")
-        Me.BGuardar.UseVisualStyleBackColor = False
-        '
-        'cmdBuscar
-        '
-        Me.cmdBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdBuscar.Image = Global.SAE.My.Resources.Resources.bs
-        Me.cmdBuscar.Location = New System.Drawing.Point(638, 63)
-        Me.cmdBuscar.Name = "cmdBuscar"
-        Me.cmdBuscar.Size = New System.Drawing.Size(46, 42)
-        Me.cmdBuscar.TabIndex = 5
-        Me.ToolTip1.SetToolTip(Me.cmdBuscar, "Buscar")
-        Me.cmdBuscar.UseVisualStyleBackColor = False
-        '
-        'txtcon
-        '
-        Me.txtcon.BackColor = System.Drawing.Color.White
-        Me.txtcon.Location = New System.Drawing.Point(103, 71)
-        Me.txtcon.Multiline = True
-        Me.txtcon.Name = "txtcon"
-        Me.txtcon.ReadOnly = True
-        Me.txtcon.Size = New System.Drawing.Size(529, 32)
-        Me.txtcon.TabIndex = 4
-        '
-        'cmbcon
-        '
-        Me.cmbcon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbcon.FormattingEnabled = True
-        Me.cmbcon.Location = New System.Drawing.Point(14, 73)
-        Me.cmbcon.Name = "cmbcon"
-        Me.cmbcon.Size = New System.Drawing.Size(83, 21)
-        Me.cmbcon.TabIndex = 3
-        '
-        'txtdesfor
-        '
-        Me.txtdesfor.BackColor = System.Drawing.Color.White
-        Me.txtdesfor.Location = New System.Drawing.Point(104, 23)
-        Me.txtdesfor.Multiline = True
-        Me.txtdesfor.Name = "txtdesfor"
-        Me.txtdesfor.ReadOnly = True
-        Me.txtdesfor.Size = New System.Drawing.Size(680, 35)
-        Me.txtdesfor.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 57)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Conceptos"
-        '
-        'cmbForm
-        '
-        Me.cmbForm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbForm.FormattingEnabled = True
-        Me.cmbForm.Location = New System.Drawing.Point(15, 25)
-        Me.cmbForm.Name = "cmbForm"
-        Me.cmbForm.Size = New System.Drawing.Size(83, 21)
-        Me.cmbForm.TabIndex = 1
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 9)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(58, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Formatos"
-        '
-        'mibarra
-        '
-        Me.mibarra.Location = New System.Drawing.Point(318, 215)
-        Me.mibarra.Name = "mibarra"
-        Me.mibarra.Size = New System.Drawing.Size(229, 23)
-        Me.mibarra.TabIndex = 116
-        Me.mibarra.Visible = False
         '
         'tipfid
         '
@@ -704,6 +559,151 @@ Partial Class FrmGenerarFmtos
         Me.rsocialcont.Name = "rsocialcont"
         Me.rsocialcont.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.rsocialcont.Width = 150
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Bcan)
+        Me.GroupBox1.Controls.Add(Me.bImp)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.BGuardar)
+        Me.GroupBox1.Controls.Add(Me.cmdBuscar)
+        Me.GroupBox1.Controls.Add(Me.txtcon)
+        Me.GroupBox1.Controls.Add(Me.cmbcon)
+        Me.GroupBox1.Controls.Add(Me.txtdesfor)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.cmbForm)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(840, 112)
+        Me.GroupBox1.TabIndex = 7
+        Me.GroupBox1.TabStop = False
+        '
+        'Bcan
+        '
+        Me.Bcan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bcan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Bcan.Image = Global.SAE.My.Resources.Resources.ccno
+        Me.Bcan.Location = New System.Drawing.Point(788, 19)
+        Me.Bcan.Name = "Bcan"
+        Me.Bcan.Size = New System.Drawing.Size(46, 42)
+        Me.Bcan.TabIndex = 117
+        Me.ToolTip1.SetToolTip(Me.Bcan, "Cancelar (Limpiar)")
+        Me.Bcan.UseVisualStyleBackColor = False
+        '
+        'bImp
+        '
+        Me.bImp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bImp.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.bImp.Image = Global.SAE.My.Resources.Resources.import
+        Me.bImp.Location = New System.Drawing.Point(738, 63)
+        Me.bImp.Name = "bImp"
+        Me.bImp.Size = New System.Drawing.Size(46, 42)
+        Me.bImp.TabIndex = 10
+        Me.ToolTip1.SetToolTip(Me.bImp, "Traer Datos Guardados")
+        Me.bImp.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button2.Image = Global.SAE.My.Resources.Resources.minusb
+        Me.Button2.Location = New System.Drawing.Point(788, 63)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(46, 42)
+        Me.Button2.TabIndex = 9
+        Me.ToolTip1.SetToolTip(Me.Button2, "Exportar XML")
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'BGuardar
+        '
+        Me.BGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BGuardar.Image = Global.SAE.My.Resources.Resources.guardar
+        Me.BGuardar.Location = New System.Drawing.Point(688, 63)
+        Me.BGuardar.Name = "BGuardar"
+        Me.BGuardar.Size = New System.Drawing.Size(46, 42)
+        Me.BGuardar.TabIndex = 8
+        Me.ToolTip1.SetToolTip(Me.BGuardar, "Guardar")
+        Me.BGuardar.UseVisualStyleBackColor = False
+        '
+        'cmdBuscar
+        '
+        Me.cmdBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdBuscar.Image = Global.SAE.My.Resources.Resources.bs
+        Me.cmdBuscar.Location = New System.Drawing.Point(638, 63)
+        Me.cmdBuscar.Name = "cmdBuscar"
+        Me.cmdBuscar.Size = New System.Drawing.Size(46, 42)
+        Me.cmdBuscar.TabIndex = 5
+        Me.ToolTip1.SetToolTip(Me.cmdBuscar, "Buscar")
+        Me.cmdBuscar.UseVisualStyleBackColor = False
+        '
+        'txtcon
+        '
+        Me.txtcon.BackColor = System.Drawing.Color.White
+        Me.txtcon.Location = New System.Drawing.Point(103, 71)
+        Me.txtcon.Multiline = True
+        Me.txtcon.Name = "txtcon"
+        Me.txtcon.ReadOnly = True
+        Me.txtcon.Size = New System.Drawing.Size(529, 32)
+        Me.txtcon.TabIndex = 4
+        '
+        'cmbcon
+        '
+        Me.cmbcon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbcon.FormattingEnabled = True
+        Me.cmbcon.Location = New System.Drawing.Point(14, 73)
+        Me.cmbcon.Name = "cmbcon"
+        Me.cmbcon.Size = New System.Drawing.Size(83, 21)
+        Me.cmbcon.TabIndex = 3
+        '
+        'txtdesfor
+        '
+        Me.txtdesfor.BackColor = System.Drawing.Color.White
+        Me.txtdesfor.Location = New System.Drawing.Point(104, 23)
+        Me.txtdesfor.Multiline = True
+        Me.txtdesfor.Name = "txtdesfor"
+        Me.txtdesfor.ReadOnly = True
+        Me.txtdesfor.Size = New System.Drawing.Size(680, 35)
+        Me.txtdesfor.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 57)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(67, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Conceptos"
+        '
+        'cmbForm
+        '
+        Me.cmbForm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbForm.FormattingEnabled = True
+        Me.cmbForm.Location = New System.Drawing.Point(15, 25)
+        Me.cmbForm.Name = "cmbForm"
+        Me.cmbForm.Size = New System.Drawing.Size(83, 21)
+        Me.cmbForm.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(12, 9)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(58, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Formatos"
+        '
+        'mibarra
+        '
+        Me.mibarra.Location = New System.Drawing.Point(318, 215)
+        Me.mibarra.Name = "mibarra"
+        Me.mibarra.Size = New System.Drawing.Size(229, 23)
+        Me.mibarra.TabIndex = 116
+        Me.mibarra.Visible = False
         '
         'FrmGenerarFmtos
         '

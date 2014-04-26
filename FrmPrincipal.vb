@@ -464,6 +464,9 @@ Public Class FrmPrincipal
         If BEstetica.Visible = True Then
             Estetica(bda)
         End If
+        If Exogena.Visible = True Then
+            MedioMag(bda)
+        End If
 
         If inmobiliaria.Visible = True Then
             Try ' OTROS CONC CONTRATOS

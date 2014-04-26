@@ -115,7 +115,11 @@
                 If tb = "ot_cpp" Or tb = "ot_cpc" Then
                     For k = 0 To tabla.Rows.Count - 1
                         If tabla.Rows(k).Item("doc_afec") <> "" Then
-                            Actualsaldos(tb, tabla.Rows(k).Item("doc_afec"), tabla.Rows(k).Item("debito"))
+                            If tb = "ot_cpc" Then
+                                Actualsaldos(tb, tabla.Rows(k).Item("doc_afec"), tabla.Rows(k).Item("credito"))
+                            Else
+                                Actualsaldos(tb, tabla.Rows(k).Item("doc_afec"), tabla.Rows(k).Item("debito"))
+                            End If
                         End If
                     Next
                 End If
@@ -128,7 +132,7 @@
             ActualizarConsecutivo()
             Dim sql2 As String = ""
             Try
-                sql2 = "DELETE FROM cobdpen WHERE doc='" & PerActual & "-" & txttipo.Text & txtnumfac.Text & "' ;"
+                sql2 = "DELETE FROM cobdpen WHERE doc='" & PerActual & "-" & txttipo.Text & txtnumfac.Text & "';"
                 myCommand.CommandText = sql2
                 myCommand.ExecuteNonQuery()
             Catch ex As Exception
