@@ -162,12 +162,37 @@ Public Class FrmInfCGN
                 End If
                 gitems.Item("codigo", fl).Value = tabla.Rows(i).Item("cta")
                 gitems.Item("descrip", fl).Value = tabla.Rows(i).Item("descrip")
-                gitems.Item("salini", fl).Value = tabla.Rows(i).Item("subtotal")
+                If (Strings.Left(gitems.Item("codigo", fl).Value, 1) = "2") Or (Strings.Left(gitems.Item("codigo", fl).Value, 1) = "3") Or (Strings.Left(gitems.Item("codigo", fl).Value, 1) = "4") Or (Strings.Left(gitems.Item("codigo", fl).Value, 1) = "9") Then
+                    Try
+                        gitems.Item("salfin", fl).Value = -1 * CDbl(tabla.Rows(i).Item("total"))
+                    Catch ex As Exception
+                        gitems.Item("salfin", fl).Value = 0
+                    End Try
+                    Try
+                        gitems.Item("salini", fl).Value = -1 * CDbl(tabla.Rows(i).Item("subtotal"))
+                    Catch ex As Exception
+                        gitems.Item("salini", fl).Value = 0
+                    End Try
+                    Try
+                        gitems.Item("salcorr", fl).Value = -1 * tabla.Rows(i).Item("salCorr")
+                    Catch ex As Exception
+                        gitems.Item("salcorr", fl).Value = 0
+                    End Try
+                    Try
+                        gitems.Item("salno", fl).Value = -1 * tabla.Rows(i).Item("salNoCorr")
+                    Catch ex As Exception
+                        gitems.Item("salno", fl).Value = 0
+                    End Try
+                Else
+                    gitems.Item("salfin", fl).Value = tabla.Rows(i).Item("total")
+                    gitems.Item("salini", fl).Value = tabla.Rows(i).Item("subtotal")
+                    gitems.Item("salcorr", fl).Value = tabla.Rows(i).Item("salCorr")
+                    gitems.Item("salno", fl).Value = tabla.Rows(i).Item("salNoCorr")
+                End If
+
                 gitems.Item("debito", fl).Value = tabla.Rows(i).Item("v1")
                 gitems.Item("credito", fl).Value = tabla.Rows(i).Item("v2")
-                gitems.Item("salfin", fl).Value = tabla.Rows(i).Item("total")
-                gitems.Item("salcorr", fl).Value = tabla.Rows(i).Item("salCorr")
-                gitems.Item("salno", fl).Value = tabla.Rows(i).Item("salNoCorr")
+               
                 gitems.Item("codigo2", fl).Value = tabla.Rows(i).Item("observ")
                 fl = fl + 1
             End If
@@ -294,4 +319,46 @@ Public Class FrmInfCGN
         Cerrar()
         generarPDF()
     End Sub
+
+    Private Sub Bexpor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bexpor.Click
+        Dim save As New SaveFileDialog
+        save.Filter = "Archivo Excel | *.xlsx"
+        If save.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Try
+                Exportar_Excel(gitems, save.FileName)
+            Catch ex As Exception
+                lbesperar.Visible = False
+            End Try
+        End If
+    End Sub
+    Public Sub Exportar_Excel(ByVal dgv As DataGridView, ByVal pth As String)
+
+        Dim xlApp As Object = CreateObject("Excel.Application")
+        'crear una nueva hoja de calculo 
+        Dim xlWB As Object = xlApp.WorkBooks.add
+        Dim xlWS As Object = xlWB.WorkSheets(1)
+
+        lbesperar.Visible = True
+
+        'exportamos los caracteres de las columnas
+        For c As Integer = 1 To gitems.Columns.Count - 2
+            xlWS.cells(1, c + 1).value = gitems.Columns(c).HeaderText
+        Next
+
+        'exportamos las cabeceras de columnas
+        For r As Integer = 0 To gitems.RowCount - 1
+            For c As Integer = 1 To gitems.Columns.Count - 2
+                xlWS.cells(r + 2, c + 1).value = gitems.Item(c, r).Value
+            Next
+        Next
+        'guardamos la hoja de calculo en la ruta especificada 
+        xlWB.saveas(pth)
+        xlWS = Nothing
+        xlWB = Nothing
+        xlApp.quit()
+        xlApp = Nothing
+        lbesperar.Visible = False
+        MsgBox("Archivo generado Exitosamente", MsgBoxStyle.Information, "SAE")
+    End Sub
+
 End Class

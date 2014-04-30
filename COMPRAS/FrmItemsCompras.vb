@@ -12,6 +12,14 @@
             gitems.Columns("descuento").Visible = True
         End If
 
+        If lbform.Text = "fdp" Then
+            gitems.Columns("ctainv").Visible = True
+            gitems.Columns("ctainv").ReadOnly = False
+        Else
+            gitems.Columns("ctainv").ReadOnly = True
+            gitems.Columns("ctainv").Visible = False
+        End If
+
         '************ ¿MANEJAN CODIGOS DE BARRAS? ******************
         Try
             Dim tabla As New DataTable
@@ -148,6 +156,8 @@
                         MsgBox("El numero no corresponde a ninguna bodega")
                         gitems.Item(6, e.RowIndex).Value = ""
                     End If
+                Case 8
+                    Buscarcuentas(gitems.Item(8, e.RowIndex).Value, e.RowIndex)
                 Case 10 ' CUENTA INGRESO
                     BuscarCuentaP(e.RowIndex, gitems.Item("ctaing", e.RowIndex).Value, "10")
                 Case 12 ' IVA
@@ -495,6 +505,10 @@
                         MsgBox("Verifique las bodegas de los articulos de inventario.  ", MsgBoxStyle.Information, "SAE Control")
                         Exit Sub
                     End If
+                    If Trim(gitems.Item("ctainv", i).Value) = "" Then
+                        MsgBox("Verifique La Cuenta de Inventario.  ", MsgBoxStyle.Information, "SAE Control")
+                        Exit Sub
+                    End If
                     FrmDocProveedor.gfactura.Item("num", j).Value = j + 1
                     FrmDocProveedor.gfactura.Item("tipo", j).Value = gitems.Item("tipo", i).Value
                     FrmDocProveedor.gfactura.Item("codigo", j).Value = gitems.Item("codigo", i).Value
@@ -598,12 +612,58 @@
         FrmOrdenCompra.lbsubtotal.Text = Moneda(suma)
         Me.Close()
     End Sub
-
-    Private Sub gitems_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles gitems.CellContentClick
+    Public Sub Buscarcuentas(ByVal cuenta As String, ByVal fila As Integer)
+        If cuenta = "" Then
+            FrmCuentas.lbform.Text = "fdp_items_Comp"
+            FrmCuentas.lbfila.Text = fila
+            FrmCuentas.ShowDialog()
+        Else
+            Dim tabla As New DataTable
+            myCommand.CommandText = "SELECT * FROM selpuc WHERE codigo ='" & cuenta & "' AND nivel='Auxiliar';"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tabla)
+            If tabla.Rows.Count <= 0 Then
+                If gitems.Item(8, fila).Value = "" Or nivel_cuenta(gitems.Item(8, fila).Value) = True Then
+                    gitems.Item(8, fila).Value = ""
+                    FrmCuentas.txtcuenta.Text = cuenta
+                    FrmCuentas.lbform.Text = "fdp_items_Comp"
+                    FrmCuentas.lbfila.Text = fila
+                    If cuenta <> "" Then
+                        FrmCuentas.ok_Click(AcceptButton, AcceptButton)
+                    End If
+                    FrmCuentas.ShowDialog()
+                Else
+                    SendKeys.Send(Chr(Keys.Tab))
+                    Dim resultado As MsgBoxResult 'HAY QUE AGREGAR UNA NUEVA CUENTA
+                    resultado = MsgBox("La cuenta (" & gitems.Item(8, fila).Value & ") NO existe en los registros, ¿Desea Agregarla?", MsgBoxStyle.YesNo, "SAE verificando")
+                    If resultado = MsgBoxResult.Yes Then
+                        FrmNuevaCuenta.txtcuenta.Text = gitems.Item(8, fila).Value
+                        gitems.Item(8, fila).Value = ""
+                        FrmNuevaCuenta.lbfila.Text = fila
+                        FrmNuevaCuenta.ShowDialog()
+                    Else
+                        gitems.Item(8, fila).Value = ""
+                    End If
+                End If
+            Else
+                gitems.Item(9, fila).Selected = True
+            End If
+        End If
 
     End Sub
-
-    Private Sub gitems_CellMouseEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles gitems.CellMouseEnter
-
-    End Sub
+    Function nivel_cuenta(ByVal codigo As String)
+        Dim tabla As New DataTable
+        myCommand.CommandText = "SELECT * FROM selpuc WHERE codigo='" & codigo & "' AND nivel='Auxiliar';"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tabla)
+        Try
+            If tabla.Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

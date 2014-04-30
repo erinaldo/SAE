@@ -758,6 +758,7 @@ Partial Class FrmContabilidad
         Me.ButtonX3.TabIndex = 22
         Me.ButtonX3.Text = "&Cuentas ReteCree"
         Me.ButtonX3.Tooltip = "Cuentas ReteCree"
+        Me.ButtonX3.Visible = False
         '
         'cdCopiarPUC
         '
@@ -931,8 +932,8 @@ Partial Class FrmContabilidad
         Me.TabControl1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TabControl1.CanReorderTabs = True
         Me.TabControl1.CloseButtonVisible = True
-        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
         Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Controls.Add(Me.TabControlPanel5)

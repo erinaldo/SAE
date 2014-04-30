@@ -30,6 +30,13 @@ Partial Class FrmOrdenesDePago
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX
         Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel
         Me.TabControl4 = New DevComponents.DotNetBar.TabControl
+        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel
+        Me.ButtonX8 = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX4 = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX
+        Me.cdmlibmay = New DevComponents.DotNetBar.ButtonX
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Contable = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel17 = New DevComponents.DotNetBar.TabControlPanel
         Me.cmd_g_o = New DevComponents.DotNetBar.ButtonX
         Me.cmd_analisis = New DevComponents.DotNetBar.ButtonX
@@ -38,22 +45,15 @@ Partial Class FrmOrdenesDePago
         Me.cmd_plan_pagos = New DevComponents.DotNetBar.ButtonX
         Me.Label24 = New System.Windows.Forms.Label
         Me.TabItem15 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel
-        Me.ButtonX4 = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX
-        Me.cdmlibmay = New DevComponents.DotNetBar.ButtonX
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Contable = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.Label4 = New System.Windows.Forms.Label
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl
-        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
-        Me.cmddesa = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX6 = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.cmdcierre = New DevComponents.DotNetBar.ButtonX
-        Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel
+        Me.ButtonX5 = New DevComponents.DotNetBar.ButtonX
+        Me.cmddoc = New DevComponents.DotNetBar.ButtonX
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.datosbac = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel
         Me.ButtonX7 = New DevComponents.DotNetBar.ButtonX
         Me.cmdEgresoOrden = New DevComponents.DotNetBar.ButtonX
@@ -62,14 +62,14 @@ Partial Class FrmOrdenesDePago
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label13 = New System.Windows.Forms.Label
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel
-        Me.ButtonX5 = New DevComponents.DotNetBar.ButtonX
-        Me.cmddoc = New DevComponents.DotNetBar.ButtonX
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.datosbac = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
+        Me.cmddesa = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX6 = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.cmdcierre = New DevComponents.DotNetBar.ButtonX
+        Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
-        Me.ButtonX8 = New DevComponents.DotNetBar.ButtonX
         Me.salir = New System.Windows.Forms.Button
         Me.cmdayuda = New System.Windows.Forms.Button
         Me.cmdsoptec = New System.Windows.Forms.Button
@@ -80,13 +80,13 @@ Partial Class FrmOrdenesDePago
         Me.TabControlPanel3.SuspendLayout()
         CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl4.SuspendLayout()
-        Me.TabControlPanel17.SuspendLayout()
         Me.TabControlPanel5.SuspendLayout()
+        Me.TabControlPanel17.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
-        Me.TabControlPanel4.SuspendLayout()
-        Me.TabControlPanel2.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
+        Me.TabControlPanel2.SuspendLayout()
+        Me.TabControlPanel4.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -168,6 +168,83 @@ Partial Class FrmOrdenesDePago
         Me.TabControl4.Tabs.Add(Me.TabItem15)
         Me.TabControl4.Tabs.Add(Me.Contable)
         Me.TabControl4.Text = "Cuentas Por Pagar"
+        '
+        'TabControlPanel5
+        '
+        Me.TabControlPanel5.Controls.Add(Me.ButtonX8)
+        Me.TabControlPanel5.Controls.Add(Me.ButtonX4)
+        Me.TabControlPanel5.Controls.Add(Me.ButtonX2)
+        Me.TabControlPanel5.Controls.Add(Me.cdmlibmay)
+        Me.TabControlPanel5.Controls.Add(Me.Button1)
+        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel5.Name = "TabControlPanel5"
+        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel5.Size = New System.Drawing.Size(715, 183)
+        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel5.Style.GradientAngle = 90
+        Me.TabControlPanel5.TabIndex = 4
+        Me.TabControlPanel5.TabItem = Me.Contable
+        '
+        'ButtonX8
+        '
+        Me.ButtonX8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX8.Location = New System.Drawing.Point(400, 77)
+        Me.ButtonX8.Name = "ButtonX8"
+        Me.ButtonX8.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX8.TabIndex = 60
+        Me.ButtonX8.Text = "&Egresos - Rubros"
+        '
+        'ButtonX4
+        '
+        Me.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX4.Location = New System.Drawing.Point(400, 36)
+        Me.ButtonX4.Name = "ButtonX4"
+        Me.ButtonX4.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX4.TabIndex = 58
+        Me.ButtonX4.Text = "&Resumen de Deducciones"
+        '
+        'ButtonX2
+        '
+        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX2.Location = New System.Drawing.Point(157, 77)
+        Me.ButtonX2.Name = "ButtonX2"
+        Me.ButtonX2.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX2.TabIndex = 57
+        Me.ButtonX2.Text = "&Ordenes de Pago"
+        '
+        'cdmlibmay
+        '
+        Me.cdmlibmay.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cdmlibmay.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cdmlibmay.Location = New System.Drawing.Point(157, 36)
+        Me.cdmlibmay.Name = "cdmlibmay"
+        Me.cdmlibmay.Size = New System.Drawing.Size(192, 36)
+        Me.cdmlibmay.TabIndex = 56
+        Me.cdmlibmay.Text = "Libro &Auxiliares (Contable)"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(255, 84)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(30, 27)
+        Me.Button1.TabIndex = 59
+        Me.Button1.Text = "&LLenar MovPresupuesto"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Contable
+        '
+        Me.Contable.AttachedControl = Me.TabControlPanel5
+        Me.Contable.Name = "Contable"
+        Me.Contable.Text = "Contable"
         '
         'TabControlPanel17
         '
@@ -259,73 +336,6 @@ Partial Class FrmOrdenesDePago
         Me.TabItem15.Name = "TabItem15"
         Me.TabItem15.Text = "Cuentas Por Pagar"
         '
-        'TabControlPanel5
-        '
-        Me.TabControlPanel5.Controls.Add(Me.ButtonX8)
-        Me.TabControlPanel5.Controls.Add(Me.ButtonX4)
-        Me.TabControlPanel5.Controls.Add(Me.ButtonX2)
-        Me.TabControlPanel5.Controls.Add(Me.cdmlibmay)
-        Me.TabControlPanel5.Controls.Add(Me.Button1)
-        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel5.Name = "TabControlPanel5"
-        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel5.Size = New System.Drawing.Size(715, 183)
-        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel5.Style.GradientAngle = 90
-        Me.TabControlPanel5.TabIndex = 4
-        Me.TabControlPanel5.TabItem = Me.Contable
-        '
-        'ButtonX4
-        '
-        Me.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX4.Location = New System.Drawing.Point(400, 36)
-        Me.ButtonX4.Name = "ButtonX4"
-        Me.ButtonX4.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX4.TabIndex = 58
-        Me.ButtonX4.Text = "&Resumen de Deducciones"
-        '
-        'ButtonX2
-        '
-        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Location = New System.Drawing.Point(157, 77)
-        Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX2.TabIndex = 57
-        Me.ButtonX2.Text = "&Ordenes de Pago"
-        '
-        'cdmlibmay
-        '
-        Me.cdmlibmay.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cdmlibmay.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cdmlibmay.Location = New System.Drawing.Point(157, 36)
-        Me.cdmlibmay.Name = "cdmlibmay"
-        Me.cdmlibmay.Size = New System.Drawing.Size(192, 36)
-        Me.cdmlibmay.TabIndex = 56
-        Me.cdmlibmay.Text = "Libro &Auxiliares (Contable)"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(255, 84)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(30, 27)
-        Me.Button1.TabIndex = 59
-        Me.Button1.Text = "&LLenar MovPresupuesto"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Contable
-        '
-        Me.Contable.AttachedControl = Me.TabControlPanel5
-        Me.Contable.Name = "Contable"
-        Me.Contable.Text = "Contable"
-        '
         'TabItem2
         '
         Me.TabItem2.AttachedControl = Me.TabControlPanel3
@@ -349,9 +359,9 @@ Partial Class FrmOrdenesDePago
         Me.TabControl1.CanReorderTabs = True
         Me.TabControl1.CloseButtonVisible = True
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Controls.Add(Me.TabControlPanel1)
         Me.TabControl1.Controls.Add(Me.TabControlPanel2)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Location = New System.Drawing.Point(7, 96)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
@@ -365,88 +375,75 @@ Partial Class FrmOrdenesDePago
         Me.TabControl1.Tabs.Add(Me.TabItem3)
         Me.TabControl1.Text = "TabControl1"
         '
-        'TabControlPanel4
+        'TabControlPanel1
         '
-        Me.TabControlPanel4.Controls.Add(Me.cmddesa)
-        Me.TabControlPanel4.Controls.Add(Me.ButtonX6)
-        Me.TabControlPanel4.Controls.Add(Me.ButtonX3)
-        Me.TabControlPanel4.Controls.Add(Me.ButtonX1)
-        Me.TabControlPanel4.Controls.Add(Me.Label4)
-        Me.TabControlPanel4.Controls.Add(Me.Label5)
-        Me.TabControlPanel4.Controls.Add(Me.cmdcierre)
-        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel4.Name = "TabControlPanel4"
-        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel4.Size = New System.Drawing.Size(733, 274)
-        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+        Me.TabControlPanel1.Controls.Add(Me.ButtonX5)
+        Me.TabControlPanel1.Controls.Add(Me.cmddoc)
+        Me.TabControlPanel1.Controls.Add(Me.Label1)
+        Me.TabControlPanel1.Controls.Add(Me.Label7)
+        Me.TabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel1.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel1.Name = "TabControlPanel1"
+        Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel1.Size = New System.Drawing.Size(733, 274)
+        Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel1.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
                     Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel4.Style.GradientAngle = 90
-        Me.TabControlPanel4.TabIndex = 4
-        Me.TabControlPanel4.TabItem = Me.TabItem3
+        Me.TabControlPanel1.Style.GradientAngle = 90
+        Me.TabControlPanel1.TabIndex = 1
+        Me.TabControlPanel1.TabItem = Me.datosbac
         '
-        'cmddesa
+        'ButtonX5
         '
-        Me.cmddesa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmddesa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmddesa.Location = New System.Drawing.Point(268, 218)
-        Me.cmddesa.Name = "cmddesa"
-        Me.cmddesa.Size = New System.Drawing.Size(192, 36)
-        Me.cmddesa.TabIndex = 25
-        Me.cmddesa.Text = "Desaprobar &CE Orden"
+        Me.ButtonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX5.Location = New System.Drawing.Point(266, 157)
+        Me.ButtonX5.Name = "ButtonX5"
+        Me.ButtonX5.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX5.TabIndex = 18
+        Me.ButtonX5.Text = "Parametros " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "&Otros Doc"
         '
-        'ButtonX6
+        'cmddoc
         '
-        Me.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX6.Location = New System.Drawing.Point(268, 176)
-        Me.ButtonX6.Name = "ButtonX6"
-        Me.ButtonX6.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX6.TabIndex = 24
-        Me.ButtonX6.Text = "&Desenglobar Nomina"
+        Me.cmddoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmddoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmddoc.Location = New System.Drawing.Point(266, 114)
+        Me.cmddoc.Name = "cmddoc"
+        Me.cmddoc.Size = New System.Drawing.Size(192, 36)
+        Me.cmddoc.TabIndex = 17
+        Me.cmddoc.Text = "&Parametros"
         '
-        'ButtonX3
+        'Label1
         '
-        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX3.Location = New System.Drawing.Point(268, 89)
-        Me.ButtonX3.Name = "ButtonX3"
-        Me.ButtonX3.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX3.TabIndex = 23
-        Me.ButtonX3.Text = "&Modificar Causaciones"
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(164, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(439, 31)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Ordenes de Pagos (Datos Basicos)"
         '
-        'Label5
+        'Label7
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Location = New System.Drawing.Point(59, 37)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(627, 42)
-        Me.Label5.TabIndex = 21
-        Me.Label5.Text = "_____________________________"
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label7.Location = New System.Drawing.Point(55, 31)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(627, 42)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "_____________________________"
         '
-        'cmdcierre
+        'datosbac
         '
-        Me.cmdcierre.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmdcierre.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdcierre.Location = New System.Drawing.Point(268, 92)
-        Me.cmdcierre.Name = "cmdcierre"
-        Me.cmdcierre.Size = New System.Drawing.Size(192, 36)
-        Me.cmdcierre.TabIndex = 19
-        Me.cmdcierre.Text = "&Cierre de Año"
-        Me.cmdcierre.Visible = False
-        '
-        'TabItem3
-        '
-        Me.TabItem3.AttachedControl = Me.TabControlPanel4
-        Me.TabItem3.Name = "TabItem3"
-        Me.TabItem3.Text = "Procesos"
+        Me.datosbac.AttachedControl = Me.TabControlPanel1
+        Me.datosbac.Name = "datosbac"
+        Me.datosbac.Text = "Datos Basicos"
         '
         'TabControlPanel2
         '
@@ -542,75 +539,88 @@ Partial Class FrmOrdenesDePago
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "Transacciones"
         '
-        'TabControlPanel1
+        'TabControlPanel4
         '
-        Me.TabControlPanel1.Controls.Add(Me.ButtonX5)
-        Me.TabControlPanel1.Controls.Add(Me.cmddoc)
-        Me.TabControlPanel1.Controls.Add(Me.Label1)
-        Me.TabControlPanel1.Controls.Add(Me.Label7)
-        Me.TabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel1.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel1.Name = "TabControlPanel1"
-        Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel1.Size = New System.Drawing.Size(733, 274)
-        Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel1.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+        Me.TabControlPanel4.Controls.Add(Me.cmddesa)
+        Me.TabControlPanel4.Controls.Add(Me.ButtonX6)
+        Me.TabControlPanel4.Controls.Add(Me.ButtonX3)
+        Me.TabControlPanel4.Controls.Add(Me.ButtonX1)
+        Me.TabControlPanel4.Controls.Add(Me.Label4)
+        Me.TabControlPanel4.Controls.Add(Me.Label5)
+        Me.TabControlPanel4.Controls.Add(Me.cmdcierre)
+        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel4.Name = "TabControlPanel4"
+        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel4.Size = New System.Drawing.Size(733, 274)
+        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
                     Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel1.Style.GradientAngle = 90
-        Me.TabControlPanel1.TabIndex = 1
-        Me.TabControlPanel1.TabItem = Me.datosbac
+        Me.TabControlPanel4.Style.GradientAngle = 90
+        Me.TabControlPanel4.TabIndex = 4
+        Me.TabControlPanel4.TabItem = Me.TabItem3
         '
-        'ButtonX5
+        'cmddesa
         '
-        Me.ButtonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX5.Location = New System.Drawing.Point(266, 157)
-        Me.ButtonX5.Name = "ButtonX5"
-        Me.ButtonX5.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX5.TabIndex = 18
-        Me.ButtonX5.Text = "Parametros " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "&Otros Doc"
+        Me.cmddesa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmddesa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmddesa.Location = New System.Drawing.Point(268, 218)
+        Me.cmddesa.Name = "cmddesa"
+        Me.cmddesa.Size = New System.Drawing.Size(192, 36)
+        Me.cmddesa.TabIndex = 25
+        Me.cmddesa.Text = "Desaprobar &CE Orden"
         '
-        'cmddoc
+        'ButtonX6
         '
-        Me.cmddoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmddoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmddoc.Location = New System.Drawing.Point(266, 114)
-        Me.cmddoc.Name = "cmddoc"
-        Me.cmddoc.Size = New System.Drawing.Size(192, 36)
-        Me.cmddoc.TabIndex = 17
-        Me.cmddoc.Text = "&Parametros"
+        Me.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX6.Location = New System.Drawing.Point(268, 178)
+        Me.ButtonX6.Name = "ButtonX6"
+        Me.ButtonX6.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX6.TabIndex = 24
+        Me.ButtonX6.Text = "&Desenglobar Nomina"
         '
-        'Label1
+        'ButtonX3
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(164, 31)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(439, 31)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Ordenes de Pagos (Datos Basicos)"
+        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX3.Location = New System.Drawing.Point(268, 89)
+        Me.ButtonX3.Name = "ButtonX3"
+        Me.ButtonX3.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX3.TabIndex = 23
+        Me.ButtonX3.Text = "&Modificar Causaciones"
         '
-        'Label7
+        'Label5
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label7.Location = New System.Drawing.Point(55, 31)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(627, 42)
-        Me.Label7.TabIndex = 11
-        Me.Label7.Text = "_____________________________"
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label5.Location = New System.Drawing.Point(59, 37)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(627, 42)
+        Me.Label5.TabIndex = 21
+        Me.Label5.Text = "_____________________________"
         '
-        'datosbac
+        'cmdcierre
         '
-        Me.datosbac.AttachedControl = Me.TabControlPanel1
-        Me.datosbac.Name = "datosbac"
-        Me.datosbac.Text = "Datos Basicos"
+        Me.cmdcierre.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmdcierre.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmdcierre.Location = New System.Drawing.Point(268, 92)
+        Me.cmdcierre.Name = "cmdcierre"
+        Me.cmdcierre.Size = New System.Drawing.Size(192, 36)
+        Me.cmdcierre.TabIndex = 19
+        Me.cmdcierre.Text = "&Cierre de Año"
+        Me.cmdcierre.Visible = False
+        '
+        'TabItem3
+        '
+        Me.TabItem3.AttachedControl = Me.TabControlPanel4
+        Me.TabItem3.Name = "TabItem3"
+        Me.TabItem3.Text = "Procesos"
         '
         'GroupPanel1
         '
@@ -647,16 +657,6 @@ Partial Class FrmOrdenesDePago
         Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
         Me.GroupPanel1.TabIndex = 6
-        '
-        'ButtonX8
-        '
-        Me.ButtonX8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX8.Location = New System.Drawing.Point(400, 77)
-        Me.ButtonX8.Name = "ButtonX8"
-        Me.ButtonX8.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX8.TabIndex = 60
-        Me.ButtonX8.Text = "&Egresos - Rubros"
         '
         'salir
         '
@@ -749,17 +749,17 @@ Partial Class FrmOrdenesDePago
         Me.TabControlPanel3.PerformLayout()
         CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl4.ResumeLayout(False)
+        Me.TabControlPanel5.ResumeLayout(False)
         Me.TabControlPanel17.ResumeLayout(False)
         Me.TabControlPanel17.PerformLayout()
-        Me.TabControlPanel5.ResumeLayout(False)
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
-        Me.TabControlPanel4.ResumeLayout(False)
-        Me.TabControlPanel4.PerformLayout()
-        Me.TabControlPanel2.ResumeLayout(False)
-        Me.TabControlPanel2.PerformLayout()
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
+        Me.TabControlPanel2.ResumeLayout(False)
+        Me.TabControlPanel2.PerformLayout()
+        Me.TabControlPanel4.ResumeLayout(False)
+        Me.TabControlPanel4.PerformLayout()
         Me.GroupPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

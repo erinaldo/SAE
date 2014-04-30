@@ -325,7 +325,7 @@ Partial Class FrmCierreOpciones
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(413, 244)
+        Me.ClientSize = New System.Drawing.Size(412, 239)
         Me.Controls.Add(Me.grilla)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.Label1)

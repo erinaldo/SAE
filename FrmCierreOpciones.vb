@@ -182,4 +182,37 @@
         End If
         FrmCuentas.ShowDialog()
     End Sub
+
+    Private Sub txtctapuente_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtctapuente.LostFocus
+        If Trim(txtctapuente.Text) <> "" Then
+            If nivel_cuenta(txtctapuente.Text) = False Then
+                MsgBox("La cuenta debe ser Auxiliar", MsgBoxStyle.Information, "SAE")
+                txtctapuente.Text = ""
+            End If
+        End If
+    End Sub
+    Function nivel_cuenta(ByVal codigo As String)
+        Dim tabla As New DataTable
+        myCommand.CommandText = "SELECT * FROM selpuc WHERE codigo='" & codigo & "' and nivel='Auxiliar';"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tabla)
+        Try
+            If tabla.Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Private Sub txtctaUP_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtctaUP.LostFocus
+        If Trim(txtctaUP.Text) <> "" Then
+            If nivel_cuenta(txtctaUP.Text) = False Then
+                MsgBox("La cuenta debe ser Auxiliar", MsgBoxStyle.Information, "SAE")
+                txtctaUP.Text = ""
+            End If
+        End If
+    End Sub
 End Class

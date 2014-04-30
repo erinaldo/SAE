@@ -64,7 +64,7 @@
 
         Dim col As New CalendarColumn()
         Me.grilla.Columns.Add(col)
-        Me.grilla.Columns.Item(3).HeaderText = "FECHA DE NACIEMIENTO"
+        Me.grilla.Columns.Item(3).HeaderText = "FECHA DE NACIMIENTO"
 
         With grilla
             .AlternatingRowsDefaultCellStyle.BackColor = Color.White

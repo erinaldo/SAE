@@ -23,17 +23,26 @@ Partial Class FrmDocProveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDocProveedor))
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.txtcuentatotal = New System.Windows.Forms.TextBox
         Me.gfp = New System.Windows.Forms.DataGridView
         Me.cual = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -194,6 +203,35 @@ Partial Class FrmDocProveedor
         Me.lbanti4 = New System.Windows.Forms.Label
         Me.lbanti5 = New System.Windows.Forms.Label
         Me.lb_imp_dec = New System.Windows.Forms.TextBox
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Label24 = New System.Windows.Forms.Label
         CType(Me.gfp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grilla, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Gparametros.SuspendLayout()
@@ -207,7 +245,7 @@ Partial Class FrmDocProveedor
         'txtcuentatotal
         '
         Me.txtcuentatotal.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentatotal.Location = New System.Drawing.Point(292, 608)
+        Me.txtcuentatotal.Location = New System.Drawing.Point(293, 591)
         Me.txtcuentatotal.Name = "txtcuentatotal"
         Me.txtcuentatotal.ShortcutsEnabled = False
         Me.txtcuentatotal.Size = New System.Drawing.Size(96, 20)
@@ -230,8 +268,8 @@ Partial Class FrmDocProveedor
         '
         'cual
         '
-        DataGridViewCellStyle21.NullValue = Nothing
-        Me.cual.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle20.NullValue = Nothing
+        Me.cual.DefaultCellStyle = DataGridViewCellStyle20
         Me.cual.Frozen = True
         Me.cual.HeaderText = "TIPO"
         Me.cual.MinimumWidth = 70
@@ -270,8 +308,8 @@ Partial Class FrmDocProveedor
         '
         'monto
         '
-        DataGridViewCellStyle22.NullValue = Nothing
-        Me.monto.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle21.NullValue = Nothing
+        Me.monto.DefaultCellStyle = DataGridViewCellStyle21
         Me.monto.Frozen = True
         Me.monto.HeaderText = "VALOR"
         Me.monto.MinimumWidth = 80
@@ -313,14 +351,14 @@ Partial Class FrmDocProveedor
         Me.grilla.Location = New System.Drawing.Point(2, 714)
         Me.grilla.MultiSelect = False
         Me.grilla.Name = "grilla"
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grilla.RowHeadersDefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grilla.RowHeadersDefaultCellStyle = DataGridViewCellStyle25
         Me.grilla.RowHeadersVisible = False
         Me.grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.grilla.Size = New System.Drawing.Size(653, 66)
@@ -329,8 +367,8 @@ Partial Class FrmDocProveedor
         '
         'Descripcion
         '
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Descripcion.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Descripcion.DefaultCellStyle = DataGridViewCellStyle22
         Me.Descripcion.FillWeight = 180.0!
         Me.Descripcion.HeaderText = "Descripcion"
         Me.Descripcion.MaxInputLength = 500
@@ -342,11 +380,11 @@ Partial Class FrmDocProveedor
         '
         'Debitos
         '
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.ForestGreen
-        DataGridViewCellStyle24.Format = "N2"
-        DataGridViewCellStyle24.NullValue = Nothing
-        Me.Debitos.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.ForestGreen
+        DataGridViewCellStyle23.Format = "N2"
+        DataGridViewCellStyle23.NullValue = Nothing
+        Me.Debitos.DefaultCellStyle = DataGridViewCellStyle23
         Me.Debitos.HeaderText = "Debitos"
         Me.Debitos.MaxInputLength = 30
         Me.Debitos.Name = "Debitos"
@@ -355,11 +393,11 @@ Partial Class FrmDocProveedor
         '
         'Creditos
         '
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle25.Format = "N2"
-        DataGridViewCellStyle25.NullValue = Nothing
-        Me.Creditos.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle24.Format = "N2"
+        DataGridViewCellStyle24.NullValue = Nothing
+        Me.Creditos.DefaultCellStyle = DataGridViewCellStyle24
         Me.Creditos.HeaderText = "Creditos"
         Me.Creditos.MaxInputLength = 30
         Me.Creditos.Name = "Creditos"
@@ -483,7 +521,7 @@ Partial Class FrmDocProveedor
         Me.txttotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txttotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotal.ForeColor = System.Drawing.Color.Red
-        Me.txttotal.Location = New System.Drawing.Point(159, 607)
+        Me.txttotal.Location = New System.Drawing.Point(160, 590)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.Size = New System.Drawing.Size(119, 20)
         Me.txttotal.TabIndex = 208
@@ -495,7 +533,7 @@ Partial Class FrmDocProveedor
         Me.txtiva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtiva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtiva.ForeColor = System.Drawing.Color.SteelBlue
-        Me.txtiva.Location = New System.Drawing.Point(159, 500)
+        Me.txtiva.Location = New System.Drawing.Point(160, 483)
         Me.txtiva.Name = "txtiva"
         Me.txtiva.Size = New System.Drawing.Size(119, 20)
         Me.txtiva.TabIndex = 207
@@ -698,7 +736,7 @@ Partial Class FrmDocProveedor
         Me.valoriva.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.valoriva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.valoriva.ForeColor = System.Drawing.Color.SteelBlue
-        Me.valoriva.Location = New System.Drawing.Point(97, 498)
+        Me.valoriva.Location = New System.Drawing.Point(98, 481)
         Me.valoriva.MaxLength = 5
         Me.valoriva.Name = "valoriva"
         Me.valoriva.ReadOnly = True
@@ -725,7 +763,7 @@ Partial Class FrmDocProveedor
         '
         Me.txtvmto.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtvmto.Enabled = False
-        Me.txtvmto.Location = New System.Drawing.Point(490, 467)
+        Me.txtvmto.Location = New System.Drawing.Point(490, 462)
         Me.txtvmto.MaxLength = 4
         Me.txtvmto.Name = "txtvmto"
         Me.txtvmto.ShortcutsEnabled = False
@@ -753,7 +791,7 @@ Partial Class FrmDocProveedor
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label17.Location = New System.Drawing.Point(399, 472)
+        Me.Label17.Location = New System.Drawing.Point(399, 467)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(86, 13)
         Me.Label17.TabIndex = 190
@@ -774,7 +812,7 @@ Partial Class FrmDocProveedor
         'txtcuentaiva
         '
         Me.txtcuentaiva.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentaiva.Location = New System.Drawing.Point(293, 500)
+        Me.txtcuentaiva.Location = New System.Drawing.Point(294, 483)
         Me.txtcuentaiva.Name = "txtcuentaiva"
         Me.txtcuentaiva.ShortcutsEnabled = False
         Me.txtcuentaiva.Size = New System.Drawing.Size(96, 20)
@@ -816,7 +854,7 @@ Partial Class FrmDocProveedor
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Crimson
-        Me.Label10.Location = New System.Drawing.Point(27, 604)
+        Me.Label10.Location = New System.Drawing.Point(28, 587)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(64, 20)
         Me.Label10.TabIndex = 177
@@ -827,7 +865,7 @@ Partial Class FrmDocProveedor
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label9.Location = New System.Drawing.Point(26, 500)
+        Me.Label9.Location = New System.Drawing.Point(27, 483)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(39, 13)
         Me.Label9.TabIndex = 176
@@ -924,7 +962,7 @@ Partial Class FrmDocProveedor
         '
         Me.cbconcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbconcepto.FormattingEnabled = True
-        Me.cbconcepto.Location = New System.Drawing.Point(24, 574)
+        Me.cbconcepto.Location = New System.Drawing.Point(25, 557)
         Me.cbconcepto.MaxDropDownItems = 4
         Me.cbconcepto.Name = "cbconcepto"
         Me.cbconcepto.Size = New System.Drawing.Size(88, 21)
@@ -935,7 +973,7 @@ Partial Class FrmDocProveedor
         '
         Me.cbcuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbcuenta.FormattingEnabled = True
-        Me.cbcuenta.Location = New System.Drawing.Point(292, 574)
+        Me.cbcuenta.Location = New System.Drawing.Point(293, 557)
         Me.cbcuenta.MaxDropDownItems = 4
         Me.cbcuenta.Name = "cbcuenta"
         Me.cbcuenta.Size = New System.Drawing.Size(97, 21)
@@ -947,7 +985,7 @@ Partial Class FrmDocProveedor
         Me.cbsr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbsr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbsr.FormattingEnabled = True
-        Me.cbsr.Location = New System.Drawing.Point(115, 574)
+        Me.cbsr.Location = New System.Drawing.Point(116, 557)
         Me.cbsr.MaxDropDownItems = 4
         Me.cbsr.Name = "cbsr"
         Me.cbsr.Size = New System.Drawing.Size(38, 23)
@@ -959,7 +997,7 @@ Partial Class FrmDocProveedor
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label6.Location = New System.Drawing.Point(11, 577)
+        Me.Label6.Location = New System.Drawing.Point(12, 560)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(14, 16)
         Me.Label6.TabIndex = 240
@@ -1306,7 +1344,7 @@ Partial Class FrmDocProveedor
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label15.Location = New System.Drawing.Point(140, 501)
+        Me.Label15.Location = New System.Drawing.Point(141, 484)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(16, 13)
         Me.Label15.TabIndex = 186
@@ -1329,7 +1367,7 @@ Partial Class FrmDocProveedor
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.Label11.Location = New System.Drawing.Point(140, 560)
+        Me.Label11.Location = New System.Drawing.Point(141, 543)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(165, 42)
         Me.Label11.TabIndex = 178
@@ -1395,7 +1433,7 @@ Partial Class FrmDocProveedor
         'txtcuentaflete
         '
         Me.txtcuentaflete.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentaflete.Location = New System.Drawing.Point(293, 525)
+        Me.txtcuentaflete.Location = New System.Drawing.Point(294, 508)
         Me.txtcuentaflete.Name = "txtcuentaflete"
         Me.txtcuentaflete.ShortcutsEnabled = False
         Me.txtcuentaflete.Size = New System.Drawing.Size(96, 20)
@@ -1406,7 +1444,7 @@ Partial Class FrmDocProveedor
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label25.Location = New System.Drawing.Point(26, 529)
+        Me.Label25.Location = New System.Drawing.Point(27, 512)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(41, 13)
         Me.Label25.TabIndex = 221
@@ -1415,7 +1453,7 @@ Partial Class FrmDocProveedor
         'txtcuentaseguro
         '
         Me.txtcuentaseguro.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentaseguro.Location = New System.Drawing.Point(293, 550)
+        Me.txtcuentaseguro.Location = New System.Drawing.Point(294, 533)
         Me.txtcuentaseguro.Name = "txtcuentaseguro"
         Me.txtcuentaseguro.ShortcutsEnabled = False
         Me.txtcuentaseguro.Size = New System.Drawing.Size(96, 20)
@@ -1426,7 +1464,7 @@ Partial Class FrmDocProveedor
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label27.Location = New System.Drawing.Point(26, 554)
+        Me.Label27.Location = New System.Drawing.Point(27, 537)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(47, 13)
         Me.Label27.TabIndex = 226
@@ -1475,9 +1513,9 @@ Partial Class FrmDocProveedor
         '
         'num
         '
-        DataGridViewCellStyle27.Format = "N0"
-        DataGridViewCellStyle27.NullValue = Nothing
-        Me.num.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle26.Format = "N0"
+        DataGridViewCellStyle26.NullValue = Nothing
+        Me.num.DefaultCellStyle = DataGridViewCellStyle26
         Me.num.Frozen = True
         Me.num.HeaderText = "NÚM"
         Me.num.MinimumWidth = 50
@@ -1509,10 +1547,10 @@ Partial Class FrmDocProveedor
         '
         'cant
         '
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle28.Format = "N0"
-        DataGridViewCellStyle28.NullValue = Nothing
-        Me.cant.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle27.Format = "N0"
+        DataGridViewCellStyle27.NullValue = Nothing
+        Me.cant.DefaultCellStyle = DataGridViewCellStyle27
         Me.cant.Frozen = True
         Me.cant.HeaderText = "CANTIDAD"
         Me.cant.MinimumWidth = 80
@@ -1523,10 +1561,10 @@ Partial Class FrmDocProveedor
         '
         'valor
         '
-        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle29.Format = "N2"
-        DataGridViewCellStyle29.NullValue = Nothing
-        Me.valor.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle28.Format = "N2"
+        DataGridViewCellStyle28.NullValue = Nothing
+        Me.valor.DefaultCellStyle = DataGridViewCellStyle28
         Me.valor.Frozen = True
         Me.valor.HeaderText = "V. UNI"
         Me.valor.MinimumWidth = 100
@@ -1536,10 +1574,10 @@ Partial Class FrmDocProveedor
         '
         'Vtotal
         '
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle30.Format = "N2"
-        DataGridViewCellStyle30.NullValue = Nothing
-        Me.Vtotal.DefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle29.Format = "N2"
+        DataGridViewCellStyle29.NullValue = Nothing
+        Me.Vtotal.DefaultCellStyle = DataGridViewCellStyle29
         Me.Vtotal.Frozen = True
         Me.Vtotal.HeaderText = "V. TOTAL"
         Me.Vtotal.MinimumWidth = 100
@@ -1661,7 +1699,7 @@ Partial Class FrmDocProveedor
         Me.lbvalor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbvalor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbvalor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lbvalor.Location = New System.Drawing.Point(159, 574)
+        Me.lbvalor.Location = New System.Drawing.Point(160, 557)
         Me.lbvalor.Name = "lbvalor"
         Me.lbvalor.Size = New System.Drawing.Size(119, 20)
         Me.lbvalor.TabIndex = 241
@@ -1684,7 +1722,7 @@ Partial Class FrmDocProveedor
         Me.txtseguro.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtseguro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtseguro.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.txtseguro.Location = New System.Drawing.Point(159, 551)
+        Me.txtseguro.Location = New System.Drawing.Point(160, 534)
         Me.txtseguro.Name = "txtseguro"
         Me.txtseguro.ShortcutsEnabled = False
         Me.txtseguro.Size = New System.Drawing.Size(119, 20)
@@ -1697,7 +1735,7 @@ Partial Class FrmDocProveedor
         Me.txtflete.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtflete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtflete.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.txtflete.Location = New System.Drawing.Point(159, 525)
+        Me.txtflete.Location = New System.Drawing.Point(160, 508)
         Me.txtflete.Name = "txtflete"
         Me.txtflete.ShortcutsEnabled = False
         Me.txtflete.Size = New System.Drawing.Size(119, 20)
@@ -1832,19 +1870,20 @@ Partial Class FrmDocProveedor
         Me.txtretCre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtretCre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtretCre.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.txtretCre.Location = New System.Drawing.Point(159, 479)
+        Me.txtretCre.Location = New System.Drawing.Point(810, 408)
         Me.txtretCre.Name = "txtretCre"
         Me.txtretCre.Size = New System.Drawing.Size(119, 20)
         Me.txtretCre.TabIndex = 279
         Me.txtretCre.Text = "0,00"
         Me.txtretCre.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.txtretCre.Visible = False
         '
         'valorretCree
         '
         Me.valorretCree.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.valorretCree.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.valorretCree.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.valorretCree.Location = New System.Drawing.Point(96, 477)
+        Me.valorretCree.Location = New System.Drawing.Point(747, 406)
         Me.valorretCree.MaxLength = 5
         Me.valorretCree.Name = "valorretCree"
         Me.valorretCree.ShortcutsEnabled = False
@@ -1852,37 +1891,41 @@ Partial Class FrmDocProveedor
         Me.valorretCree.TabIndex = 275
         Me.valorretCree.Text = "0,00"
         Me.valorretCree.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.valorretCree.Visible = False
         '
         'txtcuentaCree
         '
         Me.txtcuentaCree.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentaCree.Location = New System.Drawing.Point(293, 479)
+        Me.txtcuentaCree.Location = New System.Drawing.Point(944, 408)
         Me.txtcuentaCree.Name = "txtcuentaCree"
         Me.txtcuentaCree.ShortcutsEnabled = False
         Me.txtcuentaCree.Size = New System.Drawing.Size(96, 20)
         Me.txtcuentaCree.TabIndex = 276
+        Me.txtcuentaCree.Visible = False
         '
         'Label26
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label26.Location = New System.Drawing.Point(26, 481)
+        Me.Label26.Location = New System.Drawing.Point(677, 410)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(71, 13)
         Me.Label26.TabIndex = 277
         Me.Label26.Text = "Rete CREE"
+        Me.Label26.Visible = False
         '
         'Label29
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label29.Location = New System.Drawing.Point(139, 480)
+        Me.Label29.Location = New System.Drawing.Point(790, 409)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(21, 16)
         Me.Label29.TabIndex = 278
         Me.Label29.Text = "%"
+        Me.Label29.Visible = False
         '
         'lbanti4
         '
@@ -1910,12 +1953,283 @@ Partial Class FrmDocProveedor
         Me.lb_imp_dec.TabIndex = 282
         Me.lb_imp_dec.Visible = False
         '
+        'DataGridViewTextBoxColumn1
+        '
+        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle30
+        Me.DataGridViewTextBoxColumn1.FillWeight = 180.0!
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Descripcion"
+        Me.DataGridViewTextBoxColumn1.MaxInputLength = 500
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 250
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn1.Width = 250
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.ForestGreen
+        DataGridViewCellStyle31.Format = "N2"
+        DataGridViewCellStyle31.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle31
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Debitos"
+        Me.DataGridViewTextBoxColumn2.MaxInputLength = 30
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle32.Format = "N2"
+        DataGridViewCellStyle32.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle32
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Creditos"
+        Me.DataGridViewTextBoxColumn3.MaxInputLength = 30
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.FillWeight = 80.0!
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Cuenta"
+        Me.DataGridViewTextBoxColumn4.MaxInputLength = 20
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn4.Width = 80
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.HeaderText = "base"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "cheque"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        DataGridViewCellStyle33.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle33
+        Me.DataGridViewTextBoxColumn7.Frozen = True
+        Me.DataGridViewTextBoxColumn7.HeaderText = "TIPO"
+        Me.DataGridViewTextBoxColumn7.MinimumWidth = 70
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn7.Width = 70
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.Frozen = True
+        Me.DataGridViewTextBoxColumn8.HeaderText = "DESCRIPCIÓN"
+        Me.DataGridViewTextBoxColumn8.MinimumWidth = 90
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn8.Width = 90
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.Frozen = True
+        Me.DataGridViewTextBoxColumn9.HeaderText = "TT"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.Width = 30
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.Frozen = True
+        Me.DataGridViewTextBoxColumn10.HeaderText = "BANCO"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.Frozen = True
+        Me.DataGridViewTextBoxColumn11.HeaderText = "NUMERO"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        DataGridViewCellStyle34.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle34
+        Me.DataGridViewTextBoxColumn12.Frozen = True
+        Me.DataGridViewTextBoxColumn12.HeaderText = "VALOR"
+        Me.DataGridViewTextBoxColumn12.MinimumWidth = 80
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn12.Width = 80
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        DataGridViewCellStyle35.Format = "N0"
+        DataGridViewCellStyle35.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle35
+        Me.DataGridViewTextBoxColumn13.Frozen = True
+        Me.DataGridViewTextBoxColumn13.HeaderText = "NÚM"
+        Me.DataGridViewTextBoxColumn13.MinimumWidth = 50
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        Me.DataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn13.Width = 50
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.Frozen = True
+        Me.DataGridViewTextBoxColumn14.HeaderText = "CODIGO"
+        Me.DataGridViewTextBoxColumn14.MinimumWidth = 90
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
+        Me.DataGridViewTextBoxColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn14.Width = 90
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.Frozen = True
+        Me.DataGridViewTextBoxColumn15.HeaderText = "DESCRIPCIÓN"
+        Me.DataGridViewTextBoxColumn15.MinimumWidth = 200
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.ReadOnly = True
+        Me.DataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn15.Width = 200
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle36.Format = "N0"
+        DataGridViewCellStyle36.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn16.DefaultCellStyle = DataGridViewCellStyle36
+        Me.DataGridViewTextBoxColumn16.Frozen = True
+        Me.DataGridViewTextBoxColumn16.HeaderText = "CANTIDAD"
+        Me.DataGridViewTextBoxColumn16.MinimumWidth = 80
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        Me.DataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn16.Width = 80
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle37.Format = "N2"
+        DataGridViewCellStyle37.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn17.DefaultCellStyle = DataGridViewCellStyle37
+        Me.DataGridViewTextBoxColumn17.Frozen = True
+        Me.DataGridViewTextBoxColumn17.HeaderText = "V. UNI"
+        Me.DataGridViewTextBoxColumn17.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        Me.DataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle38.Format = "N2"
+        DataGridViewCellStyle38.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn18.DefaultCellStyle = DataGridViewCellStyle38
+        Me.DataGridViewTextBoxColumn18.Frozen = True
+        Me.DataGridViewTextBoxColumn18.HeaderText = "V. TOTAL"
+        Me.DataGridViewTextBoxColumn18.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
+        Me.DataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        Me.DataGridViewTextBoxColumn19.Frozen = True
+        Me.DataGridViewTextBoxColumn19.HeaderText = "TIPO"
+        Me.DataGridViewTextBoxColumn19.MinimumWidth = 20
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.DataGridViewTextBoxColumn19.ReadOnly = True
+        Me.DataGridViewTextBoxColumn19.Visible = False
+        Me.DataGridViewTextBoxColumn19.Width = 20
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        Me.DataGridViewTextBoxColumn20.Frozen = True
+        Me.DataGridViewTextBoxColumn20.HeaderText = "BODEGA"
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        Me.DataGridViewTextBoxColumn20.ReadOnly = True
+        Me.DataGridViewTextBoxColumn20.Visible = False
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        Me.DataGridViewTextBoxColumn21.Frozen = True
+        Me.DataGridViewTextBoxColumn21.HeaderText = "cc"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.ReadOnly = True
+        Me.DataGridViewTextBoxColumn21.Visible = False
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.Frozen = True
+        Me.DataGridViewTextBoxColumn22.HeaderText = "ctainv"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = True
+        Me.DataGridViewTextBoxColumn22.Visible = False
+        '
+        'DataGridViewTextBoxColumn23
+        '
+        Me.DataGridViewTextBoxColumn23.Frozen = True
+        Me.DataGridViewTextBoxColumn23.HeaderText = "ctacven"
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = True
+        Me.DataGridViewTextBoxColumn23.Visible = False
+        '
+        'DataGridViewTextBoxColumn24
+        '
+        Me.DataGridViewTextBoxColumn24.Frozen = True
+        Me.DataGridViewTextBoxColumn24.HeaderText = "ctaing"
+        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        Me.DataGridViewTextBoxColumn24.ReadOnly = True
+        Me.DataGridViewTextBoxColumn24.Visible = False
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        Me.DataGridViewTextBoxColumn25.Frozen = True
+        Me.DataGridViewTextBoxColumn25.HeaderText = "ctaiva"
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.ReadOnly = True
+        Me.DataGridViewTextBoxColumn25.Visible = False
+        '
+        'DataGridViewTextBoxColumn26
+        '
+        Me.DataGridViewTextBoxColumn26.Frozen = True
+        Me.DataGridViewTextBoxColumn26.HeaderText = "iva"
+        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        Me.DataGridViewTextBoxColumn26.Visible = False
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.HeaderText = "costo"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.Visible = False
+        '
+        'DataGridViewTextBoxColumn28
+        '
+        Me.DataGridViewTextBoxColumn28.HeaderText = "DESCUENTO"
+        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.Visible = False
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label24.Location = New System.Drawing.Point(402, 488)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(80, 13)
+        Me.Label24.TabIndex = 284
+        Me.Label24.Text = "Fecha V/mto"
+        '
         'FrmDocProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(680, 636)
+        Me.ClientSize = New System.Drawing.Size(671, 623)
+        Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.cbldoc)
         Me.Controls.Add(Me.lb_imp_dec)
         Me.Controls.Add(Me.lbanti5)
@@ -2203,4 +2517,33 @@ Partial Class FrmDocProveedor
     Friend WithEvents lbanti5 As System.Windows.Forms.Label
     Friend WithEvents lb_imp_dec As System.Windows.Forms.TextBox
     Friend WithEvents cbldoc As System.Windows.Forms.ComboBox
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn23 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn24 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn25 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn26 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn27 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn28 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label24 As System.Windows.Forms.Label
 End Class

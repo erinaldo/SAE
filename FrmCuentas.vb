@@ -425,6 +425,10 @@
                     FrmDocProveedor.txtcuentaseguro.Text = gcuenta.Item(1, fila).Value()
                 Case "fdp_total"
                     FrmDocProveedor.txtcuentatotal.Text = gcuenta.Item(1, fila).Value()
+                Case "fdp_items_Comp"
+                    Dim fil As Integer
+                    fil = Val(lbfila.Text)
+                    FrmItemsCompras.gitems.Item(8, fil).Value = gcuenta.Item(1, fila).Value()
                 Case "cpp_si"
                     FrmSaldosInicialesCPP.txtcta.Text = gcuenta.Item(1, fila).Value()
                     FrmSaldosInicialesCPP.txtnomcta.Text = gcuenta.Item(2, fila).Value()

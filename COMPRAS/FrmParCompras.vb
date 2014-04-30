@@ -80,36 +80,52 @@ Public Class FrmParCompras
     End Sub
     '******** CUENTAS CONTABLES *****************
     Private Sub txt_cta_caja_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_caja.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_caja"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_banco_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_banco.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_banco"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_cpp_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_cpp.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_cpp"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_gas_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_gas.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_gas"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_com_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_com.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_com"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_desc_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_desc.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_desc"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_inv_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_inv.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_inv"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_iva_g_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_iva_g.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_iva_g"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_por_iva_g_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_por_iva_g.KeyPress
         ValidarPorcentaje(txt_por_iva_g, e)
@@ -118,8 +134,10 @@ Public Class FrmParCompras
         txt_por_iva_g.Text = Moneda(txt_por_iva_g.Text)
     End Sub
     Private Sub txt_cta_iva_d_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_iva_d.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_iva_d"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_por_iva_d_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_por_iva_d.KeyPress
         ValidarPorcentaje(txt_por_iva_d, e)
@@ -128,24 +146,34 @@ Public Class FrmParCompras
         txt_por_iva_d.Text = Moneda(txt_por_iva_d.Text)
     End Sub
     Private Sub txt_cta_rtf_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_rtf.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_rtf"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_fle_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_fle.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_fle"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_seg_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_seg.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_seg"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_ppf_c_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_ppf_c.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_ppf_c"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txt_cta_ppf_d_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_cta_ppf_d.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "comp_ppf_d"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     '**************************************************
     Private Sub cmdguardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdguardar.Click

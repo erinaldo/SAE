@@ -1175,7 +1175,7 @@ Public Class FrmInformeCC
     '***************** INICIO ACTUALIZAR CATALOGO CUENTA *******************************
 
     Public Sub ActualizarCatalogo()
-        'MiConexion("sae" & CompaniaActual & PerActual(3) & PerActual(4) & PerActual(5) & PerActual(6))
+        MiConexion("sae" & CompaniaActual & PerActual(3) & PerActual(4) & PerActual(5) & PerActual(6))
         'Dim tabla As New DataTable
         'Dim barra, baraux As Double
         'myCommand.CommandText = "SELECT codigo,saldo00 FROM selpuc WHERE nivel='Auxiliar' ORDER BY codigo desc;"
@@ -1211,7 +1211,7 @@ Public Class FrmInformeCC
         '    End If
         'Next
         'Cerrar()
-        MiConexion(bda)
+        MiConexion("sae" & CompaniaActual & PerActual(3) & PerActual(4) & PerActual(5) & PerActual(6))
         Dim tabla As New DataTable
         Dim barra, baraux As Double
         myCommand.CommandText = "SELECT codigo,saldo00 FROM selpuc WHERE nivel='Auxiliar' ORDER BY codigo desc;"
@@ -1255,7 +1255,6 @@ Public Class FrmInformeCC
         Dim tabla As New DataTable
         '///////////CALCULAR SALDO INICIAL //////////////////////
         myCommand.CommandText = "SELECT sum(saldo00) FROM selpuc WHERE codigo like '" & micuenta & "%' and nivel='Auxiliar';"
-        'myCommand.CommandText = "SELECT sum(saldo00) FROM selpuc WHERE codigo = '" & micuenta & "' and nivel='Auxiliar';"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         Try
@@ -1274,9 +1273,11 @@ Public Class FrmInformeCC
         myCommand.ExecuteNonQuery()
     End Sub
     Public Sub Calcular(ByVal mitabla As String, ByVal cuenta As String)
+        If mitabla = "00" Then
+            sumasaldo = 0
+        End If
         Dim tabla As New DataTable
         myCommand.CommandText = "SELECT sum(debito),sum(credito) FROM documentos" & mitabla & " WHERE codigo like '" & cuenta & "%';"
-        ' myCommand.CommandText = "SELECT sum(debito),sum(credito) FROM documentos" & mitabla & " WHERE codigo = '" & cuenta & "';"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         Try

@@ -19,6 +19,16 @@
         End If
         gitems.RowCount = items + 1
         For i = 0 To items - 1
+            If tabla.Rows(i).Item("anulado") = "si" Then
+                gitems.Item(0, i).Style.ForeColor = Color.Red
+                gitems.Item(1, i).Style.ForeColor = Color.Red
+                gitems.Item(2, i).Style.ForeColor = Color.Red
+                gitems.Item(3, i).Style.ForeColor = Color.Red
+                gitems.Item(4, i).Style.ForeColor = Color.Red
+                gitems.Item(5, i).Style.ForeColor = Color.Red
+                gitems.Item(6, i).Style.ForeColor = Color.Red
+                gitems.Item(7, i).Style.ForeColor = Color.Red
+            End If
             gitems.Item(0, i).Value = i + 1
             gitems.Item("doc", i).Value = tabla.Rows(i).Item("doc_afec")
             gitems.Item("docu", i).Value = tabla.Rows(i).Item("doc")

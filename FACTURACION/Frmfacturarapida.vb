@@ -932,21 +932,27 @@ Public Class Frmfacturarapida
             MsgBox("No ha digitado datos del vendedor, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             txtnitv.Focus()
             Exit Sub
-        ElseIf txtdescuento.Text <> 0 And txtcuentadesc.Text = "" And txtcuentadesc.Enabled = True Then
-            MsgBox("No ha escojido cuenta para los descuentos, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
-            txtcuentadesc.Focus()
-            Exit Sub
-            'ElseIf txtiva.Text <> "0" And txtcuentadesc.Text = "" And txtcuentadesc.Enabled = True Then
-            '    MsgBox("No ha escojido cuenta para los descuentos, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
-            '    txtcuentadesc.Focus()
-            '    Exit Sub
+        ElseIf txtdescuento.Text <> "0,00" And txtcuentadesc.Text.Length < 10 Then
+            If nivel_cuenta(Trim(txtcuentadesc.Text)) = False Then
+                MsgBox("No ha Seleccionado la  cuenta auxiliar para los descuentos, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
+                txtcuentadesc.Focus()
+                Exit Sub
+            End If
+        ElseIf txtiva.Text <> "0,00" And txtcuentaiva.Text.Length < 10 Then
+            If nivel_cuenta(Trim(txtcuentaiva.Text)) = False Then
+                MsgBox("No ha escogido cuenta para el IVA, Verifique los parametros.  ", MsgBoxStyle.Information, "Editar Factura ")
+                txtcuentaiva.Focus()
+                Exit Sub
+            End If
+        ElseIf txtcuentatotal.Text.Length < 10 Then
+            If nivel_cuenta(Trim(txtcuentatotal.Text)) = False Then
+                MsgBox("No ha escogido forma de pago o la cuenta Auxiliar, Verifique los parametros.  ", MsgBoxStyle.Information, "Editar Factura ")
+                cmdfpago.Focus()
+                Exit Sub
+            End If
         ElseIf CDbl(txttotal.Text) <= 0 And CDbl(lbvalor.Text) = 0 Then
             MsgBox("El total a pagar deber mayor que cero (0), Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             cmditems.Focus()
-            Exit Sub
-        ElseIf txtcuentatotal.Text = "" And txtcuentatotal.Enabled = True Then
-            MsgBox("No ha escojido forma de pago o la cuenta, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
-            cmdfpago.Focus()
             Exit Sub
         ElseIf gfactura.Item(1, 0).Value = "" Then
             MsgBox("No ha escogido producto(s) para la factura, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
@@ -5786,7 +5792,20 @@ Public Class Frmfacturarapida
         txttotal2.Text = ""
         txtfecha2.Text = ""
     End Sub
-   
 
-    
+    Function nivel_cuenta(ByVal codigo As String)
+        Dim tabla As New DataTable
+        myCommand.CommandText = "SELECT * FROM selpuc WHERE codigo='" & codigo & "' AND nivel='Auxiliar';"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tabla)
+        Try
+            If tabla.Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

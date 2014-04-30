@@ -979,8 +979,16 @@ Public Class FrmEstadoResultados
         & " s.codigo as doc , s.descripcion AS nomart, s.nivel as cta_inv,  IFNULL(sum(c.saldo" & cbini.Text & "),0) as valor, sum(c.saldo" & ant & ") as vtotal, if(IFNULL(sum(c.saldo" & cbini.Text & "),0)=0,'Y','N') as tipo_it FROM   " _
         & " (SELECT codigo,  nivel,  saldo" & cbini.Text & ", saldo" & ant & "  from selpuc  where nivel = 'Auxiliar' ) as c right join selpuc s  " _
         & " on (c.codigo LIKE CONCAT(s.codigo,'%') ) and s.nivel in (" & niv2 & ")  where s.nivel IN (" & niv2 & ") AND s.`codigo` LIKE '7%' " _
-        & " group by s.codigo" _
+        & " group by s.codigo " _
         & " ORDER BY doc,codart "
+        '& " UNION " _
+        '& " SELECT " _
+        '& " 'CUENTAS DE ORDEN ACREEDORAS' AS codart," _
+        '& " s.codigo as doc , s.descripcion AS nomart, s.nivel as cta_inv,  IFNULL(sum(c.saldo" & cbini.Text & "),0) as valor, sum(c.saldo" & ant & ") as vtotal, if(IFNULL(sum(c.saldo" & cbini.Text & "),0)=0,'Y','N') as tipo_it FROM   " _
+        '& " (SELECT codigo,  nivel,  saldo" & cbini.Text & ", saldo" & ant & "  from selpuc  where nivel = 'Auxiliar' ) as c right join selpuc s  " _
+        '& " on (c.codigo LIKE CONCAT(s.codigo,'%') ) and s.nivel in (" & niv2 & ")  where s.nivel IN (" & niv2 & ") AND s.`codigo` LIKE '9%' " _
+        '& " group by s.codigo" _
+
 
 
         '/////////////////////////////////////////////

@@ -23,6 +23,12 @@ Partial Class FrmInfCGN
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
@@ -35,7 +41,9 @@ Partial Class FrmInfCGN
         Me.cmdsalir = New System.Windows.Forms.Button
         Me.cmdpantalla = New System.Windows.Forms.Button
         Me.gitems = New System.Windows.Forms.DataGridView
+        Me.tsaldo = New System.Windows.Forms.DataGridViewCheckBoxColumn
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.cmdBuscar = New System.Windows.Forms.Button
         Me.Label6 = New System.Windows.Forms.Label
         Me.cbfin = New System.Windows.Forms.ComboBox
         Me.cbini = New System.Windows.Forms.ComboBox
@@ -43,9 +51,22 @@ Partial Class FrmInfCGN
         Me.txtpfin = New System.Windows.Forms.TextBox
         Me.txtpini = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
-        Me.cmdBuscar = New System.Windows.Forms.Button
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.tsaldo = New System.Windows.Forms.DataGridViewCheckBoxColumn
+        Me.txtcodEntidad = New System.Windows.Forms.TextBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.txtnombre = New System.Windows.Forms.TextBox
+        Me.Bexpor = New System.Windows.Forms.Button
+        Me.lbesperar = New System.Windows.Forms.Label
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.descrip = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.salini = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -55,10 +76,6 @@ Partial Class FrmInfCGN
         Me.salcorr = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.salno = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.codigo2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.txtcodEntidad = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.txtnombre = New System.Windows.Forms.TextBox
         Me.GroupPanel1.SuspendLayout()
         CType(Me.gitems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -68,6 +85,8 @@ Partial Class FrmInfCGN
         '
         Me.GroupPanel1.CanvasColor = System.Drawing.SystemColors.Control
         Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.GroupPanel1.Controls.Add(Me.lbesperar)
+        Me.GroupPanel1.Controls.Add(Me.Bexpor)
         Me.GroupPanel1.Controls.Add(Me.TextBox1)
         Me.GroupPanel1.Controls.Add(Me.cmdsalir)
         Me.GroupPanel1.Controls.Add(Me.cmdpantalla)
@@ -109,11 +128,12 @@ Partial Class FrmInfCGN
         Me.cmdsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdsalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdsalir.Image = Global.SAE.My.Resources.Resources.atras
-        Me.cmdsalir.Location = New System.Drawing.Point(574, 3)
+        Me.cmdsalir.Location = New System.Drawing.Point(432, 5)
         Me.cmdsalir.Name = "cmdsalir"
         Me.cmdsalir.Size = New System.Drawing.Size(62, 63)
         Me.cmdsalir.TabIndex = 1
         Me.cmdsalir.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.ToolTip1.SetToolTip(Me.cmdsalir, "Salir")
         Me.cmdsalir.UseVisualStyleBackColor = False
         '
         'cmdpantalla
@@ -121,13 +141,13 @@ Partial Class FrmInfCGN
         Me.cmdpantalla.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdpantalla.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdpantalla.Image = Global.SAE.My.Resources.Resources._lib
-        Me.cmdpantalla.Location = New System.Drawing.Point(503, 3)
+        Me.cmdpantalla.Location = New System.Drawing.Point(497, 4)
         Me.cmdpantalla.Name = "cmdpantalla"
         Me.cmdpantalla.Size = New System.Drawing.Size(68, 63)
         Me.cmdpantalla.TabIndex = 0
         Me.cmdpantalla.Text = "&R"
         Me.cmdpantalla.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.ToolTip1.SetToolTip(Me.cmdpantalla, "Generar Archivo")
+        Me.ToolTip1.SetToolTip(Me.cmdpantalla, "Generar Archivo .txt")
         Me.cmdpantalla.UseVisualStyleBackColor = False
         '
         'gitems
@@ -149,6 +169,13 @@ Partial Class FrmInfCGN
         Me.gitems.Size = New System.Drawing.Size(1088, 301)
         Me.gitems.TabIndex = 78
         '
+        'tsaldo
+        '
+        Me.tsaldo.HeaderText = "CORRIENTE"
+        Me.tsaldo.MinimumWidth = 70
+        Me.tsaldo.Name = "tsaldo"
+        Me.tsaldo.Width = 70
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.cmdBuscar)
@@ -164,6 +191,15 @@ Partial Class FrmInfCGN
         Me.GroupBox1.Size = New System.Drawing.Size(673, 46)
         Me.GroupBox1.TabIndex = 79
         Me.GroupBox1.TabStop = False
+        '
+        'cmdBuscar
+        '
+        Me.cmdBuscar.Location = New System.Drawing.Point(550, 14)
+        Me.cmdBuscar.Name = "cmdBuscar"
+        Me.cmdBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.cmdBuscar.TabIndex = 80
+        Me.cmdBuscar.Text = "Buscar"
+        Me.cmdBuscar.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -233,21 +269,156 @@ Partial Class FrmInfCGN
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "Inicial"
         '
-        'cmdBuscar
+        'txtcodEntidad
         '
-        Me.cmdBuscar.Location = New System.Drawing.Point(550, 14)
-        Me.cmdBuscar.Name = "cmdBuscar"
-        Me.cmdBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.cmdBuscar.TabIndex = 80
-        Me.cmdBuscar.Text = "Buscar"
-        Me.cmdBuscar.UseVisualStyleBackColor = True
+        Me.txtcodEntidad.Location = New System.Drawing.Point(137, 6)
+        Me.txtcodEntidad.Name = "txtcodEntidad"
+        Me.txtcodEntidad.Size = New System.Drawing.Size(279, 20)
+        Me.txtcodEntidad.TabIndex = 80
         '
-        'tsaldo
+        'Label3
         '
-        Me.tsaldo.HeaderText = "CORRIENTE"
-        Me.tsaldo.MinimumWidth = 70
-        Me.tsaldo.Name = "tsaldo"
-        Me.tsaldo.Width = 70
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(10, 12)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(125, 13)
+        Me.Label3.TabIndex = 81
+        Me.Label3.Text = "Codigo de la Entidad"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(11, 35)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(139, 13)
+        Me.Label4.TabIndex = 82
+        Me.Label4.Text = "Nombre del Documento"
+        '
+        'txtnombre
+        '
+        Me.txtnombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtnombre.Location = New System.Drawing.Point(148, 32)
+        Me.txtnombre.Name = "txtnombre"
+        Me.txtnombre.Size = New System.Drawing.Size(268, 20)
+        Me.txtnombre.TabIndex = 83
+        '
+        'Bexpor
+        '
+        Me.Bexpor.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Bexpor.Image = Global.SAE.My.Resources.Resources.minusb
+        Me.Bexpor.Location = New System.Drawing.Point(569, 5)
+        Me.Bexpor.Name = "Bexpor"
+        Me.Bexpor.Size = New System.Drawing.Size(65, 62)
+        Me.Bexpor.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.Bexpor, "Exportar a Excel")
+        Me.Bexpor.UseVisualStyleBackColor = False
+        '
+        'lbesperar
+        '
+        Me.lbesperar.AutoSize = True
+        Me.lbesperar.BackColor = System.Drawing.Color.Transparent
+        Me.lbesperar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbesperar.ForeColor = System.Drawing.Color.Maroon
+        Me.lbesperar.Location = New System.Drawing.Point(718, 22)
+        Me.lbesperar.Name = "lbesperar"
+        Me.lbesperar.Size = New System.Drawing.Size(140, 24)
+        Me.lbesperar.TabIndex = 84
+        Me.lbesperar.Text = "... ESPERE ..."
+        Me.lbesperar.Visible = False
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "CODIGO"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 70
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 70
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "DESCRIPCIÓN"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 250
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn2.Width = 250
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle7.Format = "N1"
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridViewTextBoxColumn3.HeaderText = "SALDO INICIAL"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle8.Format = "N2"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridViewTextBoxColumn4.HeaderText = "DEBITO"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle9.Format = "N2"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle9
+        Me.DataGridViewTextBoxColumn5.HeaderText = "CREDITO"
+        Me.DataGridViewTextBoxColumn5.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle10.Format = "N2"
+        DataGridViewCellStyle10.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle10
+        Me.DataGridViewTextBoxColumn6.HeaderText = "SALDO FINAL"
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 120
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 120
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle11.Format = "N2"
+        DataGridViewCellStyle11.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle11
+        Me.DataGridViewTextBoxColumn7.HeaderText = "SALDO CORRIENTE"
+        Me.DataGridViewTextBoxColumn7.MinimumWidth = 120
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 120
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle12.Format = "N2"
+        DataGridViewCellStyle12.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle12
+        Me.DataGridViewTextBoxColumn8.HeaderText = "SALDO NO CORRIENTE"
+        Me.DataGridViewTextBoxColumn8.MinimumWidth = 140
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 140
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "codigo2"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.Visible = False
         '
         'codigo
         '
@@ -341,41 +512,6 @@ Partial Class FrmInfCGN
         Me.codigo2.Name = "codigo2"
         Me.codigo2.Visible = False
         '
-        'txtcodEntidad
-        '
-        Me.txtcodEntidad.Location = New System.Drawing.Point(137, 6)
-        Me.txtcodEntidad.Name = "txtcodEntidad"
-        Me.txtcodEntidad.Size = New System.Drawing.Size(279, 20)
-        Me.txtcodEntidad.TabIndex = 80
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(10, 12)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(125, 13)
-        Me.Label3.TabIndex = 81
-        Me.Label3.Text = "Codigo de la Entidad"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(11, 35)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(139, 13)
-        Me.Label4.TabIndex = 82
-        Me.Label4.Text = "Nombre del Documento"
-        '
-        'txtnombre
-        '
-        Me.txtnombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtnombre.Location = New System.Drawing.Point(148, 32)
-        Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(268, 20)
-        Me.txtnombre.TabIndex = 83
-        '
         'FrmInfCGN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -434,4 +570,15 @@ Partial Class FrmInfCGN
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtnombre As System.Windows.Forms.TextBox
+    Friend WithEvents Bexpor As System.Windows.Forms.Button
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents lbesperar As System.Windows.Forms.Label
 End Class

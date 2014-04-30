@@ -39,7 +39,7 @@ Module Informes
         End Try
         '********************
         Dim tabla, tablacomp, tablames As New DataTable
-        myCommand.CommandText = "SELECT * FROM selpuc WHERE LENGTH(codigo)=1 AND codigo<'4' ORDER BY codigo;"
+        myCommand.CommandText = "SELECT * FROM selpuc WHERE LENGTH(codigo)=1 AND (codigo<'4' OR codigo='8') ORDER BY codigo;"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         '*********************
@@ -334,9 +334,10 @@ Module Informes
         Dim tA, tP, tC As New DataTable
         Dim sumaA, sumaP, sumaC, Dif As Double
         Dim Saldo As String
+        Dim nk As Integer = k
         Saldo = "saldo" & MiPer
         'TOTAL ACTIVO
-        myCommand.CommandText = "SELECT sum(" & Saldo & ") FROM selpuc WHERE codigo like '1%' and nivel='Auxiliar';"
+        myCommand.CommandText = "SELECT sum(" & Saldo & ") FROM selpuc WHERE (codigo like '1%' OR codigo like '8%')  and nivel='Auxiliar';"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tA)
         Try
@@ -372,6 +373,15 @@ Module Informes
         cb.ShowTextAligned(50, "DIFERENCIA", 50, k - 60, 0)
         Dif = sumaA + sumaP + sumaC
         cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(Dif), 250, k - 60, 0)
+        ''******************************
+        'nk = nk - 4
+        'cb.ShowTextAligned(50, "TOTAL PUENTE", 120, nk + 7, 0)
+        'cb.ShowTextAligned(50, "D", 50, nk + 15, 0)
+        'cb.ShowTextAligned(50, "PUENTE", 150, nk + 15, 0)
+        'cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(Dif), 585, nk + 15, 0)
+        'cb.ShowTextAligned(50, "__________________________________________________________________________________________________________________________________________________ ", 50, nk + 16, 0)
+
+
         'firmas
         If FrmBalanceGral.fcon.Checked = True Then
             cb.ShowTextAligned(50, "___________________________ ", 20, k - 120, 0)

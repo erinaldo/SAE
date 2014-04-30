@@ -107,6 +107,8 @@ Partial Class Frmfacturarapida
         Me.Button1 = New System.Windows.Forms.Button
         Me.cmdPrint = New System.Windows.Forms.Button
         Me.cmditems = New System.Windows.Forms.Button
+        Me.cbldoc = New System.Windows.Forms.ComboBox
+        Me.cbbase = New System.Windows.Forms.ComboBox
         Me.gfactura = New System.Windows.Forms.DataGridView
         Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -198,8 +200,6 @@ Partial Class Frmfacturarapida
         Me.nit2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.txtcentro2 = New System.Windows.Forms.TextBox
         Me.lbespera = New System.Windows.Forms.Label
-        Me.cbldoc = New System.Windows.Forms.ComboBox
-        Me.cbbase = New System.Windows.Forms.ComboBox
         Me.GroupBox1.SuspendLayout()
         Me.grupoafecta.SuspendLayout()
         CType(Me.gfactura, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -663,7 +663,7 @@ Partial Class Frmfacturarapida
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label17.Location = New System.Drawing.Point(393, 460)
+        Me.Label17.Location = New System.Drawing.Point(394, 458)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(86, 13)
         Me.Label17.TabIndex = 47
@@ -673,7 +673,7 @@ Partial Class Frmfacturarapida
         '
         Me.txtvmto.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtvmto.Enabled = False
-        Me.txtvmto.Location = New System.Drawing.Point(487, 455)
+        Me.txtvmto.Location = New System.Drawing.Point(488, 453)
         Me.txtvmto.MaxLength = 4
         Me.txtvmto.Name = "txtvmto"
         Me.txtvmto.ShortcutsEnabled = False
@@ -977,6 +977,30 @@ Partial Class Frmfacturarapida
         Me.cmditems.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.ToolTip1.SetToolTip(Me.cmditems, "editar Items Alt + I")
         Me.cmditems.UseVisualStyleBackColor = False
+        '
+        'cbldoc
+        '
+        Me.cbldoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbldoc.FormattingEnabled = True
+        Me.cbldoc.Location = New System.Drawing.Point(300, 554)
+        Me.cbldoc.MaxDropDownItems = 4
+        Me.cbldoc.Name = "cbldoc"
+        Me.cbldoc.Size = New System.Drawing.Size(88, 21)
+        Me.cbldoc.TabIndex = 294
+        Me.ToolTip1.SetToolTip(Me.cbldoc, "Conceptos")
+        Me.cbldoc.Visible = False
+        '
+        'cbbase
+        '
+        Me.cbbase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbbase.FormattingEnabled = True
+        Me.cbbase.Location = New System.Drawing.Point(300, 581)
+        Me.cbbase.MaxDropDownItems = 4
+        Me.cbbase.Name = "cbbase"
+        Me.cbbase.Size = New System.Drawing.Size(75, 21)
+        Me.cbbase.TabIndex = 293
+        Me.ToolTip1.SetToolTip(Me.cbbase, "base conceptos")
+        Me.cbbase.Visible = False
         '
         'gfactura
         '
@@ -1916,30 +1940,6 @@ Partial Class Frmfacturarapida
         Me.lbespera.TabIndex = 268
         Me.lbespera.Text = "ESPERE UN MOMENTO ..."
         Me.lbespera.Visible = False
-        '
-        'cbldoc
-        '
-        Me.cbldoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbldoc.FormattingEnabled = True
-        Me.cbldoc.Location = New System.Drawing.Point(300, 554)
-        Me.cbldoc.MaxDropDownItems = 4
-        Me.cbldoc.Name = "cbldoc"
-        Me.cbldoc.Size = New System.Drawing.Size(88, 21)
-        Me.cbldoc.TabIndex = 294
-        Me.ToolTip1.SetToolTip(Me.cbldoc, "Conceptos")
-        Me.cbldoc.Visible = False
-        '
-        'cbbase
-        '
-        Me.cbbase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbbase.FormattingEnabled = True
-        Me.cbbase.Location = New System.Drawing.Point(300, 581)
-        Me.cbbase.MaxDropDownItems = 4
-        Me.cbbase.Name = "cbbase"
-        Me.cbbase.Size = New System.Drawing.Size(75, 21)
-        Me.cbbase.TabIndex = 293
-        Me.ToolTip1.SetToolTip(Me.cbbase, "base conceptos")
-        Me.cbbase.Visible = False
         '
         'Frmfacturarapida
         '

@@ -408,8 +408,10 @@
     End Sub
     '////////////CUENTAS//////////////
     Private Sub txtcaja_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcaja.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "caja"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtcaja_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtcaja.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -419,8 +421,10 @@
         End If
     End Sub
     Private Sub txtbanco_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtbanco.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "banco"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtbanco_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtbanco.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -430,8 +434,10 @@
         End If
     End Sub
     Private Sub txtctapc_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtctapc.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "ctapc"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtctapc_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtctapc.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -441,10 +447,13 @@
         End If
     End Sub
     Private Sub txtinventario_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtinventario.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "inventario"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtinventario_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtinventario.KeyPress
+        FrmCuentas.lbaux.Text = "Grupo"
         If e.KeyChar = Chr(Keys.Enter) Then
             SendKeys.Send("{TAB}")
         Else
@@ -452,8 +461,10 @@
         End If
     End Sub
     Private Sub txtventas_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtventas.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "ventas"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtventas_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtventas.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -463,8 +474,10 @@
         End If
     End Sub
     Private Sub txtcosto_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcosto.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "costo"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtcosto_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtcosto.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -474,8 +487,10 @@
         End If
     End Sub
     Private Sub txtivapp_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtivapp.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "ivapp"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtivapp_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtivapp.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -485,8 +500,10 @@
         End If
     End Sub
     Private Sub txtivad_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtivad.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "ivad"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtivad_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtivad.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -496,8 +513,10 @@
         End If
     End Sub
     Private Sub txtdescuento_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtdescuento.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "descuento"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtdescuento_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtdescuento.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -507,8 +526,10 @@
         End If
     End Sub
     Private Sub txtretfuente_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtretfuente.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "retfuente"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtretfuente_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtretfuente.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -518,8 +539,10 @@
         End If
     End Sub
     Private Sub txtreteica_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtreteica.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "reteica"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtreteica_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtreteica.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -529,8 +552,10 @@
         End If
     End Sub
     Private Sub txtreteiva_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtreteiva.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "reteiva"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtreteiva_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtreteiva.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
@@ -702,9 +727,6 @@
         FrmGestionLista.ShowDialog()
     End Sub
 
-    Private Sub txttipo4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txttipo4.TextChanged
-
-    End Sub
 
     Public Sub New()
 
@@ -715,11 +737,5 @@
 
     End Sub
 
-    Private Sub txtcaja_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtcaja.TextChanged
-
-    End Sub
-
-    Private Sub FrmParametrosFact_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
+   
 End Class

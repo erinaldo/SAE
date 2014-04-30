@@ -114,6 +114,7 @@ Public Class FrmNuevoAno
                 FrmCierreAno.mibarra.Value = 35
                 mibarra.Value = 35
                 LlenarInventarios(bd)
+                LlenarInventariosMov00(bd)
             End If
             FrmCierreAno.mibarra.Value = 40
             mibarra.Value = 40

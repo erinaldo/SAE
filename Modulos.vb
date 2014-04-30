@@ -1838,6 +1838,7 @@ Module Modulos
         Inventario(bd)
         FrmCirreInv.mibarra.Value = 35
         LlenarInventarios2(bd)
+        LlenarInventariosMov00(bd)
         FrmCirreInv.mibarra.Value = 99
         FrmCirreInv.Cursor = Cursors.Default
         FrmCirreInv.mibarra.Visible = False
@@ -1850,32 +1851,44 @@ Module Modulos
 
     End Sub
     Public Sub LlenarInventarios2(ByVal nbd As String)
+        'Dim tabla_ci As New DataTable
+        'Dim mi_per As String
+        Dim sql As String = ""
+
+        'LLENAR CON_INV (CONSOLIDADOS INVENTARIOS)
         Dim tabla_ci As New DataTable
         Dim mi_per As String
-        Dim sql As String = ""
         myCommand.CommandText = "SELECT * FROM " & bda & ".con_inv WHERE periodo='12' ORDER BY codart;"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla_ci)
         Dim margen As Double
         For i = 0 To tabla_ci.Rows.Count - 1
-            sql = "DELETE FROM " & nbd & ".con_inv WHERE codart='" & tabla_ci.Rows(i).Item("codart") & "' AND periodo='00'"
-            Insertar(sql)
-            mi_per = "00"
-            Try
-                margen = CDec(tabla_ci.Rows(i).Item("margen").ToString)
-            Catch ex As Exception
-                margen = 0
-            End Try
-            sql = "INSERT INTO " & nbd & ".con_inv VALUES('" & tabla_ci.Rows(i).Item("codart") & "','" & mi_per & "','" & DIN(tabla_ci.Rows(i).Item("costuni")) & "','" & DIN(tabla_ci.Rows(i).Item("costprom")) & "','" & DIN(tabla_ci.Rows(i).Item("costmoe")) & "','" & DIN(tabla_ci.Rows(i).Item("otro")) & "','" & DIN(margen) & "','" & tabla_ci.Rows(i).Item("base") & "'," _
-            & "'" & DIN(tabla_ci.Rows(i).Item("precio1")) & "','" & DIN(tabla_ci.Rows(i).Item("precio2")) & "','" & DIN(tabla_ci.Rows(i).Item("precio3")) & "','" & DIN(tabla_ci.Rows(i).Item("precio4")) & "','" & DIN(tabla_ci.Rows(i).Item("precio5")) & "','" & DIN(tabla_ci.Rows(i).Item("precio6")) & "'," _
-            & "'" & tabla_ci.Rows(i).Item("cue_inv") & "','" & tabla_ci.Rows(i).Item("cue_cos") & "','" & tabla_ci.Rows(i).Item("cue_ing") & "','" & tabla_ci.Rows(i).Item("cue_iva_v") & "','" & tabla_ci.Rows(i).Item("cue_iva_c") & "','" & tabla_ci.Rows(i).Item("cue_dev") & "'," _
-            & "'" & DIN(tabla_ci.Rows(i).Item("saldoi")) & "','" & DIN(tabla_ci.Rows(i).Item("vent")) & "','" & DIN(tabla_ci.Rows(i).Item("vsal")) & "','" & DIN(tabla_ci.Rows(i).Item("vaju")) & "'," _
-            & "'" & DIN(tabla_ci.Rows(i).Item("cant1")) & "','" & DIN(tabla_ci.Rows(i).Item("cant2")) & "','" & DIN(tabla_ci.Rows(i).Item("cant3")) & "','" & DIN(tabla_ci.Rows(i).Item("cant4")) & "','" & DIN(tabla_ci.Rows(i).Item("cant5")) & "','" & DIN(tabla_ci.Rows(i).Item("cant6")) & "','" & DIN(tabla_ci.Rows(i).Item("cant7")) & "','" & DIN(tabla_ci.Rows(i).Item("cant8")) & "','" & DIN(tabla_ci.Rows(i).Item("cant9")) & "','" & DIN(tabla_ci.Rows(i).Item("cant10")) & "'," _
-            & "'" & DIN(tabla_ci.Rows(i).Item("cant11")) & "','" & DIN(tabla_ci.Rows(i).Item("cant12")) & "','" & DIN(tabla_ci.Rows(i).Item("cant13")) & "','" & DIN(tabla_ci.Rows(i).Item("cant14")) & "','" & DIN(tabla_ci.Rows(i).Item("cant15")) & "','" & DIN(tabla_ci.Rows(i).Item("cant16")) & "','" & DIN(tabla_ci.Rows(i).Item("cant17")) & "','" & DIN(tabla_ci.Rows(i).Item("cant18")) & "','" & DIN(tabla_ci.Rows(i).Item("cant19")) & "','" & DIN(tabla_ci.Rows(i).Item("cant20")) & "'," _
-            & "'" & DIN(tabla_ci.Rows(i).Item("cant21")) & "','" & DIN(tabla_ci.Rows(i).Item("cant22")) & "','" & DIN(tabla_ci.Rows(i).Item("cant23")) & "','" & DIN(tabla_ci.Rows(i).Item("cant24")) & "','" & DIN(tabla_ci.Rows(i).Item("cant25")) & "','" & DIN(tabla_ci.Rows(i).Item("cant26")) & "','" & DIN(tabla_ci.Rows(i).Item("cant27")) & "','" & DIN(tabla_ci.Rows(i).Item("cant28")) & "','" & DIN(tabla_ci.Rows(i).Item("cant29")) & "','" & DIN(tabla_ci.Rows(i).Item("cant30")) & "'" _
-            & ");"
-            Insertar(sql)
-        Next
+            For j = 0 To 12
+                If j < 10 Then
+                    mi_per = "0" & j
+                Else
+                    mi_per = j
+                End If
+                sql = "DELETE FROM " & nbd & ".con_inv WHERE codart='" & tabla_ci.Rows(i).Item("codart") & "' AND periodo='" & mi_per & "'"
+                Insertar(sql)
+                Try
+                    margen = CDec(tabla_ci.Rows(i).Item("margen").ToString)
+                Catch ex As Exception
+                    margen = 0
+                End Try
+                sql = "INSERT INTO " & nbd & ".con_inv VALUES('" & tabla_ci.Rows(i).Item("codart") & "','" & mi_per & "','" & DIN(tabla_ci.Rows(i).Item("costuni")) & "','" & DIN(tabla_ci.Rows(i).Item("costprom")) & "','" & DIN(tabla_ci.Rows(i).Item("costmoe")) & "','" & DIN(tabla_ci.Rows(i).Item("otro")) & "','" & DIN(margen) & "','" & tabla_ci.Rows(i).Item("base") & "'," _
+                & "'" & DIN(tabla_ci.Rows(i).Item("precio1")) & "','" & DIN(tabla_ci.Rows(i).Item("precio2")) & "','" & DIN(tabla_ci.Rows(i).Item("precio3")) & "','" & DIN(tabla_ci.Rows(i).Item("precio4")) & "','" & DIN(tabla_ci.Rows(i).Item("precio5")) & "','" & DIN(tabla_ci.Rows(i).Item("precio6")) & "'," _
+                & "'" & tabla_ci.Rows(i).Item("cue_inv") & "','" & tabla_ci.Rows(i).Item("cue_cos") & "','" & tabla_ci.Rows(i).Item("cue_ing") & "','" & tabla_ci.Rows(i).Item("cue_iva_v") & "','" & tabla_ci.Rows(i).Item("cue_iva_c") & "','" & tabla_ci.Rows(i).Item("cue_dev") & "'," _
+                & "'" & DIN(tabla_ci.Rows(i).Item("saldoi")) & "','" & DIN(tabla_ci.Rows(i).Item("vent")) & "','" & DIN(tabla_ci.Rows(i).Item("vsal")) & "','" & DIN(tabla_ci.Rows(i).Item("vaju")) & "'," _
+                & "'" & DIN(tabla_ci.Rows(i).Item("cant1")) & "','" & DIN(tabla_ci.Rows(i).Item("cant2")) & "','" & DIN(tabla_ci.Rows(i).Item("cant3")) & "','" & DIN(tabla_ci.Rows(i).Item("cant4")) & "','" & DIN(tabla_ci.Rows(i).Item("cant5")) & "','" & DIN(tabla_ci.Rows(i).Item("cant6")) & "','" & DIN(tabla_ci.Rows(i).Item("cant7")) & "','" & DIN(tabla_ci.Rows(i).Item("cant8")) & "','" & DIN(tabla_ci.Rows(i).Item("cant9")) & "','" & DIN(tabla_ci.Rows(i).Item("cant10")) & "'," _
+                & "'" & DIN(tabla_ci.Rows(i).Item("cant11")) & "','" & DIN(tabla_ci.Rows(i).Item("cant12")) & "','" & DIN(tabla_ci.Rows(i).Item("cant13")) & "','" & DIN(tabla_ci.Rows(i).Item("cant14")) & "','" & DIN(tabla_ci.Rows(i).Item("cant15")) & "','" & DIN(tabla_ci.Rows(i).Item("cant16")) & "','" & DIN(tabla_ci.Rows(i).Item("cant17")) & "','" & DIN(tabla_ci.Rows(i).Item("cant18")) & "','" & DIN(tabla_ci.Rows(i).Item("cant19")) & "','" & DIN(tabla_ci.Rows(i).Item("cant20")) & "'," _
+                & "'" & DIN(tabla_ci.Rows(i).Item("cant21")) & "','" & DIN(tabla_ci.Rows(i).Item("cant22")) & "','" & DIN(tabla_ci.Rows(i).Item("cant23")) & "','" & DIN(tabla_ci.Rows(i).Item("cant24")) & "','" & DIN(tabla_ci.Rows(i).Item("cant25")) & "','" & DIN(tabla_ci.Rows(i).Item("cant26")) & "','" & DIN(tabla_ci.Rows(i).Item("cant27")) & "','" & DIN(tabla_ci.Rows(i).Item("cant28")) & "','" & DIN(tabla_ci.Rows(i).Item("cant29")) & "','" & DIN(tabla_ci.Rows(i).Item("cant30")) & "'" _
+                & ");"
+                Insertar(sql)
+            Next j
+        Next i
+
+        LlenarInventarioCantidad(nbd)
     End Sub
     Public Sub LlenarInventarios(ByVal nbd As String)
         LlenarGenerales(nbd)
@@ -1926,6 +1939,37 @@ Module Modulos
                 Insertar(sql)
             Next j
         Next i
+
+        LlenarInventarioCantidad(nbd)
+    End Sub
+    Public Sub LlenarInventarioCantidad(ByVal nbd As String)
+        Dim sql As String
+        For i = 1 To 10
+            sql = "UPDATE " & nbd & ".con_inv SET cant" & i & "='0' where cant" & i & " < 0"
+            Insertar(sql)
+        Next
+    End Sub
+
+    Public Sub LlenarInventariosMov00(ByVal nbd As String)
+        FrmCirreInv.mibarra.Value = 80
+        Dim sql As String
+
+        sql = "INSERT INTO " & nbd & ".movimientos00 VALUES('EN00001','EN',1,'01/',01,'00:00:00','0','E','ENTRADA','ENTRADA DE MERCANCIA', " _
+        & " 0,'SALDO INICIAL','','','SALDO INICIAL AÑO ANTERIOR','0','AP');"
+        Insertar(sql)
+
+        For i = 0 To 5
+            sql = " SELECT 'EN00001' AS doc, (@q := @q + 1) AS item, c.codart, a.`nomart`, " _
+            & " '0' AS bodor, '" & i & "' AS bdes, c.cant" & i & " AS cant, costuni AS valor," _
+            & " c.`cue_inv`, c.cue_cos, c.cue_ing, c.cue_iva_c, c.costuni  " _
+            & " FROM " & bda & ".con_inv c, " & bda & ".articulos a, (SELECT @q := 0) temp " _
+            & " WHERE c.`codart`= a.`codart` AND c.periodo='12' AND c.cant" & i & ">0 "
+
+            Insertar("INSERT INTO " & nbd & ".deta_mov00 " & sql)
+        Next
+
+        sql = "UPDATE " & nbd & ".tipdoc SET  iniciofc='1' WHERE tipodoc='EN'"
+        Insertar(sql)
     End Sub
     '*************** CIERRE DE AÑO INMOBILIARIA **************
     Public Sub CierreInmobiliaria()

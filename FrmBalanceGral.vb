@@ -337,6 +337,10 @@ Public Class FrmBalanceGral
 
         CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportContBalGen.rpt")
         CrReport.SetDataSource(tabla)
+        Try
+            CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+        Catch ex As Exception
+        End Try
         'CrReport.Subreports.Item("BanGenActivos").SetDataSource(tabla)
         FrmReportContBalGen.CrystalReportViewer1.ReportSource = CrReport
 

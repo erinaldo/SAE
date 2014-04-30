@@ -315,11 +315,11 @@ Public Class FrmCertificadoRete
                 Dim tablaT As New DataTable
                 tablaT = New DataTable
                 myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5 " _
-                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10,	cuenta11,	cuenta12  FROM tributarios WHERE num = '4' ;"
+                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10,	cuenta11,	cuenta12, cuenta13 , cuenta14 , cuenta15    FROM tributarios WHERE num = '4' ;"
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tablaT)
                 If tablaT.Rows.Count > 0 Then
-                    For i = 0 To 10
+                    For i = 0 To 14
                         If Trim(tablaT.Rows(0).Item(i)) <> "" Then
                             cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                         End If
@@ -336,11 +336,11 @@ Public Class FrmCertificadoRete
             Dim tablaT As New DataTable
             tablaT = New DataTable
             myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5 " _
-            & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10,	cuenta11,	cuenta12 FROM tributarios WHERE num = '4' ;"
+            & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10,	cuenta11,	cuenta12, cuenta13 , cuenta14 , cuenta15   FROM tributarios WHERE num = '4' ;"
             myAdapter.SelectCommand = myCommand
             myAdapter.Fill(tablaT)
             If tablaT.Rows.Count > 0 Then
-                For i = 0 To 4
+                For i = 0 To 14
                     If Trim(tablaT.Rows(0).Item(i)) <> "" Then
                         cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                     End If

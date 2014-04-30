@@ -38,6 +38,10 @@ Partial Class frmterceros
         Me.Label20 = New System.Windows.Forms.Label
         Me.Label19 = New System.Windows.Forms.Label
         Me.GRUPO = New System.Windows.Forms.GroupBox
+        Me.Label35 = New System.Windows.Forms.Label
+        Me.txtctab2 = New System.Windows.Forms.TextBox
+        Me.txtctab1 = New System.Windows.Forms.TextBox
+        Me.Label34 = New System.Windows.Forms.Label
         Me.cbciudad2 = New System.Windows.Forms.ComboBox
         Me.cbpais2 = New System.Windows.Forms.ComboBox
         Me.cbdep2 = New System.Windows.Forms.ComboBox
@@ -122,10 +126,6 @@ Partial Class frmterceros
         Me.txtAct1 = New System.Windows.Forms.TextBox
         Me.Label29 = New System.Windows.Forms.Label
         Me.Label33 = New System.Windows.Forms.Label
-        Me.Label34 = New System.Windows.Forms.Label
-        Me.txtctab1 = New System.Windows.Forms.TextBox
-        Me.txtctab2 = New System.Windows.Forms.TextBox
-        Me.Label35 = New System.Windows.Forms.Label
         Me.gimp.SuspendLayout()
         Me.mimenu.SuspendLayout()
         Me.GRUPO.SuspendLayout()
@@ -139,8 +139,6 @@ Partial Class frmterceros
         'gimp
         '
         Me.gimp.BackColor = System.Drawing.Color.Transparent
-        Me.gimp.Controls.Add(Me.cbretCree)
-        Me.gimp.Controls.Add(Me.Label27)
         Me.gimp.Controls.Add(Me.cbreteica)
         Me.gimp.Controls.Add(Me.cbreteiva)
         Me.gimp.Controls.Add(Me.Label21)
@@ -162,11 +160,12 @@ Partial Class frmterceros
         Me.cbretCree.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbretCree.FormattingEnabled = True
         Me.cbretCree.Items.AddRange(New Object() {"SI", "NO"})
-        Me.cbretCree.Location = New System.Drawing.Point(629, 19)
+        Me.cbretCree.Location = New System.Drawing.Point(773, 339)
         Me.cbretCree.Name = "cbretCree"
         Me.cbretCree.Size = New System.Drawing.Size(46, 21)
         Me.cbretCree.TabIndex = 75
         Me.ToolTip1.SetToolTip(Me.cbretCree, "rete ica")
+        Me.cbretCree.Visible = False
         '
         'mimenu
         '
@@ -185,11 +184,12 @@ Partial Class frmterceros
         Me.Label27.AutoSize = True
         Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(549, 21)
+        Me.Label27.Location = New System.Drawing.Point(693, 341)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(77, 16)
         Me.Label27.TabIndex = 76
         Me.Label27.Text = "Rete CREE"
+        Me.Label27.Visible = False
         '
         'cbreteica
         '
@@ -197,7 +197,7 @@ Partial Class frmterceros
         Me.cbreteica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbreteica.FormattingEnabled = True
         Me.cbreteica.Items.AddRange(New Object() {"SI", "NO"})
-        Me.cbreteica.Location = New System.Drawing.Point(482, 20)
+        Me.cbreteica.Location = New System.Drawing.Point(595, 16)
         Me.cbreteica.Name = "cbreteica"
         Me.cbreteica.Size = New System.Drawing.Size(46, 21)
         Me.cbreteica.TabIndex = 3
@@ -209,7 +209,7 @@ Partial Class frmterceros
         Me.cbreteiva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbreteiva.FormattingEnabled = True
         Me.cbreteiva.Items.AddRange(New Object() {"SI", "NO"})
-        Me.cbreteiva.Location = New System.Drawing.Point(343, 19)
+        Me.cbreteiva.Location = New System.Drawing.Point(411, 16)
         Me.cbreteiva.Name = "cbreteiva"
         Me.cbreteiva.Size = New System.Drawing.Size(46, 21)
         Me.cbreteiva.TabIndex = 2
@@ -220,7 +220,7 @@ Partial Class frmterceros
         Me.Label21.AutoSize = True
         Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(414, 21)
+        Me.Label21.Location = New System.Drawing.Point(527, 21)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(61, 16)
         Me.Label21.TabIndex = 24
@@ -231,7 +231,7 @@ Partial Class frmterceros
         Me.Label22.AutoSize = True
         Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(278, 21)
+        Me.Label22.Location = New System.Drawing.Point(349, 21)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(61, 16)
         Me.Label22.TabIndex = 23
@@ -243,7 +243,7 @@ Partial Class frmterceros
         Me.cbrf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbrf.FormattingEnabled = True
         Me.cbrf.Items.AddRange(New Object() {"SI", "NO"})
-        Me.cbrf.Location = New System.Drawing.Point(203, 18)
+        Me.cbrf.Location = New System.Drawing.Point(250, 20)
         Me.cbrf.Name = "cbrf"
         Me.cbrf.Size = New System.Drawing.Size(46, 21)
         Me.cbrf.TabIndex = 1
@@ -266,7 +266,7 @@ Partial Class frmterceros
         Me.Label20.AutoSize = True
         Me.Label20.BackColor = System.Drawing.Color.Transparent
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(121, 19)
+        Me.Label20.Location = New System.Drawing.Point(168, 21)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(81, 16)
         Me.Label20.TabIndex = 12
@@ -342,6 +342,44 @@ Partial Class frmterceros
         Me.GRUPO.Size = New System.Drawing.Size(685, 340)
         Me.GRUPO.TabIndex = 1
         Me.GRUPO.TabStop = False
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.BackColor = System.Drawing.Color.Transparent
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(378, 308)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(50, 16)
+        Me.Label35.TabIndex = 106
+        Me.Label35.Text = "Banco:"
+        '
+        'txtctab2
+        '
+        Me.txtctab2.Location = New System.Drawing.Point(432, 307)
+        Me.txtctab2.Name = "txtctab2"
+        Me.txtctab2.Size = New System.Drawing.Size(244, 20)
+        Me.txtctab2.TabIndex = 22
+        Me.ToolTip1.SetToolTip(Me.txtctab2, "No Cuenta Bancaria 2")
+        '
+        'txtctab1
+        '
+        Me.txtctab1.Location = New System.Drawing.Point(162, 307)
+        Me.txtctab1.Name = "txtctab1"
+        Me.txtctab1.Size = New System.Drawing.Size(210, 20)
+        Me.txtctab1.TabIndex = 21
+        Me.ToolTip1.SetToolTip(Me.txtctab1, "No Cuenta Bancaria 1")
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.BackColor = System.Drawing.Color.Transparent
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(29, 308)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(128, 16)
+        Me.Label34.TabIndex = 103
+        Me.Label34.Text = "Nº Cuenta Bancaria:"
         '
         'cbciudad2
         '
@@ -1231,50 +1269,14 @@ Partial Class frmterceros
         Me.Label33.TabIndex = 76
         Me.Label33.Text = "*** Doble Click para seleccionar las actividades"
         '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.BackColor = System.Drawing.Color.Transparent
-        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(29, 308)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(128, 16)
-        Me.Label34.TabIndex = 103
-        Me.Label34.Text = "Nº Cuenta Bancaria:"
-        '
-        'txtctab1
-        '
-        Me.txtctab1.Location = New System.Drawing.Point(162, 307)
-        Me.txtctab1.Name = "txtctab1"
-        Me.txtctab1.Size = New System.Drawing.Size(210, 20)
-        Me.txtctab1.TabIndex = 21
-        Me.ToolTip1.SetToolTip(Me.txtctab1, "No Cuenta Bancaria 1")
-        '
-        'txtctab2
-        '
-        Me.txtctab2.Location = New System.Drawing.Point(432, 307)
-        Me.txtctab2.Name = "txtctab2"
-        Me.txtctab2.Size = New System.Drawing.Size(244, 20)
-        Me.txtctab2.TabIndex = 22
-        Me.ToolTip1.SetToolTip(Me.txtctab2, "No Cuenta Bancaria 2")
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.BackColor = System.Drawing.Color.Transparent
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(378, 308)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(50, 16)
-        Me.Label35.TabIndex = 106
-        Me.Label35.Text = "Banco:"
-        '
         'frmterceros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(690, 540)
+        Me.ClientSize = New System.Drawing.Size(692, 540)
+        Me.Controls.Add(Me.cbretCree)
+        Me.Controls.Add(Me.Label27)
         Me.Controls.Add(Me.Label33)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GRUPO)

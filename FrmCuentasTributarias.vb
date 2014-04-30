@@ -10,12 +10,12 @@
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         grilla.RowCount = tabla.Rows.Count
-        gcuenta.RowCount = 12
+        gcuenta.RowCount = 15
         For i = 0 To tabla.Rows.Count - 1
             grilla.Item(0, i).Value = tabla.Rows(i).Item("num")
             grilla.Item(1, i).Value = tabla.Rows(i).Item("detalle")
         Next
-        For i = 0 To 11
+        For i = 0 To 14
             gcuenta.Item(1, i).Value = "CUENTA " & i + 1
         Next
         BuscarCuentas(grilla.Item(0, 0).Value)
@@ -28,7 +28,7 @@
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         If tabla.Rows.Count = 0 Then Exit Sub
-        For i = 0 To 11
+        For i = 0 To 14
             gcuenta.Item(2, i).Value = tabla.Rows(0).Item("cuenta" & i + 1)
             If tabla.Rows(0).Item("cuenta" & i + 1).ToString = "" Then
                 gcuenta.Item(0, i).Value = False
@@ -53,7 +53,7 @@
         MiConexion(bda)
         Dim sw As Integer
         sw = 0
-        For i = 0 To 11
+        For i = 0 To 14
             If gcuenta.Item(2, i).Value.ToString = "" Then Exit For
             sw = 1
             Guardar(Val(lbnum.Text), "cuenta" & (i + 1), gcuenta.Item(2, i).Value.ToString)

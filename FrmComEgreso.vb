@@ -2089,7 +2089,7 @@ Public Class FrmComEgresoCpp
                 cb.ShowTextAligned(50, "***** Este documento fué marcado como anticipo. ******", 10, k, 0)
             End If
             k = k - 20
-            cb.ShowTextAligned(50, "Impreso a la fecha y hora: " & Now & " por el usuario: " & FrmPrincipal.lbuser.Text, 10, k, 0)
+            cb.ShowTextAligned(50, "Impreso a la fecha y hora: " & Now & " por el usuario: " & FrmPrincipal.lbuser.Text & ". Modulo:Contabilidad ", 10, k, 0)
             k = k - 10
             cb.ShowTextAligned(50, "Documento elaborado por computadora en el Software de Administración Empresarial SAE Versión " & FrmPrincipal.lbversion.Text & ".", 10, k, 0)
             '*********** FIN ***********************
@@ -2391,7 +2391,7 @@ Public Class FrmComEgresoCpp
                 cb.ShowTextAligned(50, "***** Este documento fué marcado como anticipo. ******", 10, k, 0)
             End If
             k = k - 20
-            cb.ShowTextAligned(50, "Impreso a la fecha y hora: " & Now & " por el usuario: " & FrmPrincipal.lbuser.Text, 10, k, 0)
+            cb.ShowTextAligned(50, "Impreso a la fecha y hora: " & Now & " por el usuario: " & FrmPrincipal.lbuser.Text & ". Modulo:Contabilidad ", 10, k, 0)
             k = k - 10
             cb.ShowTextAligned(50, "Documento elaborado por computadora en el Software de Administración Empresarial SAE Versión " & FrmPrincipal.lbversion.Text & ".", 10, k, 0)
             '*********** FIN ***********************

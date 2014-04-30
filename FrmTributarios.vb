@@ -652,11 +652,11 @@ Public Class FrmTributarios
             Case "1"
                 tipo = "INFORME I.V.A RECAUDADO (POR PAGAR)"
                 myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5, " _
-                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12  FROM tributarios WHERE num = '1' ;"
+                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12  , cuenta13 , cuenta14 , cuenta15   FROM tributarios WHERE num = '1' ;"
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tablaT)
                 If tablaT.Rows.Count > 0 Then
-                    For i = 0 To 11
+                    For i = 0 To 14
                         If tablaT.Rows(0).Item(i) <> "" Then
                             cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                         End If
@@ -671,11 +671,11 @@ Public Class FrmTributarios
             Case "2"
                 tipo = "INFORME I.V.A PAGADO (DESCONTABLE)"
                 myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5, " _
-                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12 FROM tributarios WHERE num = '2' ;"
+                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12 , cuenta13 , cuenta14 , cuenta15  FROM tributarios WHERE num = '2' ;"
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tablaT)
                 If tablaT.Rows.Count > 0 Then
-                    For i = 0 To 11
+                    For i = 0 To 14
                         If tablaT.Rows(0).Item(i) <> "" Then
                             cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                         End If
@@ -689,11 +689,11 @@ Public Class FrmTributarios
             Case "3"
                 tipo = "INFORME RETENCIONES HECHAS POR TERCEROS"
                 myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5, " _
-                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12 FROM tributarios WHERE num = '3' ;"
+                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12, cuenta13 , cuenta14 , cuenta15   FROM tributarios WHERE num = '3' ;"
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tablaT)
                 If tablaT.Rows.Count > 0 Then
-                    For i = 0 To 11
+                    For i = 0 To 14
                         If tablaT.Rows(0).Item(i) <> "" Then
                             cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                         End If
@@ -707,11 +707,11 @@ Public Class FrmTributarios
             Case "4"
                 tipo = "RETENCIONES HECHAS A TERCEROS"
                 myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5, " _
-                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12 FROM tributarios WHERE num = '4' ;"
+                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12, cuenta13 , cuenta14 , cuenta15   FROM tributarios WHERE num = '4' ;"
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tablaT)
                 If tablaT.Rows.Count > 0 Then
-                    For i = 0 To 11
+                    For i = 0 To 14
                         If tablaT.Rows(0).Item(i) <> "" Then
                             cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                         End If
@@ -725,11 +725,11 @@ Public Class FrmTributarios
             Case "5"
                 tipo = "INFORME I.V.A RETENIDOS A TERCEROS "
                 myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5, " _
-                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12 FROM tributarios WHERE num = '5' ;"
+                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12, cuenta13 , cuenta14 , cuenta15   FROM tributarios WHERE num = '5' ;"
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tablaT)
                 If tablaT.Rows.Count > 0 Then
-                    For i = 0 To 11
+                    For i = 0 To 14
                         If tablaT.Rows(0).Item(i) <> "" Then
                             cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                         End If
@@ -743,11 +743,11 @@ Public Class FrmTributarios
             Case "6"
                 tipo = "INFORME I.C.A RETENIDOS A TERCEROS"
                 myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5, " _
-                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12 FROM tributarios WHERE num = '6' ;"
+                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12 , cuenta13 , cuenta14 , cuenta15  FROM tributarios WHERE num = '6' ;"
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tablaT)
                 If tablaT.Rows.Count > 0 Then
-                    For i = 0 To 11
+                    For i = 0 To 14
                         If tablaT.Rows(0).Item(i) <> "" Then
                             cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                         End If
@@ -761,11 +761,11 @@ Public Class FrmTributarios
             Case "7"
                 tipo = "INFORME DE OTRAS CUENTAS"
                 myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5, " _
-                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12 FROM tributarios WHERE num = '7' ;"
+                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12, cuenta13 , cuenta14 , cuenta15   FROM tributarios WHERE num = '7' ;"
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tablaT)
                 If tablaT.Rows.Count > 0 Then
-                    For i = 0 To 11
+                    For i = 0 To 14
                         If tablaT.Rows(0).Item(i) <> "" Then
                             cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                         End If
@@ -779,11 +779,11 @@ Public Class FrmTributarios
             Case "8"
                 tipo = "INFORME DE OTRAS CUENTAS"
                 myCommand.CommandText = "SELECT cuenta1, cuenta2, cuenta3, cuenta4,	cuenta5, " _
-                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12 FROM tributarios WHERE num = '8' ;"
+                & " cuenta6, cuenta7, cuenta8, cuenta9,	cuenta10, cuenta11 , cuenta12, cuenta13 , cuenta14 , cuenta15   FROM tributarios WHERE num = '8' ;"
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tablaT)
                 If tablaT.Rows.Count > 0 Then
-                    For i = 0 To 11
+                    For i = 0 To 14
                         If tablaT.Rows(0).Item(i) <> "" Then
                             cadC = cadC & "'" & tablaT.Rows(0).Item(i) & "'" & ", "
                         End If

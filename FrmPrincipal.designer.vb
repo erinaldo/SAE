@@ -614,6 +614,7 @@ Partial Class FrmPrincipal
         Me.Inventarios.Size = New System.Drawing.Size(68, 68)
         Me.Inventarios.Text = "ToolStripButton3"
         Me.Inventarios.ToolTipText = "Inventarios"
+        Me.Inventarios.Visible = False
         '
         'Facturacion
         '
@@ -657,6 +658,7 @@ Partial Class FrmPrincipal
         Me.Cartera.Size = New System.Drawing.Size(68, 68)
         Me.Cartera.Text = "ToolStripButton4"
         Me.Cartera.ToolTipText = "Cartera"
+        Me.Cartera.Visible = False
         '
         'Proveedores
         '
@@ -668,6 +670,7 @@ Partial Class FrmPrincipal
         Me.Proveedores.Size = New System.Drawing.Size(68, 68)
         Me.Proveedores.Text = "ToolStripButton5"
         Me.Proveedores.ToolTipText = "Proveedores"
+        Me.Proveedores.Visible = False
         '
         'ToolStripSeparator1
         '
@@ -689,6 +692,7 @@ Partial Class FrmPrincipal
         Me.Gerencial.Size = New System.Drawing.Size(68, 68)
         Me.Gerencial.Text = "ToolStripButton1"
         Me.Gerencial.ToolTipText = "Analisis Gerencial"
+        Me.Gerencial.Visible = False
         '
         'inmobiliaria
         '
@@ -708,7 +712,6 @@ Partial Class FrmPrincipal
         Me.cmdBanco.Name = "cmdBanco"
         Me.cmdBanco.Size = New System.Drawing.Size(68, 68)
         Me.cmdBanco.Text = "Banco"
-        Me.cmdBanco.Visible = False
         '
         'cmdOrden
         '
@@ -718,7 +721,6 @@ Partial Class FrmPrincipal
         Me.cmdOrden.Name = "cmdOrden"
         Me.cmdOrden.Size = New System.Drawing.Size(68, 68)
         Me.cmdOrden.Text = "Ordenes de Pago"
-        Me.cmdOrden.Visible = False
         '
         'cmdAuditoria
         '
@@ -922,7 +924,7 @@ Partial Class FrmPrincipal
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
-        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  24 ABRIL 2014"
+        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  29 ABRIL 2014"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

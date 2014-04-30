@@ -410,8 +410,8 @@
         myAdapter.Fill(tabla)
         Refresh()
         Dim tipo As String = tabla.Rows(0).Item("doc_aj")
-        'myCommand.CommandText = "SELECT actual" & cbper.Text & " FROM tipdoc WHERE tipodoc='" & tipo & "';"
-        myCommand.CommandText = "SELECT actualfc FROM tipdoc WHERE tipodoc='" & tipo & "';"
+        myCommand.CommandText = "SELECT actual" & cbper.Text & " FROM tipdoc WHERE tipodoc='" & tipo & "';"
+        'myCommand.CommandText = "SELECT actualfc FROM tipdoc WHERE tipodoc='" & tipo & "';"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla2)
         Refresh()

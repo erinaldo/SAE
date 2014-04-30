@@ -123,34 +123,32 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CmdUltimo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFRJREFUOE9jYKAS
-        +E/AHELyDCAF+BQRkocbgMsQmAE4LUFWgE0RIXkUF2BzLroBGJZgU4CsiJA89V2AHqskhQG2JEF0LOBK
-        T0SlA3yJkWBKJDtHAAASxke5825c7QAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAVElEQVQ4T2NgoBL4T8AcQvIMIAX4FBGS
+        hxuAyxCYATgtQVaATREheRQXYHMuugEYlmBTgKyIkDz1XYAeqySFAbYkQXQs4EpPRKUDfImRYEokO0cA
+        ABLGR7nzblztAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="CmdSiguiente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAADNJREFUKFNjYCAS
-        /CekDqQAryKYApyKkBVgVYSuAEMRNgUoikg2AcPXRPsCZ3gRDEmcOgFk7yPdd33tdgAAAABJRU5ErkJg
-        gg==
+        iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM0lEQVQoU2NgIBL8J6QOpACvIpgCnIqQ
+        FWBVhK4AQxE2BSiKSDYBw9dE+wJneBEMSZw6AWTvI913fe12AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="CmdAtras.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAADVJREFUKFNjYKAA
-        /MenFySJUwFMEqsCZEkMBeiSKAqwSZJmAsxHeN2ATRHOoMAbDsgmEY4IAE34I910/2olAAAAAElFTkSu
-        QmCC
+        iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANUlEQVQoU2NgoAD8x6cXJIlTAUwSqwJk
+        SQwF6JIoCrBJkmYCzEd43YBNEc6gwBsOyCYRjggATfgj3XT/aiUAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="CmdPrimero.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFRJREFUOE+1k1sK
-        ACAIBL3/pYsCw2TdDaR+JwYfq9nHN4Sb8gXZB8odVgLKI0QCyjPMAsoRjALF97xbFfjGWjNAEhQFtaWr
-        nSpLKidHwsKokvp2JBPkyUe5ftPErAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAVElEQVQ4T7WTWwoAIAgEvf+liwLDZN0N
+        pH4nBh+r2cc3hJvyBdkHyh1WAsojRALKM8wCyhGMAsX3vFsV+MZaM0ASFAW1paudKksqJ0fCwqiS+nYk
+        E+TJR7l+08SsAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="num.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
