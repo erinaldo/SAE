@@ -94,12 +94,12 @@ Partial Class FrmPrincipal
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator
         Me.Inventarios = New System.Windows.Forms.ToolStripButton
-        Me.Facturacion = New System.Windows.Forms.ToolStripButton
         Me.BEstetica = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator
+        Me.Facturacion = New System.Windows.Forms.ToolStripButton
         Me.Cartera = New System.Windows.Forms.ToolStripButton
         Me.Proveedores = New System.Windows.Forms.ToolStripButton
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Gerencial = New System.Windows.Forms.ToolStripButton
@@ -387,7 +387,6 @@ Partial Class FrmPrincipal
         '
         'InventariosToolStripMenuItem
         '
-        Me.InventariosToolStripMenuItem.Enabled = False
         Me.InventariosToolStripMenuItem.Image = Global.SAE.My.Resources.Resources.cajas
         Me.InventariosToolStripMenuItem.Name = "InventariosToolStripMenuItem"
         Me.InventariosToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.I), System.Windows.Forms.Keys)
@@ -401,7 +400,6 @@ Partial Class FrmPrincipal
         '
         'FacturacionToolStripMenuItem
         '
-        Me.FacturacionToolStripMenuItem.Enabled = False
         Me.FacturacionToolStripMenuItem.Image = Global.SAE.My.Resources.Resources.iconos_finan_form
         Me.FacturacionToolStripMenuItem.Name = "FacturacionToolStripMenuItem"
         Me.FacturacionToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
@@ -415,7 +413,6 @@ Partial Class FrmPrincipal
         '
         'CarteraToolStripMenuItem
         '
-        Me.CarteraToolStripMenuItem.Enabled = False
         Me.CarteraToolStripMenuItem.Image = CType(resources.GetObject("CarteraToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CarteraToolStripMenuItem.Name = "CarteraToolStripMenuItem"
         Me.CarteraToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
@@ -424,7 +421,6 @@ Partial Class FrmPrincipal
         '
         'ProveedoresToolStripMenuItem
         '
-        Me.ProveedoresToolStripMenuItem.Enabled = False
         Me.ProveedoresToolStripMenuItem.Image = CType(resources.GetObject("ProveedoresToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
         Me.ProveedoresToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
@@ -575,7 +571,7 @@ Partial Class FrmPrincipal
         'BarrasH
         '
         Me.BarrasH.ImageScalingSize = New System.Drawing.Size(64, 64)
-        Me.BarrasH.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Contabilidad, Me.ToolStripSeparator8, Me.ToolStripSeparator7, Me.Inventarios, Me.Facturacion, Me.BEstetica, Me.ToolStripSeparator6, Me.ToolStripSeparator5, Me.Cartera, Me.Proveedores, Me.ToolStripSeparator1, Me.ToolStripSeparator2, Me.Gerencial, Me.inmobiliaria, Me.cmdBanco, Me.cmdOrden, Me.cmdAuditoria, Me.Nomina, Me.ToolStripSeparator3, Me.ToolStripSeparator4, Me.Exogena})
+        Me.BarrasH.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Contabilidad, Me.ToolStripSeparator8, Me.ToolStripSeparator7, Me.Inventarios, Me.BEstetica, Me.Facturacion, Me.Cartera, Me.Proveedores, Me.ToolStripSeparator6, Me.ToolStripSeparator5, Me.ToolStripSeparator1, Me.ToolStripSeparator2, Me.Gerencial, Me.inmobiliaria, Me.cmdBanco, Me.cmdOrden, Me.cmdAuditoria, Me.Nomina, Me.ToolStripSeparator3, Me.ToolStripSeparator4, Me.Exogena})
         Me.BarrasH.Location = New System.Drawing.Point(0, 24)
         Me.BarrasH.Name = "BarrasH"
         Me.BarrasH.Size = New System.Drawing.Size(979, 71)
@@ -616,17 +612,6 @@ Partial Class FrmPrincipal
         Me.Inventarios.ToolTipText = "Inventarios"
         Me.Inventarios.Visible = False
         '
-        'Facturacion
-        '
-        Me.Facturacion.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Facturacion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.Facturacion.Image = Global.SAE.My.Resources.Resources.iconos_finan_form
-        Me.Facturacion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Facturacion.Name = "Facturacion"
-        Me.Facturacion.Size = New System.Drawing.Size(68, 68)
-        Me.Facturacion.Text = "ToolStripButton2"
-        Me.Facturacion.ToolTipText = "Facturacion"
-        '
         'BEstetica
         '
         Me.BEstetica.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -637,16 +622,17 @@ Partial Class FrmPrincipal
         Me.BEstetica.ToolTipText = "Estetica"
         Me.BEstetica.Visible = False
         '
-        'ToolStripSeparator6
+        'Facturacion
         '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 71)
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 71)
-        Me.ToolStripSeparator5.Visible = False
+        Me.Facturacion.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Facturacion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Facturacion.Image = Global.SAE.My.Resources.Resources.iconos_finan_form
+        Me.Facturacion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Facturacion.Name = "Facturacion"
+        Me.Facturacion.Size = New System.Drawing.Size(68, 68)
+        Me.Facturacion.Text = "ToolStripButton2"
+        Me.Facturacion.ToolTipText = "Facturacion"
+        Me.Facturacion.Visible = False
         '
         'Cartera
         '
@@ -671,6 +657,17 @@ Partial Class FrmPrincipal
         Me.Proveedores.Text = "ToolStripButton5"
         Me.Proveedores.ToolTipText = "Proveedores"
         Me.Proveedores.Visible = False
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 71)
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 71)
+        Me.ToolStripSeparator5.Visible = False
         '
         'ToolStripSeparator1
         '
@@ -924,7 +921,7 @@ Partial Class FrmPrincipal
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
-        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  29 ABRIL 2014"
+        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  07 MAYO 2014"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

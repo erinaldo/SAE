@@ -118,6 +118,7 @@ Public Class FrmInfCGN
         & " WHEN '4' THEN CONCAT(LEFT(s.codigo,1),'.',MID(s.codigo, 2, 1),'.',MID(s.codigo, 3, 2)) " _
         & " WHEN '6' THEN CONCAT(LEFT(s.codigo,1),'.',MID(s.codigo, 2, 1),'.',MID(s.codigo, 3, 2),'.',MID(s.codigo, 5, 2))  " _
         & " WHEN '8' THEN CONCAT(LEFT(s.codigo,1),'.',MID(s.codigo, 2, 1),'.',MID(s.codigo, 3, 2),'.',MID(s.codigo, 5, 2),'.',MID(s.codigo, 7, 2)) " _
+        & " ELSE CONCAT(LEFT(s.codigo,1),'.',MID(s.codigo, 2, 1),'.',MID(s.codigo, 3, 2),'.',MID(s.codigo, 5, 2),'.',MID(s.codigo, 7, 2),'.',MID(s.codigo, 8, 2)) " _
         & " END AS cta,  " _
         & "  s.codigo AS observ,s.descripcion AS descrip, " _
         & " ROUND(ROUND(SUM(" & saldoI & "),-3)/1000,0) as subtotal, " _
@@ -154,7 +155,8 @@ Public Class FrmInfCGN
         gitems.RowCount = tabla.Rows.Count + 1
 
         For i = 0 To tabla.Rows.Count - 1
-            If tabla.Rows(i).Item("nivel") <> "Auxiliar" Then
+            If Strings.Len(tabla.Rows(i).Item("observ")) <= 6 Then
+                'If tabla.Rows(i).Item("nivel") <> "Auxiliar" Then
                 If tabla.Rows(i).Item("tipo_saldo") = "CO" Then
                     gitems.Item("tsaldo", fl).Value = True
                 Else
@@ -192,7 +194,7 @@ Public Class FrmInfCGN
 
                 gitems.Item("debito", fl).Value = tabla.Rows(i).Item("v1")
                 gitems.Item("credito", fl).Value = tabla.Rows(i).Item("v2")
-               
+
                 gitems.Item("codigo2", fl).Value = tabla.Rows(i).Item("observ")
                 fl = fl + 1
             End If

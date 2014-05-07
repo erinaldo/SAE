@@ -34,6 +34,8 @@ Partial Class FrmEstadoResultados
         Me.n2 = New System.Windows.Forms.RadioButton
         Me.n1 = New System.Windows.Forms.RadioButton
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox
+        Me.chkMostrar = New System.Windows.Forms.CheckBox
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
         Me.frf = New System.Windows.Forms.CheckBox
         Me.frl = New System.Windows.Forms.CheckBox
@@ -43,6 +45,7 @@ Partial Class FrmEstadoResultados
         Me.Label4 = New System.Windows.Forms.Label
         Me.nivel = New System.Windows.Forms.NumericUpDown
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Label7 = New System.Windows.Forms.Label
         Me.ChCierre = New System.Windows.Forms.CheckBox
         Me.Label6 = New System.Windows.Forms.Label
         Me.cbfin = New System.Windows.Forms.ComboBox
@@ -53,10 +56,10 @@ Partial Class FrmEstadoResultados
         Me.Label1 = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label5 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
         Me.GroupPanel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         CType(Me.nivel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +74,7 @@ Partial Class FrmEstadoResultados
         Me.GroupPanel1.Controls.Add(Me.cmdGrafica)
         Me.GroupPanel1.Controls.Add(Me.cmdsalir)
         Me.GroupPanel1.Controls.Add(Me.cmdpantalla)
-        Me.GroupPanel1.Location = New System.Drawing.Point(12, 284)
+        Me.GroupPanel1.Location = New System.Drawing.Point(12, 319)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(494, 85)
         '
@@ -100,7 +103,7 @@ Partial Class FrmEstadoResultados
         '
         Me.pdf.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.pdf.Image = Global.SAE.My.Resources.Resources.Excel_Pdf
-        Me.pdf.Location = New System.Drawing.Point(175, 13)
+        Me.pdf.Location = New System.Drawing.Point(164, 13)
         Me.pdf.Name = "pdf"
         Me.pdf.Size = New System.Drawing.Size(60, 57)
         Me.pdf.TabIndex = 76
@@ -205,15 +208,37 @@ Partial Class FrmEstadoResultados
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.GroupBox6)
         Me.GroupBox4.Controls.Add(Me.GroupBox3)
         Me.GroupBox4.Controls.Add(Me.GroupBox5)
         Me.GroupBox4.Controls.Add(Me.GroupBox1)
         Me.GroupBox4.Controls.Add(Me.GroupBox2)
         Me.GroupBox4.Location = New System.Drawing.Point(11, 19)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(494, 259)
+        Me.GroupBox4.Size = New System.Drawing.Size(494, 294)
         Me.GroupBox4.TabIndex = 73
         Me.GroupBox4.TabStop = False
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.chkMostrar)
+        Me.GroupBox6.Location = New System.Drawing.Point(9, 250)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(476, 37)
+        Me.GroupBox6.TabIndex = 64
+        Me.GroupBox6.TabStop = False
+        '
+        'chkMostrar
+        '
+        Me.chkMostrar.AutoSize = True
+        Me.chkMostrar.Checked = True
+        Me.chkMostrar.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkMostrar.Location = New System.Drawing.Point(20, 14)
+        Me.chkMostrar.Name = "chkMostrar"
+        Me.chkMostrar.Size = New System.Drawing.Size(220, 17)
+        Me.chkMostrar.TabIndex = 63
+        Me.chkMostrar.Text = "Mostrar Utilidad / Perdida en el Resumen"
+        Me.chkMostrar.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
@@ -318,6 +343,16 @@ Partial Class FrmEstadoResultados
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(43, 23)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(125, 16)
+        Me.Label7.TabIndex = 56
+        Me.Label7.Text = "Hasta el Periodo"
+        '
         'ChCierre
         '
         Me.ChCierre.AutoSize = True
@@ -406,22 +441,12 @@ Partial Class FrmEstadoResultados
         Me.Label5.TabIndex = 75
         Me.Label5.Text = "ESTADO DE PERDIDAS Y GANANCIAS"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(43, 23)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 16)
-        Me.Label7.TabIndex = 56
-        Me.Label7.Text = "Hasta el Periodo"
-        '
         'FrmEstadoResultados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(516, 375)
+        Me.ClientSize = New System.Drawing.Size(516, 409)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Label5)
@@ -437,6 +462,8 @@ Partial Class FrmEstadoResultados
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
@@ -479,4 +506,6 @@ Partial Class FrmEstadoResultados
     Friend WithEvents ChCierre As System.Windows.Forms.CheckBox
     Friend WithEvents pdf As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents chkMostrar As System.Windows.Forms.CheckBox
 End Class

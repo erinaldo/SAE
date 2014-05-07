@@ -509,6 +509,7 @@ Public Class FrmSelArticulos
         Dim pmin, marmin As String
         pmin = "0"
         marmin = " (SELECT IF(margmin='S',CAST(margen AS SIGNED),0) FROM parafacts WHERE factura='RAPIDA') "
+        ' MsgBox(FrmItems.lbform.Text)
         If lbform.Text = "items" And (FrmItems.lbform.Text = "fr" Or FrmItems.lbform.Text = "fn") Then
             Select Case FrmItems.fr
                 Case "1"

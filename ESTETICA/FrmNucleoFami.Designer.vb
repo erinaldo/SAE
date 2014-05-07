@@ -25,9 +25,6 @@ Partial Class FrmNucleoFami
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmNucleoFami))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.grilla = New System.Windows.Forms.DataGridView
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.fc = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.txtcodG = New System.Windows.Forms.TextBox
         Me.txtpor = New System.Windows.Forms.TextBox
         Me.Label4 = New System.Windows.Forms.Label
@@ -35,6 +32,16 @@ Partial Class FrmNucleoFami
         Me.txtGrupo = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.lbestado = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.fc = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.edad = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.CmdEditar = New System.Windows.Forms.Button
         Me.CmdListo = New System.Windows.Forms.Button
         Me.CmdSalir = New System.Windows.Forms.Button
@@ -42,11 +49,6 @@ Partial Class FrmNucleoFami
         Me.CmdEliminar = New System.Windows.Forms.Button
         Me.CmdMostrar = New System.Windows.Forms.Button
         Me.cmdNuevo = New System.Windows.Forms.Button
-        Me.lbestado = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.GroupBox1.SuspendLayout()
         CType(Me.grilla, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -72,7 +74,7 @@ Partial Class FrmNucleoFami
         Me.grilla.AllowUserToDeleteRows = False
         Me.grilla.BackgroundColor = System.Drawing.Color.White
         Me.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grilla.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.nombre, Me.fc})
+        Me.grilla.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.nombre, Me.fc, Me.edad})
         Me.grilla.GridColor = System.Drawing.Color.DimGray
         Me.grilla.Location = New System.Drawing.Point(9, 76)
         Me.grilla.Name = "grilla"
@@ -80,28 +82,11 @@ Partial Class FrmNucleoFami
         Me.grilla.Size = New System.Drawing.Size(473, 176)
         Me.grilla.TabIndex = 78
         '
-        'id
-        '
-        Me.id.HeaderText = "CC"
-        Me.id.MinimumWidth = 100
-        Me.id.Name = "id"
-        '
-        'nombre
-        '
-        Me.nombre.HeaderText = "NOMBRE"
-        Me.nombre.MinimumWidth = 250
-        Me.nombre.Name = "nombre"
-        Me.nombre.Width = 250
-        '
-        'fc
-        '
-        Me.fc.HeaderText = "FECHA"
-        Me.fc.Name = "fc"
-        Me.fc.Visible = False
-        '
         'txtcodG
         '
+        Me.txtcodG.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtcodG.Location = New System.Drawing.Point(127, 20)
+        Me.txtcodG.MaxLength = 15
         Me.txtcodG.Name = "txtcodG"
         Me.txtcodG.Size = New System.Drawing.Size(135, 20)
         Me.txtcodG.TabIndex = 1
@@ -166,6 +151,77 @@ Partial Class FrmNucleoFami
         Me.GroupBox2.Size = New System.Drawing.Size(507, 56)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
+        '
+        'lbestado
+        '
+        Me.lbestado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbestado.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.lbestado.Location = New System.Drawing.Point(426, 0)
+        Me.lbestado.Name = "lbestado"
+        Me.lbestado.Size = New System.Drawing.Size(90, 22)
+        Me.lbestado.TabIndex = 76
+        Me.lbestado.Text = "NULO"
+        Me.lbestado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(192, 7)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(129, 15)
+        Me.Label3.TabIndex = 77
+        Me.Label3.Text = "NUCLEO FAMILIAR"
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "CC"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "NOMBRE"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 200
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 200
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "FECHA"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Visible = False
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.HeaderText = "EDAD"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'id
+        '
+        Me.id.HeaderText = "CC"
+        Me.id.MinimumWidth = 100
+        Me.id.Name = "id"
+        '
+        'nombre
+        '
+        Me.nombre.HeaderText = "NOMBRE"
+        Me.nombre.MinimumWidth = 250
+        Me.nombre.Name = "nombre"
+        Me.nombre.Width = 250
+        '
+        'fc
+        '
+        Me.fc.HeaderText = "FECHA"
+        Me.fc.Name = "fc"
+        Me.fc.Visible = False
+        '
+        'edad
+        '
+        Me.edad.HeaderText = "EDAD"
+        Me.edad.MinimumWidth = 100
+        Me.edad.Name = "edad"
         '
         'CmdEditar
         '
@@ -232,45 +288,6 @@ Partial Class FrmNucleoFami
         Me.cmdNuevo.TabIndex = 1
         Me.cmdNuevo.UseVisualStyleBackColor = True
         '
-        'lbestado
-        '
-        Me.lbestado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbestado.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.lbestado.Location = New System.Drawing.Point(426, 0)
-        Me.lbestado.Name = "lbestado"
-        Me.lbestado.Size = New System.Drawing.Size(90, 22)
-        Me.lbestado.TabIndex = 76
-        Me.lbestado.Text = "NULO"
-        Me.lbestado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(192, 7)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(129, 15)
-        Me.Label3.TabIndex = 77
-        Me.Label3.Text = "NUCLEO FAMILIAR"
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "CC"
-        Me.DataGridViewTextBoxColumn1.MinimumWidth = 100
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "NOMBRE"
-        Me.DataGridViewTextBoxColumn2.MinimumWidth = 200
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 200
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "FECHA"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
         'FrmNucleoFami
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -316,8 +333,10 @@ Partial Class FrmNucleoFami
     Friend WithEvents grilla As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents nombre As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents fc As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents edad As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

@@ -19,6 +19,11 @@ Imports System.Object
 Public Class FrmFacturaEstetica
 
     Private Sub cmditems_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmditems.Click
+        If txtnitc.Text = "" Then
+            MsgBox("Ingrese los datos del Cliente para continuar", MsgBoxStyle.Information, "Verifique")
+            txtnitc.Focus()
+            Exit Sub
+        End If
         Try
             Cerrar()
         Catch ex As Exception

@@ -27,6 +27,7 @@ Partial Class FrmDesapCEOrden
         Me.cmdsalir = New System.Windows.Forms.Button
         Me.cmdpantalla = New System.Windows.Forms.Button
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.chA = New System.Windows.Forms.CheckBox
         Me.lbtipo = New System.Windows.Forms.Label
         Me.lbdoc = New System.Windows.Forms.Label
         Me.lbtotal = New System.Windows.Forms.Label
@@ -42,7 +43,6 @@ Partial Class FrmDesapCEOrden
         Me.Label2 = New System.Windows.Forms.Label
         Me.cbper = New System.Windows.Forms.ComboBox
         Me.Label1 = New System.Windows.Forms.Label
-        Me.chA = New System.Windows.Forms.CheckBox
         Me.GroupPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -126,6 +126,19 @@ Partial Class FrmDesapCEOrden
         Me.GroupBox1.Size = New System.Drawing.Size(489, 250)
         Me.GroupBox1.TabIndex = 82
         Me.GroupBox1.TabStop = False
+        '
+        'chA
+        '
+        Me.chA.AutoSize = True
+        Me.chA.Checked = True
+        Me.chA.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chA.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chA.Location = New System.Drawing.Point(25, 120)
+        Me.chA.Name = "chA"
+        Me.chA.Size = New System.Drawing.Size(311, 19)
+        Me.chA.TabIndex = 12
+        Me.chA.Text = "Mantener el documento asociado a la Orden"
+        Me.chA.UseVisualStyleBackColor = True
         '
         'lbtipo
         '
@@ -276,19 +289,6 @@ Partial Class FrmDesapCEOrden
         Me.Label1.Size = New System.Drawing.Size(173, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Documento Del Periodo"
-        '
-        'chA
-        '
-        Me.chA.AutoSize = True
-        Me.chA.Checked = True
-        Me.chA.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chA.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chA.Location = New System.Drawing.Point(25, 120)
-        Me.chA.Name = "chA"
-        Me.chA.Size = New System.Drawing.Size(311, 19)
-        Me.chA.TabIndex = 12
-        Me.chA.Text = "Mantener el documento asociado a la Orden"
-        Me.chA.UseVisualStyleBackColor = True
         '
         'FrmDesapCEOrden
         '

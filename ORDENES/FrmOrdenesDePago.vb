@@ -239,4 +239,10 @@
         Cerrar()
         FrmInfEgreRubro.ShowDialog()
     End Sub
+
+    Private Sub ButtonX9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonX9.Click
+        MiConexion(bda)
+        Cerrar()
+        FrmElimOrden.ShowDialog()
+    End Sub
 End Class

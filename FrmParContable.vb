@@ -78,6 +78,15 @@ Public Class FrmParContable
             End If
 
         End If
+        'If txtCtaDiferencia.Text = "" Then
+        '    MsgBox("No ha escogido la Cuenta para la Diferencia.. ", MsgBoxStyle.Information, "Verificación")
+        '    txtCtaDiferencia.Focus()
+        '    Exit Sub
+        'ElseIf txtCtaPerdida.Text = "" Then
+        '    MsgBox("No ha escogido la Cuenta para la Perdida.. ", MsgBoxStyle.Information, "Verificación")
+        '    txtCtaPerdida.Focus()
+        '    Exit Sub
+        'End If
 
         Dim sql As MySqlCommand = New MySqlCommand
         Dim dr As System.Data.IDataReader, buscaruser As Boolean, opcion As String
@@ -90,7 +99,7 @@ Public Class FrmParContable
             End If
             DBCon.Open()
             sql.Connection = DBCon
-            sql.CommandText = "insert into parcontab values ('" + txtlongitudcod.Text + "','" + txtnivcue.Text + "','" + txtniv1.Text + "','" + txtniv2.Text + "','" + txtniv3.Text + "','" + txtniv4.Text + "','" + txtniv5.Text + "','" + opcion + "')"
+            sql.CommandText = "insert into parcontab values ('" + txtlongitudcod.Text + "','" + txtnivcue.Text + "','" + txtniv1.Text + "','" + txtniv2.Text + "','" + txtniv3.Text + "','" + txtniv4.Text + "','" + txtniv5.Text + "','" + opcion + "', '" + txtCtaDiferencia.Text + "','" + txtCtaPerdida.Text + "')"
             sql.CommandType = CommandType.Text
             dr = sql.ExecuteReader()
             DBCon.Close()
@@ -175,11 +184,14 @@ Public Class FrmParContable
     End Sub
     Private Sub FrmParContable_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
-            Dim tabla As New DataTable
+            Dim tabla, datos As New DataTable
             myCommand.CommandText = "SELECT count(*) from selpuc where nivel='Auxiliar';"
             myAdapter.SelectCommand = myCommand
             myAdapter.Fill(tabla)
             Refresh()
+            myCommand.CommandText = "SELECT * FROM parcontab;"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(datos)
             If tabla.Rows(0).Item(0) > 0 Then
                 txtlongitudcod.Enabled = False
                 txtnivcue.Enabled = False
@@ -189,6 +201,10 @@ Public Class FrmParContable
                 txtniv4.Enabled = False
                 txtniv5.Enabled = False
                 
+            End If
+            If datos.Rows(0).Item(0) > 0 Then
+                txtCtaDiferencia.Text = datos.Rows(0).Item("ctaDiferencia")
+                txtCtaPerdida.Text = datos.Rows(0).Item("ctaPerdida")
             End If
         Catch ex As Exception
         End Try
@@ -321,4 +337,17 @@ Public Class FrmParContable
     End Sub
 
 
+    Private Sub txtCtaDiferencia_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCtaDiferencia.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
+        FrmCuentas.lbform.Text = "parCont_dif"
+        FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
+    End Sub
+
+    Private Sub txtCtaPerdida_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCtaPerdida.DoubleClick
+        FrmCuentas.lbaux.Text = "Grupo"
+        FrmCuentas.lbform.Text = "parCont_perd"
+        FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
+    End Sub
 End Class

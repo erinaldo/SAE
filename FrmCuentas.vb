@@ -568,6 +568,11 @@
                     Dim fil As Integer
                     fil = Val(lbfila.Text)
                     FrmModCausaPresu.gitems.Item(8, fil).Value = gcuenta.Item(1, fila).Value()
+                    ' ### PARAMETROS DE CONTABILIDAD #### '
+                Case "parCont_dif"
+                    FrmParContable .txtCtaDiferencia .Text = gcuenta.Item(1, fila).Value()
+                Case "parCont_perd"
+                    FrmParContable.txtCtaPerdida.Text = gcuenta.Item(1, fila).Value()
             End Select
             gcuenta.Focus()
             Me.Close()

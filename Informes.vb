@@ -230,6 +230,7 @@ Module Informes
             cb.BeginText()
             fuente = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
             cb.SetFontAndSize(fuente, 9)
+
             ResumenBG() 'RESUMEN DEL BALANCE
             cb.EndText()
             'Forzamos vaciamiento del buffer.
@@ -331,8 +332,9 @@ Module Informes
         End If
     End Sub
     Public Sub ResumenBG()
-        Dim tA, tP, tC As New DataTable
+        Dim tA, tP, tC, tDif, tDesc As New DataTable
         Dim sumaA, sumaP, sumaC, Dif As Double
+        Dim fuente As iTextSharp.text.pdf.BaseFont
         Dim Saldo As String
         Dim nk As Integer = k
         Saldo = "saldo" & MiPer
@@ -363,6 +365,7 @@ Module Informes
         Catch ex As Exception
             sumaC = 0
         End Try
+        k = k - 20
         cb.ShowTextAligned(50, "RESUMEN DEL BALANCE", 200, k, 0)
         cb.ShowTextAligned(50, "ACTIVOS", 50, k - 15, 0)
         cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaA), 250, k - 15, 0)
@@ -370,18 +373,32 @@ Module Informes
         cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaP), 420, k - 30, 0)
         cb.ShowTextAligned(50, "CAPITAL", 50, k - 45, 0)
         cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaC), 420, k - 45, 0)
-        cb.ShowTextAligned(50, "DIFERENCIA", 50, k - 60, 0)
-        Dif = sumaA + sumaP + sumaC
-        cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(Dif), 250, k - 60, 0)
-        ''******************************
-        'nk = nk - 4
-        'cb.ShowTextAligned(50, "TOTAL PUENTE", 120, nk + 7, 0)
-        'cb.ShowTextAligned(50, "D", 50, nk + 15, 0)
-        'cb.ShowTextAligned(50, "PUENTE", 150, nk + 15, 0)
-        'cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(Dif), 585, nk + 15, 0)
-        'cb.ShowTextAligned(50, "__________________________________________________________________________________________________________________________________________________ ", 50, nk + 16, 0)
+        If FrmBalanceGral.chkMostrarDif.Checked = True Then
+            cb.ShowTextAligned(50, "DIFERENCIA", 50, k - 60, 0)
+            Dif = sumaA + sumaP + sumaC
+            cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(Dif), 250, k - 60, 0)
+        Else
+            Dif = sumaA + sumaP + sumaC
+            ''******************************
+            nk = nk - 5
+            fuente = FontFactory.GetFont(FontFactory.HELVETICA, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
+            cb.SetFontAndSize(fuente, 8)
+            myCommand.CommandText = "SELECT ctaDiferencia FROM parcontab;"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tDif)
+            myCommand.CommandText = "SELECT descripcion FROM selpuc WHERE codigo='" + tDif.Rows(0).Item("ctaDiferencia") + "';"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tDesc)
+            cb.ShowTextAligned(50, "TOTAL " + tDesc.Rows(0).Item("descripcion"), 120, nk + 5, 0)
+            cb.ShowTextAligned(50, tDif.Rows(0).Item("ctaDiferencia"), 50, nk + 15, 0)
+            cb.ShowTextAligned(50, tDesc.Rows(0).Item("descripcion"), 150, nk + 15, 0)
+            cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(Dif), 585, nk + 15, 0)
+            cb.ShowTextAligned(50, "__________________________________________________________________________________________________________________________________________________ ", 50, nk + 14, 0)
 
+        End If
 
+               fuente = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
+        cb.SetFontAndSize(fuente, 9)
         'firmas
         If FrmBalanceGral.fcon.Checked = True Then
             cb.ShowTextAligned(50, "___________________________ ", 20, k - 120, 0)

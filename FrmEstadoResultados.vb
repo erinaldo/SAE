@@ -96,6 +96,16 @@ Public Class FrmEstadoResultados
     '**************************************************************
     Public ca As String = ""
     Private Sub cmdpantalla_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdpantalla.Click
+        If chkMostrar.Checked = False Then
+            Dim tDif As New DataTable
+            myCommand.CommandText = "SELECT ctaPerdida FROM parcontab;"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tDif)
+            If tDif.Rows(0).Item(0).ToString = "" Then
+                MsgBox("No hay Cuenta Para Mostrar Utilidad / Perdida, Verifique Los Parametros", MsgBoxStyle.Information, "SAE Control")
+                Exit Sub
+            End If
+        End If
         FechaRep = Now.ToString
         If ChCierre.Checked = True Then
             ca = "AND tipodoc<>'CA'"
@@ -529,10 +539,12 @@ Public Class FrmEstadoResultados
         End If
     End Sub
     Public Sub ResumenBG()
-        Dim tI, tG, tC As New DataTable
+        Dim tI, tG, tC, tDif, tDesc As New DataTable
         Dim sumaI, sumaG, sumaC, aI, aG, aC, UTI As Double
         Dim saldo As String
         Dim inicio As Integer
+        Dim fuente As iTextSharp.text.pdf.BaseFont
+        Dim nk As Integer = k
         '****************************************
         sumaI = 0
         sumaG = 0
@@ -591,12 +603,38 @@ Public Class FrmEstadoResultados
         cb.ShowTextAligned(50, "COSTOS DE VENTAS", 50, k - 45, 0)
         cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaC), 420, k - 45, 0)
         UTI = sumaI + sumaG + sumaC
-        If UTI >= 0 Then
-            cb.ShowTextAligned(50, "PERDIDAD", 50, k - 60, 0)
+        '*************************************
+        ''******************************
+        If chkMostrar.Checked = False Then
+            nk = nk + 8
+            fuente = FontFactory.GetFont(FontFactory.HELVETICA, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
+            cb.SetFontAndSize(fuente, 8)
+            myCommand.CommandText = "SELECT ctaPerdida FROM  parcontab;"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tDif)
+            myCommand.CommandText = "SELECT descripcion FROM selpuc WHERE codigo='" + tDif.Rows(0).Item("ctaPerdida") + "';"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tDesc)
+
+            cb.ShowTextAligned(50, "TOTAL " + tDesc.Rows(0).Item("descripcion"), 120, nk, 0)
+            cb.ShowTextAligned(50, tDif.Rows(0).Item("ctaPerdida"), 50, nk + 10, 0)
+            cb.ShowTextAligned(50, tDesc.Rows(0).Item("descripcion"), 150, nk + 10, 0)
+            cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(UTI), 585, nk + 10, 0)
+            cb.ShowTextAligned(50, "__________________________________________________________________________________________________________________________________________________ ", 50, nk + 9, 0)
         Else
-            cb.ShowTextAligned(50, "UTILIDAD", 50, k - 60, 0)
+            fuente = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
+            cb.SetFontAndSize(fuente, 9)
+            If chkMostrar.Checked = True Then
+                If UTI >= 0 Then
+                    cb.ShowTextAligned(50, "PERDIDAD", 50, k - 60, 0)
+                Else
+                    cb.ShowTextAligned(50, "UTILIDAD", 50, k - 60, 0)
+                End If
+                cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(UTI), 250, k - 60, 0)
+            End If
         End If
-        cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(UTI), 250, k - 60, 0)
+
+
         'firmas
         If fcon.Checked = True Then
             cb.ShowTextAligned(50, "___________________________ ", 20, k - 110, 0)

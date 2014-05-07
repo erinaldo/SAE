@@ -430,7 +430,7 @@ Public Class FrmGestionCitas
             CmdMostrar.Focus()
         Else
             Dim resultado As MsgBoxResult
-            resultado = MsgBox("La Cita sera Eliminada ¿Desea Continuar?", MsgBoxStyle.YesNo, "Verificando")
+            resultado = MsgBox("La Cita será Eliminada ¿Desea Continuar?", MsgBoxStyle.YesNo, "Verificando")
             If resultado = MsgBoxResult.Yes Then
                 MiConexion(bda)
                 myCommand.Parameters.Clear()

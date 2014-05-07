@@ -639,13 +639,25 @@
                     myAdapter.SelectCommand = myCommand
                     myAdapter.Fill(taF)
 
-                    If tabla.Rows.Count <> 0 Then
+                    If taF.Rows.Count <> 0 Then
                         If taF.Rows(0).Item(0) = "S" Then
                             gitems.Item("codcom", fila).Value = taF.Rows(0).Item(1).ToString
                         Else
                             gitems.Item("codcom", fila).Value = ""
                         End If
                     End If
+                End If
+            Catch ex As Exception
+            End Try
+            '.....  DESCUENTO POR GRUPO FAMILIAR
+            Try
+                Dim taF2 As New DataTable
+                myCommand.CommandText = "SELECT pordes FROM  `grupo_flia` WHERE nitc='" & FrmFacturaEstetica.txtnitc.Text & "' LIMIT 1;"
+                myAdapter.SelectCommand = myCommand
+                myAdapter.Fill(taF2)
+
+                If taF2.Rows.Count <> 0 Then
+                    gitems.Item("descuento", fila).Value = Moneda(taF2.Rows(0).Item(0).ToString)
                 End If
             Catch ex As Exception
             End Try

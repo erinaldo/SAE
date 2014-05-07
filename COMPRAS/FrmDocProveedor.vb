@@ -63,6 +63,7 @@ Public Class FrmDocProveedor
         txtnumfac.Enabled = False
         txtnitc.Enabled = False
         txtfecha.Enabled = False
+        fvmto.Enabled = False
         cbaprobado.Enabled = False
         cmditems.Enabled = False
         txtcentrocosto.Enabled = False
@@ -102,6 +103,7 @@ Public Class FrmDocProveedor
     Public Sub Desbloquear()
         txtnitc.Enabled = True
         txtfecha.Enabled = True
+        fvmto.Enabled = True
         cbaprobado.Enabled = True
         cmditems.Enabled = True
         txt_doc_afe.Enabled = True
@@ -171,6 +173,10 @@ Public Class FrmDocProveedor
             Else
                 txtfecha.Value = CDate(PerActual & "/" & "01")
             End If
+        End Try
+        Try
+            fvmto.Value = txtfecha.Value
+        Catch ex As Exception
         End Try
         txtcentrocosto.Text = ""
         txtcentro.Text = ""
@@ -286,6 +292,10 @@ Public Class FrmDocProveedor
             txtvmto.Text = "30"
             lbusuario.Text = FrmPrincipal.lbuser.Text
             lbestado.Text = "NUEVO"
+            Try
+                fvmto.Value = DateAdd("d", CInt(txtvmto.Text), txtfecha.Value)
+            Catch ex As Exception
+            End Try
             txttipo.Enabled = True
             Parametros()
             Desbloquear()
@@ -578,6 +588,10 @@ Public Class FrmDocProveedor
         txtobserbaciones.Text = tabla.Rows(0).Item("observ")
         ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         txtvmto.Text = tabla.Rows(0).Item("vmto")
+        Try
+            fvmto.Value = DateAdd("d", CInt(txtvmto.Text), txtfecha.Value)
+        Catch ex As Exception
+        End Try
         txtcentrocosto.Text = tabla.Rows(0).Item("ctoc")
         If txtcentrocosto.Text <> "0" Then
             BuscarCCs()
@@ -942,6 +956,10 @@ Public Class FrmDocProveedor
         FrmFormaPago.lbform.Text = "fp"
         FrmFormaPago.ShowDialog()
         FrmFormaPago.cmdvarias.Enabled = True
+        Try
+            txtvmto_LostFocus(AcceptButton, AcceptButton)
+        Catch ex As Exception
+        End Try
 
     End Sub
     'VALIDACIONES
@@ -4631,4 +4649,29 @@ Public Class FrmDocProveedor
     End Function
 
    
+    Private Sub txtfecha_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtfecha.ValueChanged
+        If lbestado.Text = "NUEVO" Then
+            Try
+                fvmto.Value = txtfecha.Value
+                txtvmto.Text = "30"
+                Try
+                    txtvmto_LostFocus(AcceptButton, AcceptButton)
+                Catch ex As Exception
+                End Try
+            Catch ex As Exception
+            End Try
+        End If
+       
+    End Sub
+
+    Private Sub txtvmto_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtvmto.LostFocus
+        Try
+            fvmto.Value = DateAdd("d", CInt(txtvmto.Text), txtfecha.Value)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub fvmto_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fvmto.ValueChanged
+        txtvmto.Text = DateDiff("d", txtfecha.Value, fvmto.Value)
+    End Sub
 End Class

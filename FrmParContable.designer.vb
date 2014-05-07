@@ -24,8 +24,13 @@ Partial Class FrmParContable
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.gncc = New System.Windows.Forms.GroupBox
         Me.txtnc4 = New System.Windows.Forms.ComboBox
+        Me.Label14 = New System.Windows.Forms.Label
+        Me.Label15 = New System.Windows.Forms.Label
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.Label13 = New System.Windows.Forms.Label
         Me.txtnc2 = New System.Windows.Forms.ComboBox
         Me.txtnc1 = New System.Windows.Forms.ComboBox
         Me.txtnivcc = New System.Windows.Forms.ComboBox
@@ -53,14 +58,15 @@ Partial Class FrmParContable
         Me.rb_no = New System.Windows.Forms.RadioButton
         Me.Label2 = New System.Windows.Forms.Label
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.Label15 = New System.Windows.Forms.Label
         Me.CmdSalir = New System.Windows.Forms.Button
         Me.CmdRegistrarCambios = New System.Windows.Forms.Button
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label16 = New System.Windows.Forms.Label
+        Me.Label17 = New System.Windows.Forms.Label
+        Me.txtCtaDiferencia = New System.Windows.Forms.TextBox
+        Me.txtCtaPerdida = New System.Windows.Forms.TextBox
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.gncc.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -69,15 +75,29 @@ Partial Class FrmParContable
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.GroupBox1)
         Me.GroupBox2.Controls.Add(Me.gncc)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.GroupBox4)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
         Me.GroupBox2.Location = New System.Drawing.Point(8, 7)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(605, 269)
+        Me.GroupBox2.Size = New System.Drawing.Size(605, 362)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.txtCtaPerdida)
+        Me.GroupBox1.Controls.Add(Me.txtCtaDiferencia)
+        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Location = New System.Drawing.Point(24, 276)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(563, 81)
+        Me.GroupBox1.TabIndex = 19
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Cuentas de Balance"
         '
         'gncc
         '
@@ -108,6 +128,46 @@ Partial Class FrmParContable
         Me.txtnc4.Size = New System.Drawing.Size(35, 21)
         Me.txtnc4.Sorted = True
         Me.txtnc4.TabIndex = 14
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(291, 53)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(35, 15)
+        Me.Label14.TabIndex = 77
+        Me.Label14.Text = "Tipo"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(393, 52)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(49, 15)
+        Me.Label15.TabIndex = 76
+        Me.Label15.Text = "Centro"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(62, 53)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(46, 15)
+        Me.Label12.TabIndex = 79
+        Me.Label12.Text = "Grupo"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(166, 53)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(71, 15)
+        Me.Label13.TabIndex = 78
+        Me.Label13.Text = "SubGrupo"
         '
         'txtnc2
         '
@@ -403,7 +463,7 @@ Partial Class FrmParContable
         Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
         Me.GroupPanel1.Controls.Add(Me.CmdSalir)
         Me.GroupPanel1.Controls.Add(Me.CmdRegistrarCambios)
-        Me.GroupPanel1.Location = New System.Drawing.Point(8, 282)
+        Me.GroupPanel1.Location = New System.Drawing.Point(8, 377)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(605, 85)
         '
@@ -427,46 +487,6 @@ Partial Class FrmParContable
         Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
         Me.GroupPanel1.TabIndex = 71
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(62, 53)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(46, 15)
-        Me.Label12.TabIndex = 79
-        Me.Label12.Text = "Grupo"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(166, 53)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(71, 15)
-        Me.Label13.TabIndex = 78
-        Me.Label13.Text = "SubGrupo"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(291, 53)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(35, 15)
-        Me.Label14.TabIndex = 77
-        Me.Label14.Text = "Tipo"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(393, 52)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(49, 15)
-        Me.Label15.TabIndex = 76
-        Me.Label15.Text = "Centro"
         '
         'CmdSalir
         '
@@ -496,12 +516,46 @@ Partial Class FrmParContable
         Me.ToolTip1.SetToolTip(Me.CmdRegistrarCambios, "Guardar Cambios Alt + G")
         Me.CmdRegistrarCambios.UseVisualStyleBackColor = False
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(41, 28)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(292, 15)
+        Me.Label16.TabIndex = 74
+        Me.Label16.Text = "Cuenta para la Diferencia (Balance General)"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(41, 54)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(262, 15)
+        Me.Label17.TabIndex = 75
+        Me.Label17.Text = "Cuenta para la Perdida (Est. Resultado)"
+        '
+        'txtCtaDiferencia
+        '
+        Me.txtCtaDiferencia.Location = New System.Drawing.Point(339, 28)
+        Me.txtCtaDiferencia.Name = "txtCtaDiferencia"
+        Me.txtCtaDiferencia.Size = New System.Drawing.Size(105, 20)
+        Me.txtCtaDiferencia.TabIndex = 76
+        '
+        'txtCtaPerdida
+        '
+        Me.txtCtaPerdida.Location = New System.Drawing.Point(339, 53)
+        Me.txtCtaPerdida.Name = "txtCtaPerdida"
+        Me.txtCtaPerdida.Size = New System.Drawing.Size(105, 20)
+        Me.txtCtaPerdida.TabIndex = 77
+        '
         'FrmParContable
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(620, 373)
+        Me.ClientSize = New System.Drawing.Size(620, 468)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.GroupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -514,6 +568,8 @@ Partial Class FrmParContable
         Me.Text = "SAE Niveles de Cuenta y Centros de Costo"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.gncc.ResumeLayout(False)
         Me.gncc.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
@@ -561,4 +617,9 @@ Partial Class FrmParContable
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents txtCtaPerdida As System.Windows.Forms.TextBox
+    Friend WithEvents txtCtaDiferencia As System.Windows.Forms.TextBox
 End Class

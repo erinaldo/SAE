@@ -1564,6 +1564,12 @@
     <Compile Include="ESTETICA\FrmSelMetas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ESTETICA\FrmSelNucleoF.Designer.vb">
+      <DependentUpon>FrmSelNucleoF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ESTETICA\FrmSelNucleoF.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FACTURACION\FrmAntiCliente.Designer.vb">
       <DependentUpon>FrmAntiCliente.vb</DependentUpon>
     </Compile>
@@ -2126,12 +2132,6 @@
       <DependentUpon>FrmCierreOpciones.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmCierreOpciones.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCIordenes.Designer.vb">
-      <DependentUpon>FrmCIordenes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCIordenes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmComEgreso.Designer.vb">
@@ -3340,6 +3340,12 @@
     <Compile Include="ORDENES\FemFPE2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ORDENES\FrmCIordenes.Designer.vb">
+      <DependentUpon>FrmCIordenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ORDENES\FrmCIordenes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ORDENES\FrmCtasRubroxx.Designer.vb">
       <DependentUpon>FrmCtasRubroxx.vb</DependentUpon>
     </Compile>
@@ -3374,6 +3380,12 @@
       <DependentUpon>FrmEgresoNomina.vb</DependentUpon>
     </Compile>
     <Compile Include="ORDENES\FrmEgresoNomina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDENES\FrmElimOrden.Designer.vb">
+      <DependentUpon>FrmElimOrden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ORDENES\FrmElimOrden.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ORDENES\FrmFPEgresos.Designer.vb">
@@ -4424,6 +4436,10 @@
       <DependentUpon>FrmSelMetas.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ESTETICA\FrmSelNucleoF.resx">
+      <DependentUpon>FrmSelNucleoF.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FACTURACION\FrmAntiCliente.resx">
       <DependentUpon>FrmAntiCliente.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -4798,10 +4814,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCierreOpciones.resx">
       <DependentUpon>FrmCierreOpciones.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCIordenes.resx">
-      <DependentUpon>FrmCIordenes.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmComEgreso.resx">
@@ -5602,6 +5614,10 @@
       <DependentUpon>FemFPE2.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ORDENES\FrmCIordenes.resx">
+      <DependentUpon>FrmCIordenes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ORDENES\FrmCtasRubroxx.resx">
       <DependentUpon>FrmCtasRubroxx.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -5624,6 +5640,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ORDENES\FrmEgresoNomina.resx">
       <DependentUpon>FrmEgresoNomina.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDENES\FrmElimOrden.resx">
+      <DependentUpon>FrmElimOrden.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ORDENES\FrmFPEgresos.resx">

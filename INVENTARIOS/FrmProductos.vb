@@ -637,32 +637,32 @@ Public Class FrmProductos
         End If
 
         '.... VALIDAR CUENTAS
-        If lbinv.Text = "" And txtnivel.Text = "Articulo" And usacont = "si" Then
+        If txtnivel.Text = "Articulo" And usacont = "si" And nivel_cuenta(Trim(lbinv.Text)) = False Then
             MsgBox("Las cuentas del articulo estan incompletas.Verifique ", MsgBoxStyle.Information, "SAE Verificacion")
             cdmcuentas.Focus()
             Exit Sub
         End If
-        If lbing.Text = "" And txtnivel.Text = "Articulo" And usacont = "si" Then
+        If nivel_cuenta(Trim(lbing.Text)) = False And txtnivel.Text = "Articulo" And usacont = "si" Then
             MsgBox("Las cuentas del articulo estan incompletas.Verifique  ", MsgBoxStyle.Information, "SAE Verificacion")
             cdmcuentas.Focus()
             Exit Sub
         End If
-        If lbcos.Text = "" And txtnivel.Text = "Articulo" And usacont = "si" Then
+        If nivel_cuenta(Trim(lbcos.Text)) = False And txtnivel.Text = "Articulo" And usacont = "si" Then
             MsgBox("Las cuentas del articulo estan incompletas.Verifique ", MsgBoxStyle.Information, "SAE Verificacion")
             cdmcuentas.Focus()
             Exit Sub
         End If
-        If lbivag.Text = "" And txtnivel.Text = "Articulo" And usacont = "si" Then
+        If nivel_cuenta(Trim(lbivag.Text)) = False And txtnivel.Text = "Articulo" And usacont = "si" Then
             MsgBox("Las cuentas del articulo estan incompletas.Verifique ", MsgBoxStyle.Information, "SAE Verificacion")
             cdmcuentas.Focus()
             Exit Sub
         End If
-        If lbivad.Text = "" And txtnivel.Text = "Articulo" And usacont = "si" Then
+        If nivel_cuenta(Trim(lbivad.Text)) = False And txtnivel.Text = "Articulo" And usacont = "si" Then
             MsgBox("Las cuentas del articulo estan incompletas.Verifique ", MsgBoxStyle.Information, "SAE Verificacion")
             cdmcuentas.Focus()
             Exit Sub
         End If
-        If lbdev.Text = "" And txtnivel.Text = "Articulo" And usacont = "si" Then
+        If nivel_cuenta(Trim(lbdev.Text)) = False And txtnivel.Text = "Articulo" And usacont = "si" Then
             MsgBox("Las cuentas del articulo estan incompletas.Verifique ", MsgBoxStyle.Information, "SAE Verificacion")
             cdmcuentas.Focus()
             Exit Sub
@@ -1519,7 +1519,19 @@ Public Class FrmProductos
         End Try
     End Sub
 
-    Private Sub txtdesc_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtdesc.TextChanged
-
-    End Sub
+    Function nivel_cuenta(ByVal codigo As String)
+        Dim tabla As New DataTable
+        myCommand.CommandText = "SELECT * FROM selpuc WHERE codigo='" & codigo & "' AND nivel='Auxiliar';"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tabla)
+        Try
+            If tabla.Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

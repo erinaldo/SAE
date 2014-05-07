@@ -439,6 +439,10 @@ Public Class Frmfacturarapida
         cbsr.Items.Clear()
         cbvalor.Items.Clear()
         cbcuenta.Items.Clear()
+        Try
+            fvmto.Value = txtfecha.Value
+        Catch ex As Exception
+        End Try
         CalcularTotales()
         txtpagado.Text = Moneda2("0", lb_imp_dec.Text)
         lbcambio.Text = Moneda2("0", lb_imp_dec.Text)
@@ -467,6 +471,7 @@ Public Class Frmfacturarapida
         txtnitv.Enabled = False
         txtfecha.Enabled = False
         cbaprobado.Enabled = False
+        fvmto.Enabled = False
         cmditems.Enabled = False
         'txtcentrocos.Enabled = False
         '******impuestos ************
@@ -497,6 +502,7 @@ Public Class Frmfacturarapida
         txtnitv.Enabled = True
         txtfecha.Enabled = True
         cbaprobado.Enabled = True
+        fvmto.Enabled = True
         cmditems.Enabled = True
         '******impuestos ************
         valordes.Enabled = True
@@ -566,6 +572,10 @@ Public Class Frmfacturarapida
         If lbgf.Text = "S" Then
             ValidarConsecutivo()
         End If
+        Try
+            fvmto.Value = DateAdd("d", CInt(txtvmto.Text), txtfecha.Value)
+        Catch ex As Exception
+        End Try
         Cerrar()
         chcli.Focus()
     End Sub
@@ -932,22 +942,10 @@ Public Class Frmfacturarapida
             MsgBox("No ha digitado datos del vendedor, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             txtnitv.Focus()
             Exit Sub
-        ElseIf txtdescuento.Text <> "0,00" And txtcuentadesc.Text.Length < 10 Then
-            If nivel_cuenta(Trim(txtcuentadesc.Text)) = False Then
-                MsgBox("No ha Seleccionado la  cuenta auxiliar para los descuentos, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
-                txtcuentadesc.Focus()
-                Exit Sub
-            End If
-        ElseIf txtiva.Text <> "0,00" And txtcuentaiva.Text.Length < 10 Then
-            If nivel_cuenta(Trim(txtcuentaiva.Text)) = False Then
-                MsgBox("No ha escogido cuenta para el IVA, Verifique los parametros.  ", MsgBoxStyle.Information, "Editar Factura ")
-                txtcuentaiva.Focus()
-                Exit Sub
-            End If
         ElseIf txtcuentatotal.Text.Length < 10 Then
             If nivel_cuenta(Trim(txtcuentatotal.Text)) = False Then
                 MsgBox("No ha escogido forma de pago o la cuenta Auxiliar, Verifique los parametros.  ", MsgBoxStyle.Information, "Editar Factura ")
-                cmdfpago.Focus()
+                txtcuentatotal.Focus()
                 Exit Sub
             End If
         ElseIf CDbl(txttotal.Text) <= 0 And CDbl(lbvalor.Text) = 0 Then
@@ -959,6 +957,21 @@ Public Class Frmfacturarapida
             cmditems.Focus()
             Exit Sub
         End If
+
+        If txtdescuento.Text <> "0,00" And txtcuentadesc.Text.Length < 10 Then
+            If nivel_cuenta(Trim(txtcuentadesc.Text)) = False Then
+                MsgBox("No ha Seleccionado la  cuenta auxiliar para los descuentos, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
+                txtcuentadesc.Focus()
+                Exit Sub
+            End If
+        ElseIf txtiva.Text <> "0,00" And txtcuentaiva.Text.Length < 10 Then
+            If nivel_cuenta(Trim(txtcuentaiva.Text)) = False Then
+                MsgBox("No ha escogido cuenta para el IVA, Verifique los parametros.  ", MsgBoxStyle.Information, "Editar Factura ")
+                txtcuentaiva.Focus()
+                Exit Sub
+            End If
+        End If
+
         Dim sumafp As Double = 0
         For i = 0 To gfp.RowCount - 1
             sumafp = sumafp + Moneda2(gfp.Item("monto", i).Value, lb_imp_dec.Text)
@@ -2542,6 +2555,10 @@ Public Class Frmfacturarapida
             txtobserbaciones.Text = tabla.Rows(0).Item("observ")
             ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
             txtvmto.Text = tabla.Rows(0).Item("vmto")
+            Try
+                fvmto.Value = DateAdd("d", CInt(txtvmto.Text), txtfecha.Value)
+            Catch ex As Exception
+            End Try
             txtcentrocosto.Text = tabla.Rows(0).Item("cc")
             If txtcentrocosto.Text <> "0" Then
                 BuscarCCs()
@@ -2920,6 +2937,11 @@ Public Class Frmfacturarapida
         End If
         FrmFormaPago.lbform.Text = "fr"
         FrmFormaPago.ShowDialog()
+        Try
+            txtvmto_LostFocus(AcceptButton, AcceptButton)
+        Catch ex As Exception
+        End Try
+
     End Sub
     Public Sub VariasFP()
         FrmFormaPago.tabforma.Visible = False
@@ -3616,12 +3638,12 @@ Public Class Frmfacturarapida
             dc = 2
         End If
 
-        sql = " SELECT  d.doc , d.iva_d as cualfp, d.item as tipodoc, d.codart as idbod, d.nomart as comentario , " _
+        sql = " SELECT  d.doc , d.iva_d as cualfp, d.item as tipodoc, d.codart as idbod, a.referencia as margen,  d.nomart as comentario , " _
         & "  CAST((d.cantidad) AS CHAR(20)) as nitc, CAST(FORMAT(((d.valor/(1+(d.iva_d/100)))- ((d.valor /(1+(d.iva_d/100))) * (d.por_des/100)))," & dc & ")AS CHAR(20)) as nitvpre, " _
         & " FORMAT((((d.valor/(1+(d.iva_d/100)))- ((d.valor /(1+(d.iva_d/100))) * (d.por_des/100)) )* d.cantidad)," & dc & ") as nitv, " _
         & " (SELECT logofac FROM  parafacts where factura = 'RAPIDA') AS logofac, " _
         & " f.iva as numfact,  FORMAT(f.total," & dc & ") as margmin" _
-        & " FROM facturas" & p & " f INNER JOIN(detafac" & p & " d) ON f.doc = d.doc WHERE f.doc = '" & txttipo.Text & txtnumfac.Text & "' " _
+        & " FROM articulos a,facturas" & p & " f INNER JOIN(detafac" & p & " d) ON f.doc = d.doc WHERE f.doc = '" & txttipo.Text & txtnumfac.Text & "' AND d.codart= a.codart " _
         & " ORDER BY item"
 
         TextBox1.Text = sql2
@@ -5808,4 +5830,30 @@ Public Class Frmfacturarapida
             Return False
         End Try
     End Function
+
+    Private Sub txtfecha_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtfecha.ValueChanged
+        If lbestado.Text = "NUEVO" Then
+            Try
+                fvmto.Value = txtfecha.Value
+                txtvmto.Text = "0"
+                Try
+                    txtvmto_LostFocus(AcceptButton, AcceptButton)
+                Catch ex As Exception
+                End Try
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
+
+    Private Sub txtvmto_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtvmto.LostFocus
+        Try
+            fvmto.Value = DateAdd("d", CInt(txtvmto.Text), txtfecha.Value)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+   
+    Private Sub fvmto_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fvmto.ValueChanged
+        txtvmto.Text = DateDiff("d", txtfecha.Value, fvmto.Value)
+    End Sub
 End Class

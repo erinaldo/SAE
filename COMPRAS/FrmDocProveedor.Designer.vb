@@ -138,6 +138,7 @@ Partial Class FrmDocProveedor
         Me.cmbTipoAF = New System.Windows.Forms.ComboBox
         Me.cmdNuevoAF = New System.Windows.Forms.Button
         Me.cbldoc = New System.Windows.Forms.ComboBox
+        Me.fvmto = New System.Windows.Forms.DateTimePicker
         Me.txtcliente = New System.Windows.Forms.TextBox
         Me.Label5 = New System.Windows.Forms.Label
         Me.grupoafecta = New System.Windows.Forms.GroupBox
@@ -245,7 +246,7 @@ Partial Class FrmDocProveedor
         'txtcuentatotal
         '
         Me.txtcuentatotal.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentatotal.Location = New System.Drawing.Point(293, 591)
+        Me.txtcuentatotal.Location = New System.Drawing.Point(289, 591)
         Me.txtcuentatotal.Name = "txtcuentatotal"
         Me.txtcuentatotal.ShortcutsEnabled = False
         Me.txtcuentatotal.Size = New System.Drawing.Size(96, 20)
@@ -331,7 +332,7 @@ Partial Class FrmDocProveedor
         '
         Me.txtcentro.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtcentro.Enabled = False
-        Me.txtcentro.Location = New System.Drawing.Point(519, 434)
+        Me.txtcentro.Location = New System.Drawing.Point(515, 434)
         Me.txtcentro.Name = "txtcentro"
         Me.txtcentro.ShortcutsEnabled = False
         Me.txtcentro.Size = New System.Drawing.Size(141, 20)
@@ -521,7 +522,7 @@ Partial Class FrmDocProveedor
         Me.txttotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txttotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotal.ForeColor = System.Drawing.Color.Red
-        Me.txttotal.Location = New System.Drawing.Point(160, 590)
+        Me.txttotal.Location = New System.Drawing.Point(156, 590)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.Size = New System.Drawing.Size(119, 20)
         Me.txttotal.TabIndex = 208
@@ -533,7 +534,7 @@ Partial Class FrmDocProveedor
         Me.txtiva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtiva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtiva.ForeColor = System.Drawing.Color.SteelBlue
-        Me.txtiva.Location = New System.Drawing.Point(160, 483)
+        Me.txtiva.Location = New System.Drawing.Point(156, 483)
         Me.txtiva.Name = "txtiva"
         Me.txtiva.Size = New System.Drawing.Size(119, 20)
         Me.txtiva.TabIndex = 207
@@ -545,7 +546,7 @@ Partial Class FrmDocProveedor
         Me.txtdescuento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtdescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdescuento.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.txtdescuento.Location = New System.Drawing.Point(159, 429)
+        Me.txtdescuento.Location = New System.Drawing.Point(155, 429)
         Me.txtdescuento.Name = "txtdescuento"
         Me.txtdescuento.Size = New System.Drawing.Size(119, 20)
         Me.txtdescuento.TabIndex = 206
@@ -557,7 +558,7 @@ Partial Class FrmDocProveedor
         Me.txtsubtotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtsubtotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtsubtotal.ForeColor = System.Drawing.Color.SteelBlue
-        Me.txtsubtotal.Location = New System.Drawing.Point(159, 403)
+        Me.txtsubtotal.Location = New System.Drawing.Point(155, 403)
         Me.txtsubtotal.Name = "txtsubtotal"
         Me.txtsubtotal.Size = New System.Drawing.Size(119, 20)
         Me.txtsubtotal.TabIndex = 205
@@ -580,7 +581,7 @@ Partial Class FrmDocProveedor
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label19.Location = New System.Drawing.Point(400, 506)
+        Me.Label19.Location = New System.Drawing.Point(396, 514)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(77, 13)
         Me.Label19.TabIndex = 202
@@ -592,7 +593,7 @@ Partial Class FrmDocProveedor
         Me.cbaprobado.Enabled = False
         Me.cbaprobado.FormattingEnabled = True
         Me.cbaprobado.Items.AddRange(New Object() {"", "AP"})
-        Me.cbaprobado.Location = New System.Drawing.Point(491, 503)
+        Me.cbaprobado.Location = New System.Drawing.Point(487, 511)
         Me.cbaprobado.Name = "cbaprobado"
         Me.cbaprobado.Size = New System.Drawing.Size(43, 21)
         Me.cbaprobado.TabIndex = 24
@@ -600,7 +601,7 @@ Partial Class FrmDocProveedor
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(400, 568)
+        Me.Label4.Location = New System.Drawing.Point(396, 576)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(123, 13)
         Me.Label4.TabIndex = 199
@@ -611,7 +612,7 @@ Partial Class FrmDocProveedor
         Me.lbsubtotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbsubtotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbsubtotal.ForeColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.lbsubtotal.Location = New System.Drawing.Point(534, 393)
+        Me.lbsubtotal.Location = New System.Drawing.Point(530, 393)
         Me.lbsubtotal.Name = "lbsubtotal"
         Me.lbsubtotal.Size = New System.Drawing.Size(128, 20)
         Me.lbsubtotal.TabIndex = 200
@@ -622,7 +623,7 @@ Partial Class FrmDocProveedor
         'lbusuario
         '
         Me.lbusuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbusuario.Location = New System.Drawing.Point(523, 568)
+        Me.lbusuario.Location = New System.Drawing.Point(519, 576)
         Me.lbusuario.Name = "lbusuario"
         Me.lbusuario.Size = New System.Drawing.Size(144, 20)
         Me.lbusuario.TabIndex = 198
@@ -634,7 +635,7 @@ Partial Class FrmDocProveedor
         Me.txtcentrocos.Enabled = False
         Me.txtcentrocos.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtcentrocos.FormattingEnabled = True
-        Me.txtcentrocos.Location = New System.Drawing.Point(475, 393)
+        Me.txtcentrocos.Location = New System.Drawing.Point(471, 393)
         Me.txtcentrocos.Name = "txtcentrocos"
         Me.txtcentrocos.Size = New System.Drawing.Size(59, 20)
         Me.txtcentrocos.TabIndex = 21
@@ -657,7 +658,7 @@ Partial Class FrmDocProveedor
         '
         Me.cmdobservaciones.BackColor = System.Drawing.SystemColors.Control
         Me.cmdobservaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdobservaciones.Location = New System.Drawing.Point(584, 484)
+        Me.cmdobservaciones.Location = New System.Drawing.Point(580, 484)
         Me.cmdobservaciones.Name = "cmdobservaciones"
         Me.cmdobservaciones.Size = New System.Drawing.Size(76, 30)
         Me.cmdobservaciones.TabIndex = 26
@@ -668,7 +669,7 @@ Partial Class FrmDocProveedor
         'txtfecha
         '
         Me.txtfecha.CustomFormat = "yyyy/dd/mm"
-        Me.txtfecha.Location = New System.Drawing.Point(75, 143)
+        Me.txtfecha.Location = New System.Drawing.Point(71, 143)
         Me.txtfecha.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.txtfecha.Name = "txtfecha"
         Me.txtfecha.Size = New System.Drawing.Size(205, 20)
@@ -693,7 +694,7 @@ Partial Class FrmDocProveedor
         Me.txttipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.txttipo.FormattingEnabled = True
         Me.txttipo.Items.AddRange(New Object() {"FP", "AP"})
-        Me.txttipo.Location = New System.Drawing.Point(52, 92)
+        Me.txttipo.Location = New System.Drawing.Point(48, 92)
         Me.txttipo.Name = "txttipo"
         Me.txttipo.Size = New System.Drawing.Size(58, 21)
         Me.txttipo.TabIndex = 1
@@ -736,7 +737,7 @@ Partial Class FrmDocProveedor
         Me.valoriva.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.valoriva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.valoriva.ForeColor = System.Drawing.Color.SteelBlue
-        Me.valoriva.Location = New System.Drawing.Point(98, 481)
+        Me.valoriva.Location = New System.Drawing.Point(94, 481)
         Me.valoriva.MaxLength = 5
         Me.valoriva.Name = "valoriva"
         Me.valoriva.ReadOnly = True
@@ -751,7 +752,7 @@ Partial Class FrmDocProveedor
         '
         Me.cmdfpago.BackColor = System.Drawing.SystemColors.Control
         Me.cmdfpago.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdfpago.Location = New System.Drawing.Point(584, 455)
+        Me.cmdfpago.Location = New System.Drawing.Point(580, 455)
         Me.cmdfpago.Name = "cmdfpago"
         Me.cmdfpago.Size = New System.Drawing.Size(76, 30)
         Me.cmdfpago.TabIndex = 25
@@ -763,7 +764,7 @@ Partial Class FrmDocProveedor
         '
         Me.txtvmto.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtvmto.Enabled = False
-        Me.txtvmto.Location = New System.Drawing.Point(490, 462)
+        Me.txtvmto.Location = New System.Drawing.Point(486, 462)
         Me.txtvmto.MaxLength = 4
         Me.txtvmto.Name = "txtvmto"
         Me.txtvmto.ShortcutsEnabled = False
@@ -777,7 +778,7 @@ Partial Class FrmDocProveedor
         Me.valordes.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.valordes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.valordes.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.valordes.Location = New System.Drawing.Point(97, 427)
+        Me.valordes.Location = New System.Drawing.Point(93, 427)
         Me.valordes.MaxLength = 5
         Me.valordes.Name = "valordes"
         Me.valordes.ShortcutsEnabled = False
@@ -791,7 +792,7 @@ Partial Class FrmDocProveedor
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label17.Location = New System.Drawing.Point(399, 467)
+        Me.Label17.Location = New System.Drawing.Point(395, 467)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(86, 13)
         Me.Label17.TabIndex = 190
@@ -802,7 +803,7 @@ Partial Class FrmDocProveedor
         Me.Label13.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label13.Location = New System.Drawing.Point(22, 253)
+        Me.Label13.Location = New System.Drawing.Point(18, 253)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(640, 23)
         Me.Label13.TabIndex = 180
@@ -812,7 +813,7 @@ Partial Class FrmDocProveedor
         'txtcuentaiva
         '
         Me.txtcuentaiva.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentaiva.Location = New System.Drawing.Point(294, 483)
+        Me.txtcuentaiva.Location = New System.Drawing.Point(290, 483)
         Me.txtcuentaiva.Name = "txtcuentaiva"
         Me.txtcuentaiva.ShortcutsEnabled = False
         Me.txtcuentaiva.Size = New System.Drawing.Size(96, 20)
@@ -823,7 +824,7 @@ Partial Class FrmDocProveedor
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label16.Location = New System.Drawing.Point(389, 431)
+        Me.Label16.Location = New System.Drawing.Point(385, 431)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(44, 26)
         Me.Label16.TabIndex = 188
@@ -832,7 +833,7 @@ Partial Class FrmDocProveedor
         'txtcuentadesc
         '
         Me.txtcuentadesc.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentadesc.Location = New System.Drawing.Point(293, 429)
+        Me.txtcuentadesc.Location = New System.Drawing.Point(289, 429)
         Me.txtcuentadesc.Name = "txtcuentadesc"
         Me.txtcuentadesc.ShortcutsEnabled = False
         Me.txtcuentadesc.Size = New System.Drawing.Size(96, 20)
@@ -843,7 +844,7 @@ Partial Class FrmDocProveedor
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label12.Location = New System.Drawing.Point(294, 404)
+        Me.Label12.Location = New System.Drawing.Point(290, 404)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(218, 13)
         Me.Label12.TabIndex = 179
@@ -854,7 +855,7 @@ Partial Class FrmDocProveedor
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Crimson
-        Me.Label10.Location = New System.Drawing.Point(28, 587)
+        Me.Label10.Location = New System.Drawing.Point(24, 587)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(64, 20)
         Me.Label10.TabIndex = 177
@@ -865,7 +866,7 @@ Partial Class FrmDocProveedor
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label9.Location = New System.Drawing.Point(27, 483)
+        Me.Label9.Location = New System.Drawing.Point(23, 483)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(39, 13)
         Me.Label9.TabIndex = 176
@@ -876,7 +877,7 @@ Partial Class FrmDocProveedor
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label8.Location = New System.Drawing.Point(26, 429)
+        Me.Label8.Location = New System.Drawing.Point(22, 429)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(68, 13)
         Me.Label8.TabIndex = 175
@@ -887,7 +888,7 @@ Partial Class FrmDocProveedor
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label7.Location = New System.Drawing.Point(26, 403)
+        Me.Label7.Location = New System.Drawing.Point(22, 403)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 13)
         Me.Label7.TabIndex = 174
@@ -895,7 +896,7 @@ Partial Class FrmDocProveedor
         '
         'txtnitc
         '
-        Me.txtnitc.Location = New System.Drawing.Point(130, 176)
+        Me.txtnitc.Location = New System.Drawing.Point(126, 176)
         Me.txtnitc.Name = "txtnitc"
         Me.txtnitc.ShortcutsEnabled = False
         Me.txtnitc.Size = New System.Drawing.Size(119, 20)
@@ -906,7 +907,7 @@ Partial Class FrmDocProveedor
         '
         Me.txtnumfac.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtnumfac.Enabled = False
-        Me.txtnumfac.Location = New System.Drawing.Point(532, 94)
+        Me.txtnumfac.Location = New System.Drawing.Point(528, 94)
         Me.txtnumfac.Name = "txtnumfac"
         Me.txtnumfac.ShortcutsEnabled = False
         Me.txtnumfac.Size = New System.Drawing.Size(135, 20)
@@ -917,7 +918,7 @@ Partial Class FrmDocProveedor
         '
         Me.txttipo2.BackColor = System.Drawing.Color.White
         Me.txttipo2.Enabled = False
-        Me.txttipo2.Location = New System.Drawing.Point(115, 93)
+        Me.txttipo2.Location = New System.Drawing.Point(111, 93)
         Me.txttipo2.Name = "txttipo2"
         Me.txttipo2.ReadOnly = True
         Me.txttipo2.Size = New System.Drawing.Size(291, 20)
@@ -951,7 +952,7 @@ Partial Class FrmDocProveedor
         'lbhora
         '
         Me.lbhora.AutoSize = True
-        Me.lbhora.Location = New System.Drawing.Point(340, 148)
+        Me.lbhora.Location = New System.Drawing.Point(336, 148)
         Me.lbhora.Name = "lbhora"
         Me.lbhora.Size = New System.Drawing.Size(49, 13)
         Me.lbhora.TabIndex = 233
@@ -962,7 +963,7 @@ Partial Class FrmDocProveedor
         '
         Me.cbconcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbconcepto.FormattingEnabled = True
-        Me.cbconcepto.Location = New System.Drawing.Point(25, 557)
+        Me.cbconcepto.Location = New System.Drawing.Point(21, 557)
         Me.cbconcepto.MaxDropDownItems = 4
         Me.cbconcepto.Name = "cbconcepto"
         Me.cbconcepto.Size = New System.Drawing.Size(88, 21)
@@ -973,7 +974,7 @@ Partial Class FrmDocProveedor
         '
         Me.cbcuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbcuenta.FormattingEnabled = True
-        Me.cbcuenta.Location = New System.Drawing.Point(293, 557)
+        Me.cbcuenta.Location = New System.Drawing.Point(289, 557)
         Me.cbcuenta.MaxDropDownItems = 4
         Me.cbcuenta.Name = "cbcuenta"
         Me.cbcuenta.Size = New System.Drawing.Size(97, 21)
@@ -985,7 +986,7 @@ Partial Class FrmDocProveedor
         Me.cbsr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbsr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbsr.FormattingEnabled = True
-        Me.cbsr.Location = New System.Drawing.Point(116, 557)
+        Me.cbsr.Location = New System.Drawing.Point(112, 557)
         Me.cbsr.MaxDropDownItems = 4
         Me.cbsr.Name = "cbsr"
         Me.cbsr.Size = New System.Drawing.Size(38, 23)
@@ -997,7 +998,7 @@ Partial Class FrmDocProveedor
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label6.Location = New System.Drawing.Point(12, 560)
+        Me.Label6.Location = New System.Drawing.Point(8, 560)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(14, 16)
         Me.Label6.TabIndex = 240
@@ -1020,7 +1021,7 @@ Partial Class FrmDocProveedor
         '
         Me.cmdConceptos.BackColor = System.Drawing.SystemColors.Control
         Me.cmdConceptos.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdConceptos.Location = New System.Drawing.Point(584, 513)
+        Me.cmdConceptos.Location = New System.Drawing.Point(580, 513)
         Me.cmdConceptos.Name = "cmdConceptos"
         Me.cmdConceptos.Size = New System.Drawing.Size(76, 30)
         Me.cmdConceptos.TabIndex = 244
@@ -1032,7 +1033,7 @@ Partial Class FrmDocProveedor
         '
         Me.txt_doc_afe.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txt_doc_afe.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txt_doc_afe.Location = New System.Drawing.Point(532, 120)
+        Me.txt_doc_afe.Location = New System.Drawing.Point(528, 120)
         Me.txt_doc_afe.Name = "txt_doc_afe"
         Me.txt_doc_afe.Size = New System.Drawing.Size(133, 20)
         Me.txt_doc_afe.TabIndex = 4
@@ -1042,7 +1043,7 @@ Partial Class FrmDocProveedor
         '
         Me.cbbase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbbase.FormattingEnabled = True
-        Me.cbbase.Location = New System.Drawing.Point(585, 563)
+        Me.cbbase.Location = New System.Drawing.Point(581, 571)
         Me.cbbase.MaxDropDownItems = 4
         Me.cbbase.Name = "cbbase"
         Me.cbbase.Size = New System.Drawing.Size(75, 21)
@@ -1068,7 +1069,7 @@ Partial Class FrmDocProveedor
         Me.cmdPrint.BackColor = System.Drawing.Color.White
         Me.cmdPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdPrint.Image = Global.SAE.My.Resources.Resources.impresora
-        Me.cmdPrint.Location = New System.Drawing.Point(603, 172)
+        Me.cmdPrint.Location = New System.Drawing.Point(599, 172)
         Me.cmdPrint.Name = "cmdPrint"
         Me.cmdPrint.Size = New System.Drawing.Size(63, 73)
         Me.cmdPrint.TabIndex = 12
@@ -1080,7 +1081,7 @@ Partial Class FrmDocProveedor
         Me.cmditems.BackColor = System.Drawing.Color.White
         Me.cmditems.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmditems.Image = Global.SAE.My.Resources.Resources.notas2
-        Me.cmditems.Location = New System.Drawing.Point(537, 173)
+        Me.cmditems.Location = New System.Drawing.Point(533, 173)
         Me.cmditems.Name = "cmditems"
         Me.cmditems.Size = New System.Drawing.Size(63, 73)
         Me.cmditems.TabIndex = 11
@@ -1239,7 +1240,7 @@ Partial Class FrmDocProveedor
         Me.cmbTipoAF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbTipoAF.FormattingEnabled = True
         Me.cmbTipoAF.Items.AddRange(New Object() {"Seleccione...", "Devoluciones-Cantidades ", "Disminuir Valores"})
-        Me.cmbTipoAF.Location = New System.Drawing.Point(75, 116)
+        Me.cmbTipoAF.Location = New System.Drawing.Point(71, 116)
         Me.cmbTipoAF.Name = "cmbTipoAF"
         Me.cmbTipoAF.Size = New System.Drawing.Size(210, 21)
         Me.cmbTipoAF.TabIndex = 6
@@ -1259,7 +1260,7 @@ Partial Class FrmDocProveedor
         '
         Me.cbldoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbldoc.FormattingEnabled = True
-        Me.cbldoc.Location = New System.Drawing.Point(562, 610)
+        Me.cbldoc.Location = New System.Drawing.Point(562, 619)
         Me.cbldoc.MaxDropDownItems = 4
         Me.cbldoc.Name = "cbldoc"
         Me.cbldoc.Size = New System.Drawing.Size(88, 21)
@@ -1267,11 +1268,23 @@ Partial Class FrmDocProveedor
         Me.ToolTip1.SetToolTip(Me.cbldoc, "Conceptos")
         Me.cbldoc.Visible = False
         '
+        'fvmto
+        '
+        Me.fvmto.CustomFormat = "yyyy/dd/mm"
+        Me.fvmto.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.fvmto.Location = New System.Drawing.Point(487, 488)
+        Me.fvmto.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
+        Me.fvmto.Name = "fvmto"
+        Me.fvmto.Size = New System.Drawing.Size(80, 20)
+        Me.fvmto.TabIndex = 24
+        Me.ToolTip1.SetToolTip(Me.fvmto, "fecha de vencimiento")
+        Me.fvmto.Value = New Date(2010, 1, 14, 0, 0, 0, 0)
+        '
         'txtcliente
         '
         Me.txtcliente.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtcliente.Enabled = False
-        Me.txtcliente.Location = New System.Drawing.Point(258, 176)
+        Me.txtcliente.Location = New System.Drawing.Point(254, 176)
         Me.txtcliente.Name = "txtcliente"
         Me.txtcliente.ReadOnly = True
         Me.txtcliente.Size = New System.Drawing.Size(267, 20)
@@ -1280,7 +1293,7 @@ Partial Class FrmDocProveedor
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(19, 179)
+        Me.Label5.Location = New System.Drawing.Point(15, 179)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(110, 13)
         Me.Label5.TabIndex = 172
@@ -1291,7 +1304,7 @@ Partial Class FrmDocProveedor
         Me.grupoafecta.Controls.Add(Me.rbafecta1)
         Me.grupoafecta.Controls.Add(Me.rbafecta2)
         Me.grupoafecta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grupoafecta.Location = New System.Drawing.Point(221, 202)
+        Me.grupoafecta.Location = New System.Drawing.Point(217, 202)
         Me.grupoafecta.Name = "grupoafecta"
         Me.grupoafecta.Size = New System.Drawing.Size(164, 43)
         Me.grupoafecta.TabIndex = 10
@@ -1302,7 +1315,7 @@ Partial Class FrmDocProveedor
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(22, 145)
+        Me.Label3.Location = New System.Drawing.Point(18, 145)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(46, 16)
         Me.Label3.TabIndex = 171
@@ -1333,7 +1346,7 @@ Partial Class FrmDocProveedor
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(19, 96)
+        Me.Label1.Location = New System.Drawing.Point(15, 96)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(28, 13)
         Me.Label1.TabIndex = 164
@@ -1344,7 +1357,7 @@ Partial Class FrmDocProveedor
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label15.Location = New System.Drawing.Point(141, 484)
+        Me.Label15.Location = New System.Drawing.Point(137, 484)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(16, 13)
         Me.Label15.TabIndex = 186
@@ -1356,7 +1369,7 @@ Partial Class FrmDocProveedor
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label14.Location = New System.Drawing.Point(140, 430)
+        Me.Label14.Location = New System.Drawing.Point(136, 430)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(21, 16)
         Me.Label14.TabIndex = 184
@@ -1367,7 +1380,7 @@ Partial Class FrmDocProveedor
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.Label11.Location = New System.Drawing.Point(141, 543)
+        Me.Label11.Location = New System.Drawing.Point(137, 543)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(165, 42)
         Me.Label11.TabIndex = 178
@@ -1378,7 +1391,7 @@ Partial Class FrmDocProveedor
         Me.txtret.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtret.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtret.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.txtret.Location = New System.Drawing.Point(159, 455)
+        Me.txtret.Location = New System.Drawing.Point(155, 455)
         Me.txtret.Name = "txtret"
         Me.txtret.Size = New System.Drawing.Size(119, 20)
         Me.txtret.TabIndex = 220
@@ -1390,7 +1403,7 @@ Partial Class FrmDocProveedor
         Me.valorret.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.valorret.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.valorret.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.valorret.Location = New System.Drawing.Point(97, 453)
+        Me.valorret.Location = New System.Drawing.Point(93, 453)
         Me.valorret.MaxLength = 5
         Me.valorret.Name = "valorret"
         Me.valorret.ShortcutsEnabled = False
@@ -1402,7 +1415,7 @@ Partial Class FrmDocProveedor
         'txtcuentaret
         '
         Me.txtcuentaret.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentaret.Location = New System.Drawing.Point(293, 455)
+        Me.txtcuentaret.Location = New System.Drawing.Point(289, 455)
         Me.txtcuentaret.Name = "txtcuentaret"
         Me.txtcuentaret.ShortcutsEnabled = False
         Me.txtcuentaret.Size = New System.Drawing.Size(96, 20)
@@ -1413,7 +1426,7 @@ Partial Class FrmDocProveedor
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label22.Location = New System.Drawing.Point(26, 455)
+        Me.Label22.Location = New System.Drawing.Point(22, 455)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(65, 13)
         Me.Label22.TabIndex = 216
@@ -1424,7 +1437,7 @@ Partial Class FrmDocProveedor
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label23.Location = New System.Drawing.Point(140, 456)
+        Me.Label23.Location = New System.Drawing.Point(136, 456)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(21, 16)
         Me.Label23.TabIndex = 219
@@ -1433,7 +1446,7 @@ Partial Class FrmDocProveedor
         'txtcuentaflete
         '
         Me.txtcuentaflete.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentaflete.Location = New System.Drawing.Point(294, 508)
+        Me.txtcuentaflete.Location = New System.Drawing.Point(290, 508)
         Me.txtcuentaflete.Name = "txtcuentaflete"
         Me.txtcuentaflete.ShortcutsEnabled = False
         Me.txtcuentaflete.Size = New System.Drawing.Size(96, 20)
@@ -1444,7 +1457,7 @@ Partial Class FrmDocProveedor
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label25.Location = New System.Drawing.Point(27, 512)
+        Me.Label25.Location = New System.Drawing.Point(23, 512)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(41, 13)
         Me.Label25.TabIndex = 221
@@ -1453,7 +1466,7 @@ Partial Class FrmDocProveedor
         'txtcuentaseguro
         '
         Me.txtcuentaseguro.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtcuentaseguro.Location = New System.Drawing.Point(294, 533)
+        Me.txtcuentaseguro.Location = New System.Drawing.Point(290, 533)
         Me.txtcuentaseguro.Name = "txtcuentaseguro"
         Me.txtcuentaseguro.ShortcutsEnabled = False
         Me.txtcuentaseguro.Size = New System.Drawing.Size(96, 20)
@@ -1464,7 +1477,7 @@ Partial Class FrmDocProveedor
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label27.Location = New System.Drawing.Point(27, 537)
+        Me.Label27.Location = New System.Drawing.Point(23, 537)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(47, 13)
         Me.Label27.TabIndex = 226
@@ -1475,7 +1488,7 @@ Partial Class FrmDocProveedor
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label28.Location = New System.Drawing.Point(416, 124)
+        Me.Label28.Location = New System.Drawing.Point(412, 124)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(118, 13)
         Me.Label28.TabIndex = 229
@@ -1485,7 +1498,7 @@ Partial Class FrmDocProveedor
         '
         Me.grup_tip_doc.Controls.Add(Me.rbdocde2)
         Me.grup_tip_doc.Controls.Add(Me.rbdocde1)
-        Me.grup_tip_doc.Location = New System.Drawing.Point(25, 202)
+        Me.grup_tip_doc.Location = New System.Drawing.Point(21, 202)
         Me.grup_tip_doc.Name = "grup_tip_doc"
         Me.grup_tip_doc.Size = New System.Drawing.Size(191, 43)
         Me.grup_tip_doc.TabIndex = 9
@@ -1503,7 +1516,7 @@ Partial Class FrmDocProveedor
         Me.gfactura.ColumnHeadersVisible = False
         Me.gfactura.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.codigo, Me.descrip, Me.cant, Me.valor, Me.Vtotal, Me.tipo, Me.bodega, Me.cc, Me.ctainv, Me.ctacven, Me.ctaing, Me.ctaiva, Me.iva, Me.costo, Me.descuento})
         Me.gfactura.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.gfactura.Location = New System.Drawing.Point(21, 279)
+        Me.gfactura.Location = New System.Drawing.Point(17, 279)
         Me.gfactura.Name = "gfactura"
         Me.gfactura.RowHeadersVisible = False
         Me.gfactura.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -1666,7 +1679,7 @@ Partial Class FrmDocProveedor
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(293, 145)
+        Me.Label20.Location = New System.Drawing.Point(289, 145)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(38, 16)
         Me.Label20.TabIndex = 234
@@ -1676,7 +1689,7 @@ Partial Class FrmDocProveedor
         '
         Me.lbanula.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbanula.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.lbanula.Location = New System.Drawing.Point(400, 543)
+        Me.lbanula.Location = New System.Drawing.Point(396, 551)
         Me.lbanula.Name = "lbanula"
         Me.lbanula.Size = New System.Drawing.Size(262, 22)
         Me.lbanula.TabIndex = 235
@@ -1688,7 +1701,7 @@ Partial Class FrmDocProveedor
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label2.Location = New System.Drawing.Point(416, 97)
+        Me.Label2.Location = New System.Drawing.Point(412, 97)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 13)
         Me.Label2.TabIndex = 236
@@ -1699,7 +1712,7 @@ Partial Class FrmDocProveedor
         Me.lbvalor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbvalor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbvalor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lbvalor.Location = New System.Drawing.Point(160, 557)
+        Me.lbvalor.Location = New System.Drawing.Point(156, 557)
         Me.lbvalor.Name = "lbvalor"
         Me.lbvalor.Size = New System.Drawing.Size(119, 20)
         Me.lbvalor.TabIndex = 241
@@ -1711,7 +1724,7 @@ Partial Class FrmDocProveedor
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label21.Location = New System.Drawing.Point(397, 593)
+        Me.Label21.Location = New System.Drawing.Point(393, 601)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(253, 13)
         Me.Label21.TabIndex = 242
@@ -1722,7 +1735,7 @@ Partial Class FrmDocProveedor
         Me.txtseguro.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtseguro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtseguro.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.txtseguro.Location = New System.Drawing.Point(160, 534)
+        Me.txtseguro.Location = New System.Drawing.Point(156, 534)
         Me.txtseguro.Name = "txtseguro"
         Me.txtseguro.ShortcutsEnabled = False
         Me.txtseguro.Size = New System.Drawing.Size(119, 20)
@@ -1735,7 +1748,7 @@ Partial Class FrmDocProveedor
         Me.txtflete.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtflete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtflete.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.txtflete.Location = New System.Drawing.Point(160, 508)
+        Me.txtflete.Location = New System.Drawing.Point(156, 508)
         Me.txtflete.Name = "txtflete"
         Me.txtflete.ShortcutsEnabled = False
         Me.txtflete.Size = New System.Drawing.Size(119, 20)
@@ -1754,7 +1767,7 @@ Partial Class FrmDocProveedor
         'chcosto
         '
         Me.chcosto.AutoSize = True
-        Me.chcosto.Location = New System.Drawing.Point(404, 527)
+        Me.chcosto.Location = New System.Drawing.Point(400, 535)
         Me.chcosto.Name = "chcosto"
         Me.chcosto.Size = New System.Drawing.Size(151, 17)
         Me.chcosto.TabIndex = 250
@@ -1775,7 +1788,7 @@ Partial Class FrmDocProveedor
         '
         Me.GroupBox2.Controls.Add(Me.rbR)
         Me.GroupBox2.Controls.Add(Me.rbD)
-        Me.GroupBox2.Location = New System.Drawing.Point(387, 202)
+        Me.GroupBox2.Location = New System.Drawing.Point(383, 202)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(147, 43)
         Me.GroupBox2.TabIndex = 252
@@ -1787,7 +1800,7 @@ Partial Class FrmDocProveedor
         Me.lbdescuento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbdescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbdescuento.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.lbdescuento.Location = New System.Drawing.Point(540, 413)
+        Me.lbdescuento.Location = New System.Drawing.Point(536, 413)
         Me.lbdescuento.Name = "lbdescuento"
         Me.lbdescuento.Size = New System.Drawing.Size(119, 20)
         Me.lbdescuento.TabIndex = 253
@@ -1842,7 +1855,7 @@ Partial Class FrmDocProveedor
         '
         'txtcentrocosto
         '
-        Me.txtcentrocosto.Location = New System.Drawing.Point(435, 434)
+        Me.txtcentrocosto.Location = New System.Drawing.Point(431, 434)
         Me.txtcentrocosto.Name = "txtcentrocosto"
         Me.txtcentrocosto.Size = New System.Drawing.Size(78, 20)
         Me.txtcentrocosto.TabIndex = 21
@@ -1851,7 +1864,7 @@ Partial Class FrmDocProveedor
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(22, 121)
+        Me.Label30.Location = New System.Drawing.Point(18, 121)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(48, 15)
         Me.Label30.TabIndex = 273
@@ -2217,7 +2230,7 @@ Partial Class FrmDocProveedor
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label24.Location = New System.Drawing.Point(402, 488)
+        Me.Label24.Location = New System.Drawing.Point(395, 491)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(80, 13)
         Me.Label24.TabIndex = 284
@@ -2228,7 +2241,8 @@ Partial Class FrmDocProveedor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(671, 623)
+        Me.ClientSize = New System.Drawing.Size(676, 623)
+        Me.Controls.Add(Me.fvmto)
         Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.cbldoc)
         Me.Controls.Add(Me.lb_imp_dec)
@@ -2546,4 +2560,5 @@ Partial Class FrmDocProveedor
     Friend WithEvents DataGridViewTextBoxColumn27 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn28 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents fvmto As System.Windows.Forms.DateTimePicker
 End Class

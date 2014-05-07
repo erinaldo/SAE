@@ -1245,6 +1245,10 @@ Public Class FrmEstetica
     Private Sub ButtonX6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonX6.Click
         MiConexion(bda)
         Cerrar()
-        FrmNucleoFami.ShowDialog()
+        Try
+            FrmNucleoFami.ShowDialog()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Sub
 End Class

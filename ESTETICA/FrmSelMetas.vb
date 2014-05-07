@@ -111,7 +111,7 @@
     Private Sub txtcuenta_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtcuenta.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
             If cmbbuscar.Text = "" Then
-                cmbbuscar.Text = "NOMBRES"
+                cmbbuscar.Text = "CODIGO"
             End If
             BuscarGrilla(txtcuenta.Text)
         End If

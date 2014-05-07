@@ -746,6 +746,30 @@ Public Class FrmCIordenes
 
         val = txtvalor.Text
         ing = txtrb1.Text
+
+        ' ************* NUEVAS TABLAS
+        Try
+            myCommand.Parameters.Clear()
+            myCommand.CommandText = "UPDATE presupuesto" & cbper.Text & ".ingresos" & cbper.Text & " SET ingc_reduc=(ingc_reduc=+" & DIN(val) & "),ingc_reduca=(ingc_reduca=+" & DIN(val) & ") WHERE ing_codigo='" & ing & "'"
+            myCommand.ExecuteNonQuery()
+            Dim ntg As String = ""
+            For nt = CInt(cbper.Text) + 1 To 12
+                ntg = "UPDATE presupuesto" & Strings.Right(PerActual, 4) & ".ingresos"
+                If nt < 9 Then
+                    ntg = ntg & "0" & nt
+                Else
+                    ntg = ntg & nt
+                End If
+                ntg = ntg & " SET ingc_reduca=(ingc_reduca=+" & DIN(val) & ") WHERE ing_codigo='" & ing & "';"
+
+                myCommand.Parameters.Clear()
+                myCommand.CommandText = ntg
+                myCommand.ExecuteNonQuery()
+            Next
+        Catch ex As Exception
+        End Try
+        '****************************
+
         Try
             'Guardar MovIng
             myCommand.Parameters.Clear()

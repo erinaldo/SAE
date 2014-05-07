@@ -454,11 +454,19 @@ Public Class FrmPrincipal
         End Try
 
 
-        Try ' OTROS CONC CONTRATOS
+        Try ' OTROS TRIBUTARIOS
             myCommand.Parameters.Clear()
             myCommand.CommandText = "  ALTER TABLE  `tributarios` ADD  `cuenta13` VARCHAR( 15 ) NOT NULL ," _
              & " ADD  `cuenta14` VARCHAR( 15 ) NOT NULL , " _
              & " ADD  `cuenta15` VARCHAR( 15 ) NOT NULL ; "
+            myCommand.ExecuteNonQuery()
+        Catch ex As Exception
+        End Try
+
+        Try ' parcontab
+            myCommand.Parameters.Clear()
+            myCommand.CommandText = "  ALTER TABLE  `parcontab` ADD  `ctaDiferencia` varchar(10) NOT NULL," _
+             & " ADD `ctaPerdida` varchar(10) NOT NULL ; "
             myCommand.ExecuteNonQuery()
         Catch ex As Exception
         End Try

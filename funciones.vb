@@ -980,7 +980,7 @@ Module funciones
         End Try
         Try
             myCommand.Parameters.Clear()
-            myCommand.CommandText = "DELETE FROM " & pbd & ".movingresos WHERE movi_reconoce NOT IN (0,'');"
+            myCommand.CommandText = "DELETE FROM " & pbd & ".movingresos WHERE movi_reconoce NOT IN (0,'') AND CAST(movi_reconoce AS SIGNED) >0;"
             myCommand.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.ToString)

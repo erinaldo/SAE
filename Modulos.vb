@@ -123,9 +123,9 @@ Module Modulos
          & " `nombre` VARCHAR( 200 ) NOT NULL , " _
          & " `pordes` DOUBLE NOT NULL , " _
          & " `nitc` VARCHAR( 15 ) NOT NULL , " _
-         & " `edad` DATE NOT NULL, " _
-         & " PRIMARY KEY (  `codgrupo` ) " _
-         & " ) ENGINE = INNODB; "
+         & " `fecha` DATE NOT NULL, " _
+         & " `edad` INT NOT NULL, " _
+         & "  `item` INT NOT NULL ) ENGINE = INNODB; "
             myCommand.ExecuteNonQuery()
         Catch ex As Exception
         End Try
@@ -574,8 +574,8 @@ Module Modulos
         Try
             myCommand.CommandText = "CREATE TABLE IF NOT EXISTS " & bd & ".parcontab (" _
                                & "`longitud` int(10) unsigned NOT NULL,`niveles` int(10) unsigned NOT NULL,`nivel1` int(11) unsigned NOT NULL DEFAULT '0',`nivel2` int(11) unsigned NOT NULL DEFAULT '0'," _
-                               & "`nivel3` int(10) unsigned NOT NULL,`nivel4` int(10) unsigned NOT NULL,`nivel5` int(11) unsigned NOT NULL DEFAULT '0',`ccosto` varchar(2) NOT NULL, PRIMARY KEY (`longitud`)) ENGINE=MyISAM DEFAULT CHARSET=utf8;" _
-                               & "INSERT INTO " & bd & ".`parcontab` VALUES (9,5,1,1,2,2,3,'N');"
+                               & "`nivel3` int(10) unsigned NOT NULL,`nivel4` int(10) unsigned NOT NULL,`nivel5` int(11) unsigned NOT NULL DEFAULT '0',`ccosto` varchar(2) NOT NULL,`ctaDiferencia` varchar(10) NOT NULL,`ctaPerdida` varchar(10) NOT NULL, PRIMARY KEY (`longitud`)) ENGINE=MyISAM DEFAULT CHARSET=utf8;" _
+                               & "INSERT INTO " & bd & ".`parcontab` VALUES (9,5,1,1,2,2,3,'N','','');"
             myCommand.ExecuteNonQuery()
         Catch ex As Exception
         End Try
@@ -586,15 +586,15 @@ Module Modulos
         & "`cuenta3` varchar(15) NOT NULL,`cuenta4` varchar(15) NOT NULL,`cuenta5` varchar(15) NOT NULL " _
         & " ,`cuenta6` varchar(15) NOT NULL, `cuenta7` varchar(15) NOT NULL, `cuenta8` varchar(15) NOT NULL, " _
         & " `cuenta9` varchar(15) NOT NULL, `cuenta10` varchar(15) NOT NULL, `cuenta11` varchar(15) NOT NULL, " _
-        & " `cuenta12` varchar(15) NOT NULL, PRIMARY KEY (`num`)) ENGINE=MyISAM DEFAULT CHARSET=utf8;" _
-        & "INSERT INTO " & bd & ".`tributarios` VALUES (1, 'I.V.A Recaudado (por pagar)', '', '', '', '', '', '', '', '', '', '', '', ''); " _
-        & "INSERT INTO " & bd & ".`tributarios` VALUES (2, 'I.V.A Pagado (descontable)', '', '', '', '', '', '', '', '', '', '', '', ''); " _
-        & "INSERT INTO " & bd & ".`tributarios` VALUES (3, 'Retenciones hechas por tercero', '', '', '', '', '', '', '', '', '', '', '', ''); " _
-        & "INSERT INTO " & bd & ".`tributarios` VALUES (4, 'Retenciones hechas a terceros', '', '', '', '', '', '', '', '', '', '', '', ''); " _
-        & "INSERT INTO " & bd & ".`tributarios` VALUES (5, 'I.V.A Retenidos a terceros', '', '', '', '', '', '', '', '', '', '', '', ''); " _
-        & "INSERT INTO " & bd & ".`tributarios` VALUES (6, 'I.C.A Retenidos a terceros', '', '', '', '', '', '', '', '', '', '', '', ''); " _
-        & "INSERT INTO " & bd & ".`tributarios` VALUES (7, 'Informes de Otras Cuentas', '', '', '', '', '', '', '', '', '', '', '', ''); " _
-        & "INSERT INTO " & bd & ".`tributarios` VALUES (8, 'Retencion CREE', '', '', '', '', '', '', '', '', '', '', '', ''); "
+        & " `cuenta12` varchar(15) NOT NULL,`cuenta13` VARCHAR( 15 ) NOT NULL ,`cuenta14` VARCHAR( 15 ) NOT NULL ,`cuenta15` VARCHAR( 15 ) NOT NULL , PRIMARY KEY (`num`)) ENGINE=MyISAM DEFAULT CHARSET=utf8;" _
+        & "INSERT INTO " & bd & ".`tributarios` VALUES (1, 'I.V.A Recaudado (por pagar)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''); " _
+        & "INSERT INTO " & bd & ".`tributarios` VALUES (2, 'I.V.A Pagado (descontable)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''); " _
+        & "INSERT INTO " & bd & ".`tributarios` VALUES (3, 'Retenciones hechas por tercero', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''); " _
+        & "INSERT INTO " & bd & ".`tributarios` VALUES (4, 'Retenciones hechas a terceros', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''); " _
+        & "INSERT INTO " & bd & ".`tributarios` VALUES (5, 'I.V.A Retenidos a terceros', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''); " _
+        & "INSERT INTO " & bd & ".`tributarios` VALUES (6, 'I.C.A Retenidos a terceros', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''); " _
+        & "INSERT INTO " & bd & ".`tributarios` VALUES (7, 'Informes de Otras Cuentas', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''); " _
+        & "INSERT INTO " & bd & ".`tributarios` VALUES (8, 'Retencion CREE', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''); "
         Try
             myCommand.ExecuteNonQuery()
         Catch ex As Exception

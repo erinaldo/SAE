@@ -33,6 +33,16 @@ Public Class FrmBalanceGral
         txtano.Text = PerActual(3) & PerActual(4) & PerActual(5) & PerActual(6)
     End Sub
     Private Sub cmdpantalla_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdpantalla.Click
+        If chkMostrarDif.Checked = False Then
+            Dim tDif As New DataTable
+            myCommand.CommandText = "SELECT ctaDiferencia FROM parcontab;"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tDif)
+            If tDif.Rows(0).Item(0).ToString = "" Then
+                MsgBox("No hay Cuenta Para Mostrar Diferencia, Verifique Los Parametros", MsgBoxStyle.Information, "SAE Control")
+                Exit Sub
+            End If
+        End If
         BalanceGral(ini.Text, nivel.Value, txtano.Text)
     End Sub
 

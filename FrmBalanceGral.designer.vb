@@ -24,6 +24,7 @@ Partial Class FrmBalanceGral
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
+        Me.lbform = New System.Windows.Forms.Label
         Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.pdf = New System.Windows.Forms.Button
         Me.cmdGrafica = New System.Windows.Forms.Button
@@ -31,6 +32,8 @@ Partial Class FrmBalanceGral
         Me.cmdsalir = New System.Windows.Forms.Button
         Me.cmdpantalla = New System.Windows.Forms.Button
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox
+        Me.chkMostrarDif = New System.Windows.Forms.CheckBox
         Me.mibarra = New System.Windows.Forms.ProgressBar
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
         Me.frf = New System.Windows.Forms.CheckBox
@@ -45,9 +48,9 @@ Partial Class FrmBalanceGral
         Me.txtano = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.lbform = New System.Windows.Forms.Label
         Me.GroupPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.nivel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,7 +68,7 @@ Partial Class FrmBalanceGral
         Me.GroupPanel1.Controls.Add(Me.cmdactualizar)
         Me.GroupPanel1.Controls.Add(Me.cmdsalir)
         Me.GroupPanel1.Controls.Add(Me.cmdpantalla)
-        Me.GroupPanel1.Location = New System.Drawing.Point(3, 194)
+        Me.GroupPanel1.Location = New System.Drawing.Point(3, 235)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(516, 85)
         '
@@ -90,6 +93,16 @@ Partial Class FrmBalanceGral
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
         Me.GroupPanel1.TabIndex = 2
         '
+        'lbform
+        '
+        Me.lbform.AutoSize = True
+        Me.lbform.Location = New System.Drawing.Point(5, 8)
+        Me.lbform.Name = "lbform"
+        Me.lbform.Size = New System.Drawing.Size(39, 13)
+        Me.lbform.TabIndex = 7
+        Me.lbform.Text = "Label3"
+        Me.lbform.Visible = False
+        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(449, 53)
@@ -102,7 +115,7 @@ Partial Class FrmBalanceGral
         '
         Me.pdf.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.pdf.Image = Global.SAE.My.Resources.Resources.Excel_Pdf
-        Me.pdf.Location = New System.Drawing.Point(156, 8)
+        Me.pdf.Location = New System.Drawing.Point(127, 7)
         Me.pdf.Name = "pdf"
         Me.pdf.Size = New System.Drawing.Size(65, 65)
         Me.pdf.TabIndex = 5
@@ -113,7 +126,7 @@ Partial Class FrmBalanceGral
         Me.cmdGrafica.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdGrafica.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdGrafica.Image = Global.SAE.My.Resources.Resources.gbarra
-        Me.cmdGrafica.Location = New System.Drawing.Point(39, 7)
+        Me.cmdGrafica.Location = New System.Drawing.Point(39, 6)
         Me.cmdGrafica.Name = "cmdGrafica"
         Me.cmdGrafica.Size = New System.Drawing.Size(65, 66)
         Me.cmdGrafica.TabIndex = 4
@@ -129,7 +142,7 @@ Partial Class FrmBalanceGral
         Me.cmdactualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdactualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdactualizar.Image = Global.SAE.My.Resources.Resources.actualCC
-        Me.cmdactualizar.Location = New System.Drawing.Point(223, 8)
+        Me.cmdactualizar.Location = New System.Drawing.Point(223, 6)
         Me.cmdactualizar.Name = "cmdactualizar"
         Me.cmdactualizar.Size = New System.Drawing.Size(65, 66)
         Me.cmdactualizar.TabIndex = 2
@@ -143,7 +156,7 @@ Partial Class FrmBalanceGral
         Me.cmdsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdsalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdsalir.Image = Global.SAE.My.Resources.Resources.back
-        Me.cmdsalir.Location = New System.Drawing.Point(290, 8)
+        Me.cmdsalir.Location = New System.Drawing.Point(290, 6)
         Me.cmdsalir.Name = "cmdsalir"
         Me.cmdsalir.Size = New System.Drawing.Size(65, 66)
         Me.cmdsalir.TabIndex = 3
@@ -156,7 +169,7 @@ Partial Class FrmBalanceGral
         Me.cmdpantalla.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdpantalla.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdpantalla.Image = Global.SAE.My.Resources.Resources.pdf
-        Me.cmdpantalla.Location = New System.Drawing.Point(156, 7)
+        Me.cmdpantalla.Location = New System.Drawing.Point(156, 6)
         Me.cmdpantalla.Name = "cmdpantalla"
         Me.cmdpantalla.Size = New System.Drawing.Size(65, 66)
         Me.cmdpantalla.TabIndex = 1
@@ -167,15 +180,37 @@ Partial Class FrmBalanceGral
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox5)
         Me.GroupBox1.Controls.Add(Me.mibarra)
         Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Location = New System.Drawing.Point(3, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(516, 182)
+        Me.GroupBox1.Size = New System.Drawing.Size(516, 223)
         Me.GroupBox1.TabIndex = 73
         Me.GroupBox1.TabStop = False
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.chkMostrarDif)
+        Me.GroupBox5.Location = New System.Drawing.Point(18, 178)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(476, 37)
+        Me.GroupBox5.TabIndex = 63
+        Me.GroupBox5.TabStop = False
+        '
+        'chkMostrarDif
+        '
+        Me.chkMostrarDif.AutoSize = True
+        Me.chkMostrarDif.Checked = True
+        Me.chkMostrarDif.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkMostrarDif.Location = New System.Drawing.Point(20, 14)
+        Me.chkMostrarDif.Name = "chkMostrarDif"
+        Me.chkMostrarDif.Size = New System.Drawing.Size(186, 17)
+        Me.chkMostrarDif.TabIndex = 63
+        Me.chkMostrarDif.Text = "Mostrar Diferencia en el Resumen"
+        Me.chkMostrarDif.UseVisualStyleBackColor = True
         '
         'mibarra
         '
@@ -315,22 +350,12 @@ Partial Class FrmBalanceGral
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "Periodo a generar en el balance"
         '
-        'lbform
-        '
-        Me.lbform.AutoSize = True
-        Me.lbform.Location = New System.Drawing.Point(5, 8)
-        Me.lbform.Name = "lbform"
-        Me.lbform.Size = New System.Drawing.Size(39, 13)
-        Me.lbform.TabIndex = 7
-        Me.lbform.Text = "Label3"
-        Me.lbform.Visible = False
-        '
         'FrmBalanceGral
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(524, 286)
+        Me.ClientSize = New System.Drawing.Size(524, 328)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -344,6 +369,8 @@ Partial Class FrmBalanceGral
         Me.GroupPanel1.ResumeLayout(False)
         Me.GroupPanel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -377,4 +404,6 @@ Partial Class FrmBalanceGral
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents pdf As System.Windows.Forms.Button
     Friend WithEvents lbform As System.Windows.Forms.Label
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents chkMostrarDif As System.Windows.Forms.CheckBox
 End Class

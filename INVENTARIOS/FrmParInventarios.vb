@@ -381,54 +381,60 @@ Public Class FrmParInventarios
     End Sub
 
     Private Sub txtcuenta1_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcuenta1.DoubleClick
-        FrmCuentas.lbaux.Text = "auxiliar"
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "inv_cuenta1"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtcuenta2_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcuenta2.DoubleClick
         If txtcuenta1.Text = "" Then
             MsgBox("Favor Revise Debe Escoger la Cuenta 1 Para Poder Escoger la Cuenta 2", MsgBoxStyle.Information, "SAE, Verificación")
             Exit Sub
         End If
-        FrmCuentas.lbaux.Text = "auxiliar"
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "inv_cuenta2"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtcuenta3_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcuenta3.DoubleClick
         If txtcuenta2.Text = "" Then
             MsgBox("Favor Revise Debe Escoger la Cuenta 2 Para Poder Escoger la Cuenta 3", MsgBoxStyle.Information, "SAE, Verificación")
             Exit Sub
         End If
-        FrmCuentas.lbaux.Text = "auxiliar"
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "inv_cuenta3"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtcuenta4_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcuenta4.DoubleClick
         If txtcuenta3.Text = "" Then
             MsgBox("Favor Revise Debe Escoger la Cuenta 3 Para Poder Escoger la Cuenta 4", MsgBoxStyle.Information, "SAE, Verificación")
             Exit Sub
         End If
-        FrmCuentas.lbaux.Text = "auxiliar"
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "inv_cuenta4"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtcuenta5_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcuenta5.DoubleClick
         If txtcuenta4.Text = "" Then
             MsgBox("Favor Revise Debe Escoger la Cuenta 4 Para Poder Escoger la Cuenta 5", MsgBoxStyle.Information, "SAE, Verificación")
             Exit Sub
         End If
-        FrmCuentas.lbaux.Text = "auxiliar"
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "inv_cuenta5"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtcuenta6_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcuenta6.DoubleClick
         If txtcuenta5.Text = "" Then
             MsgBox("Favor Revise Debe Escoger la Cuenta 5 Para Poder Escoger la Cuenta 6", MsgBoxStyle.Information, "SAE, Verificación")
             Exit Sub
         End If
-        FrmCuentas.lbaux.Text = "auxiliar"
+        FrmCuentas.lbaux.Text = "Grupo"
         FrmCuentas.lbform.Text = "inv_cuenta6"
         FrmCuentas.ShowDialog()
+        FrmCuentas.lbaux.Text = "auxiliar"
     End Sub
     Private Sub txtcuenta1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtcuenta1.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then

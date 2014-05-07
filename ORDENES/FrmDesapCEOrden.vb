@@ -118,6 +118,16 @@
             MsgBox("Error actualizar orden " & ex.ToString, MsgBoxStyle.Information, "SAE")
         End Try
 
+        'PAGOS
+        Try
+            myCommand.Parameters.Clear()
+            myCommand.CommandText = "UPDATE  presupuesto" & Strings.Right(PerActual, 4) & ".pagos SET pag_sae='NO' WHERE  " _
+            & " pag_consecutivo = (select salmov from ctas_x_pagar where doc='" & doccxp & "');"
+            myCommand.ExecuteNonQuery()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub cmdsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsalir.Click
@@ -186,4 +196,6 @@
             End If
         End If
     End Sub
+
+   
 End Class

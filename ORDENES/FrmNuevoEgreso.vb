@@ -317,6 +317,28 @@ Public Class FrmNuevoEgreso
                     MsgBox(ex.ToString)
                 End Try
 
+                ' ************* NUEVAS TABLAS
+                Try
+                    myCommand.Parameters.Clear()
+                    myCommand.CommandText = "UPDATE presupuesto" & Strings.Right(PerActual, 4) & ".ingresos" & Strings.Left(lbperiodo.Text, 2) & " SET ingc_reduc=(ingc_reduc=+" & DIN(val) & "),ingc_reduca=(ingc_reduca=+" & DIN(val) & ") WHERE ing_codigo='" & ing & "'"
+                    myCommand.ExecuteNonQuery()
+                    Dim ntg As String = ""
+                    For nt = CInt(Strings.Right(PerActual, 4)) + 1 To 12
+                        ntg = "UPDATE presupuesto" & Strings.Right(PerActual, 4) & ".ingresos"
+                        If nt <= 9 Then
+                            ntg = ntg & "0" & nt
+                        Else
+                            ntg = ntg & nt
+                        End If
+                        ntg = ntg & " SET ingc_reduca=(ingc_reduca=+" & DIN(val) & ") WHERE ing_codigo='" & ing & "';"
+
+                        myCommand.Parameters.Clear()
+                        myCommand.CommandText = ntg
+                        myCommand.ExecuteNonQuery()
+                    Next
+                Catch ex As Exception
+                End Try
+                '****************************
                 Try
 
                     'If Trim(tcta.Rows(i).Item("sop_cont")) <> "" Then
@@ -392,6 +414,7 @@ Public Class FrmNuevoEgreso
         myCommand.CommandText = "UPDATE presupuesto" & Strings.Right(PerActual, 4) & ".pagos SET pag_sae='SI' WHERE pag_consecutivo='" & tp.Rows(0).Item(0) & "'"
         myCommand.ExecuteNonQuery()
 
+
         ' REGISTRAR PAGO PRESUPUESTO
         Movimiento_pres(doccxp)
     End Sub
@@ -421,6 +444,29 @@ Public Class FrmNuevoEgreso
                 Catch ex As Exception
                     v = 0
                 End Try
+
+                ' ************* NUEVAS TABLAS
+                Try
+                    myCommand.Parameters.Clear()
+                    myCommand.CommandText = "UPDATE presupuesto" & Strings.Right(PerActual, 4) & ".gastos" & Strings.Left(lbperiodo.Text, 2) & " SET gas_pagosae=(gas_pagosae+" & DIN(v) & "), gas_pagosaea=(gas_pagosaea+" & DIN(v) & ") WHERE gas_codigo='" & rb(i).ToString & "'"
+                    myCommand.ExecuteNonQuery()
+                    Dim ntg As String = ""
+                    For nt = CInt(Strings.Right(PerActual, 4)) + 1 To 12
+                        ntg = "UPDATE presupuesto" & Strings.Right(PerActual, 4) & ".gastos"
+                        If nt <= 9 Then
+                            ntg = ntg & "0" & nt
+                        Else
+                            ntg = ntg & nt
+                        End If
+                        ntg = ntg & " SET gas_pagosaea=(gas_pagosaea+" & DIN(v) & ") WHERE gas_codigo='" & rb(i).ToString & "';"
+
+                        myCommand.Parameters.Clear()
+                        myCommand.CommandText = ntg
+                        myCommand.ExecuteNonQuery()
+                    Next
+                Catch ex As Exception
+                End Try
+                '****************************
 
                 Try
                     'Guardar MovGasto

@@ -964,6 +964,7 @@ Public Class FrmFacturasyAjustes
             '    MsgBox("No ha escojido cuenta para los descuentos, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             '    txtcuentadesc.Focus()
             '    Exit Sub
+        
         ElseIf txtdescuento.Text <> Moneda(0) And txtcuentadesc.Text = "" And txtcuentadesc.Enabled = True Then
             MsgBox("No ha escojido cuenta para los descuentos, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             txtcuentadesc.Focus()
@@ -984,6 +985,10 @@ Public Class FrmFacturasyAjustes
             MsgBox("No ha escojido cuenta para el Rete I.V.A, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             txtctariva.Focus()
             Exit Sub
+        ElseIf nivel_cuenta(Trim(txtcuentatotal.Text)) = False Then
+            MsgBox("No ha escogido forma de pago o la cuenta Auxiliar, Verifique los parametros.  ", MsgBoxStyle.Information, "Editar Factura ")
+            txtcuentatotal.Focus()
+            Exit Sub
         ElseIf CDbl(txttotal.Text) <= 0 And CDbl(lbvalor.Text) = 0 Then
             MsgBox("El total a pagar deber mayor que cero (0), Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             cmditems.Focus()
@@ -999,6 +1004,32 @@ Public Class FrmFacturasyAjustes
         ElseIf cmbTipoAF.Enabled = True And cmbTipoAF.Text = "Seleccione..." Then
             MsgBox("No ha escogido el Tipo de Ajuste para la factura, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             cmbTipoAF.Focus()
+            Exit Sub
+        End If
+
+        If valordes.Text <> "0,00" And nivel_cuenta(Trim(txtcuentadesc.Text)) = False Then
+            MsgBox("No ha Seleccionado la  Cuenta Auxiliar para los descuentos, Verifique los parametros.  ", MsgBoxStyle.Information, "Editar Factura ")
+            txtcuentadesc.Focus()
+            Exit Sub
+        ElseIf valor_rtfuente.Text <> "0,00" And nivel_cuenta(Trim(txtctaretef.Text)) = False Then
+            MsgBox("No ha escogido cuenta Auxiliar para la Rete Fuente, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
+            txtctaretef.Focus()
+            Exit Sub
+        ElseIf valorretCree.Text <> "0,00" And nivel_cuenta(Trim(txtcuentaCree.Text)) = False Then
+            MsgBox("No ha escogido Cuenta Auxiliar para la Rete Cree, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
+            txtcuentaCree.Focus()
+            Exit Sub
+        ElseIf valor_rtica.Text <> "0,00" And nivel_cuenta(Trim(txtctarica.Text)) = False Then
+            MsgBox("No ha escogido Cuenta Auxiliar para el Rete I.C.A, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
+            txtctarica.Focus()
+            Exit Sub
+        ElseIf valor_rtiva.Text <> "0,00" And nivel_cuenta(Trim(txtctariva.Text)) = False Then
+            MsgBox("No ha escogido Cuenta  Auxiliar para el Rete I.V.A, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
+            txtctariva.Focus()
+            Exit Sub
+        ElseIf valoriva.Text <> "0,00" And nivel_cuenta(Trim(txtcuentaiva.Text)) = False Then
+            MsgBox("No ha escogido cuenta para el IVA, Verifique los parametros.  ", MsgBoxStyle.Information, "Editar Factura ")
+            txtcuentaiva.Focus()
             Exit Sub
         End If
         Dim sumafp As Double = 0
@@ -5758,4 +5789,20 @@ Public Class FrmFacturasyAjustes
         FrmCuentas.lbform.Text = "fac_rtc"
         FrmCuentas.ShowDialog()
     End Sub
+
+    Function nivel_cuenta(ByVal codigo As String)
+        Dim tabla As New DataTable
+        myCommand.CommandText = "SELECT * FROM selpuc WHERE codigo='" & codigo & "' AND nivel='Auxiliar';"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tabla)
+        Try
+            If tabla.Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class
