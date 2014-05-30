@@ -36,20 +36,20 @@ Public Class FrmProductos
         Else
             CmdPrimero_Click(AcceptButton, AcceptButton)
             ' AUTOCOMPLETAR CODIGO DE ARTICULOS
-            'Try
-            '    txtcodigo.AutoCompleteCustomSource.Clear()
-            '    Dim tb As New DataTable
-            '    tb.Clear()
-            '    myCommand.CommandText = "SELECT codart FROM articulos ORDER BY codart ;"
-            '    myAdapter.SelectCommand = myCommand
-            '    myAdapter.Fill(tb)
-            '    If tb.Rows.Count > 0 Then
-            '        For i = 0 To tb.Rows.Count - 1
-            '            txtcodigo.AutoCompleteCustomSource.Add(tb.Rows(i).Item(0))
-            '        Next
-            '    End If
-            'Catch ex As Exception
-            'End Try
+            Try
+                txtcodigo.AutoCompleteCustomSource.Clear()
+                Dim tb As New DataTable
+                tb.Clear()
+                myCommand.CommandText = "SELECT codart FROM articulos ORDER BY codart ;"
+                myAdapter.SelectCommand = myCommand
+                myAdapter.Fill(tb)
+                If tb.Rows.Count > 0 Then
+                    For i = 0 To tb.Rows.Count - 1
+                        txtcodigo.AutoCompleteCustomSource.Add(tb.Rows(i).Item(0))
+                    Next
+                End If
+            Catch ex As Exception
+            End Try
         End If
         lbitem.Text = ""
 
@@ -872,7 +872,7 @@ Public Class FrmProductos
                         Else
                             per = i
                         End If
-                        sql = "UPDATE con_inv SET margen=" & CDbl(txtmargen.Text) & ", cue_inv='" & lbinv.Text & "',cue_cos='" & lbcos.Text & "',cue_ing='" & lbing.Text & "',cue_iva_v='" & lbivag.Text & "',cue_iva_c='" & lbivad.Text & "',cue_dev='" & lbdev.Text & "'" _
+                        sql = "UPDATE con_inv SET margen=" & DIN(txtmargen.Text) & ", cue_inv='" & lbinv.Text & "',cue_cos='" & lbcos.Text & "',cue_ing='" & lbing.Text & "',cue_iva_v='" & lbivag.Text & "',cue_iva_c='" & lbivad.Text & "',cue_dev='" & lbdev.Text & "'" _
                             & " WHERE codart='" & txtcodigo.Text & "' AND periodo='" & per & "';"
                         Afecta_Con_inv(sql)
                     Next

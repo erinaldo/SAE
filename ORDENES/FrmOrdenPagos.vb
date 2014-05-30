@@ -342,6 +342,17 @@ Public Class FrmOrdenPagos
     End Function
     Public Sub Guardar()
         BuscarPeriodo()
+
+        Dim tb As New DataTable
+        tb.Clear()
+        myCommand.Parameters.Clear()
+        myCommand.CommandText = "SELECT * from ord_pagos where doc='" & PerActual & "-" & txtorden.Text & "'"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tb)
+        If tb.Rows.Count > 0 Then
+            txtorden.Text = NumeroDoc(CInt(txtorden.Text) + 1)
+        End If
+
         Try
             myCommand.Parameters.Clear()
             myCommand.Parameters.AddWithValue("?ord", PerActual & "-" & txtorden.Text)
@@ -401,7 +412,7 @@ Public Class FrmOrdenPagos
                             End If
 
                         Catch ex As Exception
-                            MsgBox(ex.ToString)
+                            '  MsgBox(ex.ToString)
                         End Try
                     Next
                 End If

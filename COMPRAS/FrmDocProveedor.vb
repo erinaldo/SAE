@@ -1040,10 +1040,14 @@ Public Class FrmDocProveedor
 
         'txtnumfac.Text = NumeroDoc(txtnumfac.Text)
     End Sub
+
+    Private Sub txt_doc_afe_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_doc_afe.Enter
+        ' txtfecha.Focus()
+    End Sub
     Private Sub txt_doc_afe_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_doc_afe.KeyPress
-        'If e.KeyChar = Chr(Keys.Enter) Then
-        '    SendKeys.Send("{TAB}")
-        'End If
+        If e.KeyChar = Chr(Keys.Enter) Then
+            SendKeys.Send("{TAB}")
+        End If
     End Sub
     Private Sub txtnitc_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtnitc.KeyPress
         ValidarNIT(txtnitc, e)
@@ -1246,6 +1250,11 @@ Public Class FrmDocProveedor
     End Sub
     '****************************************************************
     Private Sub cmditems_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmditems.Click
+        If Trim(txtnitc.Text) = "" Then
+            MsgBox("Verifique los datos del cliente", MsgBoxStyle.Information, "Verifique")
+            txtnitc.Focus()
+            Exit Sub
+        End If
         FrmItemsCompras.txtnumfac.Text = txtnumfac.Text
         FrmItemsCompras.txtfecha.Text = txtfecha.Text.ToString
         FrmItemsCompras.txttipo.Text = txttipo.Text
@@ -1722,13 +1731,13 @@ Public Class FrmDocProveedor
             MsgBox("No ha digitado datos del proveedor, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             txtnitc.Focus()
             Exit Sub
-        ElseIf txtdescuento.Text <> "0,00" And txtcuentadesc.Text.Length < 10 Then
+        ElseIf txtdescuento.Text <> Moneda(0) And txtcuentadesc.Text.Length < 10 Then
             If nivel_cuenta(Trim(txtcuentadesc.Text)) = False Then
                 MsgBox("Seleccione una cuenta auxiliar para el Descuento , Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
                 txtcuentadesc.Focus()
                 Exit Sub
             End If
-        ElseIf valordes.Text <> "0,00" And txtcuentadesc.Text = "" And txtcuentadesc.Enabled = True Then
+        ElseIf txtdescuento.Text <> Moneda(0) And txtcuentadesc.Text = "" And txtcuentadesc.Enabled = True Then
             MsgBox("No ha escojido cuenta para los descuentos, Verifique.  ", MsgBoxStyle.Information, "Editar Factura ")
             txtcuentadesc.Focus()
             Exit Sub

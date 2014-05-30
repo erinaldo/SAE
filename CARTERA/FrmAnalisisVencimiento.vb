@@ -219,7 +219,8 @@ Public Class FrmAnalisisVencimiento
         r44 = r4 + 1
         Tr4 = "SALDO " & r33 & " - " & r4
 
-        r5 = txtdias.Text * 5
+        r5 = (txtdias.Text * 4) + 1
+        'r5 = txtdias.Text * 5
         Tr5 = "SALDO " & r44 & " O MAS"
 
         fc = Strings.Right(fecha1.Text, 4) & "-" & Strings.Mid(fecha1.Text, 4, 2) & "-" & Strings.Left(fecha1.Text, 2)

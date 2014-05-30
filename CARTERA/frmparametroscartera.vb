@@ -114,8 +114,8 @@
             myCommand.Parameters.AddWithValue("?par_fac3", txttipo3.Text.ToString)
             myCommand.Parameters.AddWithValue("?par_fac4", txttipo4.Text.ToString)
             myCommand.Parameters.AddWithValue("?par_aju", txtajust.Text.ToString)
-            myCommand.Parameters.AddWithValue("?par_rc", txtrcc.Text.ToString)
-            myCommand.Parameters.AddWithValue("?par_ci", txtrc.Text.ToString)
+            myCommand.Parameters.AddWithValue("?par_rc", txtrc.Text.ToString)
+            myCommand.Parameters.AddWithValue("?par_ci", txtrcc.Text.ToString)
 
             '********************************************************************
 

@@ -103,10 +103,10 @@ Partial Class FrmPrincipal
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Gerencial = New System.Windows.Forms.ToolStripButton
+        Me.cmdAuditoria = New System.Windows.Forms.ToolStripButton
         Me.inmobiliaria = New System.Windows.Forms.ToolStripButton
         Me.cmdBanco = New System.Windows.Forms.ToolStripButton
         Me.cmdOrden = New System.Windows.Forms.ToolStripButton
-        Me.cmdAuditoria = New System.Windows.Forms.ToolStripButton
         Me.Nomina = New System.Windows.Forms.ToolStripButton
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator
@@ -434,7 +434,6 @@ Partial Class FrmPrincipal
         '
         'GerencialToolStripMenuItem
         '
-        Me.GerencialToolStripMenuItem.Enabled = False
         Me.GerencialToolStripMenuItem.Image = Global.SAE.My.Resources.Resources.grf
         Me.GerencialToolStripMenuItem.Name = "GerencialToolStripMenuItem"
         Me.GerencialToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
@@ -571,7 +570,7 @@ Partial Class FrmPrincipal
         'BarrasH
         '
         Me.BarrasH.ImageScalingSize = New System.Drawing.Size(64, 64)
-        Me.BarrasH.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Contabilidad, Me.ToolStripSeparator8, Me.ToolStripSeparator7, Me.Inventarios, Me.BEstetica, Me.Facturacion, Me.Cartera, Me.Proveedores, Me.ToolStripSeparator6, Me.ToolStripSeparator5, Me.ToolStripSeparator1, Me.ToolStripSeparator2, Me.Gerencial, Me.inmobiliaria, Me.cmdBanco, Me.cmdOrden, Me.cmdAuditoria, Me.Nomina, Me.ToolStripSeparator3, Me.ToolStripSeparator4, Me.Exogena})
+        Me.BarrasH.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Contabilidad, Me.ToolStripSeparator8, Me.ToolStripSeparator7, Me.Inventarios, Me.BEstetica, Me.Facturacion, Me.Cartera, Me.Proveedores, Me.ToolStripSeparator6, Me.ToolStripSeparator5, Me.ToolStripSeparator1, Me.ToolStripSeparator2, Me.Gerencial, Me.cmdAuditoria, Me.inmobiliaria, Me.cmdBanco, Me.cmdOrden, Me.Nomina, Me.ToolStripSeparator3, Me.ToolStripSeparator4, Me.Exogena})
         Me.BarrasH.Location = New System.Drawing.Point(0, 24)
         Me.BarrasH.Name = "BarrasH"
         Me.BarrasH.Size = New System.Drawing.Size(979, 71)
@@ -610,7 +609,6 @@ Partial Class FrmPrincipal
         Me.Inventarios.Size = New System.Drawing.Size(68, 68)
         Me.Inventarios.Text = "ToolStripButton3"
         Me.Inventarios.ToolTipText = "Inventarios"
-        Me.Inventarios.Visible = False
         '
         'BEstetica
         '
@@ -632,7 +630,6 @@ Partial Class FrmPrincipal
         Me.Facturacion.Size = New System.Drawing.Size(68, 68)
         Me.Facturacion.Text = "ToolStripButton2"
         Me.Facturacion.ToolTipText = "Facturacion"
-        Me.Facturacion.Visible = False
         '
         'Cartera
         '
@@ -644,7 +641,6 @@ Partial Class FrmPrincipal
         Me.Cartera.Size = New System.Drawing.Size(68, 68)
         Me.Cartera.Text = "ToolStripButton4"
         Me.Cartera.ToolTipText = "Cartera"
-        Me.Cartera.Visible = False
         '
         'Proveedores
         '
@@ -656,7 +652,6 @@ Partial Class FrmPrincipal
         Me.Proveedores.Size = New System.Drawing.Size(68, 68)
         Me.Proveedores.Text = "ToolStripButton5"
         Me.Proveedores.ToolTipText = "Proveedores"
-        Me.Proveedores.Visible = False
         '
         'ToolStripSeparator6
         '
@@ -689,7 +684,16 @@ Partial Class FrmPrincipal
         Me.Gerencial.Size = New System.Drawing.Size(68, 68)
         Me.Gerencial.Text = "ToolStripButton1"
         Me.Gerencial.ToolTipText = "Analisis Gerencial"
-        Me.Gerencial.Visible = False
+        '
+        'cmdAuditoria
+        '
+        Me.cmdAuditoria.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.cmdAuditoria.Image = Global.SAE.My.Resources.Resources.audita
+        Me.cmdAuditoria.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdAuditoria.Name = "cmdAuditoria"
+        Me.cmdAuditoria.Size = New System.Drawing.Size(68, 68)
+        Me.cmdAuditoria.Text = "Auditoria"
+        Me.cmdAuditoria.Visible = False
         '
         'inmobiliaria
         '
@@ -709,6 +713,7 @@ Partial Class FrmPrincipal
         Me.cmdBanco.Name = "cmdBanco"
         Me.cmdBanco.Size = New System.Drawing.Size(68, 68)
         Me.cmdBanco.Text = "Banco"
+        Me.cmdBanco.Visible = False
         '
         'cmdOrden
         '
@@ -718,16 +723,7 @@ Partial Class FrmPrincipal
         Me.cmdOrden.Name = "cmdOrden"
         Me.cmdOrden.Size = New System.Drawing.Size(68, 68)
         Me.cmdOrden.Text = "Ordenes de Pago"
-        '
-        'cmdAuditoria
-        '
-        Me.cmdAuditoria.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.cmdAuditoria.Image = Global.SAE.My.Resources.Resources.audita
-        Me.cmdAuditoria.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.cmdAuditoria.Name = "cmdAuditoria"
-        Me.cmdAuditoria.Size = New System.Drawing.Size(68, 68)
-        Me.cmdAuditoria.Text = "Auditoria"
-        Me.cmdAuditoria.Visible = False
+        Me.cmdOrden.Visible = False
         '
         'Nomina
         '
@@ -855,7 +851,7 @@ Partial Class FrmPrincipal
         Me.lbversion.Name = "lbversion"
         Me.lbversion.Size = New System.Drawing.Size(79, 25)
         Me.lbversion.TabIndex = 11
-        Me.lbversion.Text = "2013-1"
+        Me.lbversion.Text = "2014-1"
         Me.lbversion.Visible = False
         '
         'txtcant
@@ -921,7 +917,7 @@ Partial Class FrmPrincipal
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
-        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  07 MAYO 2014"
+        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  30 MAYO 2014"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

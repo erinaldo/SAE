@@ -307,14 +307,17 @@ Public Class FrmContratos
        
             If txtcontrato.Text = "" Then
                 MsgBox("No ha digitado el codigo del contrato", MsgBoxStyle.Information, "Verifique")
+                txtcontrato.Focus()
                 Exit Sub
             End If
             If txtinm.Text = "" Then
                 MsgBox("No ha seleccionado el inmueble", MsgBoxStyle.Information, "Verifique")
+                txtinm.Focus()
                 Exit Sub
             End If
             If txtarre.Text = "" Then
                 MsgBox("Seleccione el arrendatario", MsgBoxStyle.Information, "Verifique")
+                txtarre.Focus()
                 Exit Sub
             End If
             If CDate(txtf1.Text) > CDate(txtf2.Text) Then
@@ -325,8 +328,9 @@ Public Class FrmContratos
                 MsgBox("La Fecha de Facturación, no puede ser menor a la Fecha inicial del contrato", MsgBoxStyle.Information, "Verifique")
                 Exit Sub
             End If
-            If txtvalor.Text = "" Then
+            If txtvalor.Text = Moneda(0) Then
                 MsgBox("Digite el valor a pagar mensual", MsgBoxStyle.Information, "Verifique")
+                txtvalor.Focus()
                 Exit Sub
             End If
             If txtcta_v.Text = "" Then
@@ -347,10 +351,12 @@ Public Class FrmContratos
             End If
             If txtnomven.Text = "" Then
                 MsgBox("Seleccione el vendedor", MsgBoxStyle.Information, "Verifique")
+                txtnomven.Focus()
                 Exit Sub
             End If
             If txtvmto.Text = "" Then
                 MsgBox("Digite los dias de venciemiento", MsgBoxStyle.Information, "Verifique")
+                txtvmto.Focus()
                 Exit Sub
             End If
             If txtdep.Text <> Moneda(0) Then
@@ -363,6 +369,7 @@ Public Class FrmContratos
             End If
             If cbiva.Checked = True And txtivap.Text = Moneda(0) Then
                 MsgBox("Digite el porcentaje para el IVA", MsgBoxStyle.Information, "Verifique")
+                txtivap.Focus()
                 Exit Sub
             End If
             'If txtretf.Text <> Moneda(0) And txtcta_rtf.Text = "" Then
@@ -503,12 +510,12 @@ Public Class FrmContratos
                 myCommand.Parameters.AddWithValue("?f2", CDate(txtf2.Text.ToString))
                 myCommand.Parameters.AddWithValue("?valor", DIN(txtvalor.Text))
                 myCommand.Parameters.AddWithValue("?ctaval", txtcta_v.Text)
-                ' myCommand.Parameters.AddWithValue("?iva", txtivap.Text)
-                If cbiva.Checked = True Then
-                    myCommand.Parameters.AddWithValue("?iva", DIN(txtivap.Text))
-                Else
-                    myCommand.Parameters.AddWithValue("?iva", DIN(0))
-                End If
+                myCommand.Parameters.AddWithValue("?iva", DIN(txtivap.Text))
+                'If cbiva.Checked = True Then
+                '    myCommand.Parameters.AddWithValue("?iva", DIN(txtivap.Text))
+                'Else
+                '    myCommand.Parameters.AddWithValue("?iva", DIN(0))
+                'End If
                 myCommand.Parameters.AddWithValue("?ctaiva", txtcta_iva.Text)
                 If txtcomis.Text = "" Then
                     myCommand.Parameters.AddWithValue("?comi", DIN(0))
@@ -612,11 +619,14 @@ Public Class FrmContratos
                 myCommand.Parameters.AddWithValue("?f2", CDate(txtf2.Text.ToString))
                 myCommand.Parameters.AddWithValue("?valor", DIN(txtvalor.Text))
                 myCommand.Parameters.AddWithValue("?ctaval", txtcta_v.Text)
-                If cbiva.Checked = True Then
-                    myCommand.Parameters.AddWithValue("?iva", DIN(txtivap.Text))
-                Else
-                    myCommand.Parameters.AddWithValue("?iva", DIN(0))
-                End If
+
+                myCommand.Parameters.AddWithValue("?iva", DIN(txtivap.Text))
+
+                'If cbiva.Checked = True Then
+                '    myCommand.Parameters.AddWithValue("?iva", DIN(txtivap.Text))
+                'Else
+                '    myCommand.Parameters.AddWithValue("?iva", DIN(0))
+                'End If
                 '   myCommand.Parameters.AddWithValue("?iva", txtivap.Text)
                 myCommand.Parameters.AddWithValue("?ctaiva", txtcta_iva.Text)
                 If txtcomis.Text = "" Then
@@ -1401,7 +1411,11 @@ Public Class FrmContratos
 
     Private Sub txtivap_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtivap.LostFocus
         If txtivap.Text <> "" Then
-            txtivap.Text = Moneda(txtivap.Text)
+            If CInt(txtivap.Text) > 100 Then
+                txtivap.Text = Moneda(CInt(txtivap.Text) / 100)
+            Else
+                txtivap.Text = Moneda(txtivap.Text)
+            End If
         Else
             txtivap.Text = Moneda(0)
         End If
@@ -1827,4 +1841,12 @@ Public Class FrmContratos
     '    '    txtf.Text = txtf1.Text
     '    'End If
     'End Sub
+
+    Private Sub txtivap_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtivap.TextChanged
+        'If txtivap.Text <> Moneda(0) Then
+        '    cbiva.Checked = True
+        'Else
+        '    cbiva.Checked = False
+        'End If
+    End Sub
 End Class

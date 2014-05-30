@@ -10,6 +10,8 @@
         Dim items As Integer
         If lbform.Text = "fr" Then
             myCommand.CommandText = "SELECT  LEFT( f.descrip, 7 ) as anul, f.doc, f.fecha, t.nombre, t.apellidos, v.nombre AS vendedor, f.total,f.tipodoc, f.num FROM facturas" & PerActual(0) & PerActual(1) & " f, terceros t, vendedores v  WHERE  f.nitc=t.nit AND f.nitv=v.nitv AND f.ret_f='0' AND f.ret_iva='0' AND f.ret_ica='0' AND f.tipodoc<>'" & Frmfacturarapida.lbdocajuste.Text & "' ORDER BY f.doc,f.fecha;"
+        ElseIf lbform.Text = "anularFact" Then
+            myCommand.CommandText = "SELECT  LEFT( f.descrip, 7 ) as anul, f.doc, f.fecha, t.nombre, t.apellidos, v.nombre AS vendedor, f.total,f.tipodoc, f.num FROM facturas" & FrmAnularFact.cbper.Text & " f, terceros t, vendedores v  WHERE  f.nitc=t.nit AND f.nitv=v.nitv AND f.tipodoc='" & FrmAnularFact.txttipo.Text & "' AND LEFT( f.descrip, 7 )<>'ANULADO' ORDER BY f.doc,f.fecha;"
         Else
             myCommand.CommandText = "SELECT LEFT( f.descrip, 7 ) as anul,f.doc, f.fecha, t.nombre, t.apellidos, v.nombre AS vendedor, f.total,f.tipodoc, f.num FROM facturas" & PerActual(0) & PerActual(1) & " f, terceros t, vendedores v  WHERE  f.nitc=t.nit AND f.nitv=v.nitv  ORDER BY f.doc,f.fecha;"
         End If
@@ -87,6 +89,8 @@
                     Exit Sub
                 End If
                 FrmFacturasyAjustes.txtAF.Text = gitems.Item("doc", mifila).Value
+            Case "anularFact"
+                FrmAnularFact.txtnumfac.Text = gitems.Item("numero", mifila).Value()
         End Select
         gitems.Focus()
         Me.Close()

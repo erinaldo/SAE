@@ -73,11 +73,9 @@
         Me.Close()
     End Sub
     Private Sub cbper_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbper.SelectedIndexChanged
-        txtnumfac.Text = ""
         txtfecha.Value = Today
         txtfecha_ana.Value = Today
-        lbcliente.Text = ""
-        lbtotal.Text = "0,00"
+        limpiar()
     End Sub
     Private Sub txttipo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txttipo.SelectedIndexChanged
         Dim tabla As New DataTable
@@ -90,7 +88,7 @@
             Exit Sub
         End If
         txttipo2.Text = tabla.Rows(0).Item(0)
-        txtnumfac.Text = ""
+        limpiar()
     End Sub
     Private Sub txtnumfac_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtnumfac.KeyPress
         validarnumero(txtnumfac, e)
@@ -567,5 +565,21 @@
             MsgBox(ex.ToString)
         End Try
 
+    End Sub
+
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+        limpiar()
+        FrmSelFacturaVenta.lbform.Text = "anularFact"
+        FrmSelFacturaVenta.Label1.Visible = False
+        FrmSelFacturaVenta.cmbper.Visible = False
+        FrmSelFacturaVenta.ShowDialog()
+        If txtnumfac.Text <> "" Then
+            txtnumfac_LostFocus(AcceptButton, AcceptButton)
+        End If
+    End Sub
+    Public Sub limpiar()
+        txtnumfac.Text = ""
+        lbcliente.Text = ""
+        lbtotal.Text = "0,00"
     End Sub
 End Class

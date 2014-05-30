@@ -285,6 +285,7 @@ Module Informes
             Return True
         End If
     End Function
+   
     Public Sub BuscarSubNiveles(ByVal cuenta As String, ByVal item As Integer)
         Dim tabla As New DataTable
         Dim suma As Double
@@ -377,27 +378,28 @@ Module Informes
             cb.ShowTextAligned(50, "DIFERENCIA", 50, k - 60, 0)
             Dif = sumaA + sumaP + sumaC
             cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(Dif), 250, k - 60, 0)
-        Else
-            Dif = sumaA + sumaP + sumaC
-            ''******************************
-            nk = nk - 5
-            fuente = FontFactory.GetFont(FontFactory.HELVETICA, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
-            cb.SetFontAndSize(fuente, 8)
-            myCommand.CommandText = "SELECT ctaDiferencia FROM parcontab;"
-            myAdapter.SelectCommand = myCommand
-            myAdapter.Fill(tDif)
-            myCommand.CommandText = "SELECT descripcion FROM selpuc WHERE codigo='" + tDif.Rows(0).Item("ctaDiferencia") + "';"
-            myAdapter.SelectCommand = myCommand
-            myAdapter.Fill(tDesc)
-            cb.ShowTextAligned(50, "TOTAL " + tDesc.Rows(0).Item("descripcion"), 120, nk + 5, 0)
-            cb.ShowTextAligned(50, tDif.Rows(0).Item("ctaDiferencia"), 50, nk + 15, 0)
-            cb.ShowTextAligned(50, tDesc.Rows(0).Item("descripcion"), 150, nk + 15, 0)
-            cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(Dif), 585, nk + 15, 0)
-            cb.ShowTextAligned(50, "__________________________________________________________________________________________________________________________________________________ ", 50, nk + 14, 0)
-
         End If
+        'Else
+        'Dif = sumaA + sumaP + sumaC
+        ' ''******************************
+        'nk = nk - 5
+        'fuente = FontFactory.GetFont(FontFactory.HELVETICA, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
+        'cb.SetFontAndSize(fuente, 8)
+        'myCommand.CommandText = "SELECT ctaDiferencia FROM parcontab;"
+        'myAdapter.SelectCommand = myCommand
+        'myAdapter.Fill(tDif)
+        'myCommand.CommandText = "SELECT descripcion FROM selpuc WHERE codigo='" + tDif.Rows(0).Item("ctaDiferencia") + "';"
+        'myAdapter.SelectCommand = myCommand
+        'myAdapter.Fill(tDesc)
+        'cb.ShowTextAligned(50, "TOTAL " + tDesc.Rows(0).Item("descripcion"), 120, nk + 5, 0)
+        'cb.ShowTextAligned(50, tDif.Rows(0).Item("ctaDiferencia"), 50, nk + 15, 0)
+        'cb.ShowTextAligned(50, tDesc.Rows(0).Item("descripcion"), 150, nk + 15, 0)
+        'cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(Dif), 585, nk + 15, 0)
+        'cb.ShowTextAligned(50, "__________________________________________________________________________________________________________________________________________________ ", 50, nk + 14, 0)
 
-               fuente = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
+        'End If
+
+        fuente = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
         cb.SetFontAndSize(fuente, 9)
         'firmas
         If FrmBalanceGral.fcon.Checked = True Then

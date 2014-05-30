@@ -25,49 +25,6 @@ Partial Class FrmCompras
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCompras))
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl
-        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel
-        Me.TabControl3 = New DevComponents.DotNetBar.TabControl
-        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
-        Me.cmdOt = New DevComponents.DotNetBar.ButtonX
-        Me.cmdCPP = New DevComponents.DotNetBar.ButtonX
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel13 = New DevComponents.DotNetBar.TabControlPanel
-        Me.cmdfactrap = New DevComponents.DotNetBar.ButtonX
-        Me.Label20 = New System.Windows.Forms.Label
-        Me.TabItem10 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel14 = New DevComponents.DotNetBar.TabControlPanel
-        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_ped = New DevComponents.DotNetBar.ButtonX
-        Me.Label21 = New System.Windows.Forms.Label
-        Me.TabItem11 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.tra = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel
-        Me.TabControl4 = New DevComponents.DotNetBar.TabControl
-        Me.TabControlPanel15 = New DevComponents.DotNetBar.TabControlPanel
-        Me.Label22 = New System.Windows.Forms.Label
-        Me.cmd_info_prov = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_art = New DevComponents.DotNetBar.ButtonX
-        Me.TabItem13 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel17 = New DevComponents.DotNetBar.TabControlPanel
-        Me.cmd_g_o = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_analisis = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_cpp_inf_pro = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_comp_cpp = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_1_fac = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_plan_pagos = New DevComponents.DotNetBar.ButtonX
-        Me.Label24 = New System.Windows.Forms.Label
-        Me.TabItem15 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel12 = New DevComponents.DotNetBar.TabControlPanel
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.cmd_info_cant_ped = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_pendientes = New DevComponents.DotNetBar.ButtonX
-        Me.TabItem12 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.info = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel
         Me.TabControl2 = New DevComponents.DotNetBar.TabControl
         Me.TabControlPanel6 = New DevComponents.DotNetBar.TabControlPanel
@@ -86,6 +43,49 @@ Partial Class FrmCompras
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
         Me.datosbac = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel
+        Me.TabControl3 = New DevComponents.DotNetBar.TabControl
+        Me.TabControlPanel13 = New DevComponents.DotNetBar.TabControlPanel
+        Me.cmdfactrap = New DevComponents.DotNetBar.ButtonX
+        Me.Label20 = New System.Windows.Forms.Label
+        Me.TabItem10 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
+        Me.cmdOt = New DevComponents.DotNetBar.ButtonX
+        Me.cmdCPP = New DevComponents.DotNetBar.ButtonX
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel14 = New DevComponents.DotNetBar.TabControlPanel
+        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_ped = New DevComponents.DotNetBar.ButtonX
+        Me.Label21 = New System.Windows.Forms.Label
+        Me.TabItem11 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label13 = New System.Windows.Forms.Label
+        Me.tra = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel
+        Me.TabControl4 = New DevComponents.DotNetBar.TabControl
+        Me.TabControlPanel17 = New DevComponents.DotNetBar.TabControlPanel
+        Me.cmd_g_o = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_analisis = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_cpp_inf_pro = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_comp_cpp = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_1_fac = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_plan_pagos = New DevComponents.DotNetBar.ButtonX
+        Me.Label24 = New System.Windows.Forms.Label
+        Me.TabItem15 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel15 = New DevComponents.DotNetBar.TabControlPanel
+        Me.Label22 = New System.Windows.Forms.Label
+        Me.cmd_info_prov = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_art = New DevComponents.DotNetBar.ButtonX
+        Me.TabItem13 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel12 = New DevComponents.DotNetBar.TabControlPanel
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.cmd_info_cant_ped = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_pendientes = New DevComponents.DotNetBar.ButtonX
+        Me.TabItem12 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label14 = New System.Windows.Forms.Label
+        Me.info = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel10 = New DevComponents.DotNetBar.TabControlPanel
         Me.TabControl5 = New DevComponents.DotNetBar.TabControl
         Me.TabControlPanel16 = New DevComponents.DotNetBar.TabControlPanel
@@ -138,24 +138,24 @@ Partial Class FrmCompras
         Me.TabItem6 = New DevComponents.DotNetBar.TabItem(Me.components)
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
-        Me.TabControlPanel2.SuspendLayout()
-        CType(Me.TabControl3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl3.SuspendLayout()
-        Me.TabControlPanel4.SuspendLayout()
-        Me.TabControlPanel13.SuspendLayout()
-        Me.TabControlPanel14.SuspendLayout()
-        Me.TabControlPanel3.SuspendLayout()
-        CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl4.SuspendLayout()
-        Me.TabControlPanel15.SuspendLayout()
-        Me.TabControlPanel17.SuspendLayout()
-        Me.TabControlPanel12.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl2.SuspendLayout()
         Me.TabControlPanel6.SuspendLayout()
         Me.TabControlPanel7.SuspendLayout()
         Me.TabControlPanel8.SuspendLayout()
+        Me.TabControlPanel2.SuspendLayout()
+        CType(Me.TabControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl3.SuspendLayout()
+        Me.TabControlPanel13.SuspendLayout()
+        Me.TabControlPanel4.SuspendLayout()
+        Me.TabControlPanel14.SuspendLayout()
+        Me.TabControlPanel3.SuspendLayout()
+        CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl4.SuspendLayout()
+        Me.TabControlPanel17.SuspendLayout()
+        Me.TabControlPanel15.SuspendLayout()
+        Me.TabControlPanel12.SuspendLayout()
         Me.TabControlPanel10.SuspendLayout()
         CType(Me.TabControl5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl5.SuspendLayout()
@@ -173,10 +173,10 @@ Partial Class FrmCompras
         '
         Me.TabControl1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TabControl1.CanReorderTabs = True
+        Me.TabControl1.Controls.Add(Me.TabControlPanel10)
         Me.TabControl1.Controls.Add(Me.TabControlPanel1)
         Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel10)
         Me.TabControl1.Controls.Add(Me.TabControlPanel9)
         Me.TabControl1.Location = New System.Drawing.Point(4, 99)
         Me.TabControl1.Name = "TabControl1"
@@ -191,516 +191,6 @@ Partial Class FrmCompras
         Me.TabControl1.Tabs.Add(Me.pro)
         Me.TabControl1.Tabs.Add(Me.permisos)
         Me.TabControl1.Text = "Transacciones"
-        '
-        'TabControlPanel2
-        '
-        Me.TabControlPanel2.Controls.Add(Me.TabControl3)
-        Me.TabControlPanel2.Controls.Add(Me.Label2)
-        Me.TabControlPanel2.Controls.Add(Me.Label13)
-        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel2.Name = "TabControlPanel2"
-        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel2.Size = New System.Drawing.Size(733, 294)
-        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel2.Style.GradientAngle = 90
-        Me.TabControlPanel2.TabIndex = 2
-        Me.TabControlPanel2.TabItem = Me.tra
-        '
-        'TabControl3
-        '
-        Me.TabControl3.CanReorderTabs = True
-        Me.TabControl3.Controls.Add(Me.TabControlPanel13)
-        Me.TabControl3.Controls.Add(Me.TabControlPanel4)
-        Me.TabControl3.Controls.Add(Me.TabControlPanel14)
-        Me.TabControl3.Location = New System.Drawing.Point(8, 61)
-        Me.TabControl3.Name = "TabControl3"
-        Me.TabControl3.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.TabControl3.SelectedTabIndex = 0
-        Me.TabControl3.Size = New System.Drawing.Size(715, 225)
-        Me.TabControl3.TabIndex = 13
-        Me.TabControl3.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
-        Me.TabControl3.Tabs.Add(Me.TabItem10)
-        Me.TabControl3.Tabs.Add(Me.TabItem11)
-        Me.TabControl3.Tabs.Add(Me.TabItem3)
-        Me.TabControl3.Text = "Notas y Observaciones"
-        '
-        'TabControlPanel4
-        '
-        Me.TabControlPanel4.Controls.Add(Me.cmdOt)
-        Me.TabControlPanel4.Controls.Add(Me.cmdCPP)
-        Me.TabControlPanel4.Controls.Add(Me.Label8)
-        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel4.Name = "TabControlPanel4"
-        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel4.Size = New System.Drawing.Size(715, 199)
-        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel4.Style.GradientAngle = 90
-        Me.TabControlPanel4.TabIndex = 5
-        Me.TabControlPanel4.TabItem = Me.TabItem3
-        '
-        'cmdOt
-        '
-        Me.cmdOt.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmdOt.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdOt.Location = New System.Drawing.Point(220, 114)
-        Me.cmdOt.Name = "cmdOt"
-        Me.cmdOt.Size = New System.Drawing.Size(274, 36)
-        Me.cmdOt.TabIndex = 21
-        Me.cmdOt.Text = "Comprobantes de Otros &Egresos"
-        '
-        'cmdCPP
-        '
-        Me.cmdCPP.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmdCPP.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdCPP.Location = New System.Drawing.Point(220, 70)
-        Me.cmdCPP.Name = "cmdCPP"
-        Me.cmdCPP.Size = New System.Drawing.Size(274, 36)
-        Me.cmdCPP.TabIndex = 20
-        Me.cmdCPP.Text = "Comprobantes de pagos de &Cuentas Por Pagar"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(220, 18)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(288, 31)
-        Me.Label8.TabIndex = 19
-        Me.Label8.Text = "Documentos de Pagos"
-        '
-        'TabItem3
-        '
-        Me.TabItem3.AttachedControl = Me.TabControlPanel4
-        Me.TabItem3.Name = "TabItem3"
-        Me.TabItem3.Text = "Documentos de Pagos"
-        '
-        'TabControlPanel13
-        '
-        Me.TabControlPanel13.Controls.Add(Me.cmdfactrap)
-        Me.TabControlPanel13.Controls.Add(Me.Label20)
-        Me.TabControlPanel13.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel13.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel13.Name = "TabControlPanel13"
-        Me.TabControlPanel13.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel13.Size = New System.Drawing.Size(715, 199)
-        Me.TabControlPanel13.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel13.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel13.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel13.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel13.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel13.Style.GradientAngle = 90
-        Me.TabControlPanel13.TabIndex = 3
-        Me.TabControlPanel13.TabItem = Me.TabItem10
-        '
-        'cmdfactrap
-        '
-        Me.cmdfactrap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmdfactrap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdfactrap.Location = New System.Drawing.Point(256, 69)
-        Me.cmdfactrap.Name = "cmdfactrap"
-        Me.cmdfactrap.Size = New System.Drawing.Size(180, 36)
-        Me.cmdfactrap.TabIndex = 0
-        Me.cmdfactrap.Text = "Entradas de Documentos"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.Transparent
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(179, 6)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(336, 31)
-        Me.Label20.TabIndex = 15
-        Me.Label20.Text = "Documentos de Proveedor"
-        '
-        'TabItem10
-        '
-        Me.TabItem10.AttachedControl = Me.TabControlPanel13
-        Me.TabItem10.Name = "TabItem10"
-        Me.TabItem10.Text = "Documentos de Proveedor"
-        '
-        'TabControlPanel14
-        '
-        Me.TabControlPanel14.Controls.Add(Me.ButtonX1)
-        Me.TabControlPanel14.Controls.Add(Me.cmd_ped)
-        Me.TabControlPanel14.Controls.Add(Me.Label21)
-        Me.TabControlPanel14.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel14.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel14.Name = "TabControlPanel14"
-        Me.TabControlPanel14.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel14.Size = New System.Drawing.Size(715, 199)
-        Me.TabControlPanel14.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel14.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel14.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel14.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel14.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel14.Style.GradientAngle = 90
-        Me.TabControlPanel14.TabIndex = 4
-        Me.TabControlPanel14.TabItem = Me.TabItem11
-        '
-        'ButtonX1
-        '
-        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX1.Location = New System.Drawing.Point(263, 124)
-        Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX1.TabIndex = 18
-        Me.ButtonX1.Text = "Marcar Pedidos Cumplidos"
-        '
-        'cmd_ped
-        '
-        Me.cmd_ped.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_ped.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_ped.Location = New System.Drawing.Point(263, 82)
-        Me.cmd_ped.Name = "cmd_ped"
-        Me.cmd_ped.Size = New System.Drawing.Size(192, 36)
-        Me.cmd_ped.TabIndex = 17
-        Me.cmd_ped.Text = "Entrada de Pedidos"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.BackColor = System.Drawing.Color.Transparent
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(165, 36)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(392, 31)
-        Me.Label21.TabIndex = 15
-        Me.Label21.Text = "Pedidos / Ordenes de Compras"
-        '
-        'TabItem11
-        '
-        Me.TabItem11.AttachedControl = Me.TabControlPanel14
-        Me.TabItem11.Name = "TabItem11"
-        Me.TabItem11.Text = "Pedidos / Ordenes de Compras"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(68, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(582, 31)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Compras y Cuentas por Pagar (Transacciones)"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label13.Location = New System.Drawing.Point(44, 9)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(627, 42)
-        Me.Label13.TabIndex = 12
-        Me.Label13.Text = "_____________________________"
-        '
-        'tra
-        '
-        Me.tra.AttachedControl = Me.TabControlPanel2
-        Me.tra.Name = "tra"
-        Me.tra.Text = "Transacciones"
-        '
-        'TabControlPanel3
-        '
-        Me.TabControlPanel3.Controls.Add(Me.TabControl4)
-        Me.TabControlPanel3.Controls.Add(Me.Label3)
-        Me.TabControlPanel3.Controls.Add(Me.Label14)
-        Me.TabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel3.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel3.Name = "TabControlPanel3"
-        Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel3.Size = New System.Drawing.Size(733, 294)
-        Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel3.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel3.Style.GradientAngle = 90
-        Me.TabControlPanel3.TabIndex = 3
-        Me.TabControlPanel3.TabItem = Me.info
-        '
-        'TabControl4
-        '
-        Me.TabControl4.CanReorderTabs = True
-        Me.TabControl4.Controls.Add(Me.TabControlPanel17)
-        Me.TabControl4.Controls.Add(Me.TabControlPanel15)
-        Me.TabControl4.Controls.Add(Me.TabControlPanel12)
-        Me.TabControl4.Location = New System.Drawing.Point(10, 57)
-        Me.TabControl4.Name = "TabControl4"
-        Me.TabControl4.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.TabControl4.SelectedTabIndex = 1
-        Me.TabControl4.Size = New System.Drawing.Size(715, 209)
-        Me.TabControl4.TabIndex = 54
-        Me.TabControl4.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
-        Me.TabControl4.Tabs.Add(Me.TabItem15)
-        Me.TabControl4.Tabs.Add(Me.TabItem13)
-        Me.TabControl4.Tabs.Add(Me.TabItem12)
-        Me.TabControl4.Text = "Cuentas Por Pagar"
-        '
-        'TabControlPanel15
-        '
-        Me.TabControlPanel15.Controls.Add(Me.Label22)
-        Me.TabControlPanel15.Controls.Add(Me.cmd_info_prov)
-        Me.TabControlPanel15.Controls.Add(Me.cmd_info_art)
-        Me.TabControlPanel15.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel15.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel15.Name = "TabControlPanel15"
-        Me.TabControlPanel15.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel15.Size = New System.Drawing.Size(715, 183)
-        Me.TabControlPanel15.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel15.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel15.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel15.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel15.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel15.Style.GradientAngle = 90
-        Me.TabControlPanel15.TabIndex = 4
-        Me.TabControlPanel15.TabItem = Me.TabItem13
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.BackColor = System.Drawing.Color.Transparent
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(218, 23)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(274, 31)
-        Me.Label22.TabIndex = 15
-        Me.Label22.Text = "Informes de Compras"
-        '
-        'cmd_info_prov
-        '
-        Me.cmd_info_prov.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_prov.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_prov.Location = New System.Drawing.Point(239, 68)
-        Me.cmd_info_prov.Name = "cmd_info_prov"
-        Me.cmd_info_prov.Size = New System.Drawing.Size(231, 36)
-        Me.cmd_info_prov.TabIndex = 45
-        Me.cmd_info_prov.Text = "Compras por Proveedor"
-        '
-        'cmd_info_art
-        '
-        Me.cmd_info_art.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_art.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_art.Location = New System.Drawing.Point(239, 110)
-        Me.cmd_info_art.Name = "cmd_info_art"
-        Me.cmd_info_art.Size = New System.Drawing.Size(231, 36)
-        Me.cmd_info_art.TabIndex = 49
-        Me.cmd_info_art.Text = "Compras por Articulo / Grupo de Gastos"
-        '
-        'TabItem13
-        '
-        Me.TabItem13.AttachedControl = Me.TabControlPanel15
-        Me.TabItem13.Name = "TabItem13"
-        Me.TabItem13.Text = "Compras/  Documentos de Proveedor"
-        '
-        'TabControlPanel17
-        '
-        Me.TabControlPanel17.Controls.Add(Me.cmd_g_o)
-        Me.TabControlPanel17.Controls.Add(Me.cmd_analisis)
-        Me.TabControlPanel17.Controls.Add(Me.cmd_cpp_inf_pro)
-        Me.TabControlPanel17.Controls.Add(Me.cmd_comp_cpp)
-        Me.TabControlPanel17.Controls.Add(Me.cmd_1_fac)
-        Me.TabControlPanel17.Controls.Add(Me.cmd_plan_pagos)
-        Me.TabControlPanel17.Controls.Add(Me.Label24)
-        Me.TabControlPanel17.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel17.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel17.Name = "TabControlPanel17"
-        Me.TabControlPanel17.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel17.Size = New System.Drawing.Size(715, 183)
-        Me.TabControlPanel17.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel17.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel17.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel17.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel17.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel17.Style.GradientAngle = 90
-        Me.TabControlPanel17.TabIndex = 3
-        Me.TabControlPanel17.TabItem = Me.TabItem15
-        '
-        'cmd_g_o
-        '
-        Me.cmd_g_o.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_g_o.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_g_o.Location = New System.Drawing.Point(467, 112)
-        Me.cmd_g_o.Name = "cmd_g_o"
-        Me.cmd_g_o.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_g_o.TabIndex = 5
-        Me.cmd_g_o.Text = "Comprobantes de Otros Egresos"
-        '
-        'cmd_analisis
-        '
-        Me.cmd_analisis.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_analisis.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_analisis.Location = New System.Drawing.Point(35, 112)
-        Me.cmd_analisis.Name = "cmd_analisis"
-        Me.cmd_analisis.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_analisis.TabIndex = 1
-        Me.cmd_analisis.Text = "Analisis de Cuentas por Pagar"
-        '
-        'cmd_cpp_inf_pro
-        '
-        Me.cmd_cpp_inf_pro.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_cpp_inf_pro.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_cpp_inf_pro.Location = New System.Drawing.Point(35, 70)
-        Me.cmd_cpp_inf_pro.Name = "cmd_cpp_inf_pro"
-        Me.cmd_cpp_inf_pro.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_cpp_inf_pro.TabIndex = 0
-        Me.cmd_cpp_inf_pro.Text = "Movimiento por Proveedor"
-        '
-        'cmd_comp_cpp
-        '
-        Me.cmd_comp_cpp.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_comp_cpp.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_comp_cpp.Location = New System.Drawing.Point(467, 70)
-        Me.cmd_comp_cpp.Name = "cmd_comp_cpp"
-        Me.cmd_comp_cpp.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_comp_cpp.TabIndex = 4
-        Me.cmd_comp_cpp.Text = "Comprobante de Cuentas por Pagar"
-        '
-        'cmd_1_fac
-        '
-        Me.cmd_1_fac.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_1_fac.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_1_fac.Location = New System.Drawing.Point(251, 112)
-        Me.cmd_1_fac.Name = "cmd_1_fac"
-        Me.cmd_1_fac.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_1_fac.TabIndex = 3
-        Me.cmd_1_fac.Text = "Consulta de una Factura"
-        '
-        'cmd_plan_pagos
-        '
-        Me.cmd_plan_pagos.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_plan_pagos.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_plan_pagos.Location = New System.Drawing.Point(251, 70)
-        Me.cmd_plan_pagos.Name = "cmd_plan_pagos"
-        Me.cmd_plan_pagos.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_plan_pagos.TabIndex = 2
-        Me.cmd_plan_pagos.Text = "Plan Semanal de Pagos"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.Color.Transparent
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(193, 21)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(354, 31)
-        Me.Label24.TabIndex = 15
-        Me.Label24.Text = "Informes Cuentas por Pagar"
-        '
-        'TabItem15
-        '
-        Me.TabItem15.AttachedControl = Me.TabControlPanel17
-        Me.TabItem15.Name = "TabItem15"
-        Me.TabItem15.Text = "Cuentas Por Pagar"
-        '
-        'TabControlPanel12
-        '
-        Me.TabControlPanel12.Controls.Add(Me.Label12)
-        Me.TabControlPanel12.Controls.Add(Me.cmd_info_cant_ped)
-        Me.TabControlPanel12.Controls.Add(Me.cmd_info_pendientes)
-        Me.TabControlPanel12.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel12.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel12.Name = "TabControlPanel12"
-        Me.TabControlPanel12.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel12.Size = New System.Drawing.Size(715, 183)
-        Me.TabControlPanel12.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel12.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel12.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel12.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel12.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel12.Style.GradientAngle = 90
-        Me.TabControlPanel12.TabIndex = 5
-        Me.TabControlPanel12.TabItem = Me.TabItem12
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(218, 26)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(262, 31)
-        Me.Label12.TabIndex = 52
-        Me.Label12.Text = "Informes de Pedidos"
-        '
-        'cmd_info_cant_ped
-        '
-        Me.cmd_info_cant_ped.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_cant_ped.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_cant_ped.Location = New System.Drawing.Point(236, 113)
-        Me.cmd_info_cant_ped.Name = "cmd_info_cant_ped"
-        Me.cmd_info_cant_ped.Size = New System.Drawing.Size(231, 36)
-        Me.cmd_info_cant_ped.TabIndex = 51
-        Me.cmd_info_cant_ped.Text = "Cantidades Pendientes"
-        '
-        'cmd_info_pendientes
-        '
-        Me.cmd_info_pendientes.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_pendientes.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_pendientes.Location = New System.Drawing.Point(236, 71)
-        Me.cmd_info_pendientes.Name = "cmd_info_pendientes"
-        Me.cmd_info_pendientes.Size = New System.Drawing.Size(231, 36)
-        Me.cmd_info_pendientes.TabIndex = 50
-        Me.cmd_info_pendientes.Text = "Pedidos Pendientes"
-        '
-        'TabItem12
-        '
-        Me.TabItem12.AttachedControl = Me.TabControlPanel12
-        Me.TabItem12.Name = "TabItem12"
-        Me.TabItem12.Text = "Pedidos / Ordenes de Compras"
-        Me.TabItem12.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(98, 11)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(510, 31)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Compras y Cuentas por Pagar (Informes)"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label14.Location = New System.Drawing.Point(45, 11)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(627, 42)
-        Me.Label14.TabIndex = 13
-        Me.Label14.Text = "_____________________________"
-        '
-        'info
-        '
-        Me.info.AttachedControl = Me.TabControlPanel3
-        Me.info.Name = "info"
-        Me.info.Text = "Informes"
         '
         'TabControlPanel1
         '
@@ -918,6 +408,516 @@ Partial Class FrmCompras
         Me.datosbac.Name = "datosbac"
         Me.datosbac.Text = "Datos Basicos"
         '
+        'TabControlPanel2
+        '
+        Me.TabControlPanel2.Controls.Add(Me.TabControl3)
+        Me.TabControlPanel2.Controls.Add(Me.Label2)
+        Me.TabControlPanel2.Controls.Add(Me.Label13)
+        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel2.Name = "TabControlPanel2"
+        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel2.Size = New System.Drawing.Size(733, 294)
+        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel2.Style.GradientAngle = 90
+        Me.TabControlPanel2.TabIndex = 2
+        Me.TabControlPanel2.TabItem = Me.tra
+        '
+        'TabControl3
+        '
+        Me.TabControl3.CanReorderTabs = True
+        Me.TabControl3.Controls.Add(Me.TabControlPanel13)
+        Me.TabControl3.Controls.Add(Me.TabControlPanel4)
+        Me.TabControl3.Controls.Add(Me.TabControlPanel14)
+        Me.TabControl3.Location = New System.Drawing.Point(8, 61)
+        Me.TabControl3.Name = "TabControl3"
+        Me.TabControl3.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TabControl3.SelectedTabIndex = 0
+        Me.TabControl3.Size = New System.Drawing.Size(715, 225)
+        Me.TabControl3.TabIndex = 13
+        Me.TabControl3.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
+        Me.TabControl3.Tabs.Add(Me.TabItem10)
+        Me.TabControl3.Tabs.Add(Me.TabItem11)
+        Me.TabControl3.Tabs.Add(Me.TabItem3)
+        Me.TabControl3.Text = "Notas y Observaciones"
+        '
+        'TabControlPanel13
+        '
+        Me.TabControlPanel13.Controls.Add(Me.cmdfactrap)
+        Me.TabControlPanel13.Controls.Add(Me.Label20)
+        Me.TabControlPanel13.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel13.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel13.Name = "TabControlPanel13"
+        Me.TabControlPanel13.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel13.Size = New System.Drawing.Size(715, 199)
+        Me.TabControlPanel13.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel13.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel13.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel13.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel13.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel13.Style.GradientAngle = 90
+        Me.TabControlPanel13.TabIndex = 3
+        Me.TabControlPanel13.TabItem = Me.TabItem10
+        '
+        'cmdfactrap
+        '
+        Me.cmdfactrap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmdfactrap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmdfactrap.Location = New System.Drawing.Point(256, 69)
+        Me.cmdfactrap.Name = "cmdfactrap"
+        Me.cmdfactrap.Size = New System.Drawing.Size(180, 36)
+        Me.cmdfactrap.TabIndex = 0
+        Me.cmdfactrap.Text = "Entradas de Documentos"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.BackColor = System.Drawing.Color.Transparent
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(179, 6)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(336, 31)
+        Me.Label20.TabIndex = 15
+        Me.Label20.Text = "Documentos de Proveedor"
+        '
+        'TabItem10
+        '
+        Me.TabItem10.AttachedControl = Me.TabControlPanel13
+        Me.TabItem10.Name = "TabItem10"
+        Me.TabItem10.Text = "Documentos de Proveedor"
+        '
+        'TabControlPanel4
+        '
+        Me.TabControlPanel4.Controls.Add(Me.cmdOt)
+        Me.TabControlPanel4.Controls.Add(Me.cmdCPP)
+        Me.TabControlPanel4.Controls.Add(Me.Label8)
+        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel4.Name = "TabControlPanel4"
+        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel4.Size = New System.Drawing.Size(715, 199)
+        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel4.Style.GradientAngle = 90
+        Me.TabControlPanel4.TabIndex = 5
+        Me.TabControlPanel4.TabItem = Me.TabItem3
+        '
+        'cmdOt
+        '
+        Me.cmdOt.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmdOt.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmdOt.Location = New System.Drawing.Point(220, 114)
+        Me.cmdOt.Name = "cmdOt"
+        Me.cmdOt.Size = New System.Drawing.Size(274, 36)
+        Me.cmdOt.TabIndex = 21
+        Me.cmdOt.Text = "Comprobantes de Otros &Egresos"
+        '
+        'cmdCPP
+        '
+        Me.cmdCPP.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmdCPP.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmdCPP.Location = New System.Drawing.Point(220, 70)
+        Me.cmdCPP.Name = "cmdCPP"
+        Me.cmdCPP.Size = New System.Drawing.Size(274, 36)
+        Me.cmdCPP.TabIndex = 20
+        Me.cmdCPP.Text = "Comprobantes de pagos de &Cuentas Por Pagar"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(220, 18)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(288, 31)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "Documentos de Pagos"
+        '
+        'TabItem3
+        '
+        Me.TabItem3.AttachedControl = Me.TabControlPanel4
+        Me.TabItem3.Name = "TabItem3"
+        Me.TabItem3.Text = "Documentos de Pagos"
+        '
+        'TabControlPanel14
+        '
+        Me.TabControlPanel14.Controls.Add(Me.ButtonX1)
+        Me.TabControlPanel14.Controls.Add(Me.cmd_ped)
+        Me.TabControlPanel14.Controls.Add(Me.Label21)
+        Me.TabControlPanel14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel14.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel14.Name = "TabControlPanel14"
+        Me.TabControlPanel14.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel14.Size = New System.Drawing.Size(715, 199)
+        Me.TabControlPanel14.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel14.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel14.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel14.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel14.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel14.Style.GradientAngle = 90
+        Me.TabControlPanel14.TabIndex = 4
+        Me.TabControlPanel14.TabItem = Me.TabItem11
+        '
+        'ButtonX1
+        '
+        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX1.Location = New System.Drawing.Point(263, 124)
+        Me.ButtonX1.Name = "ButtonX1"
+        Me.ButtonX1.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX1.TabIndex = 18
+        Me.ButtonX1.Text = "Marcar Pedidos Cumplidos"
+        '
+        'cmd_ped
+        '
+        Me.cmd_ped.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_ped.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_ped.Location = New System.Drawing.Point(263, 82)
+        Me.cmd_ped.Name = "cmd_ped"
+        Me.cmd_ped.Size = New System.Drawing.Size(192, 36)
+        Me.cmd_ped.TabIndex = 17
+        Me.cmd_ped.Text = "Entrada de Pedidos"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.BackColor = System.Drawing.Color.Transparent
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(165, 36)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(392, 31)
+        Me.Label21.TabIndex = 15
+        Me.Label21.Text = "Pedidos / Ordenes de Compras"
+        '
+        'TabItem11
+        '
+        Me.TabItem11.AttachedControl = Me.TabControlPanel14
+        Me.TabItem11.Name = "TabItem11"
+        Me.TabItem11.Text = "Pedidos / Ordenes de Compras"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(68, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(582, 31)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Compras y Cuentas por Pagar (Transacciones)"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label13.Location = New System.Drawing.Point(44, 9)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(627, 42)
+        Me.Label13.TabIndex = 12
+        Me.Label13.Text = "_____________________________"
+        '
+        'tra
+        '
+        Me.tra.AttachedControl = Me.TabControlPanel2
+        Me.tra.Name = "tra"
+        Me.tra.Text = "Transacciones"
+        '
+        'TabControlPanel3
+        '
+        Me.TabControlPanel3.Controls.Add(Me.TabControl4)
+        Me.TabControlPanel3.Controls.Add(Me.Label3)
+        Me.TabControlPanel3.Controls.Add(Me.Label14)
+        Me.TabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel3.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel3.Name = "TabControlPanel3"
+        Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel3.Size = New System.Drawing.Size(733, 294)
+        Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel3.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel3.Style.GradientAngle = 90
+        Me.TabControlPanel3.TabIndex = 3
+        Me.TabControlPanel3.TabItem = Me.info
+        '
+        'TabControl4
+        '
+        Me.TabControl4.CanReorderTabs = True
+        Me.TabControl4.Controls.Add(Me.TabControlPanel17)
+        Me.TabControl4.Controls.Add(Me.TabControlPanel15)
+        Me.TabControl4.Controls.Add(Me.TabControlPanel12)
+        Me.TabControl4.Location = New System.Drawing.Point(10, 57)
+        Me.TabControl4.Name = "TabControl4"
+        Me.TabControl4.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TabControl4.SelectedTabIndex = 1
+        Me.TabControl4.Size = New System.Drawing.Size(715, 209)
+        Me.TabControl4.TabIndex = 54
+        Me.TabControl4.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
+        Me.TabControl4.Tabs.Add(Me.TabItem15)
+        Me.TabControl4.Tabs.Add(Me.TabItem13)
+        Me.TabControl4.Tabs.Add(Me.TabItem12)
+        Me.TabControl4.Text = "Cuentas Por Pagar"
+        '
+        'TabControlPanel17
+        '
+        Me.TabControlPanel17.Controls.Add(Me.cmd_g_o)
+        Me.TabControlPanel17.Controls.Add(Me.cmd_analisis)
+        Me.TabControlPanel17.Controls.Add(Me.cmd_cpp_inf_pro)
+        Me.TabControlPanel17.Controls.Add(Me.cmd_comp_cpp)
+        Me.TabControlPanel17.Controls.Add(Me.cmd_1_fac)
+        Me.TabControlPanel17.Controls.Add(Me.cmd_plan_pagos)
+        Me.TabControlPanel17.Controls.Add(Me.Label24)
+        Me.TabControlPanel17.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel17.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel17.Name = "TabControlPanel17"
+        Me.TabControlPanel17.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel17.Size = New System.Drawing.Size(715, 183)
+        Me.TabControlPanel17.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel17.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel17.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel17.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel17.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel17.Style.GradientAngle = 90
+        Me.TabControlPanel17.TabIndex = 3
+        Me.TabControlPanel17.TabItem = Me.TabItem15
+        '
+        'cmd_g_o
+        '
+        Me.cmd_g_o.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_g_o.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_g_o.Location = New System.Drawing.Point(467, 112)
+        Me.cmd_g_o.Name = "cmd_g_o"
+        Me.cmd_g_o.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_g_o.TabIndex = 5
+        Me.cmd_g_o.Text = "Comprobantes de Otros Egresos"
+        '
+        'cmd_analisis
+        '
+        Me.cmd_analisis.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_analisis.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_analisis.Location = New System.Drawing.Point(35, 112)
+        Me.cmd_analisis.Name = "cmd_analisis"
+        Me.cmd_analisis.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_analisis.TabIndex = 1
+        Me.cmd_analisis.Text = "Analisis de Cuentas por Pagar"
+        '
+        'cmd_cpp_inf_pro
+        '
+        Me.cmd_cpp_inf_pro.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_cpp_inf_pro.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_cpp_inf_pro.Location = New System.Drawing.Point(35, 70)
+        Me.cmd_cpp_inf_pro.Name = "cmd_cpp_inf_pro"
+        Me.cmd_cpp_inf_pro.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_cpp_inf_pro.TabIndex = 0
+        Me.cmd_cpp_inf_pro.Text = "Movimiento por Proveedor"
+        '
+        'cmd_comp_cpp
+        '
+        Me.cmd_comp_cpp.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_comp_cpp.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_comp_cpp.Location = New System.Drawing.Point(467, 70)
+        Me.cmd_comp_cpp.Name = "cmd_comp_cpp"
+        Me.cmd_comp_cpp.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_comp_cpp.TabIndex = 4
+        Me.cmd_comp_cpp.Text = "Comprobante de Cuentas por Pagar"
+        '
+        'cmd_1_fac
+        '
+        Me.cmd_1_fac.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_1_fac.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_1_fac.Location = New System.Drawing.Point(251, 112)
+        Me.cmd_1_fac.Name = "cmd_1_fac"
+        Me.cmd_1_fac.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_1_fac.TabIndex = 3
+        Me.cmd_1_fac.Text = "Consulta de una Factura"
+        '
+        'cmd_plan_pagos
+        '
+        Me.cmd_plan_pagos.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_plan_pagos.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_plan_pagos.Location = New System.Drawing.Point(251, 70)
+        Me.cmd_plan_pagos.Name = "cmd_plan_pagos"
+        Me.cmd_plan_pagos.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_plan_pagos.TabIndex = 2
+        Me.cmd_plan_pagos.Text = "Plan Semanal de Pagos"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.BackColor = System.Drawing.Color.Transparent
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(193, 21)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(354, 31)
+        Me.Label24.TabIndex = 15
+        Me.Label24.Text = "Informes Cuentas por Pagar"
+        '
+        'TabItem15
+        '
+        Me.TabItem15.AttachedControl = Me.TabControlPanel17
+        Me.TabItem15.Name = "TabItem15"
+        Me.TabItem15.Text = "Cuentas Por Pagar"
+        '
+        'TabControlPanel15
+        '
+        Me.TabControlPanel15.Controls.Add(Me.Label22)
+        Me.TabControlPanel15.Controls.Add(Me.cmd_info_prov)
+        Me.TabControlPanel15.Controls.Add(Me.cmd_info_art)
+        Me.TabControlPanel15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel15.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel15.Name = "TabControlPanel15"
+        Me.TabControlPanel15.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel15.Size = New System.Drawing.Size(715, 183)
+        Me.TabControlPanel15.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel15.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel15.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel15.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel15.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel15.Style.GradientAngle = 90
+        Me.TabControlPanel15.TabIndex = 4
+        Me.TabControlPanel15.TabItem = Me.TabItem13
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.BackColor = System.Drawing.Color.Transparent
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(218, 23)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(274, 31)
+        Me.Label22.TabIndex = 15
+        Me.Label22.Text = "Informes de Compras"
+        '
+        'cmd_info_prov
+        '
+        Me.cmd_info_prov.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_prov.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_prov.Location = New System.Drawing.Point(239, 68)
+        Me.cmd_info_prov.Name = "cmd_info_prov"
+        Me.cmd_info_prov.Size = New System.Drawing.Size(231, 36)
+        Me.cmd_info_prov.TabIndex = 45
+        Me.cmd_info_prov.Text = "Compras por Proveedor"
+        '
+        'cmd_info_art
+        '
+        Me.cmd_info_art.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_art.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_art.Location = New System.Drawing.Point(239, 110)
+        Me.cmd_info_art.Name = "cmd_info_art"
+        Me.cmd_info_art.Size = New System.Drawing.Size(231, 36)
+        Me.cmd_info_art.TabIndex = 49
+        Me.cmd_info_art.Text = "Compras por Articulo / Grupo de Gastos"
+        '
+        'TabItem13
+        '
+        Me.TabItem13.AttachedControl = Me.TabControlPanel15
+        Me.TabItem13.Name = "TabItem13"
+        Me.TabItem13.Text = "Compras/  Documentos de Proveedor"
+        '
+        'TabControlPanel12
+        '
+        Me.TabControlPanel12.Controls.Add(Me.Label12)
+        Me.TabControlPanel12.Controls.Add(Me.cmd_info_cant_ped)
+        Me.TabControlPanel12.Controls.Add(Me.cmd_info_pendientes)
+        Me.TabControlPanel12.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel12.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel12.Name = "TabControlPanel12"
+        Me.TabControlPanel12.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel12.Size = New System.Drawing.Size(715, 183)
+        Me.TabControlPanel12.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel12.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel12.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel12.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel12.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel12.Style.GradientAngle = 90
+        Me.TabControlPanel12.TabIndex = 5
+        Me.TabControlPanel12.TabItem = Me.TabItem12
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(218, 26)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(262, 31)
+        Me.Label12.TabIndex = 52
+        Me.Label12.Text = "Informes de Pedidos"
+        '
+        'cmd_info_cant_ped
+        '
+        Me.cmd_info_cant_ped.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_cant_ped.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_cant_ped.Location = New System.Drawing.Point(236, 113)
+        Me.cmd_info_cant_ped.Name = "cmd_info_cant_ped"
+        Me.cmd_info_cant_ped.Size = New System.Drawing.Size(231, 36)
+        Me.cmd_info_cant_ped.TabIndex = 51
+        Me.cmd_info_cant_ped.Text = "Cantidades Pendientes"
+        '
+        'cmd_info_pendientes
+        '
+        Me.cmd_info_pendientes.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_pendientes.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_pendientes.Location = New System.Drawing.Point(236, 71)
+        Me.cmd_info_pendientes.Name = "cmd_info_pendientes"
+        Me.cmd_info_pendientes.Size = New System.Drawing.Size(231, 36)
+        Me.cmd_info_pendientes.TabIndex = 50
+        Me.cmd_info_pendientes.Text = "Pedidos Pendientes"
+        '
+        'TabItem12
+        '
+        Me.TabItem12.AttachedControl = Me.TabControlPanel12
+        Me.TabItem12.Name = "TabItem12"
+        Me.TabItem12.Text = "Pedidos / Ordenes de Compras"
+        Me.TabItem12.Visible = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(98, 11)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(510, 31)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Compras y Cuentas por Pagar (Informes)"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label14.Location = New System.Drawing.Point(45, 11)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(627, 42)
+        Me.Label14.TabIndex = 13
+        Me.Label14.Text = "_____________________________"
+        '
+        'info
+        '
+        Me.info.AttachedControl = Me.TabControlPanel3
+        Me.info.Name = "info"
+        Me.info.Text = "Informes"
+        '
         'TabControlPanel10
         '
         Me.TabControlPanel10.Controls.Add(Me.TabControl5)
@@ -941,9 +941,9 @@ Partial Class FrmCompras
         'TabControl5
         '
         Me.TabControl5.CanReorderTabs = True
+        Me.TabControl5.Controls.Add(Me.TabControlPanel19)
         Me.TabControl5.Controls.Add(Me.TabControlPanel16)
         Me.TabControl5.Controls.Add(Me.TabControlPanel18)
-        Me.TabControl5.Controls.Add(Me.TabControlPanel19)
         Me.TabControl5.Location = New System.Drawing.Point(6, 60)
         Me.TabControl5.Name = "TabControl5"
         Me.TabControl5.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
@@ -1052,6 +1052,7 @@ Partial Class FrmCompras
         Me.cmdpost.Size = New System.Drawing.Size(274, 36)
         Me.cmdpost.TabIndex = 25
         Me.cmdpost.Text = "Desaprobar Doc&umentos de CxP"
+        Me.cmdpost.Visible = False
         '
         'Label19
         '
@@ -1110,6 +1111,7 @@ Partial Class FrmCompras
         Me.cmddes.Size = New System.Drawing.Size(180, 36)
         Me.cmddes.TabIndex = 27
         Me.cmddes.Text = "Desaprobar documentos"
+        Me.cmddes.Visible = False
         '
         'cmdanular
         '
@@ -1515,26 +1517,6 @@ Partial Class FrmCompras
         Me.Text = "SAE Compras y Cuentas por Pagar"
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
-        Me.TabControlPanel2.ResumeLayout(False)
-        Me.TabControlPanel2.PerformLayout()
-        CType(Me.TabControl3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl3.ResumeLayout(False)
-        Me.TabControlPanel4.ResumeLayout(False)
-        Me.TabControlPanel4.PerformLayout()
-        Me.TabControlPanel13.ResumeLayout(False)
-        Me.TabControlPanel13.PerformLayout()
-        Me.TabControlPanel14.ResumeLayout(False)
-        Me.TabControlPanel14.PerformLayout()
-        Me.TabControlPanel3.ResumeLayout(False)
-        Me.TabControlPanel3.PerformLayout()
-        CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl4.ResumeLayout(False)
-        Me.TabControlPanel15.ResumeLayout(False)
-        Me.TabControlPanel15.PerformLayout()
-        Me.TabControlPanel17.ResumeLayout(False)
-        Me.TabControlPanel17.PerformLayout()
-        Me.TabControlPanel12.ResumeLayout(False)
-        Me.TabControlPanel12.PerformLayout()
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1545,6 +1527,26 @@ Partial Class FrmCompras
         Me.TabControlPanel7.PerformLayout()
         Me.TabControlPanel8.ResumeLayout(False)
         Me.TabControlPanel8.PerformLayout()
+        Me.TabControlPanel2.ResumeLayout(False)
+        Me.TabControlPanel2.PerformLayout()
+        CType(Me.TabControl3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl3.ResumeLayout(False)
+        Me.TabControlPanel13.ResumeLayout(False)
+        Me.TabControlPanel13.PerformLayout()
+        Me.TabControlPanel4.ResumeLayout(False)
+        Me.TabControlPanel4.PerformLayout()
+        Me.TabControlPanel14.ResumeLayout(False)
+        Me.TabControlPanel14.PerformLayout()
+        Me.TabControlPanel3.ResumeLayout(False)
+        Me.TabControlPanel3.PerformLayout()
+        CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl4.ResumeLayout(False)
+        Me.TabControlPanel17.ResumeLayout(False)
+        Me.TabControlPanel17.PerformLayout()
+        Me.TabControlPanel15.ResumeLayout(False)
+        Me.TabControlPanel15.PerformLayout()
+        Me.TabControlPanel12.ResumeLayout(False)
+        Me.TabControlPanel12.PerformLayout()
         Me.TabControlPanel10.ResumeLayout(False)
         Me.TabControlPanel10.PerformLayout()
         CType(Me.TabControl5, System.ComponentModel.ISupportInitialize).EndInit()

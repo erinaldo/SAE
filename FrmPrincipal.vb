@@ -313,6 +313,29 @@ Public Class FrmPrincipal
         Cerrar()
 
     End Sub
+
+    Private Sub FrmPrincipal_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+        If e.KeyData = Keys.Control + Keys.Alt + Keys.D Then
+            MiConexion("sae")
+            Dim tabla As New DataTable
+            myCommand.Parameters.Clear()
+            myCommand.CommandText = "SELECT desap, rol from usuarios where login='" & lbuser.Text & "'"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tabla)
+
+            If tabla.Rows(0).Item(0) <> "S" Then
+                MsgBox("El usuario " & lbuser.Text & " NO cuenta con los permisos para realizar este proceso", MsgBoxStyle.Information, "Verificacion")
+            Else
+                Try
+                    FrmDesaprobarDoc.ShowDialog()
+                Catch ex As Exception
+                    MsgBox("Error " & ex.ToString)
+                End Try
+            End If
+            Cerrar()
+
+        End If
+    End Sub
     Private Sub FrmPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Try

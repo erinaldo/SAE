@@ -950,9 +950,9 @@ Module funciones
         If t.Rows.Count > 0 Then
             MsgBox("espere un momento")
 
-            myCommand.Parameters.Clear()
-            myCommand.CommandText = "UPDATE presupuesto" & Strings.Right(PerActual, 4) & ".gasconcepto SET gasc_orden=gasc_cod1"
-            myCommand.ExecuteNonQuery()
+            'myCommand.Parameters.Clear()
+            'myCommand.CommandText = "UPDATE presupuesto" & Strings.Right(PerActual, 4) & ".gasconcepto SET gasc_orden=gasc_cod1"
+            'myCommand.ExecuteNonQuery()
             For i = 0 To t.Rows.Count - 1
                 pagoPres(t.Rows(i).Item("doc_afec"))
                 Mov_presGas(t.Rows(i).Item("doc_afec"), t.Rows(i).Item("f"))
@@ -1015,6 +1015,9 @@ Module funciones
 
     Private Sub Mov_presIng(ByVal doccxp As String, ByVal f As String)
 
+        'If doccxp = "CP01158" Then
+        '    MsgBox("hola")
+        'End If
         Dim pbd As String = "presupuesto" & Strings.Right(PerActual, 4)
         Dim cta As String = ""
         Dim ing As String = ""

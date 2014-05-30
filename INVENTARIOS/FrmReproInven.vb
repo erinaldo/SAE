@@ -78,9 +78,9 @@ Public Class FrmReproInven
                         cant = ""
                         For j = 1 To nbod
                             If j = 1 Then
-                                cant = "cant" & j & "=" & tabla2.Rows(i).Item("cant" & j)
+                                cant = "cant" & j & "=" & DIN(tabla2.Rows(i).Item("cant" & j))
                             Else
-                                cant += ", cant" & j & "=" & tabla2.Rows(i).Item("cant" & j)
+                                cant += ", cant" & j & "=" & DIN(tabla2.Rows(i).Item("cant" & j))
                             End If
                         Next
                         sql2 = "UPDATE con_inv SET " & cant & " WHERE codart='" & codA & "' AND periodo >='01';"
@@ -136,31 +136,31 @@ Public Class FrmReproInven
                         Catch ex2 As Exception
                         End Try
                     Catch ex As Exception
-            MsgBox("sql4" & "******" & ex.ToString)
-        End Try
+                        MsgBox("sql4" & "******" & ex.ToString)
+                    End Try
                 Next
-        ' Fin while Xiam
-        Me.Cursor = Cursors.Default
-        Try
+                ' Fin while Xiam
+                Me.Cursor = Cursors.Default
+                Try
                     FrmConteoFisInv.mibarra.Visible = False
-        Catch ex As Exception
-        End Try
-        mibarra.Visible = False
-        Me.Close()
-        If FrmPrincipal.cmdAuditoria.Visible = True Then
-            Guar_MovUser("INVENTARIO", "REPROCESAR INVENTARIO", "", "", "")
-        End If
-        MsgBox("Inventario Reprocesado Correctamente...", MsgBoxStyle.Information, "SAE Reprocesar Inventarios")
+                Catch ex As Exception
+                End Try
+                mibarra.Visible = False
+                Me.Close()
+                If FrmPrincipal.cmdAuditoria.Visible = True Then
+                    Guar_MovUser("INVENTARIO", "REPROCESAR INVENTARIO", "", "", "")
+                End If
+                MsgBox("Inventario Reprocesado Correctamente...", MsgBoxStyle.Information, "SAE Reprocesar Inventarios")
             Catch ex As Exception
-            Me.Cursor = Cursors.Default
-            Try
+                Me.Cursor = Cursors.Default
+                Try
                     FrmConteoFisInv.mibarra.Visible = False
-            Catch ex1 As Exception
+                Catch ex1 As Exception
+                End Try
+                mibarra.Visible = False
+                MsgBox(ex.ToString)
             End Try
-            mibarra.Visible = False
-            MsgBox(ex.ToString)
-        End Try
-        Cerrar()
+            Cerrar()
 
         End If
     End Sub

@@ -332,13 +332,13 @@
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
 
-        If tabla.Rows(0).Item(0) = "S" Then
-            cmdpost.Visible = True
-            cmddes.Visible = True
-        Else
-            cmdpost.Visible = False
-            cmddes.Visible = False
-        End If
+        'If tabla.Rows(0).Item(0) = "S" Then
+        '    cmdpost.Visible = True
+        '    cmddes.Visible = True
+        'Else
+        '    cmdpost.Visible = False
+        '    cmddes.Visible = False
+        'End If
         Cerrar()
 
 

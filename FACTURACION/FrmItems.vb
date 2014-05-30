@@ -549,7 +549,41 @@
                 If lbform.Text = "salidas" Then
                     gitems.Item("iva", fila).Value = Moneda(0)
                 Else
-                    gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                    If lbform.Text = "fr" Then
+                        Try
+                            Dim tt As New DataTable
+                            tt.Clear()
+                            myCommand.CommandText = "SELECT iva from terceros where nit ='" & Frmfacturarapida.txtnitc.Text & "' ;"
+                            myAdapter.SelectCommand = myCommand
+                            myAdapter.Fill(tt)
+                            Refresh()
+                            If tt.Rows(0).Item(0) = "SI" Then
+                                gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                            Else
+                                gitems.Item("iva", fila).Value = Moneda(0)
+                            End If
+                        Catch ex As Exception
+                            gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                        End Try
+                    ElseIf lbform.Text = "fn" Then
+                        Try
+                            Dim tt As New DataTable
+                            tt.Clear()
+                            myCommand.CommandText = "SELECT iva from terceros where nit ='" & FrmFacturasyAjustes.txtnitc.Text & "' ;"
+                            myAdapter.SelectCommand = myCommand
+                            myAdapter.Fill(tt)
+                            Refresh()
+                            If tt.Rows(0).Item(0) = "SI" Then
+                                gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                            Else
+                                gitems.Item("iva", fila).Value = Moneda(0)
+                            End If
+                        Catch ex As Exception
+                            gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                        End Try
+                    Else
+                        gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                    End If
                 End If
 
                 If LbTipoMov.Text = "entradas" Or lbParSalida.Text = "CS" Then
@@ -774,6 +808,30 @@
                     End If
                 Catch ex As Exception
                 End Try
+                'CONSULTAR SI EL CLIENTE AFECTA IVA
+                Try
+                    Dim tt As New DataTable
+                    tt.Clear()
+                    If lbform.Text = "fr" Then
+                        myCommand.CommandText = "SELECT iva from terceros where nit ='" & Frmfacturarapida.txtnitc.Text & "' ;"
+                    ElseIf lbform.Text = "fn" Then
+                        myCommand.CommandText = "SELECT iva from terceros where nit ='" & FrmFacturasyAjustes.txtnitc.Text & "' ;"
+                    ElseIf lbform.Text = "fn_sp" Then
+                        myCommand.CommandText = "SELECT iva from terceros where nit ='" & FrmFacturasyAjustes.txtnitc.Text & "' ;"
+                    End If
+                    myAdapter.SelectCommand = myCommand
+                    myAdapter.Fill(tt)
+                    Refresh()
+                    If tt.Rows(0).Item(0) = "SI" Then
+                        gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                    Else
+                        gitems.Item("iva", fila).Value = Moneda(0)
+                    End If
+                Catch ex As Exception
+                    gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                End Try
+
+
             Else   'mostrar algunos de la consulta LIKE de los articulos  q coinciden
                 FrmSelServicio.lbform.Text = "items"
                 FrmSelServicio.txtcuenta.Text = codigo

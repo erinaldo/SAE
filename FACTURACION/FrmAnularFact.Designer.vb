@@ -45,12 +45,14 @@ Partial Class FrmAnularFact
         Me.cmdsalir = New System.Windows.Forms.Button
         Me.cmdpantalla = New System.Windows.Forms.Button
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnBuscar = New System.Windows.Forms.Button
         Me.GroupBox1.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnBuscar)
         Me.GroupBox1.Controls.Add(Me.txtfecha_ana)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.lbtipo)
@@ -188,7 +190,7 @@ Partial Class FrmAnularFact
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(23, 92)
+        Me.Label3.Location = New System.Drawing.Point(23, 93)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(144, 16)
         Me.Label3.TabIndex = 12
@@ -302,6 +304,17 @@ Partial Class FrmAnularFact
         Me.ToolTip1.SetToolTip(Me.cmdpantalla, "Anular documento Alt + A")
         Me.cmdpantalla.UseVisualStyleBackColor = False
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.AutoSize = True
+        Me.btnBuscar.Image = Global.SAE.My.Resources.Resources.DataTables
+        Me.btnBuscar.Location = New System.Drawing.Point(299, 85)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(41, 32)
+        Me.btnBuscar.TabIndex = 26
+        Me.ToolTip1.SetToolTip(Me.btnBuscar, "Anular Factura")
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
         'FrmAnularFact
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -346,4 +359,5 @@ Partial Class FrmAnularFact
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents txtfecha_ana As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents btnBuscar As System.Windows.Forms.Button
 End Class

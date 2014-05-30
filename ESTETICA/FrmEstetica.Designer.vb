@@ -46,10 +46,36 @@ Partial Class FrmEstetica
         Me.Label20 = New System.Windows.Forms.Label
         Me.TabItem10 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl
+        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.permisos = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel
+        Me.cmdCamPer = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX
+        Me.cmddes = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_anular_facts = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_imp_tipodoc = New DevComponents.DotNetBar.ButtonX
+        Me.Label21 = New System.Windows.Forms.Label
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.admin = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label13 = New System.Windows.Forms.Label
         Me.tra = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel
+        Me.cmdUsu = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX4 = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_fpago = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_vendedor = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_serv = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_referencia = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_art = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_cliente = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_cronologico = New DevComponents.DotNetBar.ButtonX
+        Me.cmd_info_consec = New DevComponents.DotNetBar.ButtonX
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label14 = New System.Windows.Forms.Label
+        Me.info = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel
         Me.TabControl2 = New DevComponents.DotNetBar.TabControl
         Me.TabControlPanel6 = New DevComponents.DotNetBar.TabControlPanel
@@ -85,32 +111,6 @@ Partial Class FrmEstetica
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
         Me.datosbac = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel
-        Me.cmdUsu = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX4 = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_fpago = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_vendedor = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_serv = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_referencia = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_art = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_cliente = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_cronologico = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_info_consec = New DevComponents.DotNetBar.ButtonX
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.info = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel
-        Me.cmdCamPer = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX
-        Me.cmddes = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_anular_facts = New DevComponents.DotNetBar.ButtonX
-        Me.cmd_imp_tipodoc = New DevComponents.DotNetBar.ButtonX
-        Me.Label21 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.admin = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.permisos = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
         Me.salir = New System.Windows.Forms.Button
         Me.cmdayuda = New System.Windows.Forms.Button
@@ -129,7 +129,10 @@ Partial Class FrmEstetica
         Me.TabControlPanel13.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
+        Me.TabControlPanel4.SuspendLayout()
+        Me.TabControlPanel5.SuspendLayout()
         Me.TabControlPanel2.SuspendLayout()
+        Me.TabControlPanel3.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl2.SuspendLayout()
@@ -137,9 +140,6 @@ Partial Class FrmEstetica
         Me.TabControlPanel8.SuspendLayout()
         Me.TabControlPanel7.SuspendLayout()
         Me.TabControlPanel9.SuspendLayout()
-        Me.TabControlPanel3.SuspendLayout()
-        Me.TabControlPanel5.SuspendLayout()
-        Me.TabControlPanel4.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
         Me.mimenu.SuspendLayout()
         Me.SuspendLayout()
@@ -187,7 +187,7 @@ Partial Class FrmEstetica
         '
         Me.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX6.Location = New System.Drawing.Point(242, 43)
+        Me.ButtonX6.Location = New System.Drawing.Point(243, 128)
         Me.ButtonX6.Name = "ButtonX6"
         Me.ButtonX6.Size = New System.Drawing.Size(222, 36)
         Me.ButtonX6.TabIndex = 40
@@ -197,7 +197,7 @@ Partial Class FrmEstetica
         '
         Me.cmdinfpa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.cmdinfpa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdinfpa.Location = New System.Drawing.Point(241, 128)
+        Me.cmdinfpa.Location = New System.Drawing.Point(243, 85)
         Me.cmdinfpa.Name = "cmdinfpa"
         Me.cmdinfpa.Size = New System.Drawing.Size(222, 36)
         Me.cmdinfpa.TabIndex = 39
@@ -207,7 +207,7 @@ Partial Class FrmEstetica
         '
         Me.cmdgrupedidos.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.cmdgrupedidos.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdgrupedidos.Location = New System.Drawing.Point(241, 86)
+        Me.cmdgrupedidos.Location = New System.Drawing.Point(243, 43)
         Me.cmdgrupedidos.Name = "cmdgrupedidos"
         Me.cmdgrupedidos.Size = New System.Drawing.Size(222, 36)
         Me.cmdgrupedidos.TabIndex = 38
@@ -398,11 +398,11 @@ Partial Class FrmEstetica
         '
         Me.TabControl1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TabControl1.CanReorderTabs = True
+        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
         Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Controls.Add(Me.TabControlPanel5)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
         Me.TabControl1.Location = New System.Drawing.Point(8, 96)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
@@ -416,6 +416,145 @@ Partial Class FrmEstetica
         Me.TabControl1.Tabs.Add(Me.admin)
         Me.TabControl1.Tabs.Add(Me.permisos)
         Me.TabControl1.Text = "TabControl1"
+        '
+        'TabControlPanel4
+        '
+        Me.TabControlPanel4.Controls.Add(Me.Label11)
+        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel4.Name = "TabControlPanel4"
+        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel4.Size = New System.Drawing.Size(733, 274)
+        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel4.Style.GradientAngle = 90
+        Me.TabControlPanel4.TabIndex = 6
+        Me.TabControlPanel4.TabItem = Me.permisos
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(136, 125)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(460, 24)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "NO TIENES PERMISOS PARA ESTA INTERFAZ"
+        '
+        'permisos
+        '
+        Me.permisos.AttachedControl = Me.TabControlPanel4
+        Me.permisos.Name = "permisos"
+        Me.permisos.Text = "Permisos"
+        Me.permisos.Visible = False
+        '
+        'TabControlPanel5
+        '
+        Me.TabControlPanel5.Controls.Add(Me.cmdCamPer)
+        Me.TabControlPanel5.Controls.Add(Me.ButtonX2)
+        Me.TabControlPanel5.Controls.Add(Me.cmddes)
+        Me.TabControlPanel5.Controls.Add(Me.cmd_anular_facts)
+        Me.TabControlPanel5.Controls.Add(Me.cmd_imp_tipodoc)
+        Me.TabControlPanel5.Controls.Add(Me.Label21)
+        Me.TabControlPanel5.Controls.Add(Me.Label5)
+        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel5.Name = "TabControlPanel5"
+        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel5.Size = New System.Drawing.Size(733, 274)
+        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel5.Style.GradientAngle = 90
+        Me.TabControlPanel5.TabIndex = 5
+        Me.TabControlPanel5.TabItem = Me.admin
+        '
+        'cmdCamPer
+        '
+        Me.cmdCamPer.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmdCamPer.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmdCamPer.Location = New System.Drawing.Point(219, 232)
+        Me.cmdCamPer.Name = "cmdCamPer"
+        Me.cmdCamPer.Size = New System.Drawing.Size(235, 36)
+        Me.cmdCamPer.TabIndex = 26
+        Me.cmdCamPer.Text = "Cambiar Factura de Fecha"
+        '
+        'ButtonX2
+        '
+        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX2.Location = New System.Drawing.Point(219, 153)
+        Me.ButtonX2.Name = "ButtonX2"
+        Me.ButtonX2.Size = New System.Drawing.Size(235, 36)
+        Me.ButtonX2.TabIndex = 23
+        Me.ButtonX2.Text = "Aprobar documentos"
+        '
+        'cmddes
+        '
+        Me.cmddes.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmddes.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmddes.Location = New System.Drawing.Point(219, 192)
+        Me.cmddes.Name = "cmddes"
+        Me.cmddes.Size = New System.Drawing.Size(235, 36)
+        Me.cmddes.TabIndex = 24
+        Me.cmddes.Text = "Desaprobar documentos"
+        '
+        'cmd_anular_facts
+        '
+        Me.cmd_anular_facts.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_anular_facts.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_anular_facts.Location = New System.Drawing.Point(219, 111)
+        Me.cmd_anular_facts.Name = "cmd_anular_facts"
+        Me.cmd_anular_facts.Size = New System.Drawing.Size(235, 36)
+        Me.cmd_anular_facts.TabIndex = 22
+        Me.cmd_anular_facts.Text = "Anular documentos"
+        '
+        'cmd_imp_tipodoc
+        '
+        Me.cmd_imp_tipodoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_imp_tipodoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_imp_tipodoc.Location = New System.Drawing.Point(220, 73)
+        Me.cmd_imp_tipodoc.Name = "cmd_imp_tipodoc"
+        Me.cmd_imp_tipodoc.Size = New System.Drawing.Size(236, 36)
+        Me.cmd_imp_tipodoc.TabIndex = 21
+        Me.cmd_imp_tipodoc.Text = "Imprimir documentos"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.BackColor = System.Drawing.Color.Transparent
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(195, 15)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(324, 31)
+        Me.Label21.TabIndex = 20
+        Me.Label21.Text = " Facturacion Documentos"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label5.Location = New System.Drawing.Point(46, 15)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(627, 42)
+        Me.Label5.TabIndex = 25
+        Me.Label5.Text = "_____________________________"
+        '
+        'admin
+        '
+        Me.admin.AttachedControl = Me.TabControlPanel5
+        Me.admin.Name = "admin"
+        Me.admin.Text = "Procesos"
         '
         'TabControlPanel2
         '
@@ -465,6 +604,164 @@ Partial Class FrmEstetica
         Me.tra.AttachedControl = Me.TabControlPanel2
         Me.tra.Name = "tra"
         Me.tra.Text = "Transacciones"
+        '
+        'TabControlPanel3
+        '
+        Me.TabControlPanel3.Controls.Add(Me.cmdUsu)
+        Me.TabControlPanel3.Controls.Add(Me.ButtonX4)
+        Me.TabControlPanel3.Controls.Add(Me.cmd_info_fpago)
+        Me.TabControlPanel3.Controls.Add(Me.cmd_info_vendedor)
+        Me.TabControlPanel3.Controls.Add(Me.cmd_info_serv)
+        Me.TabControlPanel3.Controls.Add(Me.cmd_info_referencia)
+        Me.TabControlPanel3.Controls.Add(Me.cmd_info_art)
+        Me.TabControlPanel3.Controls.Add(Me.cmd_info_cliente)
+        Me.TabControlPanel3.Controls.Add(Me.cmd_info_cronologico)
+        Me.TabControlPanel3.Controls.Add(Me.cmd_info_consec)
+        Me.TabControlPanel3.Controls.Add(Me.Label3)
+        Me.TabControlPanel3.Controls.Add(Me.Label14)
+        Me.TabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel3.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel3.Name = "TabControlPanel3"
+        Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel3.Size = New System.Drawing.Size(733, 274)
+        Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel3.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel3.Style.GradientAngle = 90
+        Me.TabControlPanel3.TabIndex = 3
+        Me.TabControlPanel3.TabItem = Me.info
+        '
+        'cmdUsu
+        '
+        Me.cmdUsu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmdUsu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmdUsu.Location = New System.Drawing.Point(276, 209)
+        Me.cmdUsu.Name = "cmdUsu"
+        Me.cmdUsu.Size = New System.Drawing.Size(152, 36)
+        Me.cmdUsu.TabIndex = 55
+        Me.cmdUsu.Text = "Usuario"
+        '
+        'ButtonX4
+        '
+        Me.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX4.Location = New System.Drawing.Point(443, 165)
+        Me.ButtonX4.Name = "ButtonX4"
+        Me.ButtonX4.Size = New System.Drawing.Size(158, 36)
+        Me.ButtonX4.TabIndex = 54
+        Me.ButtonX4.Text = "Diario"
+        '
+        'cmd_info_fpago
+        '
+        Me.cmd_info_fpago.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_fpago.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_fpago.Location = New System.Drawing.Point(276, 165)
+        Me.cmd_info_fpago.Name = "cmd_info_fpago"
+        Me.cmd_info_fpago.Size = New System.Drawing.Size(152, 36)
+        Me.cmd_info_fpago.TabIndex = 53
+        Me.cmd_info_fpago.Text = "Por Medio de pago"
+        '
+        'cmd_info_vendedor
+        '
+        Me.cmd_info_vendedor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_vendedor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_vendedor.Location = New System.Drawing.Point(443, 123)
+        Me.cmd_info_vendedor.Name = "cmd_info_vendedor"
+        Me.cmd_info_vendedor.Size = New System.Drawing.Size(158, 36)
+        Me.cmd_info_vendedor.TabIndex = 52
+        Me.cmd_info_vendedor.Text = "Por Vendedor"
+        '
+        'cmd_info_serv
+        '
+        Me.cmd_info_serv.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_serv.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_serv.Location = New System.Drawing.Point(276, 121)
+        Me.cmd_info_serv.Name = "cmd_info_serv"
+        Me.cmd_info_serv.Size = New System.Drawing.Size(152, 36)
+        Me.cmd_info_serv.TabIndex = 51
+        Me.cmd_info_serv.Text = "Por Servicio"
+        '
+        'cmd_info_referencia
+        '
+        Me.cmd_info_referencia.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_referencia.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_referencia.Location = New System.Drawing.Point(276, 79)
+        Me.cmd_info_referencia.Name = "cmd_info_referencia"
+        Me.cmd_info_referencia.Size = New System.Drawing.Size(152, 36)
+        Me.cmd_info_referencia.TabIndex = 50
+        Me.cmd_info_referencia.Text = "Por Referencia"
+        '
+        'cmd_info_art
+        '
+        Me.cmd_info_art.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_art.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_art.Location = New System.Drawing.Point(104, 165)
+        Me.cmd_info_art.Name = "cmd_info_art"
+        Me.cmd_info_art.Size = New System.Drawing.Size(154, 36)
+        Me.cmd_info_art.TabIndex = 49
+        Me.cmd_info_art.Text = "Por Articulo"
+        '
+        'cmd_info_cliente
+        '
+        Me.cmd_info_cliente.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_cliente.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_cliente.Location = New System.Drawing.Point(443, 79)
+        Me.cmd_info_cliente.Name = "cmd_info_cliente"
+        Me.cmd_info_cliente.Size = New System.Drawing.Size(158, 36)
+        Me.cmd_info_cliente.TabIndex = 47
+        Me.cmd_info_cliente.Text = "Por Cliente"
+        '
+        'cmd_info_cronologico
+        '
+        Me.cmd_info_cronologico.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_cronologico.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_cronologico.Location = New System.Drawing.Point(104, 121)
+        Me.cmd_info_cronologico.Name = "cmd_info_cronologico"
+        Me.cmd_info_cronologico.Size = New System.Drawing.Size(154, 36)
+        Me.cmd_info_cronologico.TabIndex = 46
+        Me.cmd_info_cronologico.Text = "Cronologico"
+        '
+        'cmd_info_consec
+        '
+        Me.cmd_info_consec.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_info_consec.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_info_consec.Location = New System.Drawing.Point(104, 80)
+        Me.cmd_info_consec.Name = "cmd_info_consec"
+        Me.cmd_info_consec.Size = New System.Drawing.Size(154, 36)
+        Me.cmd_info_consec.TabIndex = 45
+        Me.cmd_info_consec.Text = "Consecutivo"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(212, 25)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(288, 31)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Facturación (Informes)"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label14.Location = New System.Drawing.Point(45, 25)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(627, 42)
+        Me.Label14.TabIndex = 13
+        Me.Label14.Text = "_____________________________"
+        '
+        'info
+        '
+        Me.info.AttachedControl = Me.TabControlPanel3
+        Me.info.Name = "info"
+        Me.info.Text = "Informes"
         '
         'TabControlPanel1
         '
@@ -880,303 +1177,6 @@ Partial Class FrmEstetica
         Me.datosbac.Name = "datosbac"
         Me.datosbac.Text = "Datos Basicos"
         '
-        'TabControlPanel3
-        '
-        Me.TabControlPanel3.Controls.Add(Me.cmdUsu)
-        Me.TabControlPanel3.Controls.Add(Me.ButtonX4)
-        Me.TabControlPanel3.Controls.Add(Me.cmd_info_fpago)
-        Me.TabControlPanel3.Controls.Add(Me.cmd_info_vendedor)
-        Me.TabControlPanel3.Controls.Add(Me.cmd_info_serv)
-        Me.TabControlPanel3.Controls.Add(Me.cmd_info_referencia)
-        Me.TabControlPanel3.Controls.Add(Me.cmd_info_art)
-        Me.TabControlPanel3.Controls.Add(Me.cmd_info_cliente)
-        Me.TabControlPanel3.Controls.Add(Me.cmd_info_cronologico)
-        Me.TabControlPanel3.Controls.Add(Me.cmd_info_consec)
-        Me.TabControlPanel3.Controls.Add(Me.Label3)
-        Me.TabControlPanel3.Controls.Add(Me.Label14)
-        Me.TabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel3.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel3.Name = "TabControlPanel3"
-        Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel3.Size = New System.Drawing.Size(733, 274)
-        Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel3.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel3.Style.GradientAngle = 90
-        Me.TabControlPanel3.TabIndex = 3
-        Me.TabControlPanel3.TabItem = Me.info
-        '
-        'cmdUsu
-        '
-        Me.cmdUsu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmdUsu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdUsu.Location = New System.Drawing.Point(276, 209)
-        Me.cmdUsu.Name = "cmdUsu"
-        Me.cmdUsu.Size = New System.Drawing.Size(152, 36)
-        Me.cmdUsu.TabIndex = 55
-        Me.cmdUsu.Text = "Usuario"
-        '
-        'ButtonX4
-        '
-        Me.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX4.Location = New System.Drawing.Point(443, 165)
-        Me.ButtonX4.Name = "ButtonX4"
-        Me.ButtonX4.Size = New System.Drawing.Size(158, 36)
-        Me.ButtonX4.TabIndex = 54
-        Me.ButtonX4.Text = "Diario"
-        '
-        'cmd_info_fpago
-        '
-        Me.cmd_info_fpago.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_fpago.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_fpago.Location = New System.Drawing.Point(276, 165)
-        Me.cmd_info_fpago.Name = "cmd_info_fpago"
-        Me.cmd_info_fpago.Size = New System.Drawing.Size(152, 36)
-        Me.cmd_info_fpago.TabIndex = 53
-        Me.cmd_info_fpago.Text = "Por Medio de pago"
-        '
-        'cmd_info_vendedor
-        '
-        Me.cmd_info_vendedor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_vendedor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_vendedor.Location = New System.Drawing.Point(443, 123)
-        Me.cmd_info_vendedor.Name = "cmd_info_vendedor"
-        Me.cmd_info_vendedor.Size = New System.Drawing.Size(158, 36)
-        Me.cmd_info_vendedor.TabIndex = 52
-        Me.cmd_info_vendedor.Text = "Por Vendedor"
-        '
-        'cmd_info_serv
-        '
-        Me.cmd_info_serv.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_serv.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_serv.Location = New System.Drawing.Point(276, 121)
-        Me.cmd_info_serv.Name = "cmd_info_serv"
-        Me.cmd_info_serv.Size = New System.Drawing.Size(152, 36)
-        Me.cmd_info_serv.TabIndex = 51
-        Me.cmd_info_serv.Text = "Por Servicio"
-        '
-        'cmd_info_referencia
-        '
-        Me.cmd_info_referencia.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_referencia.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_referencia.Location = New System.Drawing.Point(276, 79)
-        Me.cmd_info_referencia.Name = "cmd_info_referencia"
-        Me.cmd_info_referencia.Size = New System.Drawing.Size(152, 36)
-        Me.cmd_info_referencia.TabIndex = 50
-        Me.cmd_info_referencia.Text = "Por Referencia"
-        '
-        'cmd_info_art
-        '
-        Me.cmd_info_art.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_art.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_art.Location = New System.Drawing.Point(104, 165)
-        Me.cmd_info_art.Name = "cmd_info_art"
-        Me.cmd_info_art.Size = New System.Drawing.Size(154, 36)
-        Me.cmd_info_art.TabIndex = 49
-        Me.cmd_info_art.Text = "Por Articulo"
-        '
-        'cmd_info_cliente
-        '
-        Me.cmd_info_cliente.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_cliente.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_cliente.Location = New System.Drawing.Point(443, 79)
-        Me.cmd_info_cliente.Name = "cmd_info_cliente"
-        Me.cmd_info_cliente.Size = New System.Drawing.Size(158, 36)
-        Me.cmd_info_cliente.TabIndex = 47
-        Me.cmd_info_cliente.Text = "Por Cliente"
-        '
-        'cmd_info_cronologico
-        '
-        Me.cmd_info_cronologico.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_cronologico.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_cronologico.Location = New System.Drawing.Point(104, 121)
-        Me.cmd_info_cronologico.Name = "cmd_info_cronologico"
-        Me.cmd_info_cronologico.Size = New System.Drawing.Size(154, 36)
-        Me.cmd_info_cronologico.TabIndex = 46
-        Me.cmd_info_cronologico.Text = "Cronologico"
-        '
-        'cmd_info_consec
-        '
-        Me.cmd_info_consec.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_info_consec.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_consec.Location = New System.Drawing.Point(104, 80)
-        Me.cmd_info_consec.Name = "cmd_info_consec"
-        Me.cmd_info_consec.Size = New System.Drawing.Size(154, 36)
-        Me.cmd_info_consec.TabIndex = 45
-        Me.cmd_info_consec.Text = "Consecutivo"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(212, 25)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(288, 31)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Facturación (Informes)"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label14.Location = New System.Drawing.Point(45, 25)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(627, 42)
-        Me.Label14.TabIndex = 13
-        Me.Label14.Text = "_____________________________"
-        '
-        'info
-        '
-        Me.info.AttachedControl = Me.TabControlPanel3
-        Me.info.Name = "info"
-        Me.info.Text = "Informes"
-        '
-        'TabControlPanel5
-        '
-        Me.TabControlPanel5.Controls.Add(Me.cmdCamPer)
-        Me.TabControlPanel5.Controls.Add(Me.ButtonX2)
-        Me.TabControlPanel5.Controls.Add(Me.cmddes)
-        Me.TabControlPanel5.Controls.Add(Me.cmd_anular_facts)
-        Me.TabControlPanel5.Controls.Add(Me.cmd_imp_tipodoc)
-        Me.TabControlPanel5.Controls.Add(Me.Label21)
-        Me.TabControlPanel5.Controls.Add(Me.Label5)
-        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel5.Name = "TabControlPanel5"
-        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel5.Size = New System.Drawing.Size(733, 274)
-        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel5.Style.GradientAngle = 90
-        Me.TabControlPanel5.TabIndex = 5
-        Me.TabControlPanel5.TabItem = Me.admin
-        '
-        'cmdCamPer
-        '
-        Me.cmdCamPer.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmdCamPer.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdCamPer.Location = New System.Drawing.Point(219, 232)
-        Me.cmdCamPer.Name = "cmdCamPer"
-        Me.cmdCamPer.Size = New System.Drawing.Size(235, 36)
-        Me.cmdCamPer.TabIndex = 26
-        Me.cmdCamPer.Text = "Cambiar Factura de Fecha"
-        '
-        'ButtonX2
-        '
-        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Location = New System.Drawing.Point(219, 153)
-        Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(235, 36)
-        Me.ButtonX2.TabIndex = 23
-        Me.ButtonX2.Text = "Aprobar documentos"
-        '
-        'cmddes
-        '
-        Me.cmddes.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmddes.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmddes.Location = New System.Drawing.Point(219, 192)
-        Me.cmddes.Name = "cmddes"
-        Me.cmddes.Size = New System.Drawing.Size(235, 36)
-        Me.cmddes.TabIndex = 24
-        Me.cmddes.Text = "Desaprobar documentos"
-        '
-        'cmd_anular_facts
-        '
-        Me.cmd_anular_facts.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_anular_facts.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_anular_facts.Location = New System.Drawing.Point(219, 111)
-        Me.cmd_anular_facts.Name = "cmd_anular_facts"
-        Me.cmd_anular_facts.Size = New System.Drawing.Size(235, 36)
-        Me.cmd_anular_facts.TabIndex = 22
-        Me.cmd_anular_facts.Text = "Anular documentos"
-        '
-        'cmd_imp_tipodoc
-        '
-        Me.cmd_imp_tipodoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_imp_tipodoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_imp_tipodoc.Location = New System.Drawing.Point(220, 73)
-        Me.cmd_imp_tipodoc.Name = "cmd_imp_tipodoc"
-        Me.cmd_imp_tipodoc.Size = New System.Drawing.Size(236, 36)
-        Me.cmd_imp_tipodoc.TabIndex = 21
-        Me.cmd_imp_tipodoc.Text = "Imprimir documentos"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.BackColor = System.Drawing.Color.Transparent
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(195, 15)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(324, 31)
-        Me.Label21.TabIndex = 20
-        Me.Label21.Text = " Facturacion Documentos"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Location = New System.Drawing.Point(46, 15)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(627, 42)
-        Me.Label5.TabIndex = 25
-        Me.Label5.Text = "_____________________________"
-        '
-        'admin
-        '
-        Me.admin.AttachedControl = Me.TabControlPanel5
-        Me.admin.Name = "admin"
-        Me.admin.Text = "Procesos"
-        '
-        'TabControlPanel4
-        '
-        Me.TabControlPanel4.Controls.Add(Me.Label11)
-        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel4.Name = "TabControlPanel4"
-        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel4.Size = New System.Drawing.Size(733, 274)
-        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel4.Style.GradientAngle = 90
-        Me.TabControlPanel4.TabIndex = 6
-        Me.TabControlPanel4.TabItem = Me.permisos
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(136, 125)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(460, 24)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "NO TIENES PERMISOS PARA ESTA INTERFAZ"
-        '
-        'permisos
-        '
-        Me.permisos.AttachedControl = Me.TabControlPanel4
-        Me.permisos.Name = "permisos"
-        Me.permisos.Text = "Permisos"
-        Me.permisos.Visible = False
-        '
         'GroupPanel1
         '
         Me.GroupPanel1.CanvasColor = System.Drawing.SystemColors.Control
@@ -1327,8 +1327,14 @@ Partial Class FrmEstetica
         Me.TabControlPanel13.PerformLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
+        Me.TabControlPanel4.ResumeLayout(False)
+        Me.TabControlPanel4.PerformLayout()
+        Me.TabControlPanel5.ResumeLayout(False)
+        Me.TabControlPanel5.PerformLayout()
         Me.TabControlPanel2.ResumeLayout(False)
         Me.TabControlPanel2.PerformLayout()
+        Me.TabControlPanel3.ResumeLayout(False)
+        Me.TabControlPanel3.PerformLayout()
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1340,12 +1346,6 @@ Partial Class FrmEstetica
         Me.TabControlPanel7.ResumeLayout(False)
         Me.TabControlPanel9.ResumeLayout(False)
         Me.TabControlPanel9.PerformLayout()
-        Me.TabControlPanel3.ResumeLayout(False)
-        Me.TabControlPanel3.PerformLayout()
-        Me.TabControlPanel5.ResumeLayout(False)
-        Me.TabControlPanel5.PerformLayout()
-        Me.TabControlPanel4.ResumeLayout(False)
-        Me.TabControlPanel4.PerformLayout()
         Me.GroupPanel1.ResumeLayout(False)
         Me.mimenu.ResumeLayout(False)
         Me.ResumeLayout(False)

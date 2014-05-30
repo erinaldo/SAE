@@ -30,13 +30,6 @@ Partial Class FrmOrdenesDePago
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX
         Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel
         Me.TabControl4 = New DevComponents.DotNetBar.TabControl
-        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel
-        Me.ButtonX8 = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX4 = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX
-        Me.cdmlibmay = New DevComponents.DotNetBar.ButtonX
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Contable = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel17 = New DevComponents.DotNetBar.TabControlPanel
         Me.cmd_g_o = New DevComponents.DotNetBar.ButtonX
         Me.cmd_analisis = New DevComponents.DotNetBar.ButtonX
@@ -45,10 +38,18 @@ Partial Class FrmOrdenesDePago
         Me.cmd_plan_pagos = New DevComponents.DotNetBar.ButtonX
         Me.Label24 = New System.Windows.Forms.Label
         Me.TabItem15 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel
+        Me.ButtonX8 = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX4 = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX
+        Me.cdmlibmay = New DevComponents.DotNetBar.ButtonX
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Contable = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.Label4 = New System.Windows.Forms.Label
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl
         Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
+        Me.ButtonX9 = New DevComponents.DotNetBar.ButtonX
         Me.cmddesa = New DevComponents.DotNetBar.ButtonX
         Me.ButtonX6 = New DevComponents.DotNetBar.ButtonX
         Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX
@@ -70,7 +71,6 @@ Partial Class FrmOrdenesDePago
         Me.Label13 = New System.Windows.Forms.Label
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
-        Me.ButtonX9 = New DevComponents.DotNetBar.ButtonX
         Me.salir = New System.Windows.Forms.Button
         Me.cmdayuda = New System.Windows.Forms.Button
         Me.cmdsoptec = New System.Windows.Forms.Button
@@ -81,8 +81,8 @@ Partial Class FrmOrdenesDePago
         Me.TabControlPanel3.SuspendLayout()
         CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl4.SuspendLayout()
-        Me.TabControlPanel5.SuspendLayout()
         Me.TabControlPanel17.SuspendLayout()
+        Me.TabControlPanel5.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel4.SuspendLayout()
@@ -157,8 +157,8 @@ Partial Class FrmOrdenesDePago
         'TabControl4
         '
         Me.TabControl4.CanReorderTabs = True
-        Me.TabControl4.Controls.Add(Me.TabControlPanel17)
         Me.TabControl4.Controls.Add(Me.TabControlPanel5)
+        Me.TabControl4.Controls.Add(Me.TabControlPanel17)
         Me.TabControl4.Location = New System.Drawing.Point(10, 55)
         Me.TabControl4.Name = "TabControl4"
         Me.TabControl4.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
@@ -169,6 +169,96 @@ Partial Class FrmOrdenesDePago
         Me.TabControl4.Tabs.Add(Me.TabItem15)
         Me.TabControl4.Tabs.Add(Me.Contable)
         Me.TabControl4.Text = "Cuentas Por Pagar"
+        '
+        'TabControlPanel17
+        '
+        Me.TabControlPanel17.Controls.Add(Me.cmd_g_o)
+        Me.TabControlPanel17.Controls.Add(Me.cmd_analisis)
+        Me.TabControlPanel17.Controls.Add(Me.cmd_cpp_inf_pro)
+        Me.TabControlPanel17.Controls.Add(Me.cmd_comp_cpp)
+        Me.TabControlPanel17.Controls.Add(Me.cmd_plan_pagos)
+        Me.TabControlPanel17.Controls.Add(Me.Label24)
+        Me.TabControlPanel17.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel17.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel17.Name = "TabControlPanel17"
+        Me.TabControlPanel17.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel17.Size = New System.Drawing.Size(715, 183)
+        Me.TabControlPanel17.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel17.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel17.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel17.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel17.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel17.Style.GradientAngle = 90
+        Me.TabControlPanel17.TabIndex = 3
+        Me.TabControlPanel17.TabItem = Me.TabItem15
+        '
+        'cmd_g_o
+        '
+        Me.cmd_g_o.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_g_o.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_g_o.Location = New System.Drawing.Point(370, 92)
+        Me.cmd_g_o.Name = "cmd_g_o"
+        Me.cmd_g_o.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_g_o.TabIndex = 5
+        Me.cmd_g_o.Text = "Comprobantes de Otros Egresos"
+        '
+        'cmd_analisis
+        '
+        Me.cmd_analisis.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_analisis.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_analisis.Location = New System.Drawing.Point(144, 90)
+        Me.cmd_analisis.Name = "cmd_analisis"
+        Me.cmd_analisis.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_analisis.TabIndex = 1
+        Me.cmd_analisis.Text = "Analisis de Cuentas por Pagar"
+        '
+        'cmd_cpp_inf_pro
+        '
+        Me.cmd_cpp_inf_pro.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_cpp_inf_pro.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_cpp_inf_pro.Location = New System.Drawing.Point(144, 52)
+        Me.cmd_cpp_inf_pro.Name = "cmd_cpp_inf_pro"
+        Me.cmd_cpp_inf_pro.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_cpp_inf_pro.TabIndex = 0
+        Me.cmd_cpp_inf_pro.Text = "Movimiento por Proveedor"
+        '
+        'cmd_comp_cpp
+        '
+        Me.cmd_comp_cpp.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_comp_cpp.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_comp_cpp.Location = New System.Drawing.Point(370, 50)
+        Me.cmd_comp_cpp.Name = "cmd_comp_cpp"
+        Me.cmd_comp_cpp.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_comp_cpp.TabIndex = 4
+        Me.cmd_comp_cpp.Text = "Comprobante de Cuentas por Pagar"
+        '
+        'cmd_plan_pagos
+        '
+        Me.cmd_plan_pagos.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cmd_plan_pagos.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cmd_plan_pagos.Location = New System.Drawing.Point(258, 132)
+        Me.cmd_plan_pagos.Name = "cmd_plan_pagos"
+        Me.cmd_plan_pagos.Size = New System.Drawing.Size(209, 36)
+        Me.cmd_plan_pagos.TabIndex = 2
+        Me.cmd_plan_pagos.Text = "Plan Semanal de Pagos"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.BackColor = System.Drawing.Color.Transparent
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(187, 5)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(354, 31)
+        Me.Label24.TabIndex = 15
+        Me.Label24.Text = "Informes Cuentas por Pagar"
+        '
+        'TabItem15
+        '
+        Me.TabItem15.AttachedControl = Me.TabControlPanel17
+        Me.TabItem15.Name = "TabItem15"
+        Me.TabItem15.Text = "Cuentas Por Pagar"
         '
         'TabControlPanel5
         '
@@ -216,7 +306,7 @@ Partial Class FrmOrdenesDePago
         '
         Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Location = New System.Drawing.Point(157, 77)
+        Me.ButtonX2.Location = New System.Drawing.Point(157, 76)
         Me.ButtonX2.Name = "ButtonX2"
         Me.ButtonX2.Size = New System.Drawing.Size(192, 36)
         Me.ButtonX2.TabIndex = 57
@@ -247,96 +337,6 @@ Partial Class FrmOrdenesDePago
         Me.Contable.Name = "Contable"
         Me.Contable.Text = "Contable"
         '
-        'TabControlPanel17
-        '
-        Me.TabControlPanel17.Controls.Add(Me.cmd_g_o)
-        Me.TabControlPanel17.Controls.Add(Me.cmd_analisis)
-        Me.TabControlPanel17.Controls.Add(Me.cmd_cpp_inf_pro)
-        Me.TabControlPanel17.Controls.Add(Me.cmd_comp_cpp)
-        Me.TabControlPanel17.Controls.Add(Me.cmd_plan_pagos)
-        Me.TabControlPanel17.Controls.Add(Me.Label24)
-        Me.TabControlPanel17.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel17.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel17.Name = "TabControlPanel17"
-        Me.TabControlPanel17.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel17.Size = New System.Drawing.Size(715, 183)
-        Me.TabControlPanel17.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel17.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel17.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel17.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel17.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel17.Style.GradientAngle = 90
-        Me.TabControlPanel17.TabIndex = 3
-        Me.TabControlPanel17.TabItem = Me.TabItem15
-        '
-        'cmd_g_o
-        '
-        Me.cmd_g_o.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_g_o.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_g_o.Location = New System.Drawing.Point(370, 92)
-        Me.cmd_g_o.Name = "cmd_g_o"
-        Me.cmd_g_o.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_g_o.TabIndex = 5
-        Me.cmd_g_o.Text = "Comprobantes de Otros Egresos"
-        '
-        'cmd_analisis
-        '
-        Me.cmd_analisis.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_analisis.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_analisis.Location = New System.Drawing.Point(144, 92)
-        Me.cmd_analisis.Name = "cmd_analisis"
-        Me.cmd_analisis.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_analisis.TabIndex = 1
-        Me.cmd_analisis.Text = "Analisis de Cuentas por Pagar"
-        '
-        'cmd_cpp_inf_pro
-        '
-        Me.cmd_cpp_inf_pro.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_cpp_inf_pro.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_cpp_inf_pro.Location = New System.Drawing.Point(144, 50)
-        Me.cmd_cpp_inf_pro.Name = "cmd_cpp_inf_pro"
-        Me.cmd_cpp_inf_pro.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_cpp_inf_pro.TabIndex = 0
-        Me.cmd_cpp_inf_pro.Text = "Movimiento por Proveedor"
-        '
-        'cmd_comp_cpp
-        '
-        Me.cmd_comp_cpp.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_comp_cpp.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_comp_cpp.Location = New System.Drawing.Point(370, 50)
-        Me.cmd_comp_cpp.Name = "cmd_comp_cpp"
-        Me.cmd_comp_cpp.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_comp_cpp.TabIndex = 4
-        Me.cmd_comp_cpp.Text = "Comprobante de Cuentas por Pagar"
-        '
-        'cmd_plan_pagos
-        '
-        Me.cmd_plan_pagos.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cmd_plan_pagos.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_plan_pagos.Location = New System.Drawing.Point(258, 132)
-        Me.cmd_plan_pagos.Name = "cmd_plan_pagos"
-        Me.cmd_plan_pagos.Size = New System.Drawing.Size(209, 36)
-        Me.cmd_plan_pagos.TabIndex = 2
-        Me.cmd_plan_pagos.Text = "Plan Semanal de Pagos"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.Color.Transparent
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(187, 5)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(354, 31)
-        Me.Label24.TabIndex = 15
-        Me.Label24.Text = "Informes Cuentas por Pagar"
-        '
-        'TabItem15
-        '
-        Me.TabItem15.AttachedControl = Me.TabControlPanel17
-        Me.TabItem15.Name = "TabItem15"
-        Me.TabItem15.Text = "Cuentas Por Pagar"
-        '
         'TabItem2
         '
         Me.TabItem2.AttachedControl = Me.TabControlPanel3
@@ -359,9 +359,9 @@ Partial Class FrmOrdenesDePago
         Me.TabControl1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TabControl1.CanReorderTabs = True
         Me.TabControl1.CloseButtonVisible = True
-        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Location = New System.Drawing.Point(7, 96)
         Me.TabControl1.Name = "TabControl1"
@@ -400,6 +400,16 @@ Partial Class FrmOrdenesDePago
         Me.TabControlPanel4.Style.GradientAngle = 90
         Me.TabControlPanel4.TabIndex = 4
         Me.TabControlPanel4.TabItem = Me.TabItem3
+        '
+        'ButtonX9
+        '
+        Me.ButtonX9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX9.Location = New System.Drawing.Point(380, 146)
+        Me.ButtonX9.Name = "ButtonX9"
+        Me.ButtonX9.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX9.TabIndex = 26
+        Me.ButtonX9.Text = "Eliminar Orden de Pago"
         '
         'cmddesa
         '
@@ -660,16 +670,6 @@ Partial Class FrmOrdenesDePago
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
         Me.GroupPanel1.TabIndex = 6
         '
-        'ButtonX9
-        '
-        Me.ButtonX9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX9.Location = New System.Drawing.Point(380, 146)
-        Me.ButtonX9.Name = "ButtonX9"
-        Me.ButtonX9.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX9.TabIndex = 26
-        Me.ButtonX9.Text = "Eliminar Orden de Pago"
-        '
         'salir
         '
         Me.salir.BackColor = System.Drawing.Color.White
@@ -761,9 +761,9 @@ Partial Class FrmOrdenesDePago
         Me.TabControlPanel3.PerformLayout()
         CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl4.ResumeLayout(False)
-        Me.TabControlPanel5.ResumeLayout(False)
         Me.TabControlPanel17.ResumeLayout(False)
         Me.TabControlPanel17.PerformLayout()
+        Me.TabControlPanel5.ResumeLayout(False)
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel4.ResumeLayout(False)

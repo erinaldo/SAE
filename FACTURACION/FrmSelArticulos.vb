@@ -530,6 +530,55 @@ Public Class FrmSelArticulos
             End Select
         End If
 
+        'VERIFICAR SI EL TERCERO SE LE COBRA IVA O NO
+        Dim civa As String = "iva"
+        If lbform.Text = "itemsC" Then
+            Try
+                Dim tt As New DataTable
+                tt.Clear()
+                If FrmItemsCompras.lbform.Text = "fdp" Then
+                    myCommand.CommandText = "SELECT iva from terceros where nit ='" & FrmDocProveedor.txtnitc.Text & "' ;"
+                ElseIf FrmItemsCompras.lbform.Text = "oc" Then
+                    myCommand.CommandText = "SELECT iva from terceros where nit ='" & FrmOrdenCompra.txtnitc.Text & "' ;"
+                End If
+                myAdapter.SelectCommand = myCommand
+                myAdapter.Fill(tt)
+                Refresh()
+                If tt.Rows(0).Item(0) = "SI" Then
+                    civa = "iva"
+                Else
+                    civa = "0"
+                End If
+            Catch ex As Exception
+                civa = "iva"
+            End Try
+        Else
+            If lbform.Text = "items" And FrmItems.lbform.Text = "fr" Then
+                Dim tt As New DataTable
+                tt.Clear()
+                myCommand.CommandText = "SELECT iva from terceros where nit ='" & Frmfacturarapida.txtnitc.Text & "' ;"
+                myAdapter.SelectCommand = myCommand
+                myAdapter.Fill(tt)
+                Refresh()
+                If tt.Rows(0).Item(0) = "SI" Then
+                    civa = "iva"
+                Else
+                    civa = "0"
+                End If
+            ElseIf lbform.Text = "items" And FrmItems.lbform.Text = "fn" Then
+                Dim tt As New DataTable
+                tt.Clear()
+                myCommand.CommandText = "SELECT iva from terceros where nit ='" & FrmFacturasyAjustes.txtnitc.Text & "' ;"
+                myAdapter.SelectCommand = myCommand
+                myAdapter.Fill(tt)
+                Refresh()
+                If tt.Rows(0).Item(0) = "SI" Then
+                    civa = "iva"
+                Else
+                    civa = "0"
+                End If
+            End If
+        End If
 
         'Dim tb As New DataTable
         'myCommand.CommandText = "SELECT lista_art FROM parafacgral ;"
@@ -551,20 +600,20 @@ Public Class FrmSelArticulos
         Else
             sql = sql & ",nomart AS nombre"
         End If
-        sql = sql & ",nivel,LEAST('1','1','1') as cant,iva"
+        sql = sql & ",nivel,LEAST('1','1','1') as cant," & civa & " as iva"
 
 
 
         If lbform.Text = "itemsC" Then
-            sql = sql & ",(cos_uni*(1+(iva/100))) as p"
+            sql = sql & ",(cos_uni*(1+(" & civa & "/100))) as p"
         Else
             If tmov = "entradas" Or FrmItems.lbParSalida.Text = "CS" Then
                 sql = sql & ",cos_uni as p"
             Else
                 Dim cad As String = "precio"
                 If lbiva.Text = "SI" Then
-                    sql = sql & ",ROUND((" & cad & " * (1 + ( iva / 100) )) + 49,-2) as p"
-                    sql = sql & ",ROUND((" & pmin & " * (1 + ( iva / 100) )),0) as pmin"
+                    sql = sql & ",ROUND((" & cad & " * (1 + ( " & civa & " / 100) )) + 49,-2) as p"
+                    sql = sql & ",ROUND((" & pmin & " * (1 + ( " & civa & " / 100) )),0) as pmin"
                 Else
                     sql = sql & ",ROUND(" & cad & "+49,-2) as p"
                     sql = sql & ",ROUND(" & pmin & ",0) as pmin"

@@ -115,7 +115,7 @@ Partial Class FrmBalanceGral
         '
         Me.pdf.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.pdf.Image = Global.SAE.My.Resources.Resources.Excel_Pdf
-        Me.pdf.Location = New System.Drawing.Point(127, 7)
+        Me.pdf.Location = New System.Drawing.Point(100, 6)
         Me.pdf.Name = "pdf"
         Me.pdf.Size = New System.Drawing.Size(65, 65)
         Me.pdf.TabIndex = 5

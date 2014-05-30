@@ -92,12 +92,12 @@ Public Class FrmRepDatos
                                 & "  '" & tabla.Rows(i).Item("nitc") & "', '" & tabla.Rows(i).Item("nomnit") & "',  " _
                                 & " '" & tabla.Rows(i).Item("nitcod") & "' , " & f & " " _
                                 & " , '" & tabla.Rows(i).Item("vmto") & "' , '" & tabla.Rows(i).Item("concepto") & "', '" & tabla.Rows(i).Item("subtotal") & "', " _
-                                & " '" & tabla.Rows(i).Item("descuento") & "', '" & tabla.Rows(i).Item("rtf") & "', '" & tabla.Rows(i).Item("por_iva") & "', " _
-                                & " '" & tabla.Rows(i).Item("iva") & "', '" & tabla.Rows(i).Item("total") & "', '" & tabla.Rows(i).Item("cta_total") & "', " _
+                                & " '" & tabla.Rows(i).Item("descuento") & "', '" & tabla.Rows(i).Item("rtf") & "', '" & DIN(tabla.Rows(i).Item("por_iva")) & "', " _
+                                & " '" & DIN(tabla.Rows(i).Item("iva")) & "', '" & DIN(tabla.Rows(i).Item("total")) & "', '" & tabla.Rows(i).Item("cta_total") & "', " _
                                 & " '" & tabla.Rows(i).Item("cta_rtf") & "', '" & tabla.Rows(i).Item("cta_iva") & "', '" & tabla.Rows(i).Item("cta_total") & "' , " _
                                 & " '" & tabla.Rows(i).Item("ctoc") & "', '" & tabla.Rows(i).Item("otroimp") & "', '" & tabla.Rows(i).Item("retiva") & "', " _
                                 & " '" & tabla.Rows(i).Item("ctaretiva") & "', '" & tabla.Rows(i).Item("retica") & "', '" & tabla.Rows(i).Item("ctaretica") & "', " _
-                                & " '" & tabla.Rows(i).Item("pagado") & "', '" & tabla.Rows(i).Item("rcpos") & "', '" & tabla.Rows(i).Item("fechpos") & "', " _
+                                & " '" & DIN(tabla.Rows(i).Item("pagado")) & "', '" & tabla.Rows(i).Item("rcpos") & "', '" & tabla.Rows(i).Item("fechpos") & "', " _
                                 & " '" & tabla.Rows(i).Item("vpos") & "', '" & tabla.Rows(i).Item("tasa") & "', '" & tabla.Rows(i).Item("moneda") & "', " _
                                 & " '" & tabla.Rows(i).Item("monloex") & "', '" & tabla.Rows(i).Item("estado") & "', '" & tabla.Rows(i).Item("salmov") & "', '" & tabla.Rows(i).Item("pagare") & "' "
 
@@ -128,10 +128,10 @@ Public Class FrmRepDatos
                     End If
                     If p <> "12" Then
 
-                        sql3 = sql3 & "SELECt doc, doc_afec, estado, abonado " _
+                        sql3 = sql3 & "SELECt item, doc, doc_afec, estado, abonado " _
                         & " from ot_cpp" & p & " where estado ='AP' and abonado <>0  and right(periodo,4)='" & año & "' AND doc_aj='' UNION "
                     Else
-                        sql3 = sql3 & " SELECt doc, doc_afec, estado, abonado " _
+                        sql3 = sql3 & " SELECt item, doc, doc_afec, estado, abonado " _
                         & " from ot_cpp" & p & " where estado ='AP' and abonado <>0  and right(periodo,4)='" & año & "' AND doc_aj='' "
                     End If
                 Next
@@ -153,7 +153,7 @@ Public Class FrmRepDatos
 
                         Try
                             myCommand.CommandText = "UPDATE  ctas_x_pagar " _
-                                 & " SET pagado ='" & tabla_s.Rows(j).Item("sum") & "'" _
+                                 & " SET pagado ='" & DIN(tabla_s.Rows(j).Item("sum")) & "'" _
                                  & " WHERE doc='" & tabla_s.Rows(j).Item("doc_afec") & "' "
                             myCommand.ExecuteNonQuery()
                         Catch ex As Exception
@@ -165,7 +165,7 @@ Public Class FrmRepDatos
                 mibarra.Visible = False
 
                 MsgBox("El proceso se realizo exitosamente ")
-
+                conexion.Close()
             Catch ex As Exception
                 MsgBox("Error al Reprocesar los Saldos", MsgBoxStyle.Information, "Verificacion")
             End Try

@@ -7,15 +7,20 @@
     Private Sub FrmSelImpuestos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim tabla As New DataTable
         Dim items As Integer
-        If lbform.Text = "generar" Or lbform.Text = "si" Then
-            myCommand.CommandText = "SELECT * FROM impuestos WHERE cod_concep='" & lbconcepto.Text & "' ORDER BY cod_concep, codigo;"
-        Else
+        If lbform.Text = "generar" Or lbform.Text = "impuestos" Then
             myCommand.CommandText = "SELECT * FROM impuestos  ORDER BY cod_concep, codigo;"
+        Else
+            myCommand.CommandText = "SELECT * FROM impuestos WHERE cod_concep='" & lbconcepto.Text & "' ORDER BY cod_concep, codigo;"
         End If
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         Refresh()
         items = tabla.Rows.Count
+        Try
+            gcuenta.Rows.Clear()
+        Catch ex As Exception
+        End Try
+
         If items = 0 Then
             MsgBox("No han creado ningún impuesto, Verifique.  ", MsgBoxStyle.Information, "Verificando ")
             Exit Sub

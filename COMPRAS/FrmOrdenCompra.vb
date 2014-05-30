@@ -710,6 +710,11 @@ Public Class FrmOrdenCompra
 
 
     Private Sub cmditems_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmditems.Click
+        If Trim(txtnitc.Text) = "" Then
+            MsgBox("Verifique los datos del cliente", MsgBoxStyle.Information, "Verificacion")
+            txtnitc.Focus()
+            Exit Sub
+        End If
         FrmItemsCompras.txtnumfac.Text = txtnumfac.Text
         FrmItemsCompras.txtfecha.Text = txtfecha.Text
         FrmItemsCompras.txttipo.Text = ""

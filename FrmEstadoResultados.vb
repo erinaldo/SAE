@@ -96,6 +96,8 @@ Public Class FrmEstadoResultados
     '**************************************************************
     Public ca As String = ""
     Private Sub cmdpantalla_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdpantalla.Click
+        '  BorrarDiferencia()
+
         If chkMostrar.Checked = False Then
             Dim tDif As New DataTable
             myCommand.CommandText = "SELECT ctaPerdida FROM parcontab;"
@@ -104,6 +106,12 @@ Public Class FrmEstadoResultados
             If tDif.Rows(0).Item(0).ToString = "" Then
                 MsgBox("No hay Cuenta Para Mostrar Utilidad / Perdida, Verifique Los Parametros", MsgBoxStyle.Information, "SAE Control")
                 Exit Sub
+            Else
+                Try
+                    '    GuardarDiferencia()
+                Catch ex As Exception
+                    MsgBox("Guardar Dif .." & ex.ToString)
+                End Try
             End If
         End If
         FechaRep = Now.ToString
@@ -120,6 +128,139 @@ Public Class FrmEstadoResultados
             End If
         End If
     End Sub
+    Dim utili As Double
+    Private Sub BorrarDiferencia()
+
+        MiConexion(bda)
+        Try
+            myCommand.CommandText = "delete from documentos" & cbfin.Text & " where doc='1' and tipodoc='AJ' and modulo='AJUSTE_BG';"
+            myCommand.ExecuteNonQuery()
+            myCommand.Parameters.Clear()
+        Catch ex As Exception
+            MsgBox("Error al Borrar dif.. " & ex.ToString)
+        End Try
+        Cerrar()
+    End Sub
+    Private Sub GuardarDiferencia()
+        utili = 0
+        '***** ////////////////////////////////////////
+        Dim tI, tG, tC, tDif, tDesc As New DataTable
+        Dim sumaI, sumaG, sumaC, aI, aG, aC, UTI As Double
+        Dim saldo As String
+        Dim inicio As Integer
+        Dim nk As Integer = k
+        '****************************************
+        sumaI = 0
+        sumaG = 0
+        sumaC = 0
+        If cbini.Text = "01" Then
+            inicio = 0
+        Else
+            inicio = Val(cbini.Text)
+        End If
+        For j = inicio To Val(cbfin.Text)
+            If j < 10 Then
+                saldo = "documentos0" & j
+            Else
+                saldo = "documentos" & j
+            End If
+            'TOTAL INGRESOS
+            tI.Clear()
+            myCommand.CommandText = "SELECT SUM(debito - credito) as s FROM " & saldo & " WHERE codigo like '4%' " & ca & ";"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tI)
+            Try
+                aI = tI.Rows(0).Item(0)
+            Catch ex As Exception
+                aI = 0
+            End Try
+            sumaI = sumaI + aI
+            'TOTAL GASTOS
+            tG.Clear()
+            myCommand.CommandText = "SELECT SUM(debito - credito) as s FROM " & saldo & " WHERE codigo like '5%' " & ca & ";"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tG)
+            Try
+                aG = tG.Rows(0).Item(0)
+            Catch ex As Exception
+                aG = 0
+            End Try
+            sumaG = sumaG + aG
+            'TOTAL COSTOS
+            tC.Clear()
+            myCommand.CommandText = "SELECT SUM(debito - credito) as s FROM " & saldo & " WHERE codigo like '6%' " & ca & ";"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tC)
+            Try
+                aC = tC.Rows(0).Item(0)
+            Catch ex As Exception
+                aC = 0
+            End Try
+            sumaC = sumaC + aC
+        Next
+        '***************************************
+        cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "RESUMEN", 300, k, 0)
+        cb.ShowTextAligned(50, "INGRESOS", 50, k - 15, 0)
+        cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaI), 250, k - 15, 0)
+        cb.ShowTextAligned(50, "GASTOS", 50, k - 30, 0)
+        cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaG), 420, k - 30, 0)
+        cb.ShowTextAligned(50, "COSTOS DE VENTAS", 50, k - 45, 0)
+        cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaC), 420, k - 45, 0)
+        UTI = sumaI + sumaG + sumaC
+
+        utili = UTI
+        If chkMostrar.Checked = False Then
+
+            UTI = sumaI + sumaG + sumaC
+            ''******************************
+            myCommand.CommandText = "SELECT ctaPerdida FROM parcontab;"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tDif)
+
+            MiConexion(bda)
+            myCommand.Parameters.Clear()
+            myCommand.Parameters.AddWithValue("?item", 100)
+            myCommand.Parameters.AddWithValue("?doc", "1")
+            myCommand.Parameters.AddWithValue("?tipodoc", "AJ")
+            myCommand.Parameters.AddWithValue("?periodo", PerActual)
+            myCommand.Parameters.AddWithValue("?dia", "01")
+            myCommand.Parameters.AddWithValue("?centro", "0")
+            myCommand.Parameters.AddWithValue("?desc", "AJUSTE")
+            If UTI < 0 Then
+                myCommand.Parameters.AddWithValue("?debito", 0)
+                myCommand.Parameters.AddWithValue("?credito", DIN(UTI * -1))
+            Else
+                myCommand.Parameters.AddWithValue("?debito", DIN(UTI))
+                myCommand.Parameters.AddWithValue("?credito", 0)
+            End If
+            myCommand.Parameters.AddWithValue("?sal", DIN(UTI))
+            myCommand.Parameters.AddWithValue("?codigo", tDif.Rows(0).Item("ctaPerdida"))
+            myCommand.Parameters.AddWithValue("?base", 0)
+            myCommand.Parameters.AddWithValue("?diasv", "0")
+            myCommand.Parameters.AddWithValue("?fechaven", "(NINGUNA)")
+            myCommand.Parameters.AddWithValue("?nit", 0)
+            myCommand.Parameters.AddWithValue("?cheque", "")
+            myCommand.Parameters.AddWithValue("?modulo", "AJUSTE_BG")
+            myCommand.CommandText = "INSERT INTO documentos" & cbfin.Text & " VALUES(?item,?doc,?tipodoc,?periodo,?dia,?centro,?desc,?debito,?credito,?codigo,?base,?diasv,?fechaven,?nit,?cheque,?modulo);"
+            myCommand.ExecuteNonQuery()
+
+            If CInt(cbfin.Text) - 1 <= 9 Then
+                myCommand.CommandText = "UPDATE selpuc SET saldo0" & CInt(cbfin.Text) - 1 & "= saldo0" & CInt(cbfin.Text) - 1 & " + ?sal, " _
+                & " saldo" & cbfin.Text & "= saldo" & cbfin.Text & " + ?sal WHERE codigo=?codigo;"
+            Else
+                myCommand.CommandText = "UPDATE selpuc SET saldo" & CInt(cbfin.Text) - 1 & "= saldo" & CInt(cbfin.Text) - 1 & " + ?sal, " _
+               & " saldo" & cbfin.Text & "= saldo" & cbfin.Text & " + ?sal WHERE codigo=?codigo;"
+            End If
+            myCommand.ExecuteNonQuery()
+            myCommand.Parameters.Clear()
+            Cerrar()
+
+
+        End If
+
+
+    End Sub
+
     Public Sub BalancePYG(ByVal perI As String, ByVal perF As String, ByVal n As Integer, ByVal ano As String, ByVal condiciones As String)
         Dim oDoc As New iTextSharp.text.Document(PageSize.A4, 0, 0, 0, 0)
         Dim pdfw As iTextSharp.text.pdf.PdfWriter

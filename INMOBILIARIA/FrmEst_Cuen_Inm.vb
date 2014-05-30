@@ -648,7 +648,7 @@ Public Class FrmEst_Cuen_Inm
         myCommand.Parameters.AddWithValue("?iva", DIN(tabc.Rows(0).Item("por_comi")))
         myCommand.Parameters.AddWithValue("?v_viva", iva)
         'myCommand.Parameters.AddWithValue("?total", valor - iva - com - rtf - rtc)
-        myCommand.Parameters.AddWithValue("?total", tt)
+        myCommand.Parameters.AddWithValue("?total", Math.Round(tt, 2))
         myCommand.Parameters.AddWithValue("?ctasubtotal", tabc.Rows(0).Item("cta_valor"))
         myCommand.Parameters.AddWithValue("?ctaret", tabc.Rows(0).Item("cta_rtf"))
         myCommand.Parameters.AddWithValue("?ctaiva", tabc.Rows(0).Item("cta_iva"))
@@ -1206,7 +1206,7 @@ Public Class FrmEst_Cuen_Inm
         sql4 = "SELECT  ci.cod_contra AS doc, c.doc AS ctatotal, CONCAT(c.nitc, ' ', c.nomnit) AS nomnit,  MID(c.concepto, 13, LENGTH(c.concepto)) AS ccosto,  c.total AS total,  " _
         & " c.pagado, IF  (NOW() > ADDDATE(c.fecha, INTERVAL c.vmto DAY), DATEDIFF(NOW() , ADDDATE(c.fecha, INTERVAL c.vmto DAY)), 0) AS vmto,  " _
         & " (SELECT mora  FROM parcontrato ) AS ret, c.rcpos, " _
-        & " c.total * (((SELECT  mora FROM parcontrato)/100)/30)*  IF (NOW() > ADDDATE(c.fecha, INTERVAL c.vmto DAY),DATEDIFF(NOW(), ADDDATE(c.fecha, INTERVAL c.vmto DAY)),0) AS  descto " _
+        & " (c.total-c.pagado) * (((SELECT  mora FROM parcontrato)/100)/30)*  IF (NOW() > ADDDATE(c.fecha, INTERVAL c.vmto DAY),DATEDIFF(NOW(), ADDDATE(c.fecha, INTERVAL c.vmto DAY)),0) AS  descto " _
         & " FROM cobdpen c, contrato_inm ci " _
         & " WHERE(c.total > c.pagado) AND c.descrip = ci.cod_contra  " & ct & " " _
         & " ORDER BY doc , nomnit, rcpos "

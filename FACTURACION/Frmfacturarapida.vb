@@ -23,6 +23,11 @@ Public Class Frmfacturarapida
             Cerrar()
         Catch ex As Exception
         End Try
+        If Trim(txtnitc.Text) = "" Then
+            MsgBox("Digite los datos del cliente", MsgBoxStyle.Information, "SAE")
+            txtnitc.Focus()
+            Exit Sub
+        End If
         MiConexion(bda)
         Cerrar()
         FrmItems.txtnumfac.Text = txtnumfac.Text
@@ -4937,13 +4942,13 @@ Public Class Frmfacturarapida
             Try
                 If Trim(gfactura.Item("codigo", i).Value.ToString) <> "" Then
                     file.WriteLine(SaltarCadena(gfactura.Item("codigo", i).Value.ToString & "-" & gfactura.Item("descrip", i).Value.ToString, 38))
-                    cad = LlenarEspacios(CambiaCadena(gfactura.Item("cant", i).Value.ToString, 6), 6)
+                    cad = LlenarEspacios(CambiaCadena(gfactura.Item("cant", i).Value.ToString, 6), 5)
                     Try
                         valor = Moneda2(gfactura.Item("valor", i).Value.ToString, lb_imp_dec.Text) / (1 + (CDbl(gfactura.Item("iva", i).Value.ToString) / 100))
                     Catch ex As Exception
                         valor = Moneda2(gfactura.Item("valor", i).Value.ToString, lb_imp_dec.Text)
                     End Try
-                    cad = cad & LlenarEspacios(Moneda2(valor, lb_imp_dec.Text), 9)
+                    cad = cad & LlenarEspacios(Moneda2(valor, lb_imp_dec.Text), 10)
                     Try
                         vtotal = Moneda2(gfactura.Item("Vtotal", i).Value.ToString, lb_imp_dec.Text) / (1 + (CDbl(gfactura.Item("iva", i).Value.ToString) / 100))
                     Catch ex As Exception

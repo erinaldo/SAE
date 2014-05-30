@@ -6,7 +6,12 @@
         Dim tabla As New DataTable
         tabla.Clear()
         Dim items As Integer
-        myCommand.CommandText = "SELECT f.*,TRIM(CONCAT(t.nombre,' ',t.apellidos)) AS nomnit FROM fact_comp" & PerActual(0) & PerActual(1) & " f LEFT JOIN (terceros t) ON f.nitc=t.nit ORDER BY f.doc,f.fecha;"
+        If lbform.Text = "anularDoc" Then
+            myCommand.CommandText = "SELECT f.*,TRIM(CONCAT(t.nombre,' ',t.apellidos)) AS nomnit FROM fact_comp" & FrmAnularCompras.cbper.Text & " f LEFT JOIN (terceros t) ON f.nitc=t.nit WHERE f.tipodoc='" & FrmAnularCompras.txttipo.Text & "'  AND f.anulado<>'si' ORDER BY f.doc,f.fecha;"
+        Else
+            myCommand.CommandText = "SELECT f.*,TRIM(CONCAT(t.nombre,' ',t.apellidos)) AS nomnit FROM fact_comp" & PerActual(0) & PerActual(1) & " f LEFT JOIN (terceros t) ON f.nitc=t.nit ORDER BY f.doc,f.fecha;"
+        End If
+
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         Refresh()
@@ -72,6 +77,9 @@
                 End If
                 FrmDocProveedor.txtAF.Text = gitems.Item("docu", mifila).Value()
                 Me.Close()
+            ElseIf lbform.Text = "anularDoc" Then
+                FrmAnularCompras.txtnumfac.Text = gitems.Item("numero", mifila).Value()
+                Me.Close()
             Else
                 FrmDocProveedor.lbestado.Text = "CONSULTA"
                 FrmDocProveedor.txtnumfac.Text = gitems.Item("docu", mifila).Value()
@@ -85,7 +93,7 @@
     End Sub
 
     Public Sub BuscarGrilla(ByVal cad As String)
-       
+
         Dim cl As Integer = 0
         Try
 

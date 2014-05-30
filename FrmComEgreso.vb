@@ -1848,10 +1848,20 @@ Public Class FrmComEgresoCpp
         myCommand.Parameters.Clear()
     End Sub
     Private Sub GuardarObserva()
-        If Trim(txtdetall.Text) <> "" Then
+        Try
             myCommand.Parameters.AddWithValue("?doc", Val(txtnumero.Text))
             myCommand.Parameters.AddWithValue("?tipodoc", lbdoc.Text)
             myCommand.Parameters.AddWithValue("?comentario", txtdetall.Text)
+        Catch ex As Exception
+        End Try
+       
+        Try
+            myCommand.CommandText = "DELETE FROM obsdocumentos" & PerActual(0) & PerActual(1) & " WHERE doc=?doc, tipodoc=?tipodoc "
+            myCommand.ExecuteNonQuery()
+        Catch ex As Exception
+        End Try
+
+        If Trim(txtdetall.Text) <> "" Then
             myCommand.CommandText = "INSERT INTO obsdocumentos" & PerActual(0) & PerActual(1) & " VALUES(?doc,?tipodoc,?comentario)"
             myCommand.ExecuteNonQuery()
         End If

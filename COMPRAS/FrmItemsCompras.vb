@@ -297,9 +297,44 @@
                 End If
                 gitems.Item("cant", fila).Value = "1"
 
-                If lbform.Text = "fdp" Or lbform.Text = "oc" Then
-                    gitems.Item(5, fila).Value = (tabla.Rows(0).Item("cos_uni") * (1 + (tabla.Rows(0).Item("iva") / 100)))
-                    gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                If lbform.Text = "fdp" Then
+                    Try
+                        Dim tt As New DataTable
+                        tt.Clear()
+                        myCommand.CommandText = "SELECT iva from terceros where nit ='" & FrmDocProveedor.txtnitc.Text & "' ;"
+                        myAdapter.SelectCommand = myCommand
+                        myAdapter.Fill(tt)
+                        Refresh()
+                        If tt.Rows(0).Item(0) = "SI" Then
+                            gitems.Item(5, fila).Value = (tabla.Rows(0).Item("cos_uni") * (1 + (tabla.Rows(0).Item("iva") / 100)))
+                            gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                        Else
+                            gitems.Item(5, fila).Value = (tabla.Rows(0).Item("cos_uni") * (1 + (0 / 100)))
+                            gitems.Item("iva", fila).Value = 0
+                        End If
+                    Catch ex As Exception
+                        gitems.Item(5, fila).Value = (tabla.Rows(0).Item("cos_uni") * (1 + (tabla.Rows(0).Item("iva") / 100)))
+                        gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                    End Try
+                ElseIf lbform.Text = "oc" Then
+                    Try
+                        Dim tt As New DataTable
+                        tt.Clear()
+                        myCommand.CommandText = "SELECT iva from terceros where nit ='" & FrmOrdenCompra.txtnitc.Text & "' ;"
+                        myAdapter.SelectCommand = myCommand
+                        myAdapter.Fill(tt)
+                        Refresh()
+                        If tt.Rows(0).Item(0) = "SI" Then
+                            gitems.Item(5, fila).Value = (tabla.Rows(0).Item("cos_uni") * (1 + (tabla.Rows(0).Item("iva") / 100)))
+                            gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                        Else
+                            gitems.Item(5, fila).Value = (tabla.Rows(0).Item("cos_uni") * (1 + (0 / 100)))
+                            gitems.Item("iva", fila).Value = 0
+                        End If
+                    Catch ex As Exception
+                        gitems.Item(5, fila).Value = (tabla.Rows(0).Item("cos_uni") * (1 + (tabla.Rows(0).Item("iva") / 100)))
+                        gitems.Item("iva", fila).Value = tabla.Rows(0).Item("iva")
+                    End Try
                 Else
                     If LbTipoMov.Text = "entradas" Then
                         gitems.Item(5, fila).Value = Moneda(tabla.Rows(0).Item("cos_uni"))
@@ -505,7 +540,7 @@
                         MsgBox("Verifique las bodegas de los articulos de inventario.  ", MsgBoxStyle.Information, "SAE Control")
                         Exit Sub
                     End If
-                    If Trim(gitems.Item("ctainv", i).Value) = "" Then
+                    If Trim(gitems.Item("ctainv", i).Value) = "" And Trim(gitems.Item("tipo", i).Value) = "I" Then
                         MsgBox("Verifique La Cuenta de Inventario.  ", MsgBoxStyle.Information, "SAE Control")
                         Exit Sub
                     End If

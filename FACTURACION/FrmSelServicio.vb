@@ -254,6 +254,32 @@
         End Select
     End Function
     Private Sub FrmSelVendedor_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+
+        'CONSULTAR SI EL CLIENTE AFECTA IVA
+        Dim civa As String = "iva"
+        If lbform.Text = "items" Then
+            Try
+                Dim tt As New DataTable
+                tt.Clear()
+                If FrmItems.lbform.Text = "fr" Then
+                    myCommand.CommandText = "SELECT iva from terceros where nit ='" & Frmfacturarapida.txtnitc.Text & "' ;"
+                ElseIf FrmItems.lbform.Text = "fn" Then
+                    myCommand.CommandText = "SELECT iva from terceros where nit ='" & FrmFacturasyAjustes.txtnitc.Text & "' ;"
+                End If
+                myAdapter.SelectCommand = myCommand
+                myAdapter.Fill(tt)
+                Refresh()
+                If tt.Rows(0).Item(0) = "SI" Then
+                    civa = "iva"
+                Else
+                    civa = "0 as iva"
+                End If
+            Catch ex As Exception
+                civa = "iva"
+            End Try
+        End If
+
         Dim items As Integer
         Dim tabla2 As New DataTable
         Dim campo As String = lp("s")
@@ -266,9 +292,9 @@
                 End If
             Case Else
                 If FrmItems.cbdesc.Text = "DETALLADA" Then
-                    myCommand.CommandText = "SELECT codser,descrip as n," & campo & ",iva,cta_iva,cta_ing,descrip as d FROM servicios ORDER BY codser;"
+                    myCommand.CommandText = "SELECT codser,descrip as n," & campo & "," & civa & ",cta_iva,cta_ing,descrip as d FROM servicios ORDER BY codser;"
                 Else
-                    myCommand.CommandText = "SELECT codser,nombre as n," & campo & ",iva,cta_iva,cta_ing,descrip as d FROM servicios ORDER BY codser;"
+                    myCommand.CommandText = "SELECT codser,nombre as n," & campo & "," & civa & ",cta_iva,cta_ing,descrip as d FROM servicios ORDER BY codser;"
                 End If
         End Select
         'If FrmItems.cbdesc.Text = "DETALLADA" Then
@@ -276,6 +302,7 @@
         'Else
         '    myCommand.CommandText = "SELECT codser,nombre as n," & campo & ",iva,cta_iva,cta_ing,descrip as d FROM servicios ORDER BY codser;"
         'End If
+
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla2)
         Refresh()

@@ -247,11 +247,11 @@ Public Class FrmCartera
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
 
-        If tabla.Rows(0).Item(0) = "S" Then
-            cmddes.Visible = True
-        Else
-            cmddes.Visible = False
-        End If
+        'If tabla.Rows(0).Item(0) = "S" Then
+        '    cmddes.Visible = True
+        'Else
+        '    cmddes.Visible = False
+        'End If
         Cerrar()
 
         'If FrmPrincipal.lbuser.Text = "sae" Then

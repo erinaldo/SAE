@@ -308,9 +308,9 @@ Public Class FrmInventarios
         myAdapter.Fill(t)
 
         If t.Rows(0).Item(0) = "S" Then
-            cmddes.Visible = True
+            ' cmddes.Visible = True
         Else
-            cmddes.Visible = False
+            '  cmddes.Visible = False
         End If
         Cerrar()
 

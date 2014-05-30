@@ -222,7 +222,7 @@ Partial Class FrmProductos
         Me.txtcbarra.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtcbarra.ForeColor = System.Drawing.SystemColors.Highlight
         Me.txtcbarra.Location = New System.Drawing.Point(123, 70)
-        Me.txtcbarra.MaxLength = 10
+        Me.txtcbarra.MaxLength = 30
         Me.txtcbarra.Name = "txtcbarra"
         Me.txtcbarra.ShortcutsEnabled = False
         Me.txtcbarra.Size = New System.Drawing.Size(91, 20)

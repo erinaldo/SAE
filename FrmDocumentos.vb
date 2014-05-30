@@ -382,7 +382,8 @@
         myCommand.Parameters.Clear()
         myCommand.Parameters.AddWithValue("?tipodoc", Trim(txttipo.Text).ToString)
         myCommand.Parameters.AddWithValue("?descripcion", CambiaCadena(txtdoc.Text.ToString, 30))
-        myCommand.CommandText = "Update tipdoc set descripcion=?descripcion WHERE tipodoc=?tipodoc;"
+        myCommand.Parameters.AddWithValue("?grupodoc", Strings.Left(txtgrupodoc.Text, 2))
+        myCommand.CommandText = "Update tipdoc set descripcion=?descripcion, grupo=?grupodoc WHERE tipodoc=?tipodoc;"
         myCommand.ExecuteNonQuery()
         ModificarActual()
         MsgBox("Los datos fueron modificados correctamente... ", MsgBoxStyle.Information, "Guardar Datos")

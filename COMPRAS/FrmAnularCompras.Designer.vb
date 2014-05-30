@@ -45,12 +45,14 @@ Partial Class FrmAnularCompras
         Me.cmdpantalla = New System.Windows.Forms.Button
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnBuscar = New System.Windows.Forms.Button
         Me.GroupBox1.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnBuscar)
         Me.GroupBox1.Controls.Add(Me.txtfecha_ana)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.lbtipo)
@@ -188,7 +190,7 @@ Partial Class FrmAnularCompras
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(23, 92)
+        Me.Label3.Location = New System.Drawing.Point(23, 93)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(144, 16)
         Me.Label3.TabIndex = 12
@@ -302,6 +304,17 @@ Partial Class FrmAnularCompras
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
         Me.GroupPanel1.TabIndex = 79
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.AutoSize = True
+        Me.btnBuscar.Image = Global.SAE.My.Resources.Resources.DataTables
+        Me.btnBuscar.Location = New System.Drawing.Point(299, 85)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(41, 32)
+        Me.btnBuscar.TabIndex = 27
+        Me.ToolTip1.SetToolTip(Me.btnBuscar, "Buscar Factura")
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
         'FrmAnularCompras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -346,4 +359,5 @@ Partial Class FrmAnularCompras
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents cmdpantalla As System.Windows.Forms.Button
     Friend WithEvents GroupPanel1 As DevComponents.DotNetBar.Controls.GroupPanel
+    Friend WithEvents btnBuscar As System.Windows.Forms.Button
 End Class

@@ -235,7 +235,7 @@ Public Class FrmInfMovCentroC
                     sql = sql & " UNION SELECT d.centro AS ctaret,c.nombre AS descrip, c.pres AS subtotal,d.nit AS nitc, TRIM(CONCAT(t.nombre,' ', t.apellidos)) AS nomnit, d.item," _
               & " CAST(CONCAT(d.tipodoc,'',LPAD(d.doc,5,'0')) AS CHAR(10)) AS doc,CONCAT(d.dia,'/',d.periodo) AS ctaiva,d.descri AS concepto,d.debito AS pagado, " _
               & " d.credito AS tasa,d.codigo AS ctatotal " _
-              & " FROM documentos" & p & " d , centrocostos c, terceros t WHERE c.centro=d.centro AND d.nit= t.nit AND FORMAT(d.dia,0) >='" & CInt(Strings.Left(fecha2.Text, 2)) & "' " & cad
+              & " FROM documentos" & p & " d , centrocostos c, terceros t WHERE c.centro=d.centro AND d.nit= t.nit AND FORMAT(d.dia,0) <='" & CInt(Strings.Left(fecha2.Text, 2)) & "' " & cad
 
                     '       sql = sql & " UNION SELECT d.cheque AS doc_ext,CAST(CONCAT(d.tipodoc,'',LPAD(d.doc,5,'0')) AS CHAR(10)) AS nitcod, CONCAT(d.dia,'/', d.periodo) AS nitc, " _
                     '& " d.descri AS descrip, d.debito AS subtotal, d.credito AS total,CONCAT(d.codigo,' ',s.descripcion) AS  nomnit, " _

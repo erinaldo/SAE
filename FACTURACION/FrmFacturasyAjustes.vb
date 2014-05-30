@@ -12,6 +12,11 @@ Imports CrystalDecisions.Shared
 Public Class FrmFacturasyAjustes
     Private Sub cmditems_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmditems.Click
 
+        If txtnitc.Text = "" Then
+            MsgBox("Verifique los datos del cliente", MsgBoxStyle.Information, "Verifique")
+            txtnitc.Focus()
+            Exit Sub
+        End If
         FrmItems.txtnumfac.Text = txtnumfac.Text
         FrmItems.txtfecha.Text = txtfecha.Text.ToString
         FrmItems.txttipo.Text = txttipo.Text

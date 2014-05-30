@@ -33,6 +33,9 @@ Public Class FrmBalanceGral
         txtano.Text = PerActual(3) & PerActual(4) & PerActual(5) & PerActual(6)
     End Sub
     Private Sub cmdpantalla_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdpantalla.Click
+
+        BorrarDifrencia()
+
         If chkMostrarDif.Checked = False Then
             Dim tDif As New DataTable
             myCommand.CommandText = "SELECT ctaDiferencia FROM parcontab;"
@@ -41,12 +44,114 @@ Public Class FrmBalanceGral
             If tDif.Rows(0).Item(0).ToString = "" Then
                 MsgBox("No hay Cuenta Para Mostrar Diferencia, Verifique Los Parametros", MsgBoxStyle.Information, "SAE Control")
                 Exit Sub
+            Else
+                Try
+                    GuardarDiferencia()
+                Catch ex As Exception
+                    MsgBox(ex.ToString)
+                End Try
             End If
         End If
+
         BalanceGral(ini.Text, nivel.Value, txtano.Text)
+        If chkMostrarDif.Checked = False Then
+            BorrarDifrencia()
+        End If
+    End Sub
+    Public Sub BorrarDifrencia()
+
+        MiConexion(bda)
+        Try
+            myCommand.CommandText = "delete from documentos" & PerActual(0) & PerActual(1) & " where doc='1' and tipodoc='AJ' and modulo='AJUSTE_BG';"
+            myCommand.ExecuteNonQuery()
+            myCommand.Parameters.Clear()
+        Catch ex As Exception
+            MsgBox("Error al Borrar dif.. " & ex.ToString)
+        End Try
+        Cerrar()
+    End Sub
+    Private Sub GuardarDiferencia()
+        Dim tA, tP, tC, tDif, tDesc As New DataTable
+        Dim sumaA, sumaP, sumaC, Dif As Double
+        Dim Saldo As String
+        Saldo = "saldo" & ini.Text
+        'TOTAL ACTIVO
+        myCommand.CommandText = "SELECT sum(" & Saldo & ") FROM selpuc WHERE (codigo like '1%' OR codigo like '8%')  and nivel='Auxiliar';"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tA)
+        Try
+            sumaA = tA.Rows(0).Item(0)
+        Catch ex As Exception
+            sumaA = 0
+        End Try
+        'TOTAL PASIVO
+        myCommand.CommandText = "SELECT sum(" & Saldo & ") FROM selpuc WHERE codigo like '2%' and nivel='Auxiliar';"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tP)
+        Try
+            sumaP = tP.Rows(0).Item(0)
+        Catch ex As Exception
+            sumaP = 0
+        End Try
+        'TOTAL CAPITAL
+        myCommand.CommandText = "SELECT sum(" & Saldo & ") FROM selpuc WHERE codigo like '3%' and nivel='Auxiliar';"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tC)
+        Try
+            sumaC = tC.Rows(0).Item(0)
+        Catch ex As Exception
+            sumaC = 0
+        End Try
+
+        Dif = sumaA + sumaP + sumaC
+
+        myCommand.CommandText = "SELECT ctaDiferencia FROM parcontab;"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(tDif)
+
+        If chkMostrarDif.Checked = False Then
+
+            Dif = sumaA + sumaP + sumaC
+            ''******************************
+            myCommand.CommandText = "SELECT ctaDiferencia FROM parcontab;"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tDif)
+
+            MiConexion(bda)
+            myCommand.Parameters.Clear()
+            myCommand.Parameters.AddWithValue("?item", 100)
+            myCommand.Parameters.AddWithValue("?doc", "1")
+            myCommand.Parameters.AddWithValue("?tipodoc", "AJ")
+            myCommand.Parameters.AddWithValue("?periodo", PerActual)
+            myCommand.Parameters.AddWithValue("?dia", "01")
+            myCommand.Parameters.AddWithValue("?centro", "0")
+            myCommand.Parameters.AddWithValue("?desc", "AJUSTE")
+            If Dif < 0 Then
+                myCommand.Parameters.AddWithValue("?debito", DIN(Dif * -1))
+                myCommand.Parameters.AddWithValue("?credito", 0)
+            Else
+                myCommand.Parameters.AddWithValue("?debito", 0)
+                myCommand.Parameters.AddWithValue("?credito", DIN(Dif))
+            End If
+            myCommand.Parameters.AddWithValue("?codigo", tDif.Rows(0).Item("ctaDiferencia"))
+            myCommand.Parameters.AddWithValue("?base", 0)
+            myCommand.Parameters.AddWithValue("?diasv", "0")
+            myCommand.Parameters.AddWithValue("?fechaven", "(NINGUNA)")
+            myCommand.Parameters.AddWithValue("?nit", 0)
+            myCommand.Parameters.AddWithValue("?cheque", "")
+            myCommand.Parameters.AddWithValue("?modulo", "AJUSTE_BG")
+            myCommand.CommandText = "INSERT INTO documentos" & PerActual(0) & PerActual(1) & " VALUES(?item,?doc,?tipodoc,?periodo,?dia,?centro,?desc,?debito,?credito,?codigo,?base,?diasv,?fechaven,?nit,?cheque,?modulo);"
+            myCommand.ExecuteNonQuery()
+            myCommand.Parameters.Clear()
+            Cerrar()
+        End If
+
+        cmdactualizar_Click(AcceptButton, AcceptButton)
+
+
     End Sub
 
-    Private Sub cmdactualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdactualizar.Click
+    Public Sub cmdactualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdactualizar.Click
         Try
             Me.Cursor = Cursors.WaitCursor
             mibarra.Visible = True
@@ -66,6 +171,7 @@ Public Class FrmBalanceGral
     Public Sub ActualizarCatalogo()
         MiConexion(bda)
         Dim tabla As New DataTable
+        tabla.Clear()
         Dim barra, baraux As Double
         myCommand.CommandText = "SELECT codigo,saldo00 FROM selpuc WHERE nivel='Auxiliar' ORDER BY codigo desc;"
         myAdapter.SelectCommand = myCommand
@@ -106,6 +212,7 @@ Public Class FrmBalanceGral
     End Sub
     Public Sub CalcularSaldo(ByVal micuenta As String)
         Dim tabla As New DataTable
+        tabla.Clear()
         '///////////CALCULAR SALDO INICIAL //////////////////////
         myCommand.CommandText = "SELECT sum(saldo00) FROM selpuc WHERE codigo like '" & micuenta & "%' and nivel='Auxiliar';"
         myAdapter.SelectCommand = myCommand
@@ -130,6 +237,7 @@ Public Class FrmBalanceGral
             sumasaldo = 0
         End If
         Dim tabla As New DataTable
+        tabla.Clear()
         myCommand.CommandText = "SELECT sum(debito),sum(credito) FROM documentos" & mitabla & " WHERE codigo like '" & cuenta & "%';"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)

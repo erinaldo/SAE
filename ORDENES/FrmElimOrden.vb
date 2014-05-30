@@ -35,7 +35,7 @@
             MsgBox("El documento no existe en este periodo.", MsgBoxStyle.Information, "SAE Buscar")
             Exit Sub
         Else
-            If tabla.Rows(0).Item("estado") <> "" Then
+            If Trim(tabla.Rows(0).Item("estado")) <> "" Then
                 MsgBox("La Orden registra Comprobante de Egreso, Desapruebelo y luego realice este proceso", MsgBoxStyle.Information, "SAE Buscar")
                 Exit Sub
             End If
@@ -79,6 +79,15 @@
             myCommand.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox("Error ELIMINAR orden " & ex.ToString, MsgBoxStyle.Information, "SAE")
+        End Try
+
+        'Deta_ORDENES
+        Try
+            myCommand.Parameters.Clear()
+            myCommand.CommandText = "DELETE FROM deta_ord WHERE doc='" & cbper.Text & cbaño.Text & "-" & txtnumfac.Text & "' ;"
+            myCommand.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox("Error ELIMINAR detalle_orden " & ex.ToString, MsgBoxStyle.Information, "SAE")
         End Try
     End Sub
 End Class

@@ -852,7 +852,7 @@ Public Class FrmInfoVendedores
                & " FROM detafac" & p & " df, vendedores v, facturas" & p & " f     " _
                & " WHERE  (f.doc = df.doc)  AND v.nitv = df.nit  " & n & "  "
                 ElseIf p = cbfin.Text Then
-                    sql = sql & " SELECT df.item, '" & p & "' AS per, f.doc , df.nit AS nitv, v.nombre AS ciu_ent, v.zona,  " _
+                    sql = sql & " UNION SELECT df.item, '" & p & "' AS per, f.doc , df.nit AS nitv, v.nombre AS ciu_ent, v.zona,  " _
             & " IF( LEFT(f.doc,2)='" & doc_aj & "', CONCAT('-',(df.vtotal-(df.vtotal*(df.por_des/100)))),   " _
             & " (df.vtotal-(df.vtotal*(df.por_des/100)))) AS subtotal   " _
             & " FROM detafac" & p & " df, vendedores v, facturas" & p & " f     " _
@@ -1199,7 +1199,11 @@ Public Class FrmInfoVendedores
     Private Sub cmdpantalla_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdpantalla.Click
         'mostrar_pdf()
         If d3.Checked = True Then
-            PDF_PERIODO()
+            Try
+                PDF_PERIODO()
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+            End Try
         Else
             If Me.Text = "INFORME POR VENDEDOR" Then
                 PDF()

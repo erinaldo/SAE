@@ -14,10 +14,10 @@ Public Class frmfacturacion
 
         If tabla.Rows(0).Item(0) = "S" Then
             cmdCamPer.Visible = True
-            cmddes.Visible = True
+            ' cmddes.Visible = True
         Else
             cmdCamPer.Visible = False
-            cmddes.Visible = False
+            ' cmddes.Visible = False
         End If
 
         If tabla.Rows(0).Item(1) = "admin" Then

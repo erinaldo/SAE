@@ -110,7 +110,7 @@
             '.....
             MsgBox("EL DOCUMENTO FUÉ DESAPROBADO " & txttipo.Text & txtnumfac.Text & ". ", MsgBoxStyle.Information, "SAE Guardar")
         Catch ex As Exception
-            'MsgBox(ex.ToString)
+            MsgBox(ex.ToString)
         End Try
         Cerrar()
     End Sub
@@ -126,6 +126,7 @@
     Public Sub SacarCartera()
         Try
             Dim tabla As New DataTable
+            tabla.Clear()
             myCommand.CommandText = "SELECT * FROM ot_cpp" & cbper.Text & " " _
             & " WHERE doc='" & txttipo.Text & txtnumfac.Text & "' AND TRIM(doc_afec)<>'';"
             myAdapter.SelectCommand = myCommand
@@ -140,14 +141,30 @@
         End Try
     End Sub
     Public Sub ActCartera(ByVal doc As String, ByVal mon As String)
-        Try
-            myCommand.CommandText = "UPDATE ctas_x_pagar SET pagado=pagado - " & DIN(mon) _
-                          & " WHERE doc=TRIM('" & doc & "');"
-            myCommand.ExecuteNonQuery()
-        Catch ex As Exception
-            MsgBox("Act Cartera: " & ex.ToString)
-        End Try
-
+        Dim td As New DataTable
+        td.Clear()
+        myCommand.CommandText = "SELECT pagado FROM ctas_x_pagar " _
+           & " WHERE doc='" & doc & "' ;"
+        myAdapter.SelectCommand = myCommand
+        myAdapter.Fill(td)
+        Refresh()
+        If td.Rows(0).Item("pagado") > 0 Then
+            Try
+                myCommand.CommandText = "UPDATE ctas_x_pagar SET pagado=pagado - " & DIN(mon) _
+                              & " WHERE doc=TRIM('" & doc & "');"
+                myCommand.ExecuteNonQuery()
+            Catch ex As Exception
+                MsgBox("Act Cartera: " & ex.ToString)
+            End Try
+        Else
+            Try
+                myCommand.CommandText = "UPDATE ctas_x_pagar SET pagado= 0 " _
+                              & " WHERE doc=TRIM('" & doc & "');"
+                myCommand.ExecuteNonQuery()
+            Catch ex As Exception
+                MsgBox("Act Cartera: " & ex.ToString)
+            End Try
+        End If
     End Sub
     Public Sub GuardarAnticipos()
         Try
