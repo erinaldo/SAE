@@ -96,11 +96,11 @@ Public Class FrmInfTercerosInm
 
 
             If cbTd.Checked = False Then ' INFORME NORMAL
-                sql = "SELECT ti.nit, concat(t.nombre,' ',t.apellidos) as nombre ,ti.clase as apellidos," _
+                sql = "SELECT ti.nit, concat(t.nombre,' ',t.apellidos) as nombre ,ti.clase as apellidos, IF(t.tipo='Inactivo',t.tipo,'Activo') AS tipo," _
                 & " if( (SELECT count(*) FROM `inmuebles` WHERE nitp= ti.nit)='0','--',cast((SELECT count(*) FROM `inmuebles` WHERE nitp= ti.nit ) as char(10))) as pais, " _
                 & "  CONCAT(t.cta_banco1,IF(t.cbanco<>'',CONCAT(' BANCO: ',t.cbanco),'')) AS contacto  " _
                 & " FROM tercerosinm ti left join terceros t on t.nit=ti.nit where ti.nit<>'' " & ter & " " & cla & " " _
-                & " Order by nombre"
+                & " Order by apellidos, nombre"
 
                 Dim tabla As DataTable
                 tabla = New DataTable

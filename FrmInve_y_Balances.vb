@@ -421,7 +421,10 @@ Public Class FrmInve_y_Balances
 
                 CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportInvBalanc.rpt")
                 CrReport.SetDataSource(tabla)
-                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                Try
+                    CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+                Catch ex As Exception
+                End Try
                 FrmReportInvBalanc.CrystalReportViewer1.ReportSource = CrReport
 
                 Try

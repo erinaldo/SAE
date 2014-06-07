@@ -206,7 +206,10 @@ Public Class FrmInfoClientes
 
                 CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportFCli.rpt")
                 CrReport.SetDataSource(tabla)
-                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                Try
+                    CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+                Catch ex As Exception
+                End Try
                 FrmReportFacCli.CrystalReportViewer1.ReportSource = CrReport
 
                 Try

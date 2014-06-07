@@ -1738,6 +1738,12 @@
     <Compile Include="FACTURACION\FrmInfoCrono.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FACTURACION\frmInfoFacturas.Designer.vb">
+      <DependentUpon>frmInfoFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FACTURACION\frmInfoFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FACTURACION\FrmInfoListaPreciosArt.Designer.vb">
       <DependentUpon>FrmInfoListaPreciosArt.vb</DependentUpon>
     </Compile>
@@ -3490,6 +3496,18 @@
     <Compile Include="ORDENES\FrmSelRubrIng.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReportFactGanancia.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportFactGanancia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportInfoFacturas2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportInfoFacturas2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="saeosteomaterial2012DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -4557,6 +4575,10 @@
     <EmbeddedResource Include="FACTURACION\FrmInfoCrono.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmInfoCrono.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FACTURACION\frmInfoFacturas.resx">
+      <DependentUpon>frmInfoFacturas.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FACTURACION\FrmInfoListaPreciosArt.resx">
       <DependentUpon>FrmInfoListaPreciosArt.vb</DependentUpon>
@@ -5719,6 +5741,14 @@
     <EmbeddedResource Include="ORDENES\FrmSelRubrIng.resx">
       <DependentUpon>FrmSelRubrIng.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFactGanancia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportFactGanancia.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportInfoFacturas2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportInfoFacturas2.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

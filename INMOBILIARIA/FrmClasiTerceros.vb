@@ -38,7 +38,7 @@
         Dim items As Integer
         Dim tb As New DataTable
         Dim tabla As New DataTable
-        myCommand.CommandText = "SELECT * FROM terceros WHERE nit ='" & txtnit.Text & "';"
+        myCommand.CommandText = "SELECT * FROM terceros WHERE nit ='" & txtnit.Text & "' and tipo<>'Inactivo' ;"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(tabla)
         Refresh()

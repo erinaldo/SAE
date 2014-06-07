@@ -6,33 +6,34 @@ N.I.T. 46746464 - REGIMEN COMUN
 CRA 9 16A-27 ALLEDUPAR, CESAR
 TEL. 674964646    
 ---------------------------------------
-FECHA: viernes, 02 de mayo de 2014
-HORA: 11:07:34
-FACTURA N°: FC 321477
-SEÑOR(A): VILLAMIZAR AMAYA JUAN PABLO
-NIT/CEDULA: 91285709
-VENDEDOR: MARTHA RANGEL
-Forma De Pago: Efectivo: $39.000,00
+FECHA: miércoles, 04 de junio de 2014
+HORA: 17:21:09
+FACTURA N°: FC 322522
+SEÑOR(A): [  SIN NIT  ]
+NIT/CEDULA: 0
+VENDEDOR: DONADO AVILA ADRIANA GUISELLE 
+Forma De Pago: Efectivo: $55.700,00
 ---------------------------------------
-    Cant   Unit     Iva %     V/total 
+    Cant   Unit      V/total      Iva 
 ---------------------------------------
-RECAR002-RECARGA COLOR
-750,00      41,38  16,00   31.034,48
-GARRA001-GARRAFAS 500CC
-  3,00     862,07  16,00    2.586,21
+BAPOR021-BASE DISIPADORA 2188 COLORES
+  1,00   14.310,34   14.310,34     D
+AUDIF007-AUDIFONO DIADEMA SOUL  COLORE
+S
+  1,00   33.706,90   33.706,90     D
 ---------------------------------------
-      Sub Total:        33.620,69
-   Iva 16,00 % :         5.379,31
-          Total:        39.000,00
+      Sub Total:        48.017,24
+D = Iva 16,00% :         7.682,76
+          Total:        55.700,00
 
 R.DIAN 240000027545 del 07/02/2013
 RANGO FACT. 300000 al 340000
 ---------------------------------------
-Impreso a la fecha: 22/05/2014
-Impreso a la hora: 2014 02:47:32
+Impreso a la fecha: 04/06/2014
+Impreso a la hora: 2014 05:21:13
 Factura elaborada por computadora en el 
 Software de Administración  Empresarial 
-SAE Versión 2013-1
+SAE Versión 2014-1
 ---------------------------------------
 
 

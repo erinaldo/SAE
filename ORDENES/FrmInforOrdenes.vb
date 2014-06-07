@@ -111,9 +111,9 @@ Public Class FrmInforOrdenes
             cad = cad & " AND estado = '' "
         End If
 
-        sql = "SELECT doc AS doc_ext, fecha, CONCAT(doccxp,'  ---  ', con_num) AS descrip, CONCAT(con_ben,' - ',nomnit) AS nomnit, v_bruto AS subtotal, v_neto AS descto, estado, sop_cont AS concepto," _
+        sql = "SELECT IF(sop_cont='','SIN EGRESO','CON EGRESO') AS ctaret, doc AS doc_ext, fecha, CONCAT(doccxp,'  ---  ', con_num) AS descrip, CONCAT(con_ben,' - ',nomnit) AS nomnit, v_bruto AS subtotal, v_neto AS descto, estado, sop_cont AS concepto," _
         & " CAST(CONCAT( RIGHT(fecha, 2), '/', MID(fecha, 6, 2),'/',LEFT(fecha, 4)) AS CHAR(10)) AS ctaiva " _
-        & " FROM ord_pagos WHERE  fecha BETWEEN '" & (fecha1.Value.ToString("yyyy-MM-dd")) & "' AND '" & (fecha2.Value.ToString("yyyy-MM-dd")) & "' " & cad & " ORDER BY fecha"
+        & " FROM ord_pagos WHERE  fecha BETWEEN '" & (fecha1.Value.ToString("yyyy-MM-dd")) & "' AND '" & (fecha2.Value.ToString("yyyy-MM-dd")) & "' " & cad & " ORDER BY ctaret,fecha"
 
         Dim tabla As DataTable
         tabla = New DataTable

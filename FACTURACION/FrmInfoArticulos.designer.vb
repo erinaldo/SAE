@@ -135,7 +135,7 @@ Partial Class FrmInfoArticulos
         Me.GroupPanel1.Controls.Add(Me.TextBox1)
         Me.GroupPanel1.Controls.Add(Me.cmdsalir)
         Me.GroupPanel1.Controls.Add(Me.cmdpantalla)
-        Me.GroupPanel1.Location = New System.Drawing.Point(9, 325)
+        Me.GroupPanel1.Location = New System.Drawing.Point(9, 273)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(526, 85)
         '
@@ -203,9 +203,9 @@ Partial Class FrmInfoArticulos
         Me.GroupBox4.Controls.Add(Me.txtpini)
         Me.GroupBox4.Controls.Add(Me.Label5)
         Me.GroupBox4.Controls.Add(Me.Label4)
-        Me.GroupBox4.Location = New System.Drawing.Point(9, 238)
+        Me.GroupBox4.Location = New System.Drawing.Point(9, 202)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(526, 81)
+        Me.GroupBox4.Size = New System.Drawing.Size(529, 65)
         Me.GroupBox4.TabIndex = 81
         Me.GroupBox4.TabStop = False
         '
@@ -298,9 +298,9 @@ Partial Class FrmInfoArticulos
         Me.GroupBox1.Controls.Add(Me.d2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.d1)
-        Me.GroupBox1.Location = New System.Drawing.Point(9, 143)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 138)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(526, 89)
+        Me.GroupBox1.Size = New System.Drawing.Size(526, 65)
         Me.GroupBox1.TabIndex = 80
         Me.GroupBox1.TabStop = False
         '
@@ -341,7 +341,7 @@ Partial Class FrmInfoArticulos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(544, 417)
+        Me.ClientSize = New System.Drawing.Size(544, 364)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)

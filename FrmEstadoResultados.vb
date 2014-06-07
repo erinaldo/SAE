@@ -107,11 +107,11 @@ Public Class FrmEstadoResultados
                 MsgBox("No hay Cuenta Para Mostrar Utilidad / Perdida, Verifique Los Parametros", MsgBoxStyle.Information, "SAE Control")
                 Exit Sub
             Else
-                Try
-                    '    GuardarDiferencia()
-                Catch ex As Exception
-                    MsgBox("Guardar Dif .." & ex.ToString)
-                End Try
+                'Try
+                '    GuardarDiferencia()
+                'Catch ex As Exception
+                '    MsgBox("Guardar Dif .." & ex.ToString)
+                'End Try
             End If
         End If
         FechaRep = Now.ToString
@@ -127,6 +127,9 @@ Public Class FrmEstadoResultados
                 BalancePYG(cbini.Text, cbfin.Text, nivel.Value, txtpini.Text, " AND nit='" & txtnit.Text & "' ")
             End If
         End If
+        'If chkMostrar.Checked = False Then
+        '    BorrarDiferencia()
+        'End If
     End Sub
     Dim utili As Double
     Private Sub BorrarDiferencia()
@@ -199,13 +202,13 @@ Public Class FrmEstadoResultados
             sumaC = sumaC + aC
         Next
         '***************************************
-        cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "RESUMEN", 300, k, 0)
-        cb.ShowTextAligned(50, "INGRESOS", 50, k - 15, 0)
-        cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaI), 250, k - 15, 0)
-        cb.ShowTextAligned(50, "GASTOS", 50, k - 30, 0)
-        cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaG), 420, k - 30, 0)
-        cb.ShowTextAligned(50, "COSTOS DE VENTAS", 50, k - 45, 0)
-        cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaC), 420, k - 45, 0)
+        'cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "RESUMEN", 300, k, 0)
+        'cb.ShowTextAligned(50, "INGRESOS", 50, k - 15, 0)
+        'cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaI), 250, k - 15, 0)
+        'cb.ShowTextAligned(50, "GASTOS", 50, k - 30, 0)
+        'cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaG), 420, k - 30, 0)
+        'cb.ShowTextAligned(50, "COSTOS DE VENTAS", 50, k - 45, 0)
+        'cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(sumaC), 420, k - 45, 0)
         UTI = sumaI + sumaG + sumaC
 
         utili = UTI
@@ -244,13 +247,13 @@ Public Class FrmEstadoResultados
             myCommand.CommandText = "INSERT INTO documentos" & cbfin.Text & " VALUES(?item,?doc,?tipodoc,?periodo,?dia,?centro,?desc,?debito,?credito,?codigo,?base,?diasv,?fechaven,?nit,?cheque,?modulo);"
             myCommand.ExecuteNonQuery()
 
-            If CInt(cbfin.Text) - 1 <= 9 Then
-                myCommand.CommandText = "UPDATE selpuc SET saldo0" & CInt(cbfin.Text) - 1 & "= saldo0" & CInt(cbfin.Text) - 1 & " + ?sal, " _
-                & " saldo" & cbfin.Text & "= saldo" & cbfin.Text & " + ?sal WHERE codigo=?codigo;"
-            Else
-                myCommand.CommandText = "UPDATE selpuc SET saldo" & CInt(cbfin.Text) - 1 & "= saldo" & CInt(cbfin.Text) - 1 & " + ?sal, " _
-               & " saldo" & cbfin.Text & "= saldo" & cbfin.Text & " + ?sal WHERE codigo=?codigo;"
-            End If
+            'If CInt(cbfin.Text) - 1 <= 9 Then
+            '    myCommand.CommandText = "UPDATE selpuc SET saldo0" & CInt(cbfin.Text) - 1 & "= saldo0" & CInt(cbfin.Text) - 1 & " + ?sal, " _
+            '    & " saldo" & cbfin.Text & "= saldo" & cbfin.Text & " + ?sal WHERE codigo=?codigo;"
+            'Else
+            '    myCommand.CommandText = "UPDATE selpuc SET saldo" & CInt(cbfin.Text) - 1 & "= saldo" & CInt(cbfin.Text) - 1 & " + ?sal, " _
+            '   & " saldo" & cbfin.Text & "= saldo" & cbfin.Text & " + ?sal WHERE codigo=?codigo;"
+            'End If
             myCommand.ExecuteNonQuery()
             myCommand.Parameters.Clear()
             Cerrar()
@@ -746,34 +749,34 @@ Public Class FrmEstadoResultados
         UTI = sumaI + sumaG + sumaC
         '*************************************
         ''******************************
-        If chkMostrar.Checked = False Then
-            nk = nk + 8
-            fuente = FontFactory.GetFont(FontFactory.HELVETICA, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
-            cb.SetFontAndSize(fuente, 8)
-            myCommand.CommandText = "SELECT ctaPerdida FROM  parcontab;"
-            myAdapter.SelectCommand = myCommand
-            myAdapter.Fill(tDif)
-            myCommand.CommandText = "SELECT descripcion FROM selpuc WHERE codigo='" + tDif.Rows(0).Item("ctaPerdida") + "';"
-            myAdapter.SelectCommand = myCommand
-            myAdapter.Fill(tDesc)
+        'If chkMostrar.Checked = False Then
+        '    nk = nk + 8
+        '    fuente = FontFactory.GetFont(FontFactory.HELVETICA, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
+        '    cb.SetFontAndSize(fuente, 8)
+        '    myCommand.CommandText = "SELECT ctaPerdida FROM  parcontab;"
+        '    myAdapter.SelectCommand = myCommand
+        '    myAdapter.Fill(tDif)
+        '    myCommand.CommandText = "SELECT descripcion FROM selpuc WHERE codigo='" + tDif.Rows(0).Item("ctaPerdida") + "';"
+        '    myAdapter.SelectCommand = myCommand
+        '    myAdapter.Fill(tDesc)
 
-            cb.ShowTextAligned(50, "TOTAL " + tDesc.Rows(0).Item("descripcion"), 120, nk, 0)
-            cb.ShowTextAligned(50, tDif.Rows(0).Item("ctaPerdida"), 50, nk + 10, 0)
-            cb.ShowTextAligned(50, tDesc.Rows(0).Item("descripcion"), 150, nk + 10, 0)
-            cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(UTI), 585, nk + 10, 0)
-            cb.ShowTextAligned(50, "__________________________________________________________________________________________________________________________________________________ ", 50, nk + 9, 0)
-        Else
-            fuente = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
-            cb.SetFontAndSize(fuente, 9)
-            If chkMostrar.Checked = True Then
-                If UTI >= 0 Then
-                    cb.ShowTextAligned(50, "PERDIDAD", 50, k - 60, 0)
-                Else
-                    cb.ShowTextAligned(50, "UTILIDAD", 50, k - 60, 0)
-                End If
-                cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(UTI), 250, k - 60, 0)
+        '    cb.ShowTextAligned(50, "TOTAL " + tDesc.Rows(0).Item("descripcion"), 120, nk, 0)
+        '    cb.ShowTextAligned(50, tDif.Rows(0).Item("ctaPerdida"), 50, nk + 10, 0)
+        '    cb.ShowTextAligned(50, tDesc.Rows(0).Item("descripcion"), 150, nk + 10, 0)
+        '    cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(UTI), 585, nk + 10, 0)
+        '    cb.ShowTextAligned(50, "__________________________________________________________________________________________________________________________________________________ ", 50, nk + 9, 0)
+        'Else
+        fuente = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont
+        cb.SetFontAndSize(fuente, 9)
+        If chkMostrar.Checked = True Then
+            If UTI >= 0 Then
+                cb.ShowTextAligned(50, "PERDIDAD", 50, k - 60, 0)
+            Else
+                cb.ShowTextAligned(50, "UTILIDAD", 50, k - 60, 0)
             End If
+            cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT, Moneda(UTI), 250, k - 60, 0)
         End If
+        'End If
 
 
         'firmas

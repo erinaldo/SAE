@@ -34,9 +34,6 @@ Partial Class frmfacturacion
         Me.Label21 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
         Me.admin = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.permisos = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel
         Me.TabControl2 = New DevComponents.DotNetBar.TabControl
         Me.TabControlPanel6 = New DevComponents.DotNetBar.TabControlPanel
@@ -71,6 +68,9 @@ Partial Class frmfacturacion
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
         Me.datosbac = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.permisos = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel
         Me.cmdcaja = New DevComponents.DotNetBar.ButtonX
         Me.cmdUsu = New DevComponents.DotNetBar.ButtonX
@@ -125,10 +125,10 @@ Partial Class frmfacturacion
         Me.cmdperio = New System.Windows.Forms.Button
         Me.cmdcompa = New System.Windows.Forms.Button
         Me.Tool = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ButtonX5 = New DevComponents.DotNetBar.ButtonX
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel5.SuspendLayout()
-        Me.TabControlPanel4.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl2.SuspendLayout()
@@ -136,6 +136,7 @@ Partial Class frmfacturacion
         Me.TabControlPanel7.SuspendLayout()
         Me.TabControlPanel9.SuspendLayout()
         Me.TabControlPanel8.SuspendLayout()
+        Me.TabControlPanel4.SuspendLayout()
         Me.TabControlPanel3.SuspendLayout()
         Me.TabControlPanel2.SuspendLayout()
         CType(Me.TabControl3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,10 +152,10 @@ Partial Class frmfacturacion
         '
         Me.TabControl1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TabControl1.CanReorderTabs = True
-        Me.TabControl1.Controls.Add(Me.TabControlPanel5)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel5)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Location = New System.Drawing.Point(5, 98)
         Me.TabControl1.Name = "TabControl1"
@@ -274,41 +275,6 @@ Partial Class frmfacturacion
         Me.admin.Name = "admin"
         Me.admin.Text = "Procesos"
         Me.admin.Visible = False
-        '
-        'TabControlPanel4
-        '
-        Me.TabControlPanel4.Controls.Add(Me.Label11)
-        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel4.Name = "TabControlPanel4"
-        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel4.Size = New System.Drawing.Size(733, 274)
-        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel4.Style.GradientAngle = 90
-        Me.TabControlPanel4.TabIndex = 6
-        Me.TabControlPanel4.TabItem = Me.permisos
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(136, 125)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(460, 24)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "NO TIENES PERMISOS PARA ESTA INTERFAZ"
-        '
-        'permisos
-        '
-        Me.permisos.AttachedControl = Me.TabControlPanel4
-        Me.permisos.Name = "permisos"
-        Me.permisos.Text = "Permisos"
         '
         'TabControlPanel1
         '
@@ -713,8 +679,44 @@ Partial Class frmfacturacion
         Me.datosbac.Name = "datosbac"
         Me.datosbac.Text = "Datos Basicos"
         '
+        'TabControlPanel4
+        '
+        Me.TabControlPanel4.Controls.Add(Me.Label11)
+        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel4.Name = "TabControlPanel4"
+        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel4.Size = New System.Drawing.Size(733, 274)
+        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel4.Style.GradientAngle = 90
+        Me.TabControlPanel4.TabIndex = 6
+        Me.TabControlPanel4.TabItem = Me.permisos
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(136, 125)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(460, 24)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "NO TIENES PERMISOS PARA ESTA INTERFAZ"
+        '
+        'permisos
+        '
+        Me.permisos.AttachedControl = Me.TabControlPanel4
+        Me.permisos.Name = "permisos"
+        Me.permisos.Text = "Permisos"
+        '
         'TabControlPanel3
         '
+        Me.TabControlPanel3.Controls.Add(Me.ButtonX5)
         Me.TabControlPanel3.Controls.Add(Me.cmdcaja)
         Me.TabControlPanel3.Controls.Add(Me.cmdUsu)
         Me.TabControlPanel3.Controls.Add(Me.ButtonX4)
@@ -747,7 +749,7 @@ Partial Class frmfacturacion
         '
         Me.cmdcaja.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.cmdcaja.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdcaja.Location = New System.Drawing.Point(376, 207)
+        Me.cmdcaja.Location = New System.Drawing.Point(451, 207)
         Me.cmdcaja.Name = "cmdcaja"
         Me.cmdcaja.Size = New System.Drawing.Size(152, 36)
         Me.cmdcaja.TabIndex = 56
@@ -757,7 +759,7 @@ Partial Class frmfacturacion
         '
         Me.cmdUsu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.cmdUsu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmdUsu.Location = New System.Drawing.Point(201, 207)
+        Me.cmdUsu.Location = New System.Drawing.Point(276, 207)
         Me.cmdUsu.Name = "cmdUsu"
         Me.cmdUsu.Size = New System.Drawing.Size(152, 36)
         Me.cmdUsu.TabIndex = 55
@@ -767,9 +769,9 @@ Partial Class frmfacturacion
         '
         Me.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX4.Location = New System.Drawing.Point(443, 165)
+        Me.ButtonX4.Location = New System.Drawing.Point(451, 165)
         Me.ButtonX4.Name = "ButtonX4"
-        Me.ButtonX4.Size = New System.Drawing.Size(158, 36)
+        Me.ButtonX4.Size = New System.Drawing.Size(152, 36)
         Me.ButtonX4.TabIndex = 54
         Me.ButtonX4.Text = "Diario"
         '
@@ -787,9 +789,9 @@ Partial Class frmfacturacion
         '
         Me.cmd_info_vendedor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.cmd_info_vendedor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_vendedor.Location = New System.Drawing.Point(443, 123)
+        Me.cmd_info_vendedor.Location = New System.Drawing.Point(451, 123)
         Me.cmd_info_vendedor.Name = "cmd_info_vendedor"
-        Me.cmd_info_vendedor.Size = New System.Drawing.Size(158, 36)
+        Me.cmd_info_vendedor.Size = New System.Drawing.Size(152, 36)
         Me.cmd_info_vendedor.TabIndex = 52
         Me.cmd_info_vendedor.Text = "Por Vendedor"
         '
@@ -827,9 +829,9 @@ Partial Class frmfacturacion
         '
         Me.cmd_info_cliente.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.cmd_info_cliente.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cmd_info_cliente.Location = New System.Drawing.Point(443, 79)
+        Me.cmd_info_cliente.Location = New System.Drawing.Point(451, 79)
         Me.cmd_info_cliente.Name = "cmd_info_cliente"
-        Me.cmd_info_cliente.Size = New System.Drawing.Size(158, 36)
+        Me.cmd_info_cliente.Size = New System.Drawing.Size(152, 36)
         Me.cmd_info_cliente.TabIndex = 47
         Me.cmd_info_cliente.Text = "Por Cliente"
         '
@@ -1348,6 +1350,16 @@ Partial Class frmfacturacion
         Me.Tool.SetToolTip(Me.cmdcompa, "abrir otra compañia")
         Me.cmdcompa.UseVisualStyleBackColor = False
         '
+        'ButtonX5
+        '
+        Me.ButtonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX5.Location = New System.Drawing.Point(104, 207)
+        Me.ButtonX5.Name = "ButtonX5"
+        Me.ButtonX5.Size = New System.Drawing.Size(154, 36)
+        Me.ButtonX5.TabIndex = 57
+        Me.ButtonX5.Text = "Ganancias"
+        '
         'frmfacturacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1368,8 +1380,6 @@ Partial Class frmfacturacion
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel5.ResumeLayout(False)
         Me.TabControlPanel5.PerformLayout()
-        Me.TabControlPanel4.ResumeLayout(False)
-        Me.TabControlPanel4.PerformLayout()
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1381,6 +1391,8 @@ Partial Class frmfacturacion
         Me.TabControlPanel9.PerformLayout()
         Me.TabControlPanel8.ResumeLayout(False)
         Me.TabControlPanel8.PerformLayout()
+        Me.TabControlPanel4.ResumeLayout(False)
+        Me.TabControlPanel4.PerformLayout()
         Me.TabControlPanel3.ResumeLayout(False)
         Me.TabControlPanel3.PerformLayout()
         Me.TabControlPanel2.ResumeLayout(False)
@@ -1499,4 +1511,5 @@ Partial Class frmfacturacion
     Friend WithEvents ButtonX4 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents cmdUsu As DevComponents.DotNetBar.ButtonX
     Friend WithEvents cmdcaja As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ButtonX5 As DevComponents.DotNetBar.ButtonX
 End Class

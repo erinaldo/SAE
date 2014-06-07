@@ -25,11 +25,9 @@ Partial Class frmterceros
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmterceros))
         Me.gimp = New System.Windows.Forms.GroupBox
-        Me.cbretCree = New System.Windows.Forms.ComboBox
+        Me.cbreteica = New System.Windows.Forms.ComboBox
         Me.mimenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.QueEsEstoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.Label27 = New System.Windows.Forms.Label
-        Me.cbreteica = New System.Windows.Forms.ComboBox
         Me.cbreteiva = New System.Windows.Forms.ComboBox
         Me.Label21 = New System.Windows.Forms.Label
         Me.Label22 = New System.Windows.Forms.Label
@@ -37,6 +35,8 @@ Partial Class frmterceros
         Me.cbiva = New System.Windows.Forms.ComboBox
         Me.Label20 = New System.Windows.Forms.Label
         Me.Label19 = New System.Windows.Forms.Label
+        Me.cbretCree = New System.Windows.Forms.ComboBox
+        Me.Label27 = New System.Windows.Forms.Label
         Me.GRUPO = New System.Windows.Forms.GroupBox
         Me.Label35 = New System.Windows.Forms.Label
         Me.txtctab2 = New System.Windows.Forms.TextBox
@@ -154,18 +154,17 @@ Partial Class frmterceros
         Me.gimp.TabStop = False
         Me.gimp.Text = "Impuestos"
         '
-        'cbretCree
+        'cbreteica
         '
-        Me.cbretCree.ContextMenuStrip = Me.mimenu
-        Me.cbretCree.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbretCree.FormattingEnabled = True
-        Me.cbretCree.Items.AddRange(New Object() {"SI", "NO"})
-        Me.cbretCree.Location = New System.Drawing.Point(773, 339)
-        Me.cbretCree.Name = "cbretCree"
-        Me.cbretCree.Size = New System.Drawing.Size(46, 21)
-        Me.cbretCree.TabIndex = 75
-        Me.ToolTip1.SetToolTip(Me.cbretCree, "rete ica")
-        Me.cbretCree.Visible = False
+        Me.cbreteica.ContextMenuStrip = Me.mimenu
+        Me.cbreteica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbreteica.FormattingEnabled = True
+        Me.cbreteica.Items.AddRange(New Object() {"SI", "NO"})
+        Me.cbreteica.Location = New System.Drawing.Point(595, 16)
+        Me.cbreteica.Name = "cbreteica"
+        Me.cbreteica.Size = New System.Drawing.Size(46, 21)
+        Me.cbreteica.TabIndex = 3
+        Me.ToolTip1.SetToolTip(Me.cbreteica, "rete ica")
         '
         'mimenu
         '
@@ -178,30 +177,6 @@ Partial Class frmterceros
         Me.QueEsEstoToolStripMenuItem.Name = "QueEsEstoToolStripMenuItem"
         Me.QueEsEstoToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.QueEsEstoToolStripMenuItem.Text = "¿Que es esto?"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.BackColor = System.Drawing.Color.Transparent
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(693, 341)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(77, 16)
-        Me.Label27.TabIndex = 76
-        Me.Label27.Text = "Rete CREE"
-        Me.Label27.Visible = False
-        '
-        'cbreteica
-        '
-        Me.cbreteica.ContextMenuStrip = Me.mimenu
-        Me.cbreteica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbreteica.FormattingEnabled = True
-        Me.cbreteica.Items.AddRange(New Object() {"SI", "NO"})
-        Me.cbreteica.Location = New System.Drawing.Point(595, 16)
-        Me.cbreteica.Name = "cbreteica"
-        Me.cbreteica.Size = New System.Drawing.Size(46, 21)
-        Me.cbreteica.TabIndex = 3
-        Me.ToolTip1.SetToolTip(Me.cbreteica, "rete ica")
         '
         'cbreteiva
         '
@@ -282,6 +257,31 @@ Partial Class frmterceros
         Me.Label19.Size = New System.Drawing.Size(29, 16)
         Me.Label19.TabIndex = 11
         Me.Label19.Text = "IVA"
+        '
+        'cbretCree
+        '
+        Me.cbretCree.ContextMenuStrip = Me.mimenu
+        Me.cbretCree.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbretCree.FormattingEnabled = True
+        Me.cbretCree.Items.AddRange(New Object() {"SI", "NO"})
+        Me.cbretCree.Location = New System.Drawing.Point(773, 339)
+        Me.cbretCree.Name = "cbretCree"
+        Me.cbretCree.Size = New System.Drawing.Size(46, 21)
+        Me.cbretCree.TabIndex = 75
+        Me.ToolTip1.SetToolTip(Me.cbretCree, "rete ica")
+        Me.cbretCree.Visible = False
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.BackColor = System.Drawing.Color.Transparent
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(693, 341)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(77, 16)
+        Me.Label27.TabIndex = 76
+        Me.Label27.Text = "Rete CREE"
+        Me.Label27.Visible = False
         '
         'GRUPO
         '
@@ -809,7 +809,7 @@ Partial Class frmterceros
         Me.cbtipo.ContextMenuStrip = Me.mimenu
         Me.cbtipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbtipo.FormattingEnabled = True
-        Me.cbtipo.Items.AddRange(New Object() {"CLIENTES", "PROVEEDOR", "EMPLEADOS", "OTROS"})
+        Me.cbtipo.Items.AddRange(New Object() {"CLIENTES", "PROVEEDOR", "EMPLEADOS", "OTROS", "Inactivo"})
         Me.cbtipo.Location = New System.Drawing.Point(349, 27)
         Me.cbtipo.Name = "cbtipo"
         Me.cbtipo.Size = New System.Drawing.Size(121, 21)

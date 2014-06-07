@@ -1211,4 +1211,10 @@ Public Class frmfacturacion
         FrmInformeCC.txtcfin.Text = "111005001"
         FrmInformeCC.ShowDialog()
     End Sub
+
+    Private Sub ButtonX5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonX5.Click
+        MiConexion(bda)
+        Cerrar()
+        frmInfoFacturas.ShowDialog()
+    End Sub
 End Class

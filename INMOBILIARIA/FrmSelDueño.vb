@@ -7,9 +7,9 @@
             tabla.Clear()
             Dim items As Integer
             If txtclase.Text <> "cliente_inm" Then
-                myCommand.CommandText = "SELECT i.nit,TRIM(CONCAT(t.apellidos,' ',t.nombre))AS ter, i.clase as tipo FROM tercerosinm i left join terceros t ON i.nit=t.nit  where i.clase= '" & txtclase.Text & "' ORDER BY ter;"
+                myCommand.CommandText = "SELECT i.nit,TRIM(CONCAT(t.apellidos,' ',t.nombre))AS ter, i.clase as tipo FROM tercerosinm i left join terceros t ON i.nit=t.nit  where i.clase= '" & txtclase.Text & "' AND t.tipo<>'Inactivo' ORDER BY ter;"
             Else
-                myCommand.CommandText = "SELECT i.nit,TRIM(CONCAT(t.apellidos,' ',t.nombre))AS ter, i.clase as tipo FROM tercerosinm i left join terceros t ON i.nit=t.nit ORDER BY ter;"
+                myCommand.CommandText = "SELECT i.nit,TRIM(CONCAT(t.apellidos,' ',t.nombre))AS ter, i.clase as tipo FROM tercerosinm i left join terceros t ON i.nit=t.nit where t.tipo<>'Inactivo' ORDER BY ter;"
 
             End If
             myAdapter.SelectCommand = myCommand

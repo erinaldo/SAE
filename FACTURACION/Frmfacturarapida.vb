@@ -4934,7 +4934,7 @@ Public Class Frmfacturarapida
         Next
         '*************** CUERPO DE LA FACTURA********************************
         file.WriteLine("---------------------------------------")
-        file.WriteLine("    Cant   Unit     Iva %     V/total ")
+        file.WriteLine("    Cant   Unit      V/total      Iva ")
         file.WriteLine("---------------------------------------")
         Dim valor, vtotal As Double
         Dim cad As String = ""
@@ -4948,14 +4948,20 @@ Public Class Frmfacturarapida
                     Catch ex As Exception
                         valor = Moneda2(gfactura.Item("valor", i).Value.ToString, lb_imp_dec.Text)
                     End Try
-                    cad = cad & LlenarEspacios(Moneda2(valor, lb_imp_dec.Text), 10)
+                    ' cad = cad & LlenarEspacios(Moneda2(valor, lb_imp_dec.Text), 10)
+                    cad = cad & LlenarEspacios(Moneda2(valor, lb_imp_dec.Text), 11)
                     Try
                         vtotal = Moneda2(gfactura.Item("Vtotal", i).Value.ToString, lb_imp_dec.Text) / (1 + (CDbl(gfactura.Item("iva", i).Value.ToString) / 100))
                     Catch ex As Exception
                         vtotal = Moneda2(gfactura.Item("Vtotal", i).Value.ToString, lb_imp_dec.Text)
                     End Try
-                    cad = cad & LlenarEspacios(Moneda2(gfactura.Item("iva", i).Value.ToString, lb_imp_dec.Text), 6)
+                    'cad = cad & LlenarEspacios(Moneda2(gfactura.Item("iva", i).Value.ToString, lb_imp_dec.Text), 6)
+                    'cad = cad & LlenarEspacios(Moneda2(vtotal, lb_imp_dec.Text), 11)
                     cad = cad & LlenarEspacios(Moneda2(vtotal, lb_imp_dec.Text), 11)
+                    If Moneda(gfactura.Item("iva", i).Value.ToString) <> Moneda(0) Then
+                        cad = cad & LlenarEspacios("D", 5)
+                    End If
+
                     file.WriteLine(cad)
                 End If
             Catch ex As Exception
@@ -4991,7 +4997,7 @@ Public Class Frmfacturarapida
         If txtiva.Text <> Moneda(0) Then
             For i = 0 To tabla4.Rows.Count - 1
                 If tabla4.Rows(i).Item(1).ToString <> 0 Then
-                    cad = LlenarEspacios("Iva " & (tabla4.Rows(i).Item(0).ToString) & " % :", 15)
+                    cad = LlenarEspacios("D = Iva " & (tabla4.Rows(i).Item(0).ToString) & "% :", 11)
                     cad = cad & LlenarEspacios(Moneda2(tabla4.Rows(i).Item(1).ToString, lb_imp_dec.Text), 16)
                     file.WriteLine(cad)
                 End If

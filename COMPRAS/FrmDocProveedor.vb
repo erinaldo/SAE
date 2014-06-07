@@ -2563,20 +2563,20 @@ Public Class FrmDocProveedor
             '************************************************
             For i = 0 To gfp.Rows.Count - 1
                 grilla.RowCount = grilla.RowCount + 1
-                MovimientoContable(0, "total", txtcuentatotal.Text, "VR. TOTAL " & gfp.Item("cual", i).Value & " " & Trim(txtcliente.Text))
+                MovimientoContable(0, "total", txtcuentatotal.Text, "Nº:" & txt_doc_afe.Text & " VR. TOTAL " & gfp.Item("cual", i).Value & " " & Trim(txtcliente.Text))
             Next
             'grilla.RowCount = grilla.RowCount + 1
             'MovimientoContable(0, "total", txtcuentatotal.Text, "VR. TOTAL " & Trim(txtcliente.Text))
             grilla.RowCount = grilla.RowCount + 1
-            MovimientoContable(0, "desc", txtcuentadesc.Text, "DESCUENTO " & valordes.Text & "% " & Trim(txtcliente.Text))
+            MovimientoContable(0, "desc", txtcuentadesc.Text, "Nº:" & txt_doc_afe.Text & " DESCUENTO " & valordes.Text & "% " & Trim(txtcliente.Text))
             grilla.RowCount = grilla.RowCount + 1
-            MovimientoContable(0, "rtf", txtcuentaret.Text, "RETE FUENTE " & valorret.Text & "% " & Trim(txtcliente.Text))
+            MovimientoContable(0, "rtf", txtcuentaret.Text, "Nº:" & txt_doc_afe.Text & " RETE FUENTE " & valorret.Text & "% " & Trim(txtcliente.Text))
             grilla.RowCount = grilla.RowCount + 1
-            MovimientoContable(0, "fle", txtcuentaflete.Text, "FLETE ")
+            MovimientoContable(0, "fle", txtcuentaflete.Text, "Nº:" & txt_doc_afe.Text & " FLETE ")
             grilla.RowCount = grilla.RowCount + 1
-            MovimientoContable(0, "seg", txtcuentaseguro.Text, "SEGURO ")
+            MovimientoContable(0, "seg", txtcuentaseguro.Text, "Nº:" & txt_doc_afe.Text & " SEGURO ")
             grilla.RowCount = grilla.RowCount + 1
-            MovimientoContable(0, "rtc", txtcuentaCree.Text, "RETE CREE" & valorret.Text & "% " & Trim(txtcliente.Text))
+            MovimientoContable(0, "rtc", txtcuentaCree.Text, "Nº:" & txt_doc_afe.Text & " RETE CREE" & valorret.Text & "% " & Trim(txtcliente.Text))
             If cbsr.Items.Count > 0 Then
                 For l = 0 To cbsr.Items.Count - 1
                     If Trim(cbsr.Items.Item(l).ToString) = "+" Then
@@ -2607,12 +2607,12 @@ Public Class FrmDocProveedor
             For i = 0 To gfactura.RowCount - 1
                 If gfactura.Item("tipo", i).Value = "I" Then
                     If txtremision.Text = "" Then
-                        MovimientoContable(i, "inv", gfactura.Item("ctainv", i).Value, "INVENTARIO " & gfactura.Item("descrip", i).Value)
+                        MovimientoContable(i, "inv", gfactura.Item("ctainv", i).Value, "Nº:" & txt_doc_afe.Text & " INVENTARIO " & gfactura.Item("descrip", i).Value)
                     End If
-                    MovimientoContable(i, "iva", gfactura.Item("ctaiva", i).Value, "IVA " & gfactura.Item("iva", i).Value & "% " & Trim(txtcliente.Text))
+                    MovimientoContable(i, "iva", gfactura.Item("ctaiva", i).Value, "Nº:" & txt_doc_afe.Text & " IVA " & gfactura.Item("iva", i).Value & "% " & Trim(txtcliente.Text))
                 Else
                     MovimientoContable(i, "ing", gfactura.Item("ctaing", i).Value, gfactura.Item("descrip", i).Value)
-                    MovimientoContable(i, "iva", gfactura.Item("ctaiva", i).Value, "IVA " & gfactura.Item("iva", i).Value & "% " & Trim(txtcliente.Text))
+                    MovimientoContable(i, "iva", gfactura.Item("ctaiva", i).Value, "Nº:" & txt_doc_afe.Text & " IVA " & gfactura.Item("iva", i).Value & "% " & Trim(txtcliente.Text))
                 End If
             Next i
             '********************************************************************

@@ -134,7 +134,10 @@ Public Class FrmInfartalf
 
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt.rpt")
                             CrReport.SetDataSource(tabla)
-                            CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                            Try
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+                            Catch ex As Exception
+                            End Try
                             FrmGenArticulos.CrystalReportViewer1.ReportSource = CrReport
 
 
@@ -198,7 +201,10 @@ Public Class FrmInfartalf
 
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt.rpt")
                             CrReport.SetDataSource(tabla)
-                            CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                            Try
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+                            Catch ex As Exception
+                            End Try
                             FrmGenArticulos.CrystalReportViewer1.ReportSource = CrReport
 
 
@@ -314,7 +320,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt2.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmGenArticulos2.CrystalReportViewer1.ReportSource = CrReport
@@ -455,7 +461,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt2.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmGenArticulos2.CrystalReportViewer1.ReportSource = CrReport
@@ -548,7 +554,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt3.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmGenArticulos3.CrystalReportViewer1.ReportSource = CrReport
@@ -630,7 +636,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt3.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmGenArticulos3.CrystalReportViewer1.ReportSource = CrReport
@@ -710,7 +716,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportKarRef.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmRepKarRef.CrystalReportViewer1.ReportSource = CrReport
@@ -795,7 +801,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportKarRef.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmRepKarRef.CrystalReportViewer1.ReportSource = CrReport
@@ -918,7 +924,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportKarRef2.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmRepKarRef2.CrystalReportViewer1.ReportSource = CrReport
@@ -1042,7 +1048,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportKarRef2.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmRepKarRef2.CrystalReportViewer1.ReportSource = CrReport
@@ -1132,7 +1138,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportKarRef3.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmRepKarRef3.CrystalReportViewer1.ReportSource = CrReport
@@ -1217,7 +1223,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportKarRef3.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmRepKarRef3.CrystalReportViewer1.ReportSource = CrReport
@@ -1294,7 +1300,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmGenArticulos.CrystalReportViewer1.ReportSource = CrReport
@@ -1356,7 +1362,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmGenArticulos.CrystalReportViewer1.ReportSource = CrReport
@@ -1460,7 +1466,7 @@ Public Class FrmInfartalf
                             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt2.rpt")
                             CrReport.SetDataSource(tabla)
                             Try
-                                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                             Catch ex As Exception
                             End Try
                             FrmGenArticulos2.CrystalReportViewer1.ReportSource = CrReport
@@ -1578,7 +1584,7 @@ Public Class FrmInfartalf
                                 CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt2.rpt")
                                 CrReport.SetDataSource(tabla)
                                 Try
-                                    CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                    CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                                 Catch ex As Exception
                                 End Try
                                 FrmGenArticulos2.CrystalReportViewer1.ReportSource = CrReport
@@ -1748,7 +1754,7 @@ Public Class FrmInfartalf
                                 CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportGenArt33.rpt")
                                 CrReport.SetDataSource(tabla)
                                 Try
-                                    CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+                                    CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
                                 Catch ex As Exception
                                 End Try
                                 FrmGenArticulos33.CrystalReportViewer1.ReportSource = CrReport

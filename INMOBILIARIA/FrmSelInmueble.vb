@@ -6,8 +6,14 @@
             Dim tabla As New DataTable
             tabla.Clear()
             Dim items As Integer
-            myCommand.CommandText = "SELECT  i.`codigo`, i.tipoim, TRIM(CONCAT(i.`direccion`,' ',i.`barrio`)) as dir, s.`descripcion`, i.estado,  TRIM(CONCAT(i.`nitp`,' ',t.nombre,' ',t.apellidos)) AS nom " _
-            & " FROM inmuebles i, terceros t, sae.mun s WHERE t.nit=i.nitp  AND s.`coddep`= i.`dpto` AND s.`codmun`= i.`ciudad` "
+            If lbform.Text = "contrato" Then
+                myCommand.CommandText = "SELECT  i.`codigo`, i.tipoim, TRIM(CONCAT(i.`direccion`,' ',i.`barrio`)) as dir, s.`descripcion`, i.estado,  TRIM(CONCAT(i.`nitp`,' ',t.nombre,' ',t.apellidos)) AS nom " _
+           & " FROM inmuebles i, terceros t, sae.mun s WHERE t.nit=i.nitp  AND s.`coddep`= i.`dpto` AND s.`codmun`= i.`ciudad` and i.estado<>'INACTIVO' "
+            Else
+                myCommand.CommandText = "SELECT  i.`codigo`, i.tipoim, TRIM(CONCAT(i.`direccion`,' ',i.`barrio`)) as dir, s.`descripcion`, i.estado,  TRIM(CONCAT(i.`nitp`,' ',t.nombre,' ',t.apellidos)) AS nom " _
+           & " FROM inmuebles i, terceros t, sae.mun s WHERE t.nit=i.nitp  AND s.`coddep`= i.`dpto` AND s.`codmun`= i.`ciudad` "
+
+            End If
             myAdapter.SelectCommand = myCommand
             myAdapter.Fill(tabla)
             Refresh()

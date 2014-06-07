@@ -446,3 +446,4 @@ D:\SAE iney\SAE\obj\Debug\SAE.vbproj.GenerateResource.Cache
 D:\SAE iney\SAE\obj\Debug\SAE.FrmElimOrden.resources
 D:\SAE iney\SAE\obj\Debug\SAE.FrmSelNucleoF.resources
 D:\SAE iney\SAE\obj\Debug\SAE.FrmDesaprobarDoc.resources
+D:\SAE iney\SAE\obj\Debug\SAE.frmInfoFacturas.resources

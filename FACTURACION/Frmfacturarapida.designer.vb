@@ -24,19 +24,7 @@ Partial Class Frmfacturarapida
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frmfacturarapida))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
@@ -49,6 +37,18 @@ Partial Class Frmfacturarapida
         Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.Button2 = New System.Windows.Forms.Button
         Me.CmdUltimo = New System.Windows.Forms.Button
@@ -123,32 +123,8 @@ Partial Class Frmfacturarapida
         Me.cmdPrint = New System.Windows.Forms.Button
         Me.cmditems = New System.Windows.Forms.Button
         Me.gfactura = New System.Windows.Forms.DataGridView
-        Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.descrip = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cant = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.valor = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Vtotal = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.bodega = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cc = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ctainv = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ctacven = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ctaing = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ctaiva = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.iva = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.costo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.nit = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.precio2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.txtcuentatotal = New System.Windows.Forms.TextBox
         Me.gfp = New System.Windows.Forms.DataGridView
-        Me.cual = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.detalle = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.tt = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.banco = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.monto = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.lbusuario = New System.Windows.Forms.Label
         Me.Label4 = New System.Windows.Forms.Label
         Me.lbsubtotal = New System.Windows.Forms.Label
@@ -162,13 +138,6 @@ Partial Class Frmfacturarapida
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Gparametros = New System.Windows.Forms.GroupBox
         Me.grilla = New System.Windows.Forms.DataGridView
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Debitos = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Creditos = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cuenta = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.base = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cheque = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.nitc = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.lbdocajuste = New System.Windows.Forms.Label
         Me.imprimir = New System.Drawing.Printing.PrintDocument
         Me.lbprint = New System.Windows.Forms.Label
@@ -201,16 +170,6 @@ Partial Class Frmfacturarapida
         Me.txtobserbaciones2 = New System.Windows.Forms.TextBox
         Me.txttotal2 = New System.Windows.Forms.Label
         Me.gfactura2 = New System.Windows.Forms.DataGridView
-        Me.num2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.codigo2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.descrip2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cant2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.valor2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.tipo2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.bodega2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cc2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.descuento2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.nit2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.txtcentro2 = New System.Windows.Forms.TextBox
         Me.lbespera = New System.Windows.Forms.Label
         Me.Label23 = New System.Windows.Forms.Label
@@ -255,6 +214,47 @@ Partial Class Frmfacturarapida
         Me.DataGridViewTextBoxColumn39 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn40 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn41 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.num2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.codigo2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.descrip2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cant2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.valor2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.tipo2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.bodega2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cc2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.descuento2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.nit2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Debitos = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Creditos = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cuenta = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.base = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cheque = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.nitc = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cual = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.detalle = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.tt = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.banco = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.monto = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.descrip = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cant = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.valor = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Vtotal = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.bodega = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cc = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ctainv = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ctacven = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ctaing = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ctaiva = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.iva = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.costo = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.nit = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.precio2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.GroupBox1.SuspendLayout()
         Me.grupoafecta.SuspendLayout()
         CType(Me.gfactura, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1089,176 +1089,6 @@ Partial Class Frmfacturarapida
         Me.gfactura.Size = New System.Drawing.Size(644, 115)
         Me.gfactura.TabIndex = 53
         '
-        'num
-        '
-        DataGridViewCellStyle1.Format = "N0"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.num.DefaultCellStyle = DataGridViewCellStyle1
-        Me.num.Frozen = True
-        Me.num.HeaderText = "NÚM"
-        Me.num.MinimumWidth = 50
-        Me.num.Name = "num"
-        Me.num.ReadOnly = True
-        Me.num.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.num.Width = 50
-        '
-        'codigo
-        '
-        Me.codigo.Frozen = True
-        Me.codigo.HeaderText = "CODIGO"
-        Me.codigo.MinimumWidth = 90
-        Me.codigo.Name = "codigo"
-        Me.codigo.ReadOnly = True
-        Me.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.codigo.Width = 90
-        '
-        'descrip
-        '
-        Me.descrip.Frozen = True
-        Me.descrip.HeaderText = "DESCRIPCIÓN"
-        Me.descrip.MinimumWidth = 200
-        Me.descrip.Name = "descrip"
-        Me.descrip.ReadOnly = True
-        Me.descrip.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.descrip.Width = 200
-        '
-        'cant
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.Format = "N0"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.cant.DefaultCellStyle = DataGridViewCellStyle2
-        Me.cant.Frozen = True
-        Me.cant.HeaderText = "CANTIDAD"
-        Me.cant.MinimumWidth = 80
-        Me.cant.Name = "cant"
-        Me.cant.ReadOnly = True
-        Me.cant.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.cant.Width = 80
-        '
-        'valor
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle3.Format = "N2"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.valor.DefaultCellStyle = DataGridViewCellStyle3
-        Me.valor.Frozen = True
-        Me.valor.HeaderText = "V. UNI"
-        Me.valor.MinimumWidth = 100
-        Me.valor.Name = "valor"
-        Me.valor.ReadOnly = True
-        Me.valor.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'Vtotal
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle4.Format = "N2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.Vtotal.DefaultCellStyle = DataGridViewCellStyle4
-        Me.Vtotal.Frozen = True
-        Me.Vtotal.HeaderText = "V. TOTAL"
-        Me.Vtotal.MinimumWidth = 100
-        Me.Vtotal.Name = "Vtotal"
-        Me.Vtotal.ReadOnly = True
-        Me.Vtotal.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'tipo
-        '
-        Me.tipo.Frozen = True
-        Me.tipo.HeaderText = "TIPO"
-        Me.tipo.MinimumWidth = 20
-        Me.tipo.Name = "tipo"
-        Me.tipo.ReadOnly = True
-        Me.tipo.Visible = False
-        Me.tipo.Width = 20
-        '
-        'bodega
-        '
-        Me.bodega.Frozen = True
-        Me.bodega.HeaderText = "BODEGA"
-        Me.bodega.Name = "bodega"
-        Me.bodega.ReadOnly = True
-        Me.bodega.Visible = False
-        '
-        'cc
-        '
-        Me.cc.Frozen = True
-        Me.cc.HeaderText = "cc"
-        Me.cc.Name = "cc"
-        Me.cc.ReadOnly = True
-        Me.cc.Visible = False
-        '
-        'ctainv
-        '
-        Me.ctainv.Frozen = True
-        Me.ctainv.HeaderText = "ctainv"
-        Me.ctainv.Name = "ctainv"
-        Me.ctainv.ReadOnly = True
-        Me.ctainv.Visible = False
-        '
-        'ctacven
-        '
-        Me.ctacven.Frozen = True
-        Me.ctacven.HeaderText = "ctacven"
-        Me.ctacven.Name = "ctacven"
-        Me.ctacven.ReadOnly = True
-        Me.ctacven.Visible = False
-        '
-        'ctaing
-        '
-        Me.ctaing.Frozen = True
-        Me.ctaing.HeaderText = "ctaing"
-        Me.ctaing.Name = "ctaing"
-        Me.ctaing.ReadOnly = True
-        Me.ctaing.Visible = False
-        '
-        'ctaiva
-        '
-        Me.ctaiva.Frozen = True
-        Me.ctaiva.HeaderText = "ctaiva"
-        Me.ctaiva.Name = "ctaiva"
-        Me.ctaiva.ReadOnly = True
-        Me.ctaiva.Visible = False
-        '
-        'iva
-        '
-        Me.iva.Frozen = True
-        Me.iva.HeaderText = "iva"
-        Me.iva.Name = "iva"
-        Me.iva.ReadOnly = True
-        Me.iva.Visible = False
-        '
-        'costo
-        '
-        Me.costo.Frozen = True
-        Me.costo.HeaderText = "costo"
-        Me.costo.Name = "costo"
-        Me.costo.ReadOnly = True
-        Me.costo.Visible = False
-        '
-        'descuento
-        '
-        Me.descuento.Frozen = True
-        Me.descuento.HeaderText = "DESCUENTO"
-        Me.descuento.Name = "descuento"
-        Me.descuento.ReadOnly = True
-        Me.descuento.Visible = False
-        '
-        'nit
-        '
-        Me.nit.HeaderText = "nit"
-        Me.nit.Name = "nit"
-        Me.nit.ReadOnly = True
-        Me.nit.Visible = False
-        '
-        'precio2
-        '
-        Me.precio2.HeaderText = "precio2"
-        Me.precio2.Name = "precio2"
-        Me.precio2.ReadOnly = True
-        Me.precio2.Visible = False
-        '
         'txtcuentatotal
         '
         Me.txtcuentatotal.BackColor = System.Drawing.SystemColors.ButtonHighlight
@@ -1282,62 +1112,6 @@ Partial Class Frmfacturarapida
         Me.gfp.Size = New System.Drawing.Size(501, 105)
         Me.gfp.TabIndex = 55
         Me.gfp.Visible = False
-        '
-        'cual
-        '
-        DataGridViewCellStyle5.NullValue = Nothing
-        Me.cual.DefaultCellStyle = DataGridViewCellStyle5
-        Me.cual.Frozen = True
-        Me.cual.HeaderText = "TIPO"
-        Me.cual.MinimumWidth = 70
-        Me.cual.Name = "cual"
-        Me.cual.ReadOnly = True
-        Me.cual.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.cual.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.cual.Width = 70
-        '
-        'detalle
-        '
-        Me.detalle.Frozen = True
-        Me.detalle.HeaderText = "DESCRIPCIÓN"
-        Me.detalle.MinimumWidth = 90
-        Me.detalle.Name = "detalle"
-        Me.detalle.ReadOnly = True
-        Me.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.detalle.Width = 90
-        '
-        'tt
-        '
-        Me.tt.Frozen = True
-        Me.tt.HeaderText = "TT"
-        Me.tt.Name = "tt"
-        Me.tt.Width = 30
-        '
-        'banco
-        '
-        Me.banco.Frozen = True
-        Me.banco.HeaderText = "BANCO"
-        Me.banco.Name = "banco"
-        Me.banco.ReadOnly = True
-        '
-        'numero
-        '
-        Me.numero.Frozen = True
-        Me.numero.HeaderText = "NUMERO"
-        Me.numero.Name = "numero"
-        Me.numero.ReadOnly = True
-        '
-        'monto
-        '
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.monto.DefaultCellStyle = DataGridViewCellStyle6
-        Me.monto.Frozen = True
-        Me.monto.HeaderText = "VALOR"
-        Me.monto.MinimumWidth = 80
-        Me.monto.Name = "monto"
-        Me.monto.ReadOnly = True
-        Me.monto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.monto.Width = 80
         '
         'lbusuario
         '
@@ -1498,75 +1272,6 @@ Partial Class Frmfacturarapida
         Me.grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.grilla.Size = New System.Drawing.Size(817, 121)
         Me.grilla.TabIndex = 112
-        '
-        'Descripcion
-        '
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Descripcion.DefaultCellStyle = DataGridViewCellStyle7
-        Me.Descripcion.FillWeight = 180.0!
-        Me.Descripcion.HeaderText = "Descripcion"
-        Me.Descripcion.MaxInputLength = 500
-        Me.Descripcion.MinimumWidth = 250
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.ReadOnly = True
-        Me.Descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Descripcion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Descripcion.Width = 250
-        '
-        'Debitos
-        '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.ForestGreen
-        DataGridViewCellStyle8.Format = "N2"
-        DataGridViewCellStyle8.NullValue = Nothing
-        Me.Debitos.DefaultCellStyle = DataGridViewCellStyle8
-        Me.Debitos.HeaderText = "Debitos"
-        Me.Debitos.MaxInputLength = 30
-        Me.Debitos.Name = "Debitos"
-        Me.Debitos.ReadOnly = True
-        Me.Debitos.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Debitos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Creditos
-        '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle9.Format = "N2"
-        DataGridViewCellStyle9.NullValue = Nothing
-        Me.Creditos.DefaultCellStyle = DataGridViewCellStyle9
-        Me.Creditos.HeaderText = "Creditos"
-        Me.Creditos.MaxInputLength = 30
-        Me.Creditos.Name = "Creditos"
-        Me.Creditos.ReadOnly = True
-        Me.Creditos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'cuenta
-        '
-        Me.cuenta.FillWeight = 80.0!
-        Me.cuenta.HeaderText = "Cuenta"
-        Me.cuenta.MaxInputLength = 20
-        Me.cuenta.Name = "cuenta"
-        Me.cuenta.ReadOnly = True
-        Me.cuenta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.cuenta.Width = 80
-        '
-        'base
-        '
-        Me.base.HeaderText = "base"
-        Me.base.Name = "base"
-        Me.base.ReadOnly = True
-        '
-        'cheque
-        '
-        Me.cheque.HeaderText = "cheque"
-        Me.cheque.Name = "cheque"
-        Me.cheque.ReadOnly = True
-        '
-        'nitc
-        '
-        Me.nitc.HeaderText = "nitc"
-        Me.nitc.Name = "nitc"
-        Me.nitc.ReadOnly = True
         '
         'lbdocajuste
         '
@@ -1888,106 +1593,6 @@ Partial Class Frmfacturarapida
         Me.gfactura2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.gfactura2.Size = New System.Drawing.Size(644, 115)
         Me.gfactura2.TabIndex = 268
-        '
-        'num2
-        '
-        DataGridViewCellStyle11.Format = "N0"
-        DataGridViewCellStyle11.NullValue = Nothing
-        Me.num2.DefaultCellStyle = DataGridViewCellStyle11
-        Me.num2.Frozen = True
-        Me.num2.HeaderText = "NÚM"
-        Me.num2.MinimumWidth = 50
-        Me.num2.Name = "num2"
-        Me.num2.ReadOnly = True
-        Me.num2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.num2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.num2.Width = 50
-        '
-        'codigo2
-        '
-        Me.codigo2.Frozen = True
-        Me.codigo2.HeaderText = "CODIGO"
-        Me.codigo2.MinimumWidth = 90
-        Me.codigo2.Name = "codigo2"
-        Me.codigo2.ReadOnly = True
-        Me.codigo2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.codigo2.Width = 90
-        '
-        'descrip2
-        '
-        Me.descrip2.Frozen = True
-        Me.descrip2.HeaderText = "DESCRIPCIÓN"
-        Me.descrip2.MinimumWidth = 200
-        Me.descrip2.Name = "descrip2"
-        Me.descrip2.ReadOnly = True
-        Me.descrip2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.descrip2.Width = 200
-        '
-        'cant2
-        '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.Format = "N0"
-        DataGridViewCellStyle12.NullValue = Nothing
-        Me.cant2.DefaultCellStyle = DataGridViewCellStyle12
-        Me.cant2.Frozen = True
-        Me.cant2.HeaderText = "CANTIDAD"
-        Me.cant2.MinimumWidth = 80
-        Me.cant2.Name = "cant2"
-        Me.cant2.ReadOnly = True
-        Me.cant2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.cant2.Width = 80
-        '
-        'valor2
-        '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle13.Format = "N2"
-        DataGridViewCellStyle13.NullValue = Nothing
-        Me.valor2.DefaultCellStyle = DataGridViewCellStyle13
-        Me.valor2.Frozen = True
-        Me.valor2.HeaderText = "V. UNI"
-        Me.valor2.MinimumWidth = 100
-        Me.valor2.Name = "valor2"
-        Me.valor2.ReadOnly = True
-        Me.valor2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'tipo2
-        '
-        Me.tipo2.Frozen = True
-        Me.tipo2.HeaderText = "TIPO"
-        Me.tipo2.MinimumWidth = 20
-        Me.tipo2.Name = "tipo2"
-        Me.tipo2.ReadOnly = True
-        Me.tipo2.Visible = False
-        Me.tipo2.Width = 20
-        '
-        'bodega2
-        '
-        Me.bodega2.Frozen = True
-        Me.bodega2.HeaderText = "BODEGA"
-        Me.bodega2.Name = "bodega2"
-        Me.bodega2.ReadOnly = True
-        Me.bodega2.Visible = False
-        '
-        'cc2
-        '
-        Me.cc2.Frozen = True
-        Me.cc2.HeaderText = "cc"
-        Me.cc2.Name = "cc2"
-        Me.cc2.ReadOnly = True
-        Me.cc2.Visible = False
-        '
-        'descuento2
-        '
-        Me.descuento2.Frozen = True
-        Me.descuento2.HeaderText = "DESCUENTO"
-        Me.descuento2.Name = "descuento2"
-        Me.descuento2.Visible = False
-        '
-        'nit2
-        '
-        Me.nit2.HeaderText = "nit"
-        Me.nit2.Name = "nit2"
-        Me.nit2.Visible = False
         '
         'txtcentro2
         '
@@ -2389,6 +1994,401 @@ Partial Class Frmfacturarapida
         Me.DataGridViewTextBoxColumn41.Name = "DataGridViewTextBoxColumn41"
         Me.DataGridViewTextBoxColumn41.Visible = False
         '
+        'num2
+        '
+        DataGridViewCellStyle11.Format = "N0"
+        DataGridViewCellStyle11.NullValue = Nothing
+        Me.num2.DefaultCellStyle = DataGridViewCellStyle11
+        Me.num2.Frozen = True
+        Me.num2.HeaderText = "NÚM"
+        Me.num2.MinimumWidth = 50
+        Me.num2.Name = "num2"
+        Me.num2.ReadOnly = True
+        Me.num2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.num2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.num2.Width = 50
+        '
+        'codigo2
+        '
+        Me.codigo2.Frozen = True
+        Me.codigo2.HeaderText = "CODIGO"
+        Me.codigo2.MinimumWidth = 90
+        Me.codigo2.Name = "codigo2"
+        Me.codigo2.ReadOnly = True
+        Me.codigo2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.codigo2.Width = 90
+        '
+        'descrip2
+        '
+        Me.descrip2.Frozen = True
+        Me.descrip2.HeaderText = "DESCRIPCIÓN"
+        Me.descrip2.MinimumWidth = 200
+        Me.descrip2.Name = "descrip2"
+        Me.descrip2.ReadOnly = True
+        Me.descrip2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.descrip2.Width = 200
+        '
+        'cant2
+        '
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.Format = "N0"
+        DataGridViewCellStyle12.NullValue = Nothing
+        Me.cant2.DefaultCellStyle = DataGridViewCellStyle12
+        Me.cant2.Frozen = True
+        Me.cant2.HeaderText = "CANTIDAD"
+        Me.cant2.MinimumWidth = 80
+        Me.cant2.Name = "cant2"
+        Me.cant2.ReadOnly = True
+        Me.cant2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.cant2.Width = 80
+        '
+        'valor2
+        '
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle13.Format = "N2"
+        DataGridViewCellStyle13.NullValue = Nothing
+        Me.valor2.DefaultCellStyle = DataGridViewCellStyle13
+        Me.valor2.Frozen = True
+        Me.valor2.HeaderText = "V. UNI"
+        Me.valor2.MinimumWidth = 100
+        Me.valor2.Name = "valor2"
+        Me.valor2.ReadOnly = True
+        Me.valor2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'tipo2
+        '
+        Me.tipo2.Frozen = True
+        Me.tipo2.HeaderText = "TIPO"
+        Me.tipo2.MinimumWidth = 20
+        Me.tipo2.Name = "tipo2"
+        Me.tipo2.ReadOnly = True
+        Me.tipo2.Visible = False
+        Me.tipo2.Width = 20
+        '
+        'bodega2
+        '
+        Me.bodega2.Frozen = True
+        Me.bodega2.HeaderText = "BODEGA"
+        Me.bodega2.Name = "bodega2"
+        Me.bodega2.ReadOnly = True
+        Me.bodega2.Visible = False
+        '
+        'cc2
+        '
+        Me.cc2.Frozen = True
+        Me.cc2.HeaderText = "cc"
+        Me.cc2.Name = "cc2"
+        Me.cc2.ReadOnly = True
+        Me.cc2.Visible = False
+        '
+        'descuento2
+        '
+        Me.descuento2.Frozen = True
+        Me.descuento2.HeaderText = "DESCUENTO"
+        Me.descuento2.Name = "descuento2"
+        Me.descuento2.Visible = False
+        '
+        'nit2
+        '
+        Me.nit2.HeaderText = "nit"
+        Me.nit2.Name = "nit2"
+        Me.nit2.Visible = False
+        '
+        'Descripcion
+        '
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Descripcion.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Descripcion.FillWeight = 180.0!
+        Me.Descripcion.HeaderText = "Descripcion"
+        Me.Descripcion.MaxInputLength = 500
+        Me.Descripcion.MinimumWidth = 250
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.ReadOnly = True
+        Me.Descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Descripcion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Descripcion.Width = 250
+        '
+        'Debitos
+        '
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.ForestGreen
+        DataGridViewCellStyle8.Format = "N2"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.Debitos.DefaultCellStyle = DataGridViewCellStyle8
+        Me.Debitos.HeaderText = "Debitos"
+        Me.Debitos.MaxInputLength = 30
+        Me.Debitos.Name = "Debitos"
+        Me.Debitos.ReadOnly = True
+        Me.Debitos.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Debitos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Creditos
+        '
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle9.Format = "N2"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.Creditos.DefaultCellStyle = DataGridViewCellStyle9
+        Me.Creditos.HeaderText = "Creditos"
+        Me.Creditos.MaxInputLength = 30
+        Me.Creditos.Name = "Creditos"
+        Me.Creditos.ReadOnly = True
+        Me.Creditos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'cuenta
+        '
+        Me.cuenta.FillWeight = 80.0!
+        Me.cuenta.HeaderText = "Cuenta"
+        Me.cuenta.MaxInputLength = 20
+        Me.cuenta.Name = "cuenta"
+        Me.cuenta.ReadOnly = True
+        Me.cuenta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.cuenta.Width = 80
+        '
+        'base
+        '
+        Me.base.HeaderText = "base"
+        Me.base.Name = "base"
+        Me.base.ReadOnly = True
+        '
+        'cheque
+        '
+        Me.cheque.HeaderText = "cheque"
+        Me.cheque.Name = "cheque"
+        Me.cheque.ReadOnly = True
+        '
+        'nitc
+        '
+        Me.nitc.HeaderText = "nitc"
+        Me.nitc.Name = "nitc"
+        Me.nitc.ReadOnly = True
+        '
+        'cual
+        '
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.cual.DefaultCellStyle = DataGridViewCellStyle5
+        Me.cual.Frozen = True
+        Me.cual.HeaderText = "TIPO"
+        Me.cual.MinimumWidth = 70
+        Me.cual.Name = "cual"
+        Me.cual.ReadOnly = True
+        Me.cual.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.cual.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.cual.Width = 70
+        '
+        'detalle
+        '
+        Me.detalle.Frozen = True
+        Me.detalle.HeaderText = "DESCRIPCIÓN"
+        Me.detalle.MinimumWidth = 90
+        Me.detalle.Name = "detalle"
+        Me.detalle.ReadOnly = True
+        Me.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.detalle.Width = 90
+        '
+        'tt
+        '
+        Me.tt.Frozen = True
+        Me.tt.HeaderText = "TT"
+        Me.tt.Name = "tt"
+        Me.tt.Width = 30
+        '
+        'banco
+        '
+        Me.banco.Frozen = True
+        Me.banco.HeaderText = "BANCO"
+        Me.banco.Name = "banco"
+        Me.banco.ReadOnly = True
+        '
+        'numero
+        '
+        Me.numero.Frozen = True
+        Me.numero.HeaderText = "NUMERO"
+        Me.numero.Name = "numero"
+        Me.numero.ReadOnly = True
+        '
+        'monto
+        '
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.monto.DefaultCellStyle = DataGridViewCellStyle6
+        Me.monto.Frozen = True
+        Me.monto.HeaderText = "VALOR"
+        Me.monto.MinimumWidth = 80
+        Me.monto.Name = "monto"
+        Me.monto.ReadOnly = True
+        Me.monto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.monto.Width = 80
+        '
+        'num
+        '
+        DataGridViewCellStyle1.Format = "N0"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.num.DefaultCellStyle = DataGridViewCellStyle1
+        Me.num.Frozen = True
+        Me.num.HeaderText = "NÚM"
+        Me.num.MinimumWidth = 50
+        Me.num.Name = "num"
+        Me.num.ReadOnly = True
+        Me.num.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.num.Width = 50
+        '
+        'codigo
+        '
+        Me.codigo.Frozen = True
+        Me.codigo.HeaderText = "CODIGO"
+        Me.codigo.MinimumWidth = 90
+        Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
+        Me.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.codigo.Width = 90
+        '
+        'descrip
+        '
+        Me.descrip.Frozen = True
+        Me.descrip.HeaderText = "DESCRIPCIÓN"
+        Me.descrip.MinimumWidth = 200
+        Me.descrip.Name = "descrip"
+        Me.descrip.ReadOnly = True
+        Me.descrip.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.descrip.Width = 200
+        '
+        'cant
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.Format = "N0"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.cant.DefaultCellStyle = DataGridViewCellStyle2
+        Me.cant.Frozen = True
+        Me.cant.HeaderText = "CANTIDAD"
+        Me.cant.MinimumWidth = 80
+        Me.cant.Name = "cant"
+        Me.cant.ReadOnly = True
+        Me.cant.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.cant.Width = 80
+        '
+        'valor
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle3.Format = "N2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.valor.DefaultCellStyle = DataGridViewCellStyle3
+        Me.valor.Frozen = True
+        Me.valor.HeaderText = "V. UNI"
+        Me.valor.MinimumWidth = 100
+        Me.valor.Name = "valor"
+        Me.valor.ReadOnly = True
+        Me.valor.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'Vtotal
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.Vtotal.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Vtotal.Frozen = True
+        Me.Vtotal.HeaderText = "V. TOTAL"
+        Me.Vtotal.MinimumWidth = 100
+        Me.Vtotal.Name = "Vtotal"
+        Me.Vtotal.ReadOnly = True
+        Me.Vtotal.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'tipo
+        '
+        Me.tipo.Frozen = True
+        Me.tipo.HeaderText = "TIPO"
+        Me.tipo.MinimumWidth = 20
+        Me.tipo.Name = "tipo"
+        Me.tipo.ReadOnly = True
+        Me.tipo.Visible = False
+        Me.tipo.Width = 20
+        '
+        'bodega
+        '
+        Me.bodega.Frozen = True
+        Me.bodega.HeaderText = "BODEGA"
+        Me.bodega.Name = "bodega"
+        Me.bodega.ReadOnly = True
+        Me.bodega.Visible = False
+        '
+        'cc
+        '
+        Me.cc.Frozen = True
+        Me.cc.HeaderText = "cc"
+        Me.cc.Name = "cc"
+        Me.cc.ReadOnly = True
+        Me.cc.Visible = False
+        '
+        'ctainv
+        '
+        Me.ctainv.Frozen = True
+        Me.ctainv.HeaderText = "ctainv"
+        Me.ctainv.Name = "ctainv"
+        Me.ctainv.ReadOnly = True
+        Me.ctainv.Visible = False
+        '
+        'ctacven
+        '
+        Me.ctacven.Frozen = True
+        Me.ctacven.HeaderText = "ctacven"
+        Me.ctacven.Name = "ctacven"
+        Me.ctacven.ReadOnly = True
+        Me.ctacven.Visible = False
+        '
+        'ctaing
+        '
+        Me.ctaing.Frozen = True
+        Me.ctaing.HeaderText = "ctaing"
+        Me.ctaing.Name = "ctaing"
+        Me.ctaing.ReadOnly = True
+        Me.ctaing.Visible = False
+        '
+        'ctaiva
+        '
+        Me.ctaiva.Frozen = True
+        Me.ctaiva.HeaderText = "ctaiva"
+        Me.ctaiva.Name = "ctaiva"
+        Me.ctaiva.ReadOnly = True
+        Me.ctaiva.Visible = False
+        '
+        'iva
+        '
+        Me.iva.Frozen = True
+        Me.iva.HeaderText = "iva"
+        Me.iva.Name = "iva"
+        Me.iva.ReadOnly = True
+        Me.iva.Visible = False
+        '
+        'costo
+        '
+        Me.costo.Frozen = True
+        Me.costo.HeaderText = "costo"
+        Me.costo.Name = "costo"
+        Me.costo.ReadOnly = True
+        Me.costo.Visible = False
+        '
+        'descuento
+        '
+        Me.descuento.Frozen = True
+        Me.descuento.HeaderText = "DESCUENTO"
+        Me.descuento.Name = "descuento"
+        Me.descuento.ReadOnly = True
+        Me.descuento.Visible = False
+        '
+        'nit
+        '
+        Me.nit.HeaderText = "nit"
+        Me.nit.Name = "nit"
+        Me.nit.ReadOnly = True
+        Me.nit.Visible = False
+        '
+        'precio2
+        '
+        Me.precio2.HeaderText = "precio2"
+        Me.precio2.Name = "precio2"
+        Me.precio2.ReadOnly = True
+        Me.precio2.Visible = False
+        '
         'Frmfacturarapida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2649,24 +2649,6 @@ Partial Class Frmfacturarapida
     Friend WithEvents descuento2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents nit2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents lbespera As System.Windows.Forms.Label
-    Friend WithEvents num As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents codigo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents descrip As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cant As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents valor As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Vtotal As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tipo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents bodega As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cc As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ctainv As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ctacven As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ctaing As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ctaiva As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents iva As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents costo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents nit As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents precio2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cbldoc As System.Windows.Forms.ComboBox
     Friend WithEvents cbbase As System.Windows.Forms.ComboBox
     Friend WithEvents fvmto As System.Windows.Forms.DateTimePicker
@@ -2712,4 +2694,22 @@ Partial Class Frmfacturarapida
     Friend WithEvents DataGridViewTextBoxColumn39 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn40 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn41 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents num As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents codigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents descrip As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cant As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents valor As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Vtotal As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tipo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents bodega As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cc As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ctainv As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ctacven As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ctaing As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ctaiva As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents iva As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents costo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nit As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents precio2 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

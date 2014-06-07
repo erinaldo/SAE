@@ -413,7 +413,10 @@ Public Class FrmInvenDia
 
             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\Reportdia.rpt")
             CrReport.SetDataSource(tabla)
-            CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+            Try
+                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+            Catch ex As Exception
+            End Try
             FrmRdia.CrystalReportViewer1.ReportSource = CrReport
 
             '%%%%%%%%%%%%%%%%       enviar parametros segun consulta

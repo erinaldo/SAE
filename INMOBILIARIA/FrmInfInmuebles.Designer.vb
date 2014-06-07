@@ -298,7 +298,7 @@ Partial Class FrmInfInmuebles
         '
         Me.cmbesta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbesta.FormattingEnabled = True
-        Me.cmbesta.Items.AddRange(New Object() {"TODOS", "DISPONIBLE", "OCUPADO"})
+        Me.cmbesta.Items.AddRange(New Object() {"TODOS", "DISPONIBLE", "OCUPADO", "INACTIVO"})
         Me.cmbesta.Location = New System.Drawing.Point(80, 18)
         Me.cmbesta.Name = "cmbesta"
         Me.cmbesta.Size = New System.Drawing.Size(121, 21)

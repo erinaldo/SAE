@@ -610,6 +610,8 @@
             End If
             gitems.Item("descuento", fila).Value = Moneda("0")
             gitems.Item("disponible", fila).Value = tabla.Rows(0).Item("ct")
+
+            Costos(fila)
             '........... CONCEPTOS COMISIONABLES.....
             Try
                 If lbform.Text = "fn" Or lbform.Text = "fr" Or lbform.Text = "fn_sp" Then
@@ -637,7 +639,7 @@
             End Try
 
 
-            Costos(fila)
+
         Catch ex As Exception
             'MsgBox(ex.ToString)
         End Try

@@ -106,7 +106,10 @@ Public Class FrmInfPunto
 
         CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportPunto.rpt")
         CrReport.SetDataSource(tabla)
-        CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+        Try
+            CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+        Catch ex As Exception
+        End Try
         FrmRepSinMov2.CrystalReportViewer1.ReportSource = CrReport
 
         Try

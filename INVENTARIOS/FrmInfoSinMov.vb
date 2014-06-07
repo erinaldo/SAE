@@ -99,6 +99,9 @@ Public Class FrmInfoSinMov
             cad = " AND (" & cant & " ) <>0 "
         End If
 
+        sql = "SELECT k.codart, k.nomart, a.cant_min, a.referencia AS referencia, k.pp , k.cos_pro, k.precio,cast(MAX(CAST(k.f AS DATE)) as char(15)) AS estado , " _
+        & " k.empaque FROM ( "
+
         For i = 1 To pa
             If i < 10 Then
                 p = "0" & i
@@ -108,28 +111,49 @@ Public Class FrmInfoSinMov
                 pr = p - 1
             End If
             If p = ini Then
-                sql = " SELECT a.nivel, d.codart AS codart, d.nomart AS nomart, a.referencia as referencia, CONCAT( m.dia,  '/', m.per ) AS estado, a.cant_min, " _
-               & " " & cant & "  AS pp, c.costprom AS cos_pro, ( c.costprom * " & cant & " ) AS precio, " _
-               & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) )) AS empaque " _
-               & " FROM deta_mov" & p & " d, movimientos" & p & " m, con_inv c, articulos a WHERE (c.codart = d.codart )AND ( a.codart = d.codart ) " _
-               & " AND dia = ( Select MAX(m.dia) FROM movimientos" & p & " m )  AND c.periodo =" & pr & " AND d.doc = m.doc AND  " _
-               & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) ) ) >  " & NumericUpDown1.Text & " " & cad
-                '& " AND (" & cant & " ) <>0 "
+
+                sql = sql & " SELECT d.item, d.doc, d.codart, d.nomart," _
+ & " CONCAT(RIGHT(m.per,4),LEFT(m.per,2),IF(LENGTH(m.dia)=1,CONCAT('0',m.dia),m.dia)) AS f, " _
+ & " " & cant & "  AS pp,  c.costprom AS cos_pro, ( c.costprom * " & cant & " ) AS precio, " _
+ & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) )) AS empaque  " _
+ & "FROM deta_mov" & p & " d, movimientos" & p & " m, con_inv c " _
+ & " WHERE m.doc=d.doc AND c.codart=d.codart AND c.periodo='" & p & "' AND LEFT(d.doc,2) NOT IN ('TR','AI') AND" _
+ & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) ) ) >  " & NumericUpDown1.Text & " " & cad
+
+
+                'sql = sql & " SELECT a.nivel, d.codart AS codart, d.nomart AS nomart, a.referencia as referencia, CONCAT( m.dia,  '/', m.per ) AS estado, a.cant_min, " _
+                '   & " " & cant & "  AS pp, c.costprom AS cos_pro, ( c.costprom * " & cant & " ) AS precio, " _
+                '   & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) )) AS empaque " _
+                '   & " FROM deta_mov" & p & " d, movimientos" & p & " m, con_inv c, articulos a WHERE (c.codart = d.codart )AND ( a.codart = d.codart ) " _
+                '   & " AND dia = ( Select MAX(m.dia) FROM movimientos" & p & " m )  AND c.periodo =" & pr & " AND d.doc = m.doc AND  " _
+                '   & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) ) ) >  " & NumericUpDown1.Text & " " & cad
+                ''& " AND (" & cant & " ) <>0 "
             Else
-                sql = sql & " UNION SELECT a.nivel, d.codart AS codart, d.nomart AS nomart, a.referencia as referencia, CONCAT( m.dia,  '/', m.per ) AS estado, a.cant_min, " _
-                & " " & cant & "  AS pp, c.costprom AS cos_pro, ( c.costprom * " & cant & " ) AS precio, " _
-                & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) )) AS empaque " _
-                & " FROM deta_mov" & p & " d, movimientos" & p & " m, con_inv c, articulos a WHERE (c.codart = d.codart )AND ( a.codart = d.codart ) " _
-                & " AND dia = ( Select MAX(m.dia) FROM movimientos" & p & " m )  AND c.periodo =" & pr & " AND d.doc = m.doc AND  " _
-                & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) ) ) >  " & NumericUpDown1.Text & " " & cad
-                '& " AND (" & cant & " ) <>0  "
+                'sql = sql & " UNION SELECT a.nivel, d.codart AS codart, d.nomart AS nomart, a.referencia as referencia, CONCAT( m.dia,  '/', m.per ) AS estado, a.cant_min, " _
+                '& " " & cant & "  AS pp, c.costprom AS cos_pro, ( c.costprom * " & cant & " ) AS precio, " _
+                '& " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) )) AS empaque " _
+                '& " FROM deta_mov" & p & " d, movimientos" & p & " m, con_inv c, articulos a WHERE (c.codart = d.codart )AND ( a.codart = d.codart ) " _
+                '& " AND dia = ( Select MAX(m.dia) FROM movimientos" & p & " m )  AND c.periodo =" & pr & " AND d.doc = m.doc AND  " _
+                '& " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) ) ) >  " & NumericUpDown1.Text & " " & cad
+                ''& " AND (" & cant & " ) <>0  "
+
+                sql = sql & " union SELECT d.item, d.doc, d.codart, d.nomart," _
+ & " CONCAT(RIGHT(m.per,4),LEFT(m.per,2),IF(LENGTH(m.dia)=1,CONCAT('0',m.dia),m.dia)) AS f, " _
+ & " " & cant & "  AS pp,  c.costprom AS cos_pro, ( c.costprom * " & cant & " ) AS precio, " _
+ & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) )) AS empaque  " _
+ & "FROM deta_mov" & p & " d, movimientos" & p & " m, con_inv c " _
+ & " WHERE m.doc=d.doc AND c.codart=d.codart AND c.periodo='" & p & "' AND LEFT(d.doc,2) NOT IN ('TR','AI') AND " _
+ & " ( SELECT DATEDIFF( NOW( ) , CONCAT( RIGHT( m.per, 4 ) ,  '-', LEFT( m.per, 2 ) ,  '-', LPAD( m.dia, 2,  '0' ) ) ) ) >  " & NumericUpDown1.Text & " " & cad
+
             End If
         Next
 
+        sql = sql & " )AS k , articulos a  WHERE(k.codart = a.codart) GROUP BY codart  "
+
         If or1.Checked = True Then
-            sql = sql & " GROUP BY codart  ORDER BY referencia "
+            sql = sql & " ORDER BY referencia, f "
         Else
-            sql = sql & " GROUP BY codart  ORDER BY codart "
+            sql = sql & " ORDER BY codart, f"
         End If
         Dim tabla As DataTable
         tabla = New DataTable
@@ -146,7 +170,10 @@ Public Class FrmInfoSinMov
             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportEstSinMov.rpt")
         End If
         CrReport.SetDataSource(tabla)
-        CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+        Try
+            CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+        Catch ex As Exception
+        End Try
         FrmRepSinMov2.CrystalReportViewer1.ReportSource = CrReport
 
         Try

@@ -212,7 +212,7 @@ Public Class FrmConciliacionB
         cmdcanc.Enabled = True
     End Sub
     Private Sub limpiar()
-
+        txtsi.Text = Moneda(0)
         txtsaldo.Text = Moneda(0)
         txtsalaj.Text = Moneda(0)
         txtsalB.Text = Moneda(0)

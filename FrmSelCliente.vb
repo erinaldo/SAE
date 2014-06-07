@@ -7,7 +7,7 @@
             tabla.Clear()
             Dim items As Integer
             If lbform.Text = "tercerosInm" Then
-                myCommand.CommandText = "SELECT t.nit,TRIM(CONCAT(t.apellidos,' ',t.nombre))AS ter, IFNULL(i.clase,'') as tipo FROM terceros t left join tercerosinm i ON i.nit=t.nit ORDER BY ter;"
+                myCommand.CommandText = "SELECT t.nit,TRIM(CONCAT(t.apellidos,' ',t.nombre))AS ter, IFNULL(i.clase,'') as tipo FROM terceros t left join tercerosinm i ON i.nit=t.nit WHERE t.tipo<>'Inactivo' ORDER BY ter;"
             Else
                 myCommand.CommandText = "SELECT t.nit,TRIM(CONCAT(t.apellidos,' ',t.nombre))AS ter FROM terceros t  ORDER BY ter;"
             End If
