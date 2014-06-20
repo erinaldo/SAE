@@ -932,11 +932,11 @@ Module funciones
                 p = i
             End If
             If i <> 12 Then
-                sql = sql & "SELECT doc_afec, CONCAT(RIGHT(periodo, 4) , LEFT(periodo,2) , IF(LENGTH(dia)=1,CONCAT('0',dia),dia)) AS f " _
+                sql = sql & "SELECT doc_afec, CONCAT(RIGHT(periodo, 4) , LEFT(periodo,2) , IF(LENGTH(dia)=1,CONCAT('0',dia),dia)) AS f, concat(periodo,'-',doc) as doce " _
                 & " FROM ot_cpp" & p & " WHERE doc_afec<>'' UNION "
                 '& " and LENGTH(doc_afec)=11 UNION "
             Else
-                sql = sql & "SELECT doc_afec, CONCAT(RIGHT(periodo, 4) , LEFT(periodo,2) , IF(LENGTH(dia)=1,CONCAT('0',dia),dia)) AS f " _
+                sql = sql & "SELECT doc_afec, CONCAT(RIGHT(periodo, 4) , LEFT(periodo,2) , IF(LENGTH(dia)=1,CONCAT('0',dia),dia)) AS f, concat(periodo,'-',doc) as doce  " _
                 & " FROM ot_cpp" & p & " WHERE doc_afec<>'' "
                 '& " and LENGTH(doc_afec)=11 "
             End If
@@ -955,7 +955,7 @@ Module funciones
             'myCommand.ExecuteNonQuery()
             For i = 0 To t.Rows.Count - 1
                 pagoPres(t.Rows(i).Item("doc_afec"))
-                Mov_presGas(t.Rows(i).Item("doc_afec"), t.Rows(i).Item("f"))
+                Mov_presGas(t.Rows(i).Item("doc_afec"), t.Rows(i).Item("f"), t.Rows(i).Item("doce"))
                 Mov_presIng(t.Rows(i).Item("doc_afec"), t.Rows(i).Item("f"))
             Next
             MsgBox("Fin del proceso")
@@ -1121,7 +1121,7 @@ Module funciones
 
         Next
     End Sub
-    Private Sub Mov_presGas(ByVal doccxp As String, ByVal f As String)
+    Private Sub Mov_presGas(ByVal doccxp As String, ByVal f As String, ByVal docce As String)
 
         Dim tp As New DataTable
         tp.Clear()
@@ -1154,9 +1154,9 @@ Module funciones
                 myCommand.Parameters.Clear()
                 myCommand.CommandText = "INSERT INTO " & pbd & ".`movgastos`(movg_rubro,movg_fecha, movg_vigencia, " _
                                 & "movg_aumento, movg_reduccion, movg_credito, movg_contra, " _
-                                & "movg_aplaza,movg_desaplaza, movg_cdp, movg_rp, movg_pago,movg_anticipo,mov_vsae) " _
+                                & "movg_aplaza,movg_desaplaza, movg_cdp, movg_rp, movg_pago,movg_anticipo,movg_cgr,mov_vsae) " _
                                 & "VALUES ('" & rb(i).ToString & "', " & f & "," & Strings.Right(PerActual, 4) & ", " _
-                                & " '0', '0', '0', '0', '0', '0', '0', '0','0','0'," & v & " )"
+                                & " '0', '0', '0', '0', '0', '0', '0', '0','0','0','" & docce & "'," & v & " )"
                 myCommand.ExecuteNonQuery()
             Catch ex As Exception
                 MsgBox(ex.ToString)
@@ -1201,9 +1201,9 @@ Module funciones
                                 myCommand.Parameters.Clear()
                                 myCommand.CommandText = "INSERT INTO " & pbd & ".`movgastos`(movg_rubro,movg_fecha, movg_vigencia, " _
                                                 & "movg_aumento, movg_reduccion, movg_credito, movg_contra, " _
-                                                & "movg_aplaza,movg_desaplaza, movg_cdp, movg_rp, movg_pago,movg_anticipo,mov_vsae) " _
+                                                & "movg_aplaza,movg_desaplaza, movg_cdp, movg_rp, movg_pago,movg_anticipo,movg_cgr,mov_vsae) " _
                                                 & "VALUES ('" & tc.Rows(k).Item("codigo") & "', " & f & "," & Strings.Right(PerActual, 4) & ", " _
-                                                & " '0', '0', '0', '0', '0', '0', '0', '0','0','0'," & v & " )"
+                                                & " '0', '0', '0', '0', '0', '0', '0', '0','0','0','" & docce & "'," & v & " )"
                                 myCommand.ExecuteNonQuery()
 
                             Next
@@ -1643,6 +1643,75 @@ Module funciones
         MsgBox("OK")
         Cerrar()
 
+    End Sub
+
+    Public Sub AjCostos()
+        MiConexion(bda)
+        Dim p As String = ""
+        For i = 1 To 12
+            MsgBox("periodo" & i)
+            If i <= 9 Then
+                p = "0" & i
+            Else
+                p = i
+            End If
+
+            Dim tf As New DataTable
+            myCommand.Parameters.Clear()
+            myCommand.CommandText = "SELECT DISTINCT doc, LEFT(doc,2) td, CAST(MID(doc,3,LENGTH(doc)) AS SIGNED) nm FROM deta_mov" & p & " WHERE costo=0 AND LEFT(doc,2) IN ('FC','DP','AF','EN');"
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tf)
+
+            If tf.Rows.Count > 0 Then
+                MsgBox("son " & tf.Rows.Count & "espere ")
+
+                For j = 0 To tf.Rows.Count - 1
+
+                    'ACT COSTOS factura
+                    myCommand.Parameters.Clear()
+                    myCommand.CommandText = " UPDATE detafac" & p & " d, con_inv c SET d.costo= c.costprom " _
+                    & " WHERE c.periodo='" & p & "' AND d.codart=c.codart AND doc ='" & tf.Rows(j).Item(0) & "'"
+                    myCommand.ExecuteNonQuery()
+
+                    'ACT COSTOS detamov
+                    myCommand.Parameters.Clear()
+                    myCommand.CommandText = "UPDATE deta_mov" & p & " d, con_inv c SET d.costo= c.costprom  " _
+                    & " WHERE c.periodo='" & p & "' AND d.codart=c.codart AND doc='" & tf.Rows(j).Item(0) & "'"
+                    myCommand.ExecuteNonQuery()
+
+                    'DELETE documentosxx
+                    myCommand.Parameters.Clear()
+                    myCommand.CommandText = "DELETE FROM documentos" & p & " WHERE tipodoc='" & tf.Rows(j).Item(1) & "' and doc='" & tf.Rows(j).Item(2) & "' and codigo IN ('143501001','613554001')"
+                    myCommand.ExecuteNonQuery()
+
+                    'INSERT docxx 5
+                    myCommand.Parameters.Clear()
+                    myCommand.CommandText = "INSERT INTO documentos" & p & " SELECT 11,'" & tf.Rows(j).Item(2) & "', '" & tf.Rows(j).Item(1) & "','" & p & "/" & Right(PerActual, 4) & "', f.dia,'0','A 1435 ',0," _
+                    & " ROUND(SUM(d.costo*d.cantidad),2) AS v, '143501001', " _
+                    & " 0, 0, '00/00/0000', f.nitc, '','facturacion' " _
+                    & "FROM deta_mov" & p & " d, movimientos" & p & " f " _
+                    & "WHERE d.doc= f.doc   AND  f.doc='" & tf.Rows(j).Item(0) & "' GROUP BY d.doc;"
+                    myCommand.ExecuteNonQuery()
+
+                    'INSERT docxx 6
+                    myCommand.Parameters.Clear()
+                    myCommand.CommandText = "INSERT INTO documentos" & p & " SELECT 10, '" & tf.Rows(j).Item(2) & "', '" & tf.Rows(j).Item(1) & "','" & p & "/" & Right(PerActual, 4) & "', f.dia,'0','A VENTAS'," _
+                    & " ROUND(SUM(d.costo*d.cantidad),2) AS v,0,'613506001', " _
+                    & " 0, 0, '00/00/0000', f.nitc, '','facturacion' " _
+                    & "FROM deta_mov" & p & " d, movimientos" & p & " f " _
+                    & "WHERE d.doc= f.doc   AND  f.doc='" & tf.Rows(j).Item(0) & "' GROUP BY d.doc;"
+                    myCommand.ExecuteNonQuery()
+
+                    'DELETE documentosxx en cero
+                    myCommand.Parameters.Clear()
+                    myCommand.CommandText = "DELETE FROM documentos" & p & " WHERE (debito+credito)=0 "
+                    myCommand.ExecuteNonQuery()
+
+                Next
+            End If
+            MsgBox("FIN periodo" & i)
+        Next
+        Cerrar()
     End Sub
 End Module
 

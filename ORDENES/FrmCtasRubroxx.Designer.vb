@@ -27,6 +27,7 @@ Partial Class FrmCtasRubroxx
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCtasRubroxx))
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
+        Me.lbcta = New System.Windows.Forms.Label
         Me.lbcm = New System.Windows.Forms.Label
         Me.CmdSalir = New System.Windows.Forms.Button
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
@@ -45,7 +46,6 @@ Partial Class FrmCtasRubroxx
         Me.ok = New System.Windows.Forms.Button
         Me.Label5 = New System.Windows.Forms.Label
         Me.txtcuenta = New System.Windows.Forms.TextBox
-        Me.lbcta = New System.Windows.Forms.Label
         Me.GroupPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.gitems, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +83,16 @@ Partial Class FrmCtasRubroxx
         Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
         Me.GroupPanel1.TabIndex = 5
+        '
+        'lbcta
+        '
+        Me.lbcta.AutoSize = True
+        Me.lbcta.BackColor = System.Drawing.Color.Transparent
+        Me.lbcta.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbcta.Location = New System.Drawing.Point(14, 7)
+        Me.lbcta.Name = "lbcta"
+        Me.lbcta.Size = New System.Drawing.Size(0, 17)
+        Me.lbcta.TabIndex = 5
         '
         'lbcm
         '
@@ -264,16 +274,6 @@ Partial Class FrmCtasRubroxx
         Me.txtcuenta.Name = "txtcuenta"
         Me.txtcuenta.Size = New System.Drawing.Size(259, 20)
         Me.txtcuenta.TabIndex = 0
-        '
-        'lbcta
-        '
-        Me.lbcta.AutoSize = True
-        Me.lbcta.BackColor = System.Drawing.Color.Transparent
-        Me.lbcta.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbcta.Location = New System.Drawing.Point(14, 7)
-        Me.lbcta.Name = "lbcta"
-        Me.lbcta.Size = New System.Drawing.Size(0, 17)
-        Me.lbcta.TabIndex = 5
         '
         'FrmCtasRubroxx
         '

@@ -24,11 +24,11 @@ Partial Class FrmOrdenPagos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOrdenPagos))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.Label9 = New System.Windows.Forms.Label
         Me.txtconcep = New System.Windows.Forms.TextBox
         Me.Label7 = New System.Windows.Forms.Label
@@ -714,6 +714,7 @@ Partial Class FrmOrdenPagos
         Me.txtbruto.Location = New System.Drawing.Point(492, 292)
         Me.txtbruto.MaxLength = 200
         Me.txtbruto.Name = "txtbruto"
+        Me.txtbruto.ReadOnly = True
         Me.txtbruto.Size = New System.Drawing.Size(198, 20)
         Me.txtbruto.TabIndex = 99
         Me.txtbruto.Text = "0,00"
@@ -732,14 +733,14 @@ Partial Class FrmOrdenPagos
         Me.grilla.Location = New System.Drawing.Point(11, 372)
         Me.grilla.MultiSelect = False
         Me.grilla.Name = "grilla"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grilla.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grilla.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.grilla.RowHeadersVisible = False
         Me.grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.grilla.Size = New System.Drawing.Size(754, 128)
@@ -752,9 +753,9 @@ Partial Class FrmOrdenPagos
         '
         'Descripcion
         '
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Descripcion.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Descripcion.DefaultCellStyle = DataGridViewCellStyle1
         Me.Descripcion.FillWeight = 180.0!
         Me.Descripcion.HeaderText = "Concepto"
         Me.Descripcion.MaxInputLength = 50
@@ -766,11 +767,11 @@ Partial Class FrmOrdenPagos
         '
         'Debitos
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.ForestGreen
-        DataGridViewCellStyle7.Format = "N2"
-        DataGridViewCellStyle7.NullValue = Nothing
-        Me.Debitos.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.ForestGreen
+        DataGridViewCellStyle2.Format = "N2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Debitos.DefaultCellStyle = DataGridViewCellStyle2
         Me.Debitos.HeaderText = "Debitos"
         Me.Debitos.MaxInputLength = 30
         Me.Debitos.MinimumWidth = 180
@@ -781,11 +782,11 @@ Partial Class FrmOrdenPagos
         '
         'Creditos
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle8.Format = "N2"
-        DataGridViewCellStyle8.NullValue = Nothing
-        Me.Creditos.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle3.Format = "N2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.Creditos.DefaultCellStyle = DataGridViewCellStyle3
         Me.Creditos.HeaderText = "Creditos"
         Me.Creditos.MaxInputLength = 30
         Me.Creditos.MinimumWidth = 180
@@ -795,9 +796,9 @@ Partial Class FrmOrdenPagos
         '
         'porc
         '
-        DataGridViewCellStyle9.Format = "N2"
-        DataGridViewCellStyle9.NullValue = Nothing
-        Me.porc.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.porc.DefaultCellStyle = DataGridViewCellStyle4
         Me.porc.HeaderText = "por %"
         Me.porc.MinimumWidth = 60
         Me.porc.Name = "porc"

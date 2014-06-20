@@ -24,13 +24,13 @@ Partial Class FrmCuentasRubros
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCuentasRubros))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.r2 = New System.Windows.Forms.RadioButton
+        Me.r1 = New System.Windows.Forms.RadioButton
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
         Me.lbfila = New System.Windows.Forms.Label
         Me.lbform = New System.Windows.Forms.Label
-        Me.r1 = New System.Windows.Forms.RadioButton
-        Me.r2 = New System.Windows.Forms.RadioButton
-        Me.Label1 = New System.Windows.Forms.Label
         Me.cmditems = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
         Me.GroupBox1.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -41,9 +41,31 @@ Partial Class FrmCuentasRubros
         Me.GroupBox1.Controls.Add(Me.r1)
         Me.GroupBox1.Location = New System.Drawing.Point(5, 25)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(410, 51)
+        Me.GroupBox1.Size = New System.Drawing.Size(340, 51)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'r2
+        '
+        Me.r2.AutoSize = True
+        Me.r2.Checked = True
+        Me.r2.Location = New System.Drawing.Point(38, 19)
+        Me.r2.Name = "r2"
+        Me.r2.Size = New System.Drawing.Size(65, 17)
+        Me.r2.TabIndex = 1
+        Me.r2.TabStop = True
+        Me.r2.Text = "Ingresos"
+        Me.r2.UseVisualStyleBackColor = True
+        '
+        'r1
+        '
+        Me.r1.AutoSize = True
+        Me.r1.Location = New System.Drawing.Point(216, 19)
+        Me.r1.Name = "r1"
+        Me.r1.Size = New System.Drawing.Size(58, 17)
+        Me.r1.TabIndex = 0
+        Me.r1.Text = "Gastos"
+        Me.r1.UseVisualStyleBackColor = True
         '
         'GroupPanel1
         '
@@ -54,7 +76,7 @@ Partial Class FrmCuentasRubros
         Me.GroupPanel1.Controls.Add(Me.cmditems)
         Me.GroupPanel1.Location = New System.Drawing.Point(7, 82)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(410, 80)
+        Me.GroupPanel1.Size = New System.Drawing.Size(338, 80)
         '
         '
         '
@@ -98,45 +120,13 @@ Partial Class FrmCuentasRubros
         Me.lbform.Text = "formulario"
         Me.lbform.Visible = False
         '
-        'r1
-        '
-        Me.r1.AutoSize = True
-        Me.r1.Checked = True
-        Me.r1.Location = New System.Drawing.Point(56, 19)
-        Me.r1.Name = "r1"
-        Me.r1.Size = New System.Drawing.Size(58, 17)
-        Me.r1.TabIndex = 0
-        Me.r1.TabStop = True
-        Me.r1.Text = "Gastos"
-        Me.r1.UseVisualStyleBackColor = True
-        '
-        'r2
-        '
-        Me.r2.AutoSize = True
-        Me.r2.Location = New System.Drawing.Point(268, 19)
-        Me.r2.Name = "r2"
-        Me.r2.Size = New System.Drawing.Size(65, 17)
-        Me.r2.TabIndex = 1
-        Me.r2.Text = "Ingresos"
-        Me.r2.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(103, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(220, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "ASIGNAR CUENTAS A LOS RUBROS"
-        '
         'cmditems
         '
         Me.cmditems.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmditems.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmditems.ForeColor = System.Drawing.Color.Transparent
         Me.cmditems.Image = Global.SAE.My.Resources.Resources.continuar
-        Me.cmditems.Location = New System.Drawing.Point(169, 3)
+        Me.cmditems.Location = New System.Drawing.Point(128, 3)
         Me.cmditems.Name = "cmditems"
         Me.cmditems.Size = New System.Drawing.Size(72, 68)
         Me.cmditems.TabIndex = 0
@@ -144,12 +134,22 @@ Partial Class FrmCuentasRubros
         Me.cmditems.TextAlign = System.Drawing.ContentAlignment.TopRight
         Me.cmditems.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(81, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(172, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "SELECCIONE LOS RUBROS "
+        '
         'FrmCuentasRubros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(424, 169)
+        Me.ClientSize = New System.Drawing.Size(349, 169)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.GroupBox1)
@@ -159,7 +159,7 @@ Partial Class FrmCuentasRubros
         Me.MinimizeBox = False
         Me.Name = "FrmCuentasRubros"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Cuentas Rubros"
+        Me.Text = "Rubros"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupPanel1.ResumeLayout(False)

@@ -785,7 +785,7 @@ Public Class Frmfacturarapida
                 myAdapter.SelectCommand = myCommand
                 myAdapter.Fill(tbc)
                 Refresh()
-                If (CInt(tbc.Rows(0).Item(0)) - DIN(gfactura.Item(3, fila).Value)) < 0 Then
+                If (CDbl(tbc.Rows(0).Item(0)) - CDbl(gfactura.Item(3, fila).Value)) < 0 Then
                     MsgBox("La cantidad disponible del articulo " & gfactura.Item("codigo", fila).Value & ", es " & tbc.Rows(0).Item(0) & " , Verifique", MsgBoxStyle.Information, "Verifique")
                     Return (False)
                     Exit Function

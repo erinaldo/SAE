@@ -814,6 +814,7 @@ Public Class FrmBalancePrueba
             CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportContBalPru.rpt")
             CrReport.SetDataSource(tabla)
             CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+
             FrmReportContBalPru.CrystalReportViewer1.ReportSource = CrReport
 
             Try
@@ -849,13 +850,13 @@ Public Class FrmBalancePrueba
                 prmdatos.Add(PrTD)
                 prmdatos.Add(PrTC)
 
-
                 FrmReportContBalPru.CrystalReportViewer1.ParameterFieldInfo = prmdatos
                 FrmReportContBalPru.ShowDialog()
 
             Catch ex As Exception
-                MsgBox("Error al Generar el Informe " & sql)
+                MsgBox("Error al Generar el Informe " & ex.ToString)
             End Try
+
 
         End If
         '.......... FIN INFORME NORMAL

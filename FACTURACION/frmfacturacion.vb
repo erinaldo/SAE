@@ -1217,4 +1217,12 @@ Public Class frmfacturacion
         Cerrar()
         frmInfoFacturas.ShowDialog()
     End Sub
+
+    Private Sub ButtonX6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonX6.Click
+        Dim resultado As MsgBoxResult
+        resultado = MsgBox("Reprocesar costos?", MsgBoxStyle.YesNo, "Verificando")
+        If resultado = MsgBoxResult.Yes Then
+            AjCostos()
+        End If
+    End Sub
 End Class

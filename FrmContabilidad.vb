@@ -345,6 +345,7 @@
     End Sub
 
     Private Sub ButtonX7_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonX7.Click
+        FrmCuentasRubros.lbform.Text = "ctas"
         FrmCuentasRubros.ShowDialog()
     End Sub
 End Class

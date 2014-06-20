@@ -37,13 +37,15 @@ Partial Class FrmClientMora
         Me.checkresumido = New System.Windows.Forms.CheckBox
         Me.txtcliente = New System.Windows.Forms.TextBox
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.chcli = New System.Windows.Forms.CheckBox
         Me.txtnitc = New System.Windows.Forms.TextBox
         Me.c2 = New System.Windows.Forms.RadioButton
         Me.c1 = New System.Windows.Forms.RadioButton
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
         Me.cmdsalir = New System.Windows.Forms.Button
         Me.cmdpantalla = New System.Windows.Forms.Button
-        Me.chcli = New System.Windows.Forms.CheckBox
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.fecha2 = New System.Windows.Forms.DateTimePicker
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -53,7 +55,7 @@ Partial Class FrmClientMora
         'f2
         '
         Me.f2.AutoSize = True
-        Me.f2.Location = New System.Drawing.Point(157, 21)
+        Me.f2.Location = New System.Drawing.Point(117, 24)
         Me.f2.Name = "f2"
         Me.f2.Size = New System.Drawing.Size(116, 17)
         Me.f2.TabIndex = 136
@@ -62,11 +64,12 @@ Partial Class FrmClientMora
         '
         'txtdias
         '
-        Me.txtdias.Location = New System.Drawing.Point(249, 61)
+        Me.txtdias.Location = New System.Drawing.Point(265, 42)
         Me.txtdias.Name = "txtdias"
         Me.txtdias.Size = New System.Drawing.Size(49, 20)
         Me.txtdias.TabIndex = 10
         Me.txtdias.Text = "0"
+        Me.txtdias.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox1
         '
@@ -90,6 +93,8 @@ Partial Class FrmClientMora
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.fecha2)
         Me.GroupBox1.Controls.Add(Me.txtdias)
         Me.GroupBox1.Controls.Add(Me.f2)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -106,7 +111,7 @@ Partial Class FrmClientMora
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(166, 64)
+        Me.Label3.Location = New System.Drawing.Point(256, 24)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 13)
         Me.Label3.TabIndex = 124
@@ -115,7 +120,7 @@ Partial Class FrmClientMora
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 64)
+        Me.Label1.Location = New System.Drawing.Point(9, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 2
@@ -124,7 +129,7 @@ Partial Class FrmClientMora
         'fecha1
         '
         Me.fecha1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.fecha1.Location = New System.Drawing.Point(68, 61)
+        Me.fecha1.Location = New System.Drawing.Point(55, 65)
         Me.fecha1.Name = "fecha1"
         Me.fecha1.Size = New System.Drawing.Size(78, 20)
         Me.fecha1.TabIndex = 0
@@ -207,6 +212,17 @@ Partial Class FrmClientMora
         Me.GroupBox3.TabIndex = 137
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Informe Para"
+        '
+        'chcli
+        '
+        Me.chcli.AutoSize = True
+        Me.chcli.Location = New System.Drawing.Point(106, 40)
+        Me.chcli.Name = "chcli"
+        Me.chcli.Size = New System.Drawing.Size(152, 17)
+        Me.chcli.TabIndex = 141
+        Me.chcli.Text = "Buscar Cliente por Apellido"
+        Me.chcli.UseVisualStyleBackColor = True
+        Me.chcli.Visible = False
         '
         'txtnitc
         '
@@ -298,16 +314,23 @@ Partial Class FrmClientMora
         Me.cmdpantalla.TextAlign = System.Drawing.ContentAlignment.TopRight
         Me.cmdpantalla.UseVisualStyleBackColor = False
         '
-        'chcli
+        'Label2
         '
-        Me.chcli.AutoSize = True
-        Me.chcli.Location = New System.Drawing.Point(106, 40)
-        Me.chcli.Name = "chcli"
-        Me.chcli.Size = New System.Drawing.Size(152, 17)
-        Me.chcli.TabIndex = 141
-        Me.chcli.Text = "Buscar Cliente por Apellido"
-        Me.chcli.UseVisualStyleBackColor = True
-        Me.chcli.Visible = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(146, 68)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(13, 13)
+        Me.Label2.TabIndex = 138
+        Me.Label2.Text = "a"
+        '
+        'fecha2
+        '
+        Me.fecha2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.fecha2.Location = New System.Drawing.Point(168, 64)
+        Me.fecha2.Name = "fecha2"
+        Me.fecha2.Size = New System.Drawing.Size(78, 20)
+        Me.fecha2.TabIndex = 137
+        Me.fecha2.Value = New Date(2011, 9, 9, 0, 0, 0, 0)
         '
         'FrmClientMora
         '
@@ -362,4 +385,6 @@ Partial Class FrmClientMora
     Friend WithEvents cmdsalir As System.Windows.Forms.Button
     Friend WithEvents GroupPanel1 As DevComponents.DotNetBar.Controls.GroupPanel
     Friend WithEvents chcli As System.Windows.Forms.CheckBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents fecha2 As System.Windows.Forms.DateTimePicker
 End Class

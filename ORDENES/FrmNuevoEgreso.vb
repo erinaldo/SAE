@@ -42,6 +42,12 @@ Public Class FrmNuevoEgreso
             txtce.Focus()
             Exit Sub
         End If
+        If fechace.Value < fecha.Value Then
+            MsgBox("La fecha del egreso NO puede ser Inferior a la de la Orden", MsgBoxStyle.Information, "Verifique")
+            fechace.Focus()
+            Exit Sub
+        End If
+
         MiConexion(bda)
 
         'Try
@@ -473,9 +479,9 @@ Public Class FrmNuevoEgreso
                     myCommand.Parameters.Clear()
                     myCommand.CommandText = "INSERT INTO " & pbd & ".`movgastos`(movg_rubro,movg_fecha, movg_vigencia, " _
                                     & "movg_aumento, movg_reduccion, movg_credito, movg_contra, " _
-                                    & "movg_aplaza,movg_desaplaza, movg_cdp, movg_rp, movg_pago,movg_anticipo,mov_vsae) " _
+                                    & "movg_aplaza,movg_desaplaza, movg_cdp, movg_rp, movg_pago,movg_anticipo,movg_cgr,mov_vsae) " _
                                     & "VALUES ('" & rb(i).ToString & "', " & f & "," & Strings.Right(PerActual, 4) & ", " _
-                                    & " '0', '0', '0', '0', '0', '0', '0', '0','0','0'," & v & " )"
+                                    & " '0', '0', '0', '0', '0', '0', '0', '0','0','0','" & lbperiodo.Text & "-" & lbtipodoc.Text & txtce.Text & "'," & v & " )"
                     myCommand.ExecuteNonQuery()
                 Catch ex As Exception
                     MsgBox(ex.ToString)
@@ -515,9 +521,9 @@ Public Class FrmNuevoEgreso
                                 myCommand.Parameters.Clear()
                                 myCommand.CommandText = "INSERT INTO " & pbd & ".`movgastos`(movg_rubro,movg_fecha, movg_vigencia, " _
                                                 & "movg_aumento, movg_reduccion, movg_credito, movg_contra, " _
-                                                & "movg_aplaza,movg_desaplaza, movg_cdp, movg_rp, movg_pago,movg_anticipo,mov_vsae) " _
+                                                & "movg_aplaza,movg_desaplaza, movg_cdp, movg_rp, movg_pago,movg_anticipo,movg_cgr,mov_vsae) " _
                                                 & "VALUES ('" & tc.Rows(k).Item("codigo") & "', " & f & "," & Strings.Right(PerActual, 4) & ", " _
-                                                & " '0', '0', '0', '0', '0', '0', '0', '0','0','0'," & v & " )"
+                                                & " '0', '0', '0', '0', '0', '0', '0', '0','0','0','" & lbperiodo.Text & "-" & lbtipodoc.Text & txtce.Text & "'," & v & " )"
                                 myCommand.ExecuteNonQuery()
                             Next
                         End If

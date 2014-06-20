@@ -198,6 +198,8 @@ Public Class FrmInfEgreRubro
         nom = tabla2.Rows(0).Item("descripcion")
         nit = tabla2.Rows(0).Item("nit")
 
+       
+
         If r2.Checked = True Then
             cad = " and c.ccosto like '%" & txtd.Text & "%'"
         ElseIf r3.Checked = True Then
@@ -212,6 +214,10 @@ Public Class FrmInfEgreRubro
                     End If
                 Next
             End If
+        End If
+
+        If chv.Checked = True Then
+            cad = cad & " AND YEAR(c.fecha) = '" & Strings.Right(PerActual, 4) & "' "
         End If
 
         For i = Val(cbini.Text) To Val(cbfin.Text)
@@ -230,7 +236,7 @@ Public Class FrmInfEgreRubro
                 '& " FROM ot_cpp" & p & " c, terceros t   WHERE t.nit = c.nitc AND c.credito <> 0   AND (c.sucursal<>'--' and c.codigo NOT LIKE '1110%') and  " _
                 '& " cast(c.dia as signed) BETWEEN '" & txtdi1.Text & "' AND  '" & txtdi2.Text & "'" & cad
 
-                sql = "SELECT o.doc AS doc, CAST(CONCAT(o.dia,'/',o.periodo) AS CHAR(15)) AS nitc, o.doc_afec , p.doccxp, p.doc AS doc_ext, c.ccosto AS descrip, g.gasc_concepto AS nomnit, o.total as ret " _
+                sql = "SELECT o.doc AS doc, CAST(CONCAT(o.dia,'/',o.periodo) AS CHAR(15)) AS nitc, o.doc_afec , p.doccxp, p.doc AS doc_ext, c.ccosto AS descrip, g.gasc_concepto AS nomnit, o.total as ret, p.v_bruto  as subtotal " _
                 & " FROM ot_cpp" & p & " o,  ord_pagos p, ctas_x_pagar c LEFT JOIN presupuesto" & Strings.Right(PerActual, 4) & ".gasconcepto g ON c.ccosto = g.gasc_cod1 " _
                 & " WHERE o.doc_afec<>'' AND o.doc_afec=p.doccxp AND p.sop_cont =CONCAT('" & p & "/" & Strings.Right(PerActual, 4) & "-',o.doc)  " _
                 & " AND p.doccxp = c.doc AND o.doc_afec=c.doc " _
@@ -246,7 +252,7 @@ Public Class FrmInfEgreRubro
                     ' & " FROM ot_cpp" & p & " c, terceros t   WHERE t.nit = c.nitc AND c.credito <> 0   AND (c.sucursal<>'--' and c.codigo NOT LIKE '1110%') and  " _
                     ' & " cast(c.dia as signed)>= '" & txtdi1.Text & "' " & cad
 
-                    sql = "SELECT o.doc AS doc, CAST(CONCAT(o.dia,'/',o.periodo) AS CHAR(15)) AS nitc, o.doc_afec , p.doccxp, p.doc AS doc_ext, c.ccosto AS descrip, g.gasc_concepto AS nomnit, o.total as ret " _
+                    sql = "SELECT o.doc AS doc, CAST(CONCAT(o.dia,'/',o.periodo) AS CHAR(15)) AS nitc, o.doc_afec , p.doccxp, p.doc AS doc_ext, c.ccosto AS descrip, g.gasc_concepto AS nomnit, o.total as ret, p.v_bruto  as subtotal " _
                                    & " FROM ot_cpp" & p & " o,  ord_pagos p, ctas_x_pagar c LEFT JOIN presupuesto" & Strings.Right(PerActual, 4) & ".gasconcepto g ON c.ccosto = g.gasc_cod1 " _
                                    & " WHERE o.doc_afec<>'' AND o.doc_afec=p.doccxp AND p.sop_cont =CONCAT('" & p & "/" & Strings.Right(PerActual, 4) & "-',o.doc)  " _
                                    & " AND p.doccxp = c.doc AND o.doc_afec=c.doc " _
@@ -261,7 +267,7 @@ Public Class FrmInfEgreRubro
                     ' & " CAST(CONCAT(RIGHT(c.periodo,4),LEFT(c.periodo,2),IF(LENGTH(c.dia)=1,CONCAT('0',c.dia),c.dia)) AS DATE) AS ff " _
                     ' & " FROM ot_cpp" & p & " c, terceros t   WHERE t.nit = c.nitc AND c.credito <> 0   AND (c.sucursal<>'--' and c.codigo NOT LIKE '1110%')  " & cad
 
-                    sql = sql & " UNION SELECT o.doc AS doc, CAST(CONCAT(o.dia,'/',o.periodo) AS CHAR(15)) AS nitc, o.doc_afec , p.doccxp, p.doc AS doc_ext, c.ccosto AS descrip, g.gasc_concepto AS nomnit, o.total as ret " _
+                    sql = sql & " UNION SELECT o.doc AS doc, CAST(CONCAT(o.dia,'/',o.periodo) AS CHAR(15)) AS nitc, o.doc_afec , p.doccxp, p.doc AS doc_ext, c.ccosto AS descrip, g.gasc_concepto AS nomnit, o.total as ret, p.v_bruto  as subtotal " _
                & " FROM ot_cpp" & p & " o,  ord_pagos p, ctas_x_pagar c LEFT JOIN presupuesto" & Strings.Right(PerActual, 4) & ".gasconcepto g ON c.ccosto = g.gasc_cod1 " _
                & " WHERE o.doc_afec<>'' AND o.doc_afec=p.doccxp AND p.sop_cont =CONCAT('" & p & "/" & Strings.Right(PerActual, 4) & "-',o.doc)  " _
                & " AND p.doccxp = c.doc AND o.doc_afec=c.doc " & cad
@@ -276,7 +282,7 @@ Public Class FrmInfEgreRubro
                     ' & " FROM ot_cpp" & p & " c , terceros t  WHERE t.nit = c.nitc AND c.credito <> 0   AND (c.sucursal<>'--' and c.codigo NOT LIKE '1110%') and  " _
                     ' & " cast(c.dia as signed)<= '" & txtdi2.Text & "' " & cad
 
-                    sql = sql & " union SELECT o.doc AS doc, CAST(CONCAT(o.dia,'/',o.periodo) AS CHAR(15)) AS nitc, o.doc_afec , p.doccxp, p.doc AS doc_ext, c.ccosto AS descrip, g.gasc_concepto AS nomnit, o.total as ret " _
+                    sql = sql & " union SELECT o.doc AS doc, CAST(CONCAT(o.dia,'/',o.periodo) AS CHAR(15)) AS nitc, o.doc_afec , p.doccxp, p.doc AS doc_ext, c.ccosto AS descrip, g.gasc_concepto AS nomnit, o.total as ret, p.v_bruto  as subtotal " _
                & " FROM ot_cpp" & p & " o,  ord_pagos p, ctas_x_pagar c LEFT JOIN presupuesto" & Strings.Right(PerActual, 4) & ".gasconcepto g ON c.ccosto = g.gasc_cod1 " _
                & " WHERE o.doc_afec<>'' AND o.doc_afec=p.doccxp AND p.sop_cont =CONCAT('" & p & "/" & Strings.Right(PerActual, 4) & "-',o.doc)  " _
                & " AND p.doccxp = c.doc AND o.doc_afec=c.doc " _

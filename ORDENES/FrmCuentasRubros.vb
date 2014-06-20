@@ -46,8 +46,22 @@
             FrmCtasRubroxx.tiprb.Text = "INGRESOS"
             cm = "c.ingc_" & cm
         End If
-        FrmCtasRubroxx.lbcm.Text = ""
-        FrmCtasRubroxx.lbcm.Text = cm
-        FrmCtasRubroxx.ShowDialog()
+
+        If lbform.Text = "ctas" Then
+            FrmCtasRubroxx.lbcm.Text = ""
+            FrmCtasRubroxx.lbcm.Text = cm
+            FrmCtasRubroxx.ShowDialog()
+        ElseIf lbform.Text = "ejecucion" Then
+            If r1.Checked = True Then
+                FrmRubros.Text = "Ejecucion de Gastos"
+                FrmRubros.lbtipo.Text = "gas"
+            Else
+                FrmRubros.Text = "Ejecucion de Ingresos"
+                FrmRubros.lbtipo.Text = "ing"
+            End If
+
+            FrmRubros.ShowDialog()
+        End If
+       
     End Sub
 End Class

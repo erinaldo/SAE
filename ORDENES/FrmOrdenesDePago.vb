@@ -245,4 +245,15 @@
         Cerrar()
         FrmElimOrden.ShowDialog()
     End Sub
+
+    Private Sub bring_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bring.Click
+        MiConexion(bda)
+        Cerrar()
+        FrmCuentasRubros.lbform.Text = "ejecucion"
+        FrmCuentasRubros.ShowDialog()
+    End Sub
+
+    Private Sub ButtonX10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonX10.Click
+        FrmEjecGastos.ShowDialog()
+    End Sub
 End Class

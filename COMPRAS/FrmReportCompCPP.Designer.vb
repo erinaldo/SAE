@@ -25,6 +25,7 @@ Partial Class FrmReportCompCPP
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReportCompCPP))
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
         Me.ReportCompCPP1 = New SAE.ReportCompCPP
+        Me.ReportEjecGasA11 = New SAE.ReportEjecGasA1
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -35,7 +36,7 @@ Partial Class FrmReportCompCPP
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.ReportCompCPP1
+        Me.CrystalReportViewer1.ReportSource = Me.ReportEjecGasA11
         Me.CrystalReportViewer1.ShowGroupTreeButton = False
         Me.CrystalReportViewer1.ShowRefreshButton = False
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(410, 317)
@@ -56,4 +57,5 @@ Partial Class FrmReportCompCPP
     End Sub
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents ReportCompCPP1 As SAE.ReportCompCPP
+    Friend WithEvents ReportEjecGasA11 As SAE.ReportEjecGasA1
 End Class

@@ -45,6 +45,7 @@ Partial Class FrmInfEgreRubro
         Me.cmdpantalla = New System.Windows.Forms.Button
         Me.grubro = New System.Windows.Forms.DataGridView
         Me.rubro = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.chv = New System.Windows.Forms.CheckBox
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
@@ -53,6 +54,7 @@ Partial Class FrmInfEgreRubro
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.chv)
         Me.GroupBox2.Controls.Add(Me.txtnomr)
         Me.GroupBox2.Controls.Add(Me.cmdrb)
         Me.GroupBox2.Controls.Add(Me.txtd)
@@ -303,6 +305,18 @@ Partial Class FrmInfEgreRubro
         Me.rubro.HeaderText = "rubro"
         Me.rubro.Name = "rubro"
         '
+        'chv
+        '
+        Me.chv.AutoSize = True
+        Me.chv.Checked = True
+        Me.chv.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chv.Location = New System.Drawing.Point(336, 8)
+        Me.chv.Name = "chv"
+        Me.chv.Size = New System.Drawing.Size(124, 17)
+        Me.chv.TabIndex = 85
+        Me.chv.Text = "Solo Vigencia Actual"
+        Me.chv.UseVisualStyleBackColor = True
+        '
         'FrmInfEgreRubro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -352,4 +366,5 @@ Partial Class FrmInfEgreRubro
     Friend WithEvents txtnomr As System.Windows.Forms.TextBox
     Friend WithEvents grubro As System.Windows.Forms.DataGridView
     Friend WithEvents rubro As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents chv As System.Windows.Forms.CheckBox
 End Class

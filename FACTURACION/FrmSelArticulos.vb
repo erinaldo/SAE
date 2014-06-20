@@ -628,7 +628,7 @@ Public Class FrmSelArticulos
         Else
             sql = sql & ",cue_iva_c AS c_iva"
         End If
-        sql = sql & ",cos_uni, SUM(ctotal) AS ct FROM vista_canti WHERE estado='Activo' GROUP BY codart ORDER BY codart"
+        sql = sql & ",cos_pro as cos_uni, SUM(ctotal) AS ct FROM vista_canti WHERE estado='Activo' GROUP BY codart ORDER BY codart"
 
 
         'If FrmItems.lbExistencia.Text = "SI" Then

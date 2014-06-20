@@ -37,6 +37,7 @@
                 gitems.Item(2, i).Value = tabla.Rows(i).Item("desart")
                 gitems.Item(3, i).Value = tabla.Rows(i).Item("nivel")
                 gitems.Item(4, i).Value = tabla.Rows(i).Item("ncant")
+                gitems.Item(5, i).Value = tabla.Rows(i).Item("codbar")
             Next
             BuscarGrilla(txtcuenta.Text)
         Else
@@ -125,6 +126,8 @@
                 cl = 0
             ElseIf cmbbuscar.Text = "DESCRIPCION" Then
                 cl = 1
+            ElseIf cmbbuscar.Text = "CODIGO DE BARRA" Then
+                cl = 5
             End If
 
             Try

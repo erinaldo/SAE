@@ -447,3 +447,5 @@ D:\SAE iney\SAE\obj\Debug\SAE.FrmElimOrden.resources
 D:\SAE iney\SAE\obj\Debug\SAE.FrmSelNucleoF.resources
 D:\SAE iney\SAE\obj\Debug\SAE.FrmDesaprobarDoc.resources
 D:\SAE iney\SAE\obj\Debug\SAE.frmInfoFacturas.resources
+D:\SAE iney\SAE\obj\Debug\SAE.FrmRubros.resources
+D:\SAE iney\SAE\obj\Debug\SAE.FrmEjecGastos.resources

@@ -863,6 +863,30 @@ Public Class FrmProductos
                 myCommand.CommandText = "UPDATE articulos SET nomart=?nomart,desart=?desart,nivel=?nivel,referencia=?referencia,codbar=?codbar,margen=?margen,iva=?iva,exento=?exento,excluido=?excluido,cue_inv=?cue_inv,cue_ing=?cue_ing,cue_cos=?cue_cos," _
                                     & "cue_iva_v=?cue_iva_v,cue_iva_c=?cue_iva_c,cue_dev=?cue_dev,unidad=?unidad,empaque=?empaque,can_emp=?can_emp,uni_emp=?uni_emp,cant_min=?cant_min,pp=?pp,estado=?estado,con_comi=?con_comi,importa=?importa,num_reg=?num_reg,por_ara=?por_ara,pos_ara=?pos_ara,p1=?p1,p2=?p2,p3=?p3,p4=?p4,p5=?p5 WHERE codart='" & txtcodigo.Text & "';"
                 myCommand.ExecuteNonQuery()
+
+                ' ''....
+                ''If txtnivel.Text = "Articulo" Then
+                ''    Dim per, sql As String
+                ''    For i = 0 To 12
+                ''        If i < 10 Then
+                ''            per = "0" & i
+                ''        Else
+                ''            per = i
+                ''        End If
+                ''        Dim tcin As New DataTable
+                ''        tcin.Clear()
+                ''        myCommand.CommandText = "SELECT * FROM con_inv WHERE codart='" & txtcodigo.Text & "' AND periodo='" & per & "'"
+                ''        myAdapter.SelectCommand = myCommand
+                ''        myAdapter.Fill(tcin)
+                ''        If tcin.Rows.Count = 0 Then
+                ''            sql = "INSERT INTO con_inv (codart,periodo,costuni,costprom,costmoe,otro,margen,base,cue_inv,cue_cos,cue_ing,cue_iva_v,cue_iva_c,cue_dev,saldoi,vent,vsal,vaju)" _
+                ''       & " VALUES('" & txtcodigo.Text & "','" & per & "','0','0','0','0','" & CDbl(txtmargen.Text) & "','0','" & lbinv.Text & "','" & lbcos.Text & "','" & lbing.Text & "','" & lbivag.Text & "','" & lbivad.Text & "','" & lbdev.Text & "','0','0','0','0');"
+                ''            Afecta_Con_inv(sql)
+                ''        End If
+                ''    Next
+                ''End If
+                ' ''....
+
                 If txtnivel.Text = "Articulo" Then
                     Dim per, sql As String
                     per = PerActual(0) & PerActual(1)

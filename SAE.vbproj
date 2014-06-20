@@ -1000,6 +1000,12 @@
       <DependentUpon>ReportEgreRb.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="bin\Debug\Reportes\Rordenes\ReportEjecGasA1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportEjecGasA1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="bin\Debug\Reportes\Rordenes\ReportInfOrden.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3394,6 +3400,12 @@
     <Compile Include="ORDENES\FrmEgresoNomina.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ORDENES\FrmEjecGastos.Designer.vb">
+      <DependentUpon>FrmEjecGastos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ORDENES\FrmEjecGastos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ORDENES\FrmElimOrden.Designer.vb">
       <DependentUpon>FrmElimOrden.vb</DependentUpon>
     </Compile>
@@ -3458,6 +3470,12 @@
       <DependentUpon>FrmPOrdOt.vb</DependentUpon>
     </Compile>
     <Compile Include="ORDENES\FrmPOrdOt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDENES\FrmRubros.Designer.vb">
+      <DependentUpon>FrmRubros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ORDENES\FrmRubros.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ORDENES\FrmSelConcili.Designer.vb">
@@ -4087,6 +4105,10 @@
     <EmbeddedResource Include="bin\Debug\Reportes\Rordenes\ReportEgreRb.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportEgreRb.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Reportes\Rordenes\ReportEjecGasA1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportEjecGasA1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\Reportes\Rordenes\ReportInfOrden.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -5674,6 +5696,10 @@
       <DependentUpon>FrmEgresoNomina.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ORDENES\FrmEjecGastos.resx">
+      <DependentUpon>FrmEjecGastos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ORDENES\FrmElimOrden.resx">
       <DependentUpon>FrmElimOrden.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -5716,6 +5742,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ORDENES\FrmPOrdOt.resx">
       <DependentUpon>FrmPOrdOt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDENES\FrmRubros.resx">
+      <DependentUpon>FrmRubros.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ORDENES\FrmSelConcili.resx">

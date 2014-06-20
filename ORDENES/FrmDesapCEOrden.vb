@@ -128,6 +128,16 @@
 
         End Try
 
+        'MOVGASTOS
+        Try
+            myCommand.Parameters.Clear()
+            myCommand.CommandText = "DELETE  FROM presupuesto" & Strings.Right(PerActual, 4) & ".movgastos" _
+            & " WHERE movg_cgr='" & cbper.Text & "/" & Strings.Right(PerActual, 4) & "-" & txttipo.Text & txtnumfac.Text & "' "
+            myCommand.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox("Error actualizar  movgastos " & ex.ToString, MsgBoxStyle.Information, "SAE")
+        End Try
+
     End Sub
 
     Private Sub cmdsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsalir.Click

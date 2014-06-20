@@ -40,11 +40,12 @@ Partial Class FrmInfDeducciones
         Me.RadioButton2 = New System.Windows.Forms.RadioButton
         Me.RadioButton1 = New System.Windows.Forms.RadioButton
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.r1 = New System.Windows.Forms.RadioButton
-        Me.r2 = New System.Windows.Forms.RadioButton
-        Me.r3 = New System.Windows.Forms.RadioButton
-        Me.txtd = New System.Windows.Forms.TextBox
         Me.txtce = New System.Windows.Forms.TextBox
+        Me.txtd = New System.Windows.Forms.TextBox
+        Me.r3 = New System.Windows.Forms.RadioButton
+        Me.r2 = New System.Windows.Forms.RadioButton
+        Me.r1 = New System.Windows.Forms.RadioButton
+        Me.chb = New System.Windows.Forms.CheckBox
         Me.GroupPanel1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -250,6 +251,7 @@ Partial Class FrmInfDeducciones
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.chb)
         Me.GroupBox2.Controls.Add(Me.txtce)
         Me.GroupBox2.Controls.Add(Me.txtd)
         Me.GroupBox2.Controls.Add(Me.r3)
@@ -260,6 +262,44 @@ Partial Class FrmInfDeducciones
         Me.GroupBox2.Size = New System.Drawing.Size(468, 85)
         Me.GroupBox2.TabIndex = 80
         Me.GroupBox2.TabStop = False
+        '
+        'txtce
+        '
+        Me.txtce.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtce.Enabled = False
+        Me.txtce.Location = New System.Drawing.Point(171, 55)
+        Me.txtce.Name = "txtce"
+        Me.txtce.Size = New System.Drawing.Size(142, 20)
+        Me.txtce.TabIndex = 84
+        '
+        'txtd
+        '
+        Me.txtd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtd.Enabled = False
+        Me.txtd.Location = New System.Drawing.Point(171, 30)
+        Me.txtd.Name = "txtd"
+        Me.txtd.Size = New System.Drawing.Size(142, 20)
+        Me.txtd.TabIndex = 83
+        '
+        'r3
+        '
+        Me.r3.AutoSize = True
+        Me.r3.Location = New System.Drawing.Point(15, 57)
+        Me.r3.Name = "r3"
+        Me.r3.Size = New System.Drawing.Size(156, 17)
+        Me.r3.TabIndex = 82
+        Me.r3.Text = "Un Comprobante de Egreso"
+        Me.r3.UseVisualStyleBackColor = True
+        '
+        'r2
+        '
+        Me.r2.AutoSize = True
+        Me.r2.Location = New System.Drawing.Point(15, 37)
+        Me.r2.Name = "r2"
+        Me.r2.Size = New System.Drawing.Size(98, 17)
+        Me.r2.TabIndex = 81
+        Me.r2.Text = "Una deduccion"
+        Me.r2.UseVisualStyleBackColor = True
         '
         'r1
         '
@@ -273,43 +313,15 @@ Partial Class FrmInfDeducciones
         Me.r1.Text = "Todos"
         Me.r1.UseVisualStyleBackColor = True
         '
-        'r2
+        'chb
         '
-        Me.r2.AutoSize = True
-        Me.r2.Location = New System.Drawing.Point(15, 37)
-        Me.r2.Name = "r2"
-        Me.r2.Size = New System.Drawing.Size(98, 17)
-        Me.r2.TabIndex = 81
-        Me.r2.Text = "Una deduccion"
-        Me.r2.UseVisualStyleBackColor = True
-        '
-        'r3
-        '
-        Me.r3.AutoSize = True
-        Me.r3.Location = New System.Drawing.Point(15, 57)
-        Me.r3.Name = "r3"
-        Me.r3.Size = New System.Drawing.Size(156, 17)
-        Me.r3.TabIndex = 82
-        Me.r3.Text = "Un Comprobante de Egreso"
-        Me.r3.UseVisualStyleBackColor = True
-        '
-        'txtd
-        '
-        Me.txtd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtd.Enabled = False
-        Me.txtd.Location = New System.Drawing.Point(171, 30)
-        Me.txtd.Name = "txtd"
-        Me.txtd.Size = New System.Drawing.Size(142, 20)
-        Me.txtd.TabIndex = 83
-        '
-        'txtce
-        '
-        Me.txtce.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtce.Enabled = False
-        Me.txtce.Location = New System.Drawing.Point(171, 55)
-        Me.txtce.Name = "txtce"
-        Me.txtce.Size = New System.Drawing.Size(142, 20)
-        Me.txtce.TabIndex = 84
+        Me.chb.AutoSize = True
+        Me.chb.Location = New System.Drawing.Point(343, 16)
+        Me.chb.Name = "chb"
+        Me.chb.Size = New System.Drawing.Size(120, 17)
+        Me.chb.TabIndex = 85
+        Me.chb.Text = "Agrupar por Bancos"
+        Me.chb.UseVisualStyleBackColor = True
         '
         'FrmInfDeducciones
         '
@@ -361,4 +373,5 @@ Partial Class FrmInfDeducciones
     Friend WithEvents r3 As System.Windows.Forms.RadioButton
     Friend WithEvents r2 As System.Windows.Forms.RadioButton
     Friend WithEvents r1 As System.Windows.Forms.RadioButton
+    Friend WithEvents chb As System.Windows.Forms.CheckBox
 End Class

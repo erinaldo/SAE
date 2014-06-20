@@ -48,6 +48,9 @@ Public Class FrmClientMora
         fecha1.MinDate = "01/01/2000"
         fecha1.MaxDate = "31/12/" & ano
         fecha1.Value = "01/01" & "/" & ano
+        fecha2.MinDate = "01/01/2000"
+        fecha2.MaxDate = "31/12/" & ano
+        fecha2.Value = "31/12" & "/" & ano
         '*********************
 
         '' CARGAR CLIENTES
@@ -159,6 +162,7 @@ Public Class FrmClientMora
         Dim cant As String = ""
         Dim inf As String = ""
         Dim fc As String = ""
+        Dim fc2 As String = ""
         Dim doc_aj As String = ""
 
         MiConexion(bda)
@@ -190,6 +194,7 @@ Public Class FrmClientMora
         conexion.Open()
 
         fc = Strings.Right(fecha1.Text, 4) & "-" & Strings.Mid(fecha1.Text, 4, 2) & "-" & Strings.Left(fecha1.Text, 2)
+        fc2 = Strings.Right(fecha2.Text, 4) & "-" & Strings.Mid(fecha2.Text, 4, 2) & "-" & Strings.Left(fecha2.Text, 2)
 
         Dim d As String = ""
         Dim cl As String = ""
@@ -202,9 +207,11 @@ Public Class FrmClientMora
             td = " AND c.tipo = '" & cbdoc.Text & "'"
         End If
         If f1.Checked = True Then
-            ff = " AND c.fecha >= '" & fc & "'"
+            ' ff = " AND c.fecha >= '" & fc & "'"
+            ff = " AND c.fecha BETWEEN '" & fc & "' and '" & fc2 & "'"
         Else
-            ff = " AND (SELECT ADDDATE(  c.fecha, INTERVAL c.vmto DAY) ) >= '" & fc & "'"
+            ' ff = " AND (SELECT ADDDATE(  c.fecha, INTERVAL c.vmto DAY) ) >= '" & fc & "'"
+            ff = " AND (SELECT ADDDATE(  c.fecha, INTERVAL c.vmto DAY) ) BETWEEN '" & fc & "' and '" & fc2 & "'"
         End If
         If txtdias.Text <> "0" Then
             d = " AND (SELECT DATEDIFF( NOW( ) ,ADDDATE(  c.fecha, INTERVAL c.vmto DAY) )) >= '" & txtdias.Text & "' "

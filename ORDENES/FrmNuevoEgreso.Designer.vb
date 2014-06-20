@@ -24,26 +24,19 @@ Partial Class FrmNuevoEgreso
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmNuevoEgreso))
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmNuevoEgreso))
         Me.txtcta = New System.Windows.Forms.TextBox
         Me.grilla = New System.Windows.Forms.DataGridView
-        Me.Cuenta = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Debitos = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Creditos = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Base = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.doc_afe = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.abonado = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.editar = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DocAnti = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.nit = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cheque = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.sucursal = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.gce = New System.Windows.Forms.GroupBox
         Me.cmdpuc = New System.Windows.Forms.Button
         Me.lbtipodoc = New System.Windows.Forms.Label
@@ -98,16 +91,6 @@ Partial Class FrmNuevoEgreso
         Me.txtorden = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.cmdpagos = New System.Windows.Forms.Button
-        Me.gcuenta = New System.Windows.Forms.DataGridView
-        Me.cta_con = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.monto = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cheque2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.banco = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.lbbanco = New System.Windows.Forms.Label
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.lbnroobs = New System.Windows.Forms.Label
-        Me.Label38 = New System.Windows.Forms.Label
         Me.cmdMost = New System.Windows.Forms.Button
         Me.CmdUltimo = New System.Windows.Forms.Button
         Me.CmdSiguiente = New System.Windows.Forms.Button
@@ -119,6 +102,44 @@ Partial Class FrmNuevoEgreso
         Me.CmdCancelar = New System.Windows.Forms.Button
         Me.CmdEliminar = New System.Windows.Forms.Button
         Me.cmdprint = New System.Windows.Forms.Button
+        Me.cmdpagos = New System.Windows.Forms.Button
+        Me.gcuenta = New System.Windows.Forms.DataGridView
+        Me.lbbanco = New System.Windows.Forms.Label
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.lbnroobs = New System.Windows.Forms.Label
+        Me.Label38 = New System.Windows.Forms.Label
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cta_con = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.monto = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cheque2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.banco = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Cuenta = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Debitos = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Creditos = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Base = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.doc_afe = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.abonado = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.editar = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DocAnti = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.nit = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.cheque = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.sucursal = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.grilla, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gce.SuspendLayout()
         Me.g1.SuspendLayout()
@@ -164,114 +185,6 @@ Partial Class FrmNuevoEgreso
         Me.grilla.Size = New System.Drawing.Size(876, 86)
         Me.grilla.TabIndex = 99
         Me.grilla.Visible = False
-        '
-        'Cuenta
-        '
-        Me.Cuenta.FillWeight = 80.0!
-        Me.Cuenta.HeaderText = "Cuenta"
-        Me.Cuenta.MaxInputLength = 12
-        Me.Cuenta.MinimumWidth = 74
-        Me.Cuenta.Name = "Cuenta"
-        Me.Cuenta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Cuenta.Width = 74
-        '
-        'Descripcion
-        '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Descripcion.DefaultCellStyle = DataGridViewCellStyle1
-        Me.Descripcion.FillWeight = 180.0!
-        Me.Descripcion.HeaderText = "Detalle Cuenta"
-        Me.Descripcion.MaxInputLength = 50
-        Me.Descripcion.MinimumWidth = 140
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Descripcion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Descripcion.Width = 140
-        '
-        'Debitos
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.ForestGreen
-        DataGridViewCellStyle2.Format = "N2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.Debitos.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Debitos.HeaderText = "Debitos"
-        Me.Debitos.MaxInputLength = 30
-        Me.Debitos.MinimumWidth = 85
-        Me.Debitos.Name = "Debitos"
-        Me.Debitos.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Debitos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Debitos.Width = 85
-        '
-        'Creditos
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle3.Format = "N2"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.Creditos.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Creditos.HeaderText = "Creditos"
-        Me.Creditos.MaxInputLength = 30
-        Me.Creditos.MinimumWidth = 85
-        Me.Creditos.Name = "Creditos"
-        Me.Creditos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Creditos.Width = 85
-        '
-        'Base
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Format = "N2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.Base.DefaultCellStyle = DataGridViewCellStyle4
-        Me.Base.HeaderText = "Base"
-        Me.Base.MinimumWidth = 83
-        Me.Base.Name = "Base"
-        Me.Base.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.Base.Width = 83
-        '
-        'doc_afe
-        '
-        Me.doc_afe.HeaderText = "Doc Afecta"
-        Me.doc_afe.MinimumWidth = 86
-        Me.doc_afe.Name = "doc_afe"
-        Me.doc_afe.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.doc_afe.Width = 86
-        '
-        'abonado
-        '
-        Me.abonado.HeaderText = "Abonado"
-        Me.abonado.Name = "abonado"
-        '
-        'editar
-        '
-        Me.editar.HeaderText = "Editar si/no"
-        Me.editar.Name = "editar"
-        Me.editar.Visible = False
-        '
-        'DocAnti
-        '
-        Me.DocAnti.HeaderText = "DocAnti"
-        Me.DocAnti.Name = "DocAnti"
-        Me.DocAnti.ReadOnly = True
-        Me.DocAnti.Visible = False
-        '
-        'nit
-        '
-        Me.nit.HeaderText = "nit"
-        Me.nit.Name = "nit"
-        '
-        'cheque
-        '
-        Me.cheque.HeaderText = "cheque"
-        Me.cheque.Name = "cheque"
-        Me.cheque.Width = 50
-        '
-        'sucursal
-        '
-        Me.sucursal.HeaderText = "sucursal"
-        Me.sucursal.Name = "sucursal"
-        Me.sucursal.Width = 50
         '
         'gce
         '
@@ -827,6 +740,7 @@ Partial Class FrmNuevoEgreso
         '
         'fecha
         '
+        Me.fecha.Enabled = False
         Me.fecha.Location = New System.Drawing.Point(64, 53)
         Me.fecha.Name = "fecha"
         Me.fecha.Size = New System.Drawing.Size(200, 20)
@@ -851,120 +765,6 @@ Partial Class FrmNuevoEgreso
         Me.Label1.Size = New System.Drawing.Size(239, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ORDEN DE PAGO NUMERO"
-        '
-        'cmdpagos
-        '
-        Me.cmdpagos.Location = New System.Drawing.Point(21, 594)
-        Me.cmdpagos.Name = "cmdpagos"
-        Me.cmdpagos.Size = New System.Drawing.Size(75, 23)
-        Me.cmdpagos.TabIndex = 102
-        Me.cmdpagos.Text = "&Pagos"
-        Me.cmdpagos.UseVisualStyleBackColor = True
-        '
-        'gcuenta
-        '
-        Me.gcuenta.AllowUserToDeleteRows = False
-        Me.gcuenta.AllowUserToResizeColumns = False
-        Me.gcuenta.AllowUserToResizeRows = False
-        Me.gcuenta.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.gcuenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        Me.gcuenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.gcuenta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cta_con, Me.monto, Me.cheque2, Me.banco})
-        Me.gcuenta.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.gcuenta.Location = New System.Drawing.Point(748, 215)
-        Me.gcuenta.MultiSelect = False
-        Me.gcuenta.Name = "gcuenta"
-        Me.gcuenta.RowHeadersVisible = False
-        Me.gcuenta.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.gcuenta.Size = New System.Drawing.Size(393, 97)
-        Me.gcuenta.StandardTab = True
-        Me.gcuenta.TabIndex = 103
-        Me.gcuenta.Visible = False
-        '
-        'cta_con
-        '
-        Me.cta_con.HeaderText = "CTA CONTABLE"
-        Me.cta_con.MinimumWidth = 100
-        Me.cta_con.Name = "cta_con"
-        Me.cta_con.ReadOnly = True
-        Me.cta_con.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.cta_con.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'monto
-        '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        Me.monto.DefaultCellStyle = DataGridViewCellStyle6
-        Me.monto.HeaderText = "MONTO ($)"
-        Me.monto.MinimumWidth = 100
-        Me.monto.Name = "monto"
-        '
-        'cheque2
-        '
-        Me.cheque2.HeaderText = "CHEQUE"
-        Me.cheque2.MinimumWidth = 70
-        Me.cheque2.Name = "cheque2"
-        Me.cheque2.Width = 70
-        '
-        'banco
-        '
-        Me.banco.HeaderText = "banco"
-        Me.banco.Name = "banco"
-        Me.banco.ReadOnly = True
-        '
-        'lbbanco
-        '
-        Me.lbbanco.AutoSize = True
-        Me.lbbanco.Location = New System.Drawing.Point(792, 163)
-        Me.lbbanco.Name = "lbbanco"
-        Me.lbbanco.Size = New System.Drawing.Size(37, 13)
-        Me.lbbanco.TabIndex = 104
-        Me.lbbanco.Text = "banco"
-        Me.lbbanco.Visible = False
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.cmdMost)
-        Me.GroupBox1.Controls.Add(Me.lbnroobs)
-        Me.GroupBox1.Controls.Add(Me.Label38)
-        Me.GroupBox1.Controls.Add(Me.CmdUltimo)
-        Me.GroupBox1.Controls.Add(Me.CmdSiguiente)
-        Me.GroupBox1.Controls.Add(Me.CmdAtras)
-        Me.GroupBox1.Controls.Add(Me.CmdPrimero)
-        Me.GroupBox1.Controls.Add(Me.CmdNuevo)
-        Me.GroupBox1.Controls.Add(Me.CmdSalir)
-        Me.GroupBox1.Controls.Add(Me.CmdListo)
-        Me.GroupBox1.Controls.Add(Me.CmdCancelar)
-        Me.GroupBox1.Controls.Add(Me.CmdEliminar)
-        Me.GroupBox1.Controls.Add(Me.cmdprint)
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 501)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(721, 56)
-        Me.GroupBox1.TabIndex = 105
-        Me.GroupBox1.TabStop = False
-        '
-        'lbnroobs
-        '
-        Me.lbnroobs.AutoSize = True
-        Me.lbnroobs.BackColor = System.Drawing.Color.Transparent
-        Me.lbnroobs.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbnroobs.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.lbnroobs.Location = New System.Drawing.Point(666, 34)
-        Me.lbnroobs.Name = "lbnroobs"
-        Me.lbnroobs.Size = New System.Drawing.Size(35, 13)
-        Me.lbnroobs.TabIndex = 111
-        Me.lbnroobs.Text = "0000"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.BackColor = System.Drawing.Color.Transparent
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label38.Location = New System.Drawing.Point(620, 16)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(82, 13)
-        Me.Label38.TabIndex = 110
-        Me.Label38.Text = "Registro Nro."
         '
         'cmdMost
         '
@@ -1078,6 +878,366 @@ Partial Class FrmNuevoEgreso
         Me.cmdprint.TabIndex = 92
         Me.ToolTip1.SetToolTip(Me.cmdprint, "Imprimir")
         Me.cmdprint.UseVisualStyleBackColor = True
+        '
+        'cmdpagos
+        '
+        Me.cmdpagos.Location = New System.Drawing.Point(21, 594)
+        Me.cmdpagos.Name = "cmdpagos"
+        Me.cmdpagos.Size = New System.Drawing.Size(75, 23)
+        Me.cmdpagos.TabIndex = 102
+        Me.cmdpagos.Text = "&Pagos"
+        Me.cmdpagos.UseVisualStyleBackColor = True
+        '
+        'gcuenta
+        '
+        Me.gcuenta.AllowUserToDeleteRows = False
+        Me.gcuenta.AllowUserToResizeColumns = False
+        Me.gcuenta.AllowUserToResizeRows = False
+        Me.gcuenta.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.gcuenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        Me.gcuenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gcuenta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cta_con, Me.monto, Me.cheque2, Me.banco})
+        Me.gcuenta.GridColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.gcuenta.Location = New System.Drawing.Point(748, 215)
+        Me.gcuenta.MultiSelect = False
+        Me.gcuenta.Name = "gcuenta"
+        Me.gcuenta.RowHeadersVisible = False
+        Me.gcuenta.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.gcuenta.Size = New System.Drawing.Size(393, 97)
+        Me.gcuenta.StandardTab = True
+        Me.gcuenta.TabIndex = 103
+        Me.gcuenta.Visible = False
+        '
+        'lbbanco
+        '
+        Me.lbbanco.AutoSize = True
+        Me.lbbanco.Location = New System.Drawing.Point(792, 163)
+        Me.lbbanco.Name = "lbbanco"
+        Me.lbbanco.Size = New System.Drawing.Size(37, 13)
+        Me.lbbanco.TabIndex = 104
+        Me.lbbanco.Text = "banco"
+        Me.lbbanco.Visible = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.cmdMost)
+        Me.GroupBox1.Controls.Add(Me.lbnroobs)
+        Me.GroupBox1.Controls.Add(Me.Label38)
+        Me.GroupBox1.Controls.Add(Me.CmdUltimo)
+        Me.GroupBox1.Controls.Add(Me.CmdSiguiente)
+        Me.GroupBox1.Controls.Add(Me.CmdAtras)
+        Me.GroupBox1.Controls.Add(Me.CmdPrimero)
+        Me.GroupBox1.Controls.Add(Me.CmdNuevo)
+        Me.GroupBox1.Controls.Add(Me.CmdSalir)
+        Me.GroupBox1.Controls.Add(Me.CmdListo)
+        Me.GroupBox1.Controls.Add(Me.CmdCancelar)
+        Me.GroupBox1.Controls.Add(Me.CmdEliminar)
+        Me.GroupBox1.Controls.Add(Me.cmdprint)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 501)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(721, 56)
+        Me.GroupBox1.TabIndex = 105
+        Me.GroupBox1.TabStop = False
+        '
+        'lbnroobs
+        '
+        Me.lbnroobs.AutoSize = True
+        Me.lbnroobs.BackColor = System.Drawing.Color.Transparent
+        Me.lbnroobs.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbnroobs.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.lbnroobs.Location = New System.Drawing.Point(666, 34)
+        Me.lbnroobs.Name = "lbnroobs"
+        Me.lbnroobs.Size = New System.Drawing.Size(35, 13)
+        Me.lbnroobs.TabIndex = 111
+        Me.lbnroobs.Text = "0000"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.BackColor = System.Drawing.Color.Transparent
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label38.Location = New System.Drawing.Point(620, 16)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(82, 13)
+        Me.Label38.TabIndex = 110
+        Me.Label38.Text = "Registro Nro."
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.FillWeight = 80.0!
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Cuenta"
+        Me.DataGridViewTextBoxColumn1.MaxInputLength = 12
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 74
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn1.Width = 74
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridViewTextBoxColumn2.FillWeight = 180.0!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Detalle Cuenta"
+        Me.DataGridViewTextBoxColumn2.MaxInputLength = 50
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 140
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn2.Width = 140
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.ForestGreen
+        DataGridViewCellStyle8.Format = "N2"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Debitos"
+        Me.DataGridViewTextBoxColumn3.MaxInputLength = 30
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 85
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn3.Width = 85
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle9.Format = "N2"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle9
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Creditos"
+        Me.DataGridViewTextBoxColumn4.MaxInputLength = 30
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 85
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn4.Width = 85
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle10.Format = "N2"
+        DataGridViewCellStyle10.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle10
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Base"
+        Me.DataGridViewTextBoxColumn5.MinimumWidth = 83
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn5.Width = 83
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Doc Afecta"
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 86
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn6.Width = 86
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Abonado"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Editar si/no"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.Visible = False
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "DocAnti"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Visible = False
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.HeaderText = "nit"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.HeaderText = "cheque"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.Width = 50
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.HeaderText = "sucursal"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.Width = 50
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.HeaderText = "CTA CONTABLE"
+        Me.DataGridViewTextBoxColumn13.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        Me.DataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        Me.DataGridViewTextBoxColumn14.DefaultCellStyle = DataGridViewCellStyle11
+        Me.DataGridViewTextBoxColumn14.HeaderText = "MONTO ($)"
+        Me.DataGridViewTextBoxColumn14.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.HeaderText = "CHEQUE"
+        Me.DataGridViewTextBoxColumn15.MinimumWidth = 70
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.Width = 70
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.HeaderText = "banco"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        '
+        'cta_con
+        '
+        Me.cta_con.HeaderText = "CTA CONTABLE"
+        Me.cta_con.MinimumWidth = 100
+        Me.cta_con.Name = "cta_con"
+        Me.cta_con.ReadOnly = True
+        Me.cta_con.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.cta_con.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'monto
+        '
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        Me.monto.DefaultCellStyle = DataGridViewCellStyle6
+        Me.monto.HeaderText = "MONTO ($)"
+        Me.monto.MinimumWidth = 100
+        Me.monto.Name = "monto"
+        '
+        'cheque2
+        '
+        Me.cheque2.HeaderText = "CHEQUE"
+        Me.cheque2.MinimumWidth = 70
+        Me.cheque2.Name = "cheque2"
+        Me.cheque2.Width = 70
+        '
+        'banco
+        '
+        Me.banco.HeaderText = "banco"
+        Me.banco.Name = "banco"
+        Me.banco.ReadOnly = True
+        '
+        'Cuenta
+        '
+        Me.Cuenta.FillWeight = 80.0!
+        Me.Cuenta.HeaderText = "Cuenta"
+        Me.Cuenta.MaxInputLength = 12
+        Me.Cuenta.MinimumWidth = 74
+        Me.Cuenta.Name = "Cuenta"
+        Me.Cuenta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Cuenta.Width = 74
+        '
+        'Descripcion
+        '
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Descripcion.DefaultCellStyle = DataGridViewCellStyle1
+        Me.Descripcion.FillWeight = 180.0!
+        Me.Descripcion.HeaderText = "Detalle Cuenta"
+        Me.Descripcion.MaxInputLength = 50
+        Me.Descripcion.MinimumWidth = 140
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Descripcion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Descripcion.Width = 140
+        '
+        'Debitos
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.ForestGreen
+        DataGridViewCellStyle2.Format = "N2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Debitos.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Debitos.HeaderText = "Debitos"
+        Me.Debitos.MaxInputLength = 30
+        Me.Debitos.MinimumWidth = 85
+        Me.Debitos.Name = "Debitos"
+        Me.Debitos.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Debitos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Debitos.Width = 85
+        '
+        'Creditos
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle3.Format = "N2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.Creditos.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Creditos.HeaderText = "Creditos"
+        Me.Creditos.MaxInputLength = 30
+        Me.Creditos.MinimumWidth = 85
+        Me.Creditos.Name = "Creditos"
+        Me.Creditos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Creditos.Width = 85
+        '
+        'Base
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.Base.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Base.HeaderText = "Base"
+        Me.Base.MinimumWidth = 83
+        Me.Base.Name = "Base"
+        Me.Base.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Base.Width = 83
+        '
+        'doc_afe
+        '
+        Me.doc_afe.HeaderText = "Doc Afecta"
+        Me.doc_afe.MinimumWidth = 86
+        Me.doc_afe.Name = "doc_afe"
+        Me.doc_afe.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.doc_afe.Width = 86
+        '
+        'abonado
+        '
+        Me.abonado.HeaderText = "Abonado"
+        Me.abonado.Name = "abonado"
+        '
+        'editar
+        '
+        Me.editar.HeaderText = "Editar si/no"
+        Me.editar.Name = "editar"
+        Me.editar.Visible = False
+        '
+        'DocAnti
+        '
+        Me.DocAnti.HeaderText = "DocAnti"
+        Me.DocAnti.Name = "DocAnti"
+        Me.DocAnti.ReadOnly = True
+        Me.DocAnti.Visible = False
+        '
+        'nit
+        '
+        Me.nit.HeaderText = "nit"
+        Me.nit.Name = "nit"
+        '
+        'cheque
+        '
+        Me.cheque.HeaderText = "cheque"
+        Me.cheque.Name = "cheque"
+        Me.cheque.Width = 50
+        '
+        'sucursal
+        '
+        Me.sucursal.HeaderText = "sucursal"
+        Me.sucursal.Name = "sucursal"
+        Me.sucursal.Width = 50
         '
         'FrmNuevoEgreso
         '
@@ -1201,4 +1361,20 @@ Partial Class FrmNuevoEgreso
     Friend WithEvents Label38 As System.Windows.Forms.Label
     Friend WithEvents lbnroobs As System.Windows.Forms.Label
     Friend WithEvents cmdMost As System.Windows.Forms.Button
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

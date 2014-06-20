@@ -2530,8 +2530,9 @@ Public Class FrmDocProveedor
             End If
             Try
                 myCommand.Parameters.Clear()
+                myCommand.Parameters.AddWithValue("?cosuni", costo)
                 myCommand.Parameters.AddWithValue("?costprom", costoprom)
-                myCommand.CommandText = "UPDATE articulos SET cos_pro=?costprom " _
+                myCommand.CommandText = "UPDATE articulos SET cos_uni=?cosuni,cos_pro=?costprom " _
                                      & " WHERE codart='" & gfactura.Item(1, fila).Value & "';"
                 myCommand.ExecuteNonQuery()
             Catch ex As Exception
