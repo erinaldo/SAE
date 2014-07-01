@@ -30,13 +30,10 @@ Partial Class FrmOrdenesDePago
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX
         Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel
         Me.TabControl4 = New DevComponents.DotNetBar.TabControl
-        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel
-        Me.ButtonX8 = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX4 = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX
-        Me.cdmlibmay = New DevComponents.DotNetBar.ButtonX
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Contable = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel6 = New DevComponents.DotNetBar.TabControlPanel
+        Me.ButtonX10 = New DevComponents.DotNetBar.ButtonX
+        Me.bring = New DevComponents.DotNetBar.ButtonX
+        Me.TabItem4 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel17 = New DevComponents.DotNetBar.TabControlPanel
         Me.cmd_g_o = New DevComponents.DotNetBar.ButtonX
         Me.cmd_analisis = New DevComponents.DotNetBar.ButtonX
@@ -45,6 +42,13 @@ Partial Class FrmOrdenesDePago
         Me.cmd_plan_pagos = New DevComponents.DotNetBar.ButtonX
         Me.Label24 = New System.Windows.Forms.Label
         Me.TabItem15 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel
+        Me.ButtonX8 = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX4 = New DevComponents.DotNetBar.ButtonX
+        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX
+        Me.cdmlibmay = New DevComponents.DotNetBar.ButtonX
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Contable = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.Label4 = New System.Windows.Forms.Label
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl
@@ -71,10 +75,6 @@ Partial Class FrmOrdenesDePago
         Me.cmdcierre = New DevComponents.DotNetBar.ButtonX
         Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
-        Me.TabItem4 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel6 = New DevComponents.DotNetBar.TabControlPanel
-        Me.bring = New DevComponents.DotNetBar.ButtonX
-        Me.ButtonX10 = New DevComponents.DotNetBar.ButtonX
         Me.salir = New System.Windows.Forms.Button
         Me.cmdayuda = New System.Windows.Forms.Button
         Me.cmdsoptec = New System.Windows.Forms.Button
@@ -85,15 +85,15 @@ Partial Class FrmOrdenesDePago
         Me.TabControlPanel3.SuspendLayout()
         CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl4.SuspendLayout()
-        Me.TabControlPanel5.SuspendLayout()
+        Me.TabControlPanel6.SuspendLayout()
         Me.TabControlPanel17.SuspendLayout()
+        Me.TabControlPanel5.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
         Me.TabControlPanel2.SuspendLayout()
         Me.TabControlPanel4.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
-        Me.TabControlPanel6.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label14
@@ -177,82 +177,50 @@ Partial Class FrmOrdenesDePago
         Me.TabControl4.Tabs.Add(Me.TabItem4)
         Me.TabControl4.Text = "Cuentas Por Pagar"
         '
-        'TabControlPanel5
+        'TabControlPanel6
         '
-        Me.TabControlPanel5.Controls.Add(Me.ButtonX8)
-        Me.TabControlPanel5.Controls.Add(Me.ButtonX4)
-        Me.TabControlPanel5.Controls.Add(Me.ButtonX2)
-        Me.TabControlPanel5.Controls.Add(Me.cdmlibmay)
-        Me.TabControlPanel5.Controls.Add(Me.Button1)
-        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel5.Name = "TabControlPanel5"
-        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel5.Size = New System.Drawing.Size(715, 183)
-        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+        Me.TabControlPanel6.Controls.Add(Me.ButtonX10)
+        Me.TabControlPanel6.Controls.Add(Me.bring)
+        Me.TabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel6.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel6.Name = "TabControlPanel6"
+        Me.TabControlPanel6.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel6.Size = New System.Drawing.Size(715, 183)
+        Me.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel6.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
                     Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel5.Style.GradientAngle = 90
-        Me.TabControlPanel5.TabIndex = 4
-        Me.TabControlPanel5.TabItem = Me.Contable
+        Me.TabControlPanel6.Style.GradientAngle = 90
+        Me.TabControlPanel6.TabIndex = 5
+        Me.TabControlPanel6.TabItem = Me.TabItem4
         '
-        'ButtonX8
+        'ButtonX10
         '
-        Me.ButtonX8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX8.Location = New System.Drawing.Point(382, 77)
-        Me.ButtonX8.Name = "ButtonX8"
-        Me.ButtonX8.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX8.TabIndex = 60
-        Me.ButtonX8.Text = "&Egresos - Rubros"
+        Me.ButtonX10.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX10.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX10.Location = New System.Drawing.Point(268, 80)
+        Me.ButtonX10.Name = "ButtonX10"
+        Me.ButtonX10.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX10.TabIndex = 63
+        Me.ButtonX10.Text = "Ejecucion de &Gastos"
         '
-        'ButtonX4
+        'bring
         '
-        Me.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX4.Location = New System.Drawing.Point(382, 36)
-        Me.ButtonX4.Name = "ButtonX4"
-        Me.ButtonX4.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX4.TabIndex = 58
-        Me.ButtonX4.Text = "&Resumen de Deducciones"
+        Me.bring.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.bring.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.bring.Location = New System.Drawing.Point(268, 38)
+        Me.bring.Name = "bring"
+        Me.bring.Size = New System.Drawing.Size(192, 36)
+        Me.bring.TabIndex = 62
+        Me.bring.Text = "Ejecucion de &Rubros"
         '
-        'ButtonX2
+        'TabItem4
         '
-        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Location = New System.Drawing.Point(157, 76)
-        Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX2.TabIndex = 57
-        Me.ButtonX2.Text = "&Ordenes de Pago"
-        '
-        'cdmlibmay
-        '
-        Me.cdmlibmay.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.cdmlibmay.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.cdmlibmay.Location = New System.Drawing.Point(157, 36)
-        Me.cdmlibmay.Name = "cdmlibmay"
-        Me.cdmlibmay.Size = New System.Drawing.Size(192, 36)
-        Me.cdmlibmay.TabIndex = 56
-        Me.cdmlibmay.Text = "Libro &Auxiliares (Contable)"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(255, 84)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(30, 27)
-        Me.Button1.TabIndex = 59
-        Me.Button1.Text = "&LLenar MovPresupuesto"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Contable
-        '
-        Me.Contable.AttachedControl = Me.TabControlPanel5
-        Me.Contable.Name = "Contable"
-        Me.Contable.Text = "Contable"
+        Me.TabItem4.AttachedControl = Me.TabControlPanel6
+        Me.TabItem4.Name = "TabItem4"
+        Me.TabItem4.Text = "Presupuesto"
         '
         'TabControlPanel17
         '
@@ -344,6 +312,83 @@ Partial Class FrmOrdenesDePago
         Me.TabItem15.Name = "TabItem15"
         Me.TabItem15.Text = "Cuentas Por Pagar"
         '
+        'TabControlPanel5
+        '
+        Me.TabControlPanel5.Controls.Add(Me.ButtonX8)
+        Me.TabControlPanel5.Controls.Add(Me.ButtonX4)
+        Me.TabControlPanel5.Controls.Add(Me.ButtonX2)
+        Me.TabControlPanel5.Controls.Add(Me.cdmlibmay)
+        Me.TabControlPanel5.Controls.Add(Me.Button1)
+        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 26)
+        Me.TabControlPanel5.Name = "TabControlPanel5"
+        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel5.Size = New System.Drawing.Size(715, 183)
+        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel5.Style.GradientAngle = 90
+        Me.TabControlPanel5.TabIndex = 4
+        Me.TabControlPanel5.TabItem = Me.Contable
+        '
+        'ButtonX8
+        '
+        Me.ButtonX8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX8.Location = New System.Drawing.Point(382, 77)
+        Me.ButtonX8.Name = "ButtonX8"
+        Me.ButtonX8.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX8.TabIndex = 60
+        Me.ButtonX8.Text = "&Egresos - Rubros"
+        '
+        'ButtonX4
+        '
+        Me.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX4.Location = New System.Drawing.Point(382, 36)
+        Me.ButtonX4.Name = "ButtonX4"
+        Me.ButtonX4.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX4.TabIndex = 58
+        Me.ButtonX4.Text = "&Resumen de Deducciones"
+        '
+        'ButtonX2
+        '
+        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX2.Location = New System.Drawing.Point(157, 76)
+        Me.ButtonX2.Name = "ButtonX2"
+        Me.ButtonX2.Size = New System.Drawing.Size(192, 36)
+        Me.ButtonX2.TabIndex = 57
+        Me.ButtonX2.Text = "&Ordenes de Pago"
+        '
+        'cdmlibmay
+        '
+        Me.cdmlibmay.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.cdmlibmay.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.cdmlibmay.Location = New System.Drawing.Point(157, 36)
+        Me.cdmlibmay.Name = "cdmlibmay"
+        Me.cdmlibmay.Size = New System.Drawing.Size(192, 36)
+        Me.cdmlibmay.TabIndex = 56
+        Me.cdmlibmay.Text = "Libro &Auxiliares (Contable)"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(255, 84)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(30, 27)
+        Me.Button1.TabIndex = 59
+        Me.Button1.Text = "&LLenar MovPresupuesto"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Contable
+        '
+        Me.Contable.AttachedControl = Me.TabControlPanel5
+        Me.Contable.Name = "Contable"
+        Me.Contable.Text = "Contable"
+        '
         'TabItem2
         '
         Me.TabItem2.AttachedControl = Me.TabControlPanel3
@@ -367,8 +412,8 @@ Partial Class FrmOrdenesDePago
         Me.TabControl1.CanReorderTabs = True
         Me.TabControl1.CloseButtonVisible = True
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
         Me.TabControl1.Controls.Add(Me.TabControlPanel2)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
         Me.TabControl1.Controls.Add(Me.TabControlPanel4)
         Me.TabControl1.Location = New System.Drawing.Point(7, 96)
         Me.TabControl1.Name = "TabControl1"
@@ -677,51 +722,6 @@ Partial Class FrmOrdenesDePago
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
         Me.GroupPanel1.TabIndex = 6
         '
-        'TabItem4
-        '
-        Me.TabItem4.AttachedControl = Me.TabControlPanel6
-        Me.TabItem4.Name = "TabItem4"
-        Me.TabItem4.Text = "Presupuesto"
-        '
-        'TabControlPanel6
-        '
-        Me.TabControlPanel6.Controls.Add(Me.ButtonX10)
-        Me.TabControlPanel6.Controls.Add(Me.bring)
-        Me.TabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel6.Location = New System.Drawing.Point(0, 26)
-        Me.TabControlPanel6.Name = "TabControlPanel6"
-        Me.TabControlPanel6.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel6.Size = New System.Drawing.Size(715, 183)
-        Me.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel6.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel6.Style.GradientAngle = 90
-        Me.TabControlPanel6.TabIndex = 5
-        Me.TabControlPanel6.TabItem = Me.TabItem4
-        '
-        'bring
-        '
-        Me.bring.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.bring.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.bring.Location = New System.Drawing.Point(268, 38)
-        Me.bring.Name = "bring"
-        Me.bring.Size = New System.Drawing.Size(192, 36)
-        Me.bring.TabIndex = 62
-        Me.bring.Text = "Ejecucion de &Rubros"
-        '
-        'ButtonX10
-        '
-        Me.ButtonX10.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX10.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX10.Location = New System.Drawing.Point(268, 80)
-        Me.ButtonX10.Name = "ButtonX10"
-        Me.ButtonX10.Size = New System.Drawing.Size(192, 36)
-        Me.ButtonX10.TabIndex = 63
-        Me.ButtonX10.Text = "Ejecucion de &Gastos"
-        '
         'salir
         '
         Me.salir.BackColor = System.Drawing.Color.White
@@ -813,9 +813,10 @@ Partial Class FrmOrdenesDePago
         Me.TabControlPanel3.PerformLayout()
         CType(Me.TabControl4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl4.ResumeLayout(False)
-        Me.TabControlPanel5.ResumeLayout(False)
+        Me.TabControlPanel6.ResumeLayout(False)
         Me.TabControlPanel17.ResumeLayout(False)
         Me.TabControlPanel17.PerformLayout()
+        Me.TabControlPanel5.ResumeLayout(False)
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)
@@ -825,7 +826,6 @@ Partial Class FrmOrdenesDePago
         Me.TabControlPanel4.ResumeLayout(False)
         Me.TabControlPanel4.PerformLayout()
         Me.GroupPanel1.ResumeLayout(False)
-        Me.TabControlPanel6.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

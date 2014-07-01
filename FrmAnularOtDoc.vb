@@ -98,6 +98,8 @@
                     tb = "ot_cpp"
                 Case "nc"
                     tb = "ot_doc"
+                Case "recaja"
+                    tb = "ot_doc"
             End Select
 
             Dim tabla As New DataTable
@@ -158,15 +160,18 @@
             
             Select Case lbform.Text
                 Case "ce"
-                    FrmComEgresoCpp.lbanulado.Text = "ANULADO CON " & lbtipo.Text & NumeroDoc(lbdoc.Text)
+                    FrmCompEgreCpp.lbanulado.Text = "ANULADO CON " & lbtipo.Text & NumeroDoc(lbdoc.Text)
                 Case "ci"
                     FrmCompIngresos.lbanulado.Text = "ANULADO CON " & lbtipo.Text & NumeroDoc(lbdoc.Text)
+                    FrmComEgresoCpp.lbanulado.Text = "ANULADO CON " & lbtipo.Text & NumeroDoc(lbdoc.Text)
                 Case "rc"
-                    FrmRecibodeCaja.lbanulado.Text = "ANULADO CON " & lbtipo.Text & NumeroDoc(lbdoc.Text)
+                    FrmReciboCartera.lbanulado.Text = "ANULADO CON " & lbtipo.Text & NumeroDoc(lbdoc.Text)
                 Case "nd"
                     FrmNotaDebito.lbanulado.Text = "ANULADO CON " & lbtipo.Text & NumeroDoc(lbdoc.Text)
                 Case "nc"
                     FrmNotaCredito.lbanulado.Text = "ANULADO CON " & lbtipo.Text & NumeroDoc(lbdoc.Text)
+                Case "recaja"
+                    FrmRecibodeCaja.lbanulado.Text = "ANULADO CON " & lbtipo.Text & NumeroDoc(lbdoc.Text)
             End Select
             '.....
             If FrmPrincipal.cmdAuditoria.Visible = True Then

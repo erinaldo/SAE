@@ -684,7 +684,7 @@ Public Class FrmComEgresoCpp
                 Exit Sub
             End If
             If tra_con <> "E" Then
-                MsgBox("No tienes permisos para esta operaión.   ", MsgBoxStyle.Information, "SAE Control")
+                MsgBox("No tienes permisos para esta operación.", MsgBoxStyle.Information, "SAE Control")
                 Exit Sub
             End If
             FrmAnularOtDoc.lbcompa.Text = lbcompa.Text

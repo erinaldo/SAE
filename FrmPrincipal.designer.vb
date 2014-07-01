@@ -609,7 +609,6 @@ Partial Class FrmPrincipal
         Me.Inventarios.Size = New System.Drawing.Size(68, 68)
         Me.Inventarios.Text = "ToolStripButton3"
         Me.Inventarios.ToolTipText = "Inventarios"
-        Me.Inventarios.Visible = False
         '
         'BEstetica
         '
@@ -631,7 +630,6 @@ Partial Class FrmPrincipal
         Me.Facturacion.Size = New System.Drawing.Size(68, 68)
         Me.Facturacion.Text = "ToolStripButton2"
         Me.Facturacion.ToolTipText = "Facturacion"
-        Me.Facturacion.Visible = False
         '
         'Proveedores
         '
@@ -643,7 +641,6 @@ Partial Class FrmPrincipal
         Me.Proveedores.Size = New System.Drawing.Size(68, 68)
         Me.Proveedores.Text = "ToolStripButton5"
         Me.Proveedores.ToolTipText = "Proveedores"
-        Me.Proveedores.Visible = False
         '
         'Cartera
         '
@@ -655,7 +652,6 @@ Partial Class FrmPrincipal
         Me.Cartera.Size = New System.Drawing.Size(68, 68)
         Me.Cartera.Text = "ToolStripButton4"
         Me.Cartera.ToolTipText = "Cartera"
-        Me.Cartera.Visible = False
         '
         'ToolStripSeparator6
         '
@@ -688,7 +684,6 @@ Partial Class FrmPrincipal
         Me.Gerencial.Size = New System.Drawing.Size(68, 68)
         Me.Gerencial.Text = "ToolStripButton1"
         Me.Gerencial.ToolTipText = "Analisis Gerencial"
-        Me.Gerencial.Visible = False
         '
         'cmdAuditoria
         '
@@ -718,6 +713,7 @@ Partial Class FrmPrincipal
         Me.cmdBanco.Name = "cmdBanco"
         Me.cmdBanco.Size = New System.Drawing.Size(68, 68)
         Me.cmdBanco.Text = "Banco"
+        Me.cmdBanco.Visible = False
         '
         'cmdOrden
         '
@@ -727,6 +723,7 @@ Partial Class FrmPrincipal
         Me.cmdOrden.Name = "cmdOrden"
         Me.cmdOrden.Size = New System.Drawing.Size(68, 68)
         Me.cmdOrden.Text = "Ordenes de Pago"
+        Me.cmdOrden.Visible = False
         '
         'Nomina
         '
@@ -920,7 +917,7 @@ Partial Class FrmPrincipal
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
-        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  19 DE JUNIO 2014"
+        Me.Text = "SAE - SOFTWARE DE ADMINISTRACION EMPRESARIAL       UPDATE  28 DE JUNIO 2014"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

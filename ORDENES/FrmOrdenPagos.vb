@@ -1211,7 +1211,7 @@ Public Class FrmOrdenPagos
         cd_rb = Trim(cd_rb.Replace(Chr(10), ""))
         Dim tr As New DataTable
         myCommand.Parameters.Clear()
-        myCommand.CommandText = " SELECT CONCAT(" & cm & " ,'  - ' ,gasc_concepto) " _
+        myCommand.CommandText = " SELECT CONCAT(" & cm & " ,'  - ' ,gasc_concepto), gasc_cod1 " _
         & " FROM presupuesto" & a & ".`gasconcepto`, ctas_x_pagar  WHERE `gasc_cod1` IN (" & Trim(cd_rb) & ") " _
         & " and doc='" & lbcp.Text & "'"
         myAdapter.SelectCommand = myCommand
@@ -1225,48 +1225,54 @@ Public Class FrmOrdenPagos
 
         Dim ta5 As New DataTable
         myCommand.Parameters.Clear()
-        myCommand.CommandText = "select moneda, rcpos, if(monloex='N','',monloex) as mon from ctas_x_pagar where doc='" & lbcp.Text & "'"
+        myCommand.CommandText = "select moneda, rcpos, if(monloex='N','',monloex) as mon, ccosto from ctas_x_pagar where doc='" & lbcp.Text & "'"
         myAdapter.SelectCommand = myCommand
         myAdapter.Fill(ta5)
         Dim cp2() As String
         Dim cp3() As String
         Dim cp4() As String
+        Dim cp5() As String
         cp2 = Trim(ta5.Rows(0).Item("moneda")).Split(";")
         cp3 = Trim(ta5.Rows(0).Item("rcpos")).Split(";")
         cp4 = Trim(ta5.Rows(0).Item("mon")).Split(";")
+        cp5 = Trim(ta5.Rows(0).Item("ccosto")).Split(";")
        
         If tr.Rows.Count > 0 Then
-            For j = 0 To tr.Rows.Count - 1
-                If Int(cp3(j).ToString) <> 0 Then
-                    rb = rb & "RUBRO:" & tr.Rows(j).Item(0).ToString & vbCrLf
-                    ' "FUENTE: " & cp2(j).ToString & vbCrLf & _
-                    ' "MONTO: " & MontoRubro(Moneda(cp3(j).ToString.Replace(".", ","))) & vbCrLf & _
-                    '"SECTOR: " & cp4(j).ToString & vbCrLf & vbCrLf
-                    'Try
-                    '    rb = rb & "FUENTE: " & cp2(j).ToString & vbCrLf
-                    'Catch ex As Exception
-                    'End Try
-                    Try
-                        If Trim(cp2(j).ToString) <> "" Then
-                            rb = rb & "FUENTE: " & cp2(j).ToString & vbCrLf
-                        End If
-                    Catch ex As Exception
-                    End Try
+            For l = 0 To tr.Rows.Count - 1
+                For j = 0 To tr.Rows.Count - 1
+                    If tr.Rows(l).Item("gasc_cod1").ToString = Trim(cp5(j).ToString) Then
+                        If Int(cp3(j).ToString) <> 0 Then
+                            rb = rb & "RUBRO:" & tr.Rows(l).Item(0).ToString & vbCrLf
+                            ' "FUENTE: " & cp2(j).ToString & vbCrLf & _
+                            ' "MONTO: " & MontoRubro(Moneda(cp3(j).ToString.Replace(".", ","))) & vbCrLf & _
+                            '"SECTOR: " & cp4(j).ToString & vbCrLf & vbCrLf
+                            'Try
+                            '    rb = rb & "FUENTE: " & cp2(j).ToString & vbCrLf
+                            'Catch ex As Exception
+                            'End Try
+                            Try
+                                If Trim(cp2(j).ToString) <> "" Then
+                                    rb = rb & "FUENTE: " & cp2(j).ToString & vbCrLf
+                                End If
+                            Catch ex As Exception
+                            End Try
 
-                    Try
-                        rb = rb & "MONTO: " & MontoRubro(Moneda(cp3(j).ToString.Replace(".", ","))) & vbCrLf
-                    Catch ex As Exception
-                    End Try
-                    Try
-                        If Trim(cp4(j).ToString) <> "" Then
-                            rb = rb & "SECTOR: " & cp4(j).ToString & vbCrLf & vbCrLf
-                        Else
-                            rb = rb & vbCrLf
+                            Try
+                                rb = rb & "MONTO: " & MontoRubro(Moneda(cp3(j).ToString.Replace(".", ","))) & vbCrLf
+                            Catch ex As Exception
+                            End Try
+                            Try
+                                If Trim(cp4(j).ToString) <> "" Then
+                                    rb = rb & "SECTOR: " & cp4(j).ToString & vbCrLf & vbCrLf
+                                Else
+                                    rb = rb & vbCrLf
+                                End If
+                            Catch ex As Exception
+                                rb = rb & vbCrLf
+                            End Try
                         End If
-                    Catch ex As Exception
-                        rb = rb & vbCrLf
-                    End Try
-                End If
+                    End If
+                Next
             Next
         End If
 

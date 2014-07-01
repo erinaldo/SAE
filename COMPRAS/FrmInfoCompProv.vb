@@ -163,9 +163,12 @@ Public Class FrmInfoCompProv
 
         Dim m1 As String = ""
         Dim m2 As String = ""
+        Dim d1, d2 As String
 
         m1 = Strings.Mid(fecha1.Text, 4, 2)
         m2 = Strings.Mid(fecha2.Text, 4, 2)
+        d1 = Strings.Left(fecha1.Text, 2)
+        d2 = Strings.Left(fecha2.Text, 2)
 
         Dim cad As String = ""
         If c2.Checked = True Then ' Un nit
@@ -187,109 +190,244 @@ Public Class FrmInfoCompProv
             cad = cad & " AND f.estado='AP' AND f.anulado = 'no' "
         End If
 
+        If chRs.Checked = False Then
+            '//////////////////////////////////
+            For i = Val(m1) To Val(m2)
+                If i < 10 Then
+                    p = "0" & i
+                Else
+                    p = i
+                End If
 
-        '//////////////////////////////////
-        For i = Val(m1) To Val(m2)
-            If i < 10 Then
-                p = "0" & i
-            Else
-                p = i
-            End If
+                If p = m1 Then
+                    sql = "  SELECT f.nitc, t.nombre, ( TRIM( CONCAT( t.nombre,  ' ', t.apellidos ) )) AS ciu_ent, f.doc,CONCAT(dc.cod_art,' - ',dc.nom_art) AS dir_ent, CAST( f.fecha AS CHAR( 20 ) ) AS fecha, dc.cantidad AS num, " _
+                    & " dc.valor/(1+(dc.por_iva_g/100)) AS v1 , f.doc_afec as usuario," _
+                    & " (((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad) AS descuento, " _
+                    & " ((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad) AS iva, " _
+                    & " (((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad) AS ret_f, " _
+                    & " (dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad AS Subtotal, " _
+                    & " dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) AS v2 " _
+                    & " FROM fact_comp" & p & " f, detacomp" & p & " dc, terceros t " _
+                    & " WHERE  (f.doc = dc.doc) AND f.nitc = t.nit " & cad
 
-            If p = m1 Then
-                sql = "  SELECT f.nitc, t.nombre, ( TRIM( CONCAT( t.nombre,  ' ', t.apellidos ) )) AS ciu_ent, f.doc,CONCAT(dc.cod_art,' - ',dc.nom_art) AS dir_ent, CAST( f.fecha AS CHAR( 20 ) ) AS fecha, dc.cantidad AS num, " _
-                & " dc.valor/(1+(dc.por_iva_g/100)) AS v1 , f.doc_afec as usuario," _
-                & " (((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad) AS descuento, " _
-                & " ((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad) AS iva, " _
-                & " (((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad) AS ret_f, " _
-                & " (dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad AS Subtotal, " _
-                & " dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) AS v2 " _
-                & " FROM fact_comp" & p & " f, detacomp" & p & " dc, terceros t " _
-                & " WHERE  (f.doc = dc.doc) AND f.nitc = t.nit " & cad
+                Else
+                    sql = sql & " UNION SELECT f.nitc, t.nombre, ( TRIM( CONCAT( t.nombre,  ' ', t.apellidos ) )) AS ciu_ent, f.doc, CONCAT(dc.cod_art,' - ',dc.nom_art) AS dir_ent, CAST( f.fecha AS CHAR( 20 ) ) AS fecha, dc.cantidad AS num, " _
+                     & " dc.valor/(1+(dc.por_iva_g/100)) AS v1 , f.doc_afec as usuario," _
+                    & " (((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad) AS descuento, " _
+                    & " ((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad) AS iva, " _
+                    & " (((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad) AS ret_f, " _
+                    & " (dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad AS Subtotal, " _
+                    & " dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) AS v2 " _
+                    & " FROM fact_comp" & p & " f, detacomp" & p & " dc, terceros t " _
+                    & " WHERE  (f.doc = dc.doc) AND f.nitc = t.nit " & cad
+                End If
+            Next
 
-            Else
-                sql = sql & " UNION SELECT f.nitc, t.nombre, ( TRIM( CONCAT( t.nombre,  ' ', t.apellidos ) )) AS ciu_ent, f.doc, CONCAT(dc.cod_art,' - ',dc.nom_art) AS dir_ent, CAST( f.fecha AS CHAR( 20 ) ) AS fecha, dc.cantidad AS num, " _
-                 & " dc.valor/(1+(dc.por_iva_g/100)) AS v1 , f.doc_afec as usuario," _
-                & " (((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad) AS descuento, " _
-                & " ((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad) AS iva, " _
-                & " (((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad) AS ret_f, " _
-                & " (dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad AS Subtotal, " _
-                & " dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) AS v2 " _
-                & " FROM fact_comp" & p & " f, detacomp" & p & " dc, terceros t " _
-                & " WHERE  (f.doc = dc.doc) AND f.nitc = t.nit " & cad
-            End If
-        Next
-
-        sql = sql & " ORDER BY nombre "
-
-    
-        '' //////////////////  ////////////////
+            sql = sql & " ORDER BY nombre "
 
 
+            '' //////////////////  ////////////////
 
-        TextBox1.Text = sql
 
 
-        Dim tabla As DataTable
-        tabla = New DataTable
-        myCommand.Parameters.Clear()
-        myCommand.CommandText = sql
-        myCommand.Connection = conexion
-        myAdapter.SelectCommand = myCommand
-        myAdapter.Fill(tabla)
+            TextBox1.Text = sql
 
-        Dim CrReport As New CrystalDecisions.CrystalReports.Engine.ReportDocument
-        CrReport = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
 
-        CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportCcomXpro.rpt")
-        CrReport.SetDataSource(tabla)
-        CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
-        FrmReportCcomXpro.CrystalReportViewer1.ReportSource = CrReport
+            Dim tabla As New DataTable
+            myCommand.Parameters.Clear()
+            myCommand.CommandText = sql
+            myCommand.Connection = conexion
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tabla)
 
-        Dim doc_aj As String = ""
-        Dim tb As New DataTable
-        tb = New DataTable
-        myCommand.CommandText = "SELECT doc_aj FROM `par_comp` "
-        myAdapter.SelectCommand = myCommand
-        myAdapter.Fill(tb)
-        doc_aj = tb.Rows(0).Item(0)
+            Dim CrReport As New CrystalDecisions.CrystalReports.Engine.ReportDocument
+            CrReport = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
+            CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportCcomXpro.rpt")
+            CrReport.SetDataSource(tabla)
+            Try
+                CrReport.PrintOptions.PaperSize = PaperSize.PaperA4
+            Catch ex As Exception
+            End Try
+            FrmReportCcomXpro.CrystalReportViewer1.ReportSource = CrReport
 
-        Try
-            Dim Prcompañia As New ParameterField
-            Dim PrNit As New ParameterField
-            Dim Prperiodo As New ParameterField
-            Dim Prtitulo As New ParameterField
-            Dim PrAJ As New ParameterField
+            Dim doc_aj As String = ""
+            Dim tb As New DataTable
+            tb = New DataTable
+            myCommand.CommandText = "SELECT doc_aj FROM `par_comp` "
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tb)
+            doc_aj = tb.Rows(0).Item(0)
 
-            Dim prmdatos As ParameterFields
-            prmdatos = New ParameterFields
+            Try
+                Dim Prcompañia As New ParameterField
+                Dim PrNit As New ParameterField
+                Dim Prperiodo As New ParameterField
+                Dim Prtitulo As New ParameterField
+                Dim PrAJ As New ParameterField
 
-            Prcompañia.Name = "comp"
-            Prcompañia.CurrentValues.AddValue(nom.ToString)
+                Dim prmdatos As ParameterFields
+                prmdatos = New ParameterFields
 
-            PrNit.Name = "nit"
-            PrNit.CurrentValues.AddValue(nit.ToString)
+                Prcompañia.Name = "comp"
+                Prcompañia.CurrentValues.AddValue(nom.ToString)
 
-            Prperiodo.Name = "periodo"
-            Prperiodo.CurrentValues.AddValue(per.ToString)
+                PrNit.Name = "nit"
+                PrNit.CurrentValues.AddValue(nit.ToString)
 
-            Prtitulo.Name = "titulo"
-            Prtitulo.CurrentValues.AddValue(tit.ToString)
+                Prperiodo.Name = "periodo"
+                Prperiodo.CurrentValues.AddValue(per.ToString)
 
-            PrAJ.Name = "doc_aj"
-            PrAJ.CurrentValues.AddValue(doc_aj.ToString)
+                Prtitulo.Name = "titulo"
+                Prtitulo.CurrentValues.AddValue(tit.ToString)
 
-            prmdatos.Add(Prcompañia)
-            prmdatos.Add(PrNit)
-            prmdatos.Add(Prperiodo)
-            prmdatos.Add(Prtitulo)
-            prmdatos.Add(PrAJ)
-            FrmReportCcomXpro.CrystalReportViewer1.ParameterFieldInfo = prmdatos
-            FrmReportCcomXpro.ShowDialog()
+                PrAJ.Name = "doc_aj"
+                PrAJ.CurrentValues.AddValue(doc_aj.ToString)
 
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
+                prmdatos.Add(Prcompañia)
+                prmdatos.Add(PrNit)
+                prmdatos.Add(Prperiodo)
+                prmdatos.Add(Prtitulo)
+                prmdatos.Add(PrAJ)
+                FrmReportCcomXpro.CrystalReportViewer1.ParameterFieldInfo = prmdatos
+                FrmReportCcomXpro.ShowDialog()
+
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+            End Try
+        Else
+
+            Dim doc_aj As String = ""
+            Try
+                Dim tb As New DataTable
+                tb = New DataTable
+                myCommand.CommandText = "SELECT doc_aj FROM `par_comp` "
+                myAdapter.SelectCommand = myCommand
+                myAdapter.Fill(tb)
+                doc_aj = tb.Rows(0).Item(0)
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+                Exit Sub
+            End Try
+            '//////////////////////////////////
+
+            sql = " SELECT concat(c.nitc,'__',c.ciu_ent) descrip, SUM(c.num) num, SUM(c.v1) v1, SUM(c.descuento) descuento, SUM(c.ret_f) ret_f, SUM(c.subtotal) subtotal," _
+            & " SUM(c.iva) iva, SUM(c.v2) v2 FROM ( "
+
+            For i = Val(m1) To Val(m2)
+                If i < 10 Then
+                    p = "0" & i
+                Else
+                    p = i
+                End If
+
+                If Val(m1) = Val(m2) Then
+                    sql = sql & "  SELECT f.nitc, t.nombre, ( TRIM( CONCAT( t.nombre,  ' ', t.apellidos ) )) AS ciu_ent, f.doc,CONCAT(dc.cod_art,' - ',dc.nom_art) AS dir_ent, " _
+& " CAST( f.fecha AS CHAR( 20 ) ) AS fecha, " _
+& " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.cantidad),dc.cantidad) num,   " _
+& " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.valor/(1+(dc.por_iva_g/100))),dc.valor/(1+(dc.por_iva_g/100)))  v1, " _
+& "  f.doc_afec AS usuario,  " _
+& " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)),(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) descuento, " _
+& " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad)),((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad)) iva, " _
+& " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)),(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) ret_f, " _
+& " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad),(dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad) subtotal,   " _
+& " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) ) " _
+& " ,dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) ) v2  " _
+& " FROM fact_comp" & p & " f, detacomp" & p & " dc, terceros t  " _
+& "  WHERE  (f.doc = dc.doc) AND f.nitc = t.nit and  RIGHT(f.fecha,2) BETWEEN '" & d1 & "' and '" & d2 & "' " & cad
+                Else
+                    If i = Val(m1) Then
+                        sql = sql & "  SELECT f.nitc, t.nombre, ( TRIM( CONCAT( t.nombre,  ' ', t.apellidos ) )) AS ciu_ent, f.doc,CONCAT(dc.cod_art,' - ',dc.nom_art) AS dir_ent, " _
+    & " CAST( f.fecha AS CHAR( 20 ) ) AS fecha, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.cantidad),dc.cantidad) num,   " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.valor/(1+(dc.por_iva_g/100))),dc.valor/(1+(dc.por_iva_g/100)))  v1, " _
+    & "  f.doc_afec AS usuario,  " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)),(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) descuento, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad)),((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad)) iva, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)),(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) ret_f, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad),(dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad) subtotal,   " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) ) " _
+    & " ,dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) ) v2  " _
+    & " FROM fact_comp" & p & " f, detacomp" & p & " dc, terceros t   " _
+    & "  WHERE  (f.doc = dc.doc) AND f.nitc = t.nit and  RIGHT(f.fecha,2) >= '" & d1 & "' " & cad
+                    ElseIf i <> Val(m1) Or i <> Val(m2) Then
+                        sql = sql & "  UNION  SELECT f.nitc, t.nombre, ( TRIM( CONCAT( t.nombre,  ' ', t.apellidos ) )) AS ciu_ent, f.doc,CONCAT(dc.cod_art,' - ',dc.nom_art) AS dir_ent, " _
+    & " CAST( f.fecha AS CHAR( 20 ) ) AS fecha, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.cantidad),dc.cantidad) num,   " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.valor/(1+(dc.por_iva_g/100))),dc.valor/(1+(dc.por_iva_g/100)))  v1, " _
+    & "  f.doc_afec AS usuario,  " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)),(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) descuento, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad)),((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad)) iva, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)),(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) ret_f, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad),(dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad) subtotal,   " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) ) " _
+    & " ,dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) ) v2  " _
+    & " FROM fact_comp" & p & " f, detacomp" & p & " dc, terceros t  " _
+    & "  WHERE  (f.doc = dc.doc) AND f.nitc = t.nit " & cad
+                    ElseIf i = Val(m2) Then
+                        sql = sql & " UNION  SELECT f.nitc, t.nombre, ( TRIM( CONCAT( t.nombre,  ' ', t.apellidos ) )) AS ciu_ent, f.doc,CONCAT(dc.cod_art,' - ',dc.nom_art) AS dir_ent, " _
+    & " CAST( f.fecha AS CHAR( 20 ) ) AS fecha, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.cantidad),dc.cantidad) num,   " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.valor/(1+(dc.por_iva_g/100))),dc.valor/(1+(dc.por_iva_g/100)))  v1, " _
+    & "  f.doc_afec AS usuario,  " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)),(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) descuento, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad)),((dc.valor - ( dc.valor / ( 1 + ( dc.por_iva_g /100 ) ) )) * dc.cantidad)) iva, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)),(((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) ret_f, " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',(dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad),(dc.valor/(1+(dc.por_iva_g/100)))* dc.cantidad) subtotal,   " _
+    & " IF (LEFT(f.doc,2)='" & doc_aj & "',CONCAT('-',dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) ) " _
+    & " ,dc.vtotal - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_rtf /100) * dc.cantidad)) - ((((dc.valor / ( 1 + ( dc.por_iva_g /100 ) )) * f.por_desc /100) * dc.cantidad)) ) v2  " _
+    & " FROM fact_comp" & p & " f, detacomp" & p & " dc, terceros t  " _
+    & "  WHERE  (f.doc = dc.doc) AND f.nitc = t.nit and  RIGHT(f.fecha,2) <= '" & d2 & "' " & cad
+                    End If
+                End If
+            Next
+
+            sql = sql & " ) AS c   GROUP BY c.nitc ORDER BY c.nombre "
+            Dim tabla As New DataTable
+            myCommand.Parameters.Clear()
+            myCommand.CommandText = sql
+            myCommand.Connection = conexion
+            myAdapter.SelectCommand = myCommand
+            myAdapter.Fill(tabla)
+
+            Dim CrReport As New CrystalDecisions.CrystalReports.Engine.ReportDocument
+            CrReport = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
+            CrReport.Load(My.Application.Info.DirectoryPath & "\Reportes\ReportComXproR.rpt")
+            CrReport.SetDataSource(tabla)
+            Try
+                CrReport.PrintOptions.PaperSize = PaperSize.PaperLetter
+            Catch ex As Exception
+            End Try
+            FrmReportCcomXpro.CrystalReportViewer1.ReportSource = CrReport
+
+
+            Try
+                Dim Prcompañia As New ParameterField
+                Dim PrNit As New ParameterField
+                Dim Prperiodo As New ParameterField
+
+                Dim prmdatos As ParameterFields
+                prmdatos = New ParameterFields
+
+                Prcompañia.Name = "comp"
+                Prcompañia.CurrentValues.AddValue(nom.ToString)
+                PrNit.Name = "nit"
+                PrNit.CurrentValues.AddValue(nit.ToString)
+                Prperiodo.Name = "rg"
+                Prperiodo.CurrentValues.AddValue("FECHA INICIAL:" & fecha1.Text & "  - FECHA FINAL:" & fecha2.Text)
+
+
+                prmdatos.Add(Prcompañia)
+                prmdatos.Add(PrNit)
+                prmdatos.Add(Prperiodo)
+
+                FrmReportCcomXpro.CrystalReportViewer1.ParameterFieldInfo = prmdatos
+                FrmReportCcomXpro.ShowDialog()
+
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+            End Try
+
+        End If
 
 
     End Sub

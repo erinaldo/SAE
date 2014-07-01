@@ -23,9 +23,12 @@ Partial Class FrmReportCompCPP
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReportCompCPP))
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
         Me.ReportCompCPP1 = New SAE.ReportCompCPP
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
+        Me.ReportEjecGasI11 = New SAE.ReportEjecGasI1
+        Me.ReportEjecGasA21 = New SAE.ReportEjecGasA2
         Me.ReportEjecGasA11 = New SAE.ReportEjecGasA1
+        Me.ReportEjecGasI21 = New SAE.ReportEjecGasI2
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -36,7 +39,7 @@ Partial Class FrmReportCompCPP
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.ReportEjecGasA11
+        Me.CrystalReportViewer1.ReportSource = Me.ReportEjecGasI21
         Me.CrystalReportViewer1.ShowGroupTreeButton = False
         Me.CrystalReportViewer1.ShowRefreshButton = False
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(410, 317)
@@ -58,4 +61,7 @@ Partial Class FrmReportCompCPP
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents ReportCompCPP1 As SAE.ReportCompCPP
     Friend WithEvents ReportEjecGasA11 As SAE.ReportEjecGasA1
+    Friend WithEvents ReportEjecGasA21 As SAE.ReportEjecGasA2
+    Friend WithEvents ReportEjecGasI11 As SAE.ReportEjecGasI1
+    Friend WithEvents ReportEjecGasI21 As SAE.ReportEjecGasI2
 End Class

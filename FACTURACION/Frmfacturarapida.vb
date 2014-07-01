@@ -3648,7 +3648,7 @@ Public Class Frmfacturarapida
         & " FORMAT((((d.valor/(1+(d.iva_d/100)))- ((d.valor /(1+(d.iva_d/100))) * (d.por_des/100)) )* d.cantidad)," & dc & ") as nitv, " _
         & " (SELECT logofac FROM  parafacts where factura = 'RAPIDA') AS logofac, " _
         & " f.iva as numfact,  FORMAT(f.total," & dc & ") as margmin" _
-        & " FROM articulos a,facturas" & p & " f INNER JOIN(detafac" & p & " d) ON f.doc = d.doc WHERE f.doc = '" & txttipo.Text & txtnumfac.Text & "' AND d.codart= a.codart " _
+        & " FROM facturas" & p & " f INNER JOIN(detafac" & p & " d) ON f.doc = d.doc LEFT JOIN articulos a ON d.codart= a.codart WHERE f.doc = '" & txttipo.Text & txtnumfac.Text & "'  " _
         & " ORDER BY item"
 
         TextBox1.Text = sql2

@@ -468,7 +468,7 @@ Public Class FrmRecibodeCaja
             End Try
             FrmAnularOtDoc.txtfecha_ana.Text = Today
             FrmAnularOtDoc.lbcliente.Text = lbcliente.Text
-            FrmAnularOtDoc.lbform.Text = "rc"
+            FrmAnularOtDoc.lbform.Text = "recaja"
             FrmAnularOtDoc.ShowDialog()
         Else
             MsgBox("El estado " & lbestado.Text & " del registro no permite esta acción, Verifique.   ", MsgBoxStyle.Information, "Verificando")

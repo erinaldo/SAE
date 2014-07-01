@@ -27,6 +27,10 @@ Partial Class FrmEjecGastos
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEjecGastos))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.p2 = New System.Windows.Forms.RadioButton
+        Me.p1 = New System.Windows.Forms.RadioButton
+        Me.Label2 = New System.Windows.Forms.Label
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
         Me.r2 = New System.Windows.Forms.RadioButton
         Me.r1 = New System.Windows.Forms.RadioButton
@@ -48,13 +52,9 @@ Partial Class FrmEjecGastos
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.p2 = New System.Windows.Forms.RadioButton
-        Me.p1 = New System.Windows.Forms.RadioButton
-        Me.Label2 = New System.Windows.Forms.Label
         Me.GroupBox3.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -73,6 +73,49 @@ Partial Class FrmEjecGastos
         Me.GroupBox3.Size = New System.Drawing.Size(527, 133)
         Me.GroupBox3.TabIndex = 11
         Me.GroupBox3.TabStop = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.p2)
+        Me.GroupBox1.Controls.Add(Me.p1)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 88)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(360, 36)
+        Me.GroupBox1.TabIndex = 87
+        Me.GroupBox1.TabStop = False
+        '
+        'p2
+        '
+        Me.p2.AutoSize = True
+        Me.p2.Location = New System.Drawing.Point(280, 13)
+        Me.p2.Name = "p2"
+        Me.p2.Size = New System.Drawing.Size(52, 17)
+        Me.p2.TabIndex = 86
+        Me.p2.Text = "PDF2"
+        Me.p2.UseVisualStyleBackColor = True
+        '
+        'p1
+        '
+        Me.p1.AutoSize = True
+        Me.p1.Checked = True
+        Me.p1.Location = New System.Drawing.Point(194, 13)
+        Me.p1.Name = "p1"
+        Me.p1.Size = New System.Drawing.Size(52, 17)
+        Me.p1.TabIndex = 85
+        Me.p1.TabStop = True
+        Me.p1.Text = "PDF1"
+        Me.p1.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 12)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(109, 15)
+        Me.Label2.TabIndex = 84
+        Me.Label2.Text = "Mostrar Informe"
         '
         'GroupBox2
         '
@@ -132,7 +175,7 @@ Partial Class FrmEjecGastos
         Me.cmdsalir.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdsalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cmdsalir.Image = Global.SAE.My.Resources.Resources.salir
-        Me.cmdsalir.Location = New System.Drawing.Point(467, 33)
+        Me.cmdsalir.Location = New System.Drawing.Point(457, 41)
         Me.cmdsalir.Name = "cmdsalir"
         Me.cmdsalir.Size = New System.Drawing.Size(56, 51)
         Me.cmdsalir.TabIndex = 7
@@ -142,8 +185,8 @@ Partial Class FrmEjecGastos
         'CmdCons
         '
         Me.CmdCons.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CmdCons.Image = Global.SAE.My.Resources.Resources.DataTables
-        Me.CmdCons.Location = New System.Drawing.Point(405, 33)
+        Me.CmdCons.Image = Global.SAE.My.Resources.Resources.Excel_Pdf
+        Me.CmdCons.Location = New System.Drawing.Point(392, 41)
         Me.CmdCons.Name = "CmdCons"
         Me.CmdCons.Size = New System.Drawing.Size(56, 51)
         Me.CmdCons.TabIndex = 3
@@ -279,49 +322,6 @@ Partial Class FrmEjecGastos
         Me.DataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.DataGridViewTextBoxColumn10.Width = 130
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.p2)
-        Me.GroupBox1.Controls.Add(Me.p1)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 88)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(360, 36)
-        Me.GroupBox1.TabIndex = 87
-        Me.GroupBox1.TabStop = False
-        '
-        'p2
-        '
-        Me.p2.AutoSize = True
-        Me.p2.Location = New System.Drawing.Point(280, 13)
-        Me.p2.Name = "p2"
-        Me.p2.Size = New System.Drawing.Size(52, 17)
-        Me.p2.TabIndex = 86
-        Me.p2.Text = "PDF2"
-        Me.p2.UseVisualStyleBackColor = True
-        '
-        'p1
-        '
-        Me.p1.AutoSize = True
-        Me.p1.Checked = True
-        Me.p1.Location = New System.Drawing.Point(194, 13)
-        Me.p1.Name = "p1"
-        Me.p1.Size = New System.Drawing.Size(52, 17)
-        Me.p1.TabIndex = 85
-        Me.p1.TabStop = True
-        Me.p1.Text = "PDF1"
-        Me.p1.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 12)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 15)
-        Me.Label2.TabIndex = 84
-        Me.Label2.Text = "Mostrar Informe"
-        '
         'FrmEjecGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -338,10 +338,10 @@ Partial Class FrmEjecGastos
         Me.Text = "Ejecucion Completa de Gastos"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

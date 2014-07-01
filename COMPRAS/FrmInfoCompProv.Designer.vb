@@ -48,6 +48,7 @@ Partial Class FrmInfoCompProv
         Me.txttipo2 = New System.Windows.Forms.TextBox
         Me.doc2 = New System.Windows.Forms.RadioButton
         Me.doc1 = New System.Windows.Forms.RadioButton
+        Me.chRs = New System.Windows.Forms.CheckBox
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -126,6 +127,7 @@ Partial Class FrmInfoCompProv
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.chRs)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.fecha2)
@@ -357,6 +359,16 @@ Partial Class FrmInfoCompProv
         Me.doc1.Text = "&Todos los Documentos"
         Me.doc1.UseVisualStyleBackColor = True
         '
+        'chRs
+        '
+        Me.chRs.AutoSize = True
+        Me.chRs.Location = New System.Drawing.Point(19, 106)
+        Me.chRs.Name = "chRs"
+        Me.chRs.Size = New System.Drawing.Size(111, 17)
+        Me.chRs.TabIndex = 4
+        Me.chRs.Text = "Informe Resumido"
+        Me.chRs.UseVisualStyleBackColor = True
+        '
         'FrmInfoCompProv
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -415,4 +427,5 @@ Partial Class FrmInfoCompProv
     Friend WithEvents e5 As System.Windows.Forms.RadioButton
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents chcli As System.Windows.Forms.CheckBox
+    Friend WithEvents chRs As System.Windows.Forms.CheckBox
 End Class
